@@ -172,7 +172,7 @@ methods:
     description: "Compute-optimal successor to PaLM with improved multilingual and reasoning"
 
   # === Claude Family ===
-  - name: "Claude"
+  - name: "Claude 1"
     paper: null
     arxiv: null
     year: 2023
@@ -184,7 +184,7 @@ methods:
     parents:
       - name: "Transformer"
         relation: extends
-    description: "Anthropic's family of safety-focused large language models (no public paper/code)"
+    description: "Anthropic's first commercial safety-focused large language model"
 
   # === LLaMA Family ===
   - name: "LLaMA"
@@ -499,3 +499,192 @@ methods:
       - name: "Transformer"
         relation: replaces
     description: "Selective state-space model achieving linear-time sequence modeling"
+
+  # === Claude Family (Anthropic) ===
+  - name: "Claude 2"
+    year: 2023
+    open_source: closed
+    license: null
+    tags: [decoder, rlhf, safety, proprietary, 100k-context]
+    parents:
+      - name: "Claude 1"
+        relation: extends
+    description: "100K context window with improved reasoning and safety"
+
+  - name: "Claude 3 Opus"
+    year: 2024
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, reasoning, multimodal]
+    parents:
+      - name: "Claude 2"
+        relation: extends
+    description: "Near-frontier intelligence with strong vision and analysis capabilities"
+
+  - name: "Claude 3.5 Sonnet"
+    year: 2024
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, coding, reasoning, fast]
+    parents:
+      - name: "Claude 3 Opus"
+        relation: extends
+    description: "Surpassed Opus in most benchmarks with faster speed and strong coding ability"
+
+  - name: "Claude 3.5 Haiku"
+    year: 2024
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, fast, lightweight]
+    parents:
+      - name: "Claude 3.5 Sonnet"
+        relation: extends
+    description: "Fast and cost-effective model matching Sonnet 3.0 performance"
+
+  - name: "Claude 4 Opus"
+    year: 2025
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, coding, agentic, frontier]
+    parents:
+      - name: "Claude 3.5 Sonnet"
+        relation: extends
+    description: "Frontier model with strong agentic coding and sustained complex task performance"
+
+  - name: "Claude 4.5 Sonnet"
+    year: 2025
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, creative, hybrid-reasoning]
+    parents:
+      - name: "Claude 4 Opus"
+        relation: extends
+    description: "Hybrid extended thinking model with strong creative writing and analysis"
+
+  # === Gemini Family (Google) ===
+  - name: "Gemini 1.0"
+    year: 2023
+    open_source: closed
+    license: null
+    tags: [decoder, multimodal, proprietary, natively-multimodal]
+    parents:
+      - name: "PaLM 2"
+        relation: extends
+    description: "Google's natively multimodal model trained jointly on text, image, audio, and video"
+
+  - name: "Gemini 1.5 Pro"
+    year: 2024
+    arxiv: "2403.05530"
+    open_source: closed
+    license: null
+    tags: [decoder, multimodal, proprietary, long-context, moe]
+    parents:
+      - name: "Gemini 1.0"
+        relation: extends
+    description: "MoE architecture with 1M+ token context window and strong multimodal reasoning"
+
+  - name: "Gemini 2.0 Flash"
+    year: 2024
+    open_source: closed
+    license: null
+    tags: [decoder, multimodal, proprietary, agentic, fast]
+    parents:
+      - name: "Gemini 1.5 Pro"
+        relation: extends
+    description: "Agentic multimodal model with native tool use, code execution, and real-time capabilities"
+
+  - name: "Gemini 2.5 Pro"
+    year: 2025
+    open_source: closed
+    license: null
+    tags: [decoder, multimodal, proprietary, thinking, frontier]
+    parents:
+      - name: "Gemini 2.0 Flash"
+        relation: extends
+    description: "Frontier thinking model with state-of-the-art reasoning and coding benchmarks"
+
+  # === Grok Family (xAI) ===
+  - name: "Grok-1"
+    year: 2024
+    code: "xai-org/grok-1"
+    stars: 49000
+    open_source: open
+    license: "Apache-2.0"
+    tags: [decoder, moe, open-weight, 314b]
+    parents:
+      - name: "Transformer"
+        relation: extends
+      - name: "Mixtral"
+        relation: inspires
+    description: "xAI's 314B MoE model, fully open-sourced weights"
+
+  - name: "Grok-2"
+    year: 2024
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, reasoning, multimodal]
+    parents:
+      - name: "Grok-1"
+        relation: extends
+    description: "Frontier-competitive model with image understanding and generation"
+
+  - name: "Grok-3"
+    year: 2025
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, reasoning, thinking, frontier]
+    parents:
+      - name: "Grok-2"
+        relation: extends
+    description: "xAI's frontier model with DeepSearch and extended thinking capabilities"
+
+  # === ChatGPT / o-series (OpenAI) ===
+  - name: "ChatGPT"
+    year: 2022
+    open_source: closed
+    license: null
+    tags: [decoder, rlhf, chat, product]
+    parents:
+      - name: "InstructGPT"
+        relation: extends
+    description: "Conversational AI product built on InstructGPT/GPT-3.5 with RLHF fine-tuning"
+
+  - name: "GPT-4o"
+    year: 2024
+    open_source: closed
+    license: null
+    tags: [decoder, omni-modal, proprietary, real-time, voice]
+    parents:
+      - name: "GPT-4"
+        relation: extends
+    description: "Omni-modal model with native voice, vision, and text at GPT-4 level with faster speed"
+
+  - name: "o1"
+    year: 2024
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, reasoning, chain-of-thought, thinking]
+    parents:
+      - name: "GPT-4o"
+        relation: extends
+    description: "OpenAI's reasoning model using internal chain-of-thought for complex math and coding"
+
+  - name: "o3"
+    year: 2025
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, reasoning, frontier, thinking]
+    parents:
+      - name: "o1"
+        relation: extends
+    description: "Next-generation reasoning model with adaptive compute and frontier-level performance"
+
+  - name: "GPT-4.1"
+    year: 2025
+    open_source: closed
+    license: null
+    tags: [decoder, proprietary, coding, instruction-following, long-context]
+    parents:
+      - name: "GPT-4o"
+        relation: extends
+    description: "Improved GPT-4 with better coding, instruction following, and 1M token context"
