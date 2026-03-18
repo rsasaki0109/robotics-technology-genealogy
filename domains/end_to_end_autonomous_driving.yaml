@@ -18,6 +18,8 @@ methods:
     year: 1989
     code: ""
     stars: 0
+    open_source: closed
+    license: ""
     tags: [pioneer, neural-network, steering, end-to-end]
     parents: []
     description: "First neural network approach to end-to-end driving, mapping camera images directly to steering commands"
@@ -28,6 +30,8 @@ methods:
     year: 2016
     code: ""
     stars: 0
+    open_source: closed
+    license: ""
     tags: [cnn, nvidia, steering, end-to-end, imitation-learning]
     parents:
       - name: "ALVINN"
@@ -40,6 +44,8 @@ methods:
     year: 2019
     code: ""
     stars: 0
+    open_source: closed
+    license: ""
     tags: [imitation-learning, waymo, mid-to-mid, data-augmentation]
     parents:
       - name: "PilotNet"
@@ -55,6 +61,8 @@ methods:
     year: 2020
     code: "dotchen/LearningByCheating"
     stars: 600
+    open_source: open
+    license: "MIT"
     tags: [privileged-learning, distillation, carla, imitation-learning]
     parents:
       - name: "ChauffeurNet"
@@ -67,6 +75,8 @@ methods:
     year: 2022
     code: "autonomousvision/transfuser"
     stars: 1100
+    open_source: open
+    license: ""
     tags: [transformer, multi-modal, fusion, carla, lidar-camera]
     parents:
       - name: "LBC"
@@ -81,6 +91,8 @@ methods:
     year: 2022
     code: "opendilab/InterFuser"
     stars: 500
+    open_source: open
+    license: ""
     tags: [transformer, safety, interpretable, multi-sensor, carla]
     parents:
       - name: "TransFuser"
@@ -93,6 +105,8 @@ methods:
     year: 2023
     code: "OpenDriveLab/TCP"
     stars: 400
+    open_source: open
+    license: ""
     tags: [trajectory-conditioned, imitation-learning, carla, planning]
     parents:
       - name: "TransFuser"
@@ -107,6 +121,8 @@ methods:
     year: 2023
     code: "OpenDriveLab/ThinkTwice"
     stars: 300
+    open_source: open
+    license: ""
     tags: [iterative-refinement, decoder, scalable, carla]
     parents:
       - name: "TCP"
@@ -124,6 +140,8 @@ methods:
     year: 2023
     code: "OpenDriveLab/UniAD"
     stars: 5000
+    open_source: open
+    license: "Apache-2.0"
     tags: [unified, multi-task, transformer, planning-oriented, nuscenes]
     parents:
       - name: "TransFuser"
@@ -138,6 +156,8 @@ methods:
     year: 2023
     code: "hustvl/VAD"
     stars: 1200
+    open_source: open
+    license: "Apache-2.0"
     tags: [vectorized, efficient, end-to-end, nuscenes]
     parents:
       - name: "UniAD"
@@ -150,6 +170,8 @@ methods:
     year: 2024
     code: "OpenDriveLab/GenAD"
     stars: 500
+    open_source: open
+    license: ""
     tags: [generative, world-model, prediction, end-to-end]
     parents:
       - name: "VAD"
@@ -164,6 +186,8 @@ methods:
     year: 2024
     code: "wljungbergh/PARA-Drive"
     stars: 100
+    open_source: open
+    license: ""
     tags: [parallel, real-time, efficient, end-to-end]
     parents:
       - name: "UniAD"
@@ -176,6 +200,8 @@ methods:
     year: 2024
     code: "Thinklab-SJTU/Bench2Drive"
     stars: 500
+    open_source: open
+    license: "Apache-2.0"
     tags: [benchmark, closed-loop, carla, evaluation, multi-ability]
     parents:
       - name: "UniAD"
@@ -193,6 +219,8 @@ methods:
     year: 2024
     code: ""
     stars: 0
+    open_source: partial
+    license: ""
     tags: [vlm, scene-understanding, chain-of-thought, language, driving]
     parents:
       - name: "UniAD"
@@ -205,6 +233,8 @@ methods:
     year: 2024
     code: "hustvl/Senna"
     stars: 300
+    open_source: open
+    license: ""
     tags: [vlm, end-to-end, bridge, planning, language-grounded]
     parents:
       - name: "DriveVLM"
@@ -219,6 +249,8 @@ methods:
     year: 2024
     code: "JeffWang987/DriveDreamer"
     stars: 500
+    open_source: open
+    license: ""
     tags: [world-model, video-generation, simulation, driving]
     parents:
       - name: "UniAD"
@@ -234,6 +266,8 @@ methods:
     year: 2024
     code: "opendilab/LMDrive"
     stars: 700
+    open_source: open
+    license: ""
     tags: [llm, closed-loop, language, instruction, end-to-end]
     parents:
       - name: "DriveVLM"
@@ -248,6 +282,8 @@ methods:
     year: 2024
     code: ""
     stars: 0
+    open_source: closed
+    license: ""
     tags: [llm, interpretable, end-to-end, chain-of-thought, driving]
     parents:
       - name: "DriveVLM"
@@ -260,6 +296,8 @@ methods:
     year: 2024
     code: "hustvl/DiffusionDrive"
     stars: 300
+    open_source: open
+    license: ""
     tags: [diffusion, multi-modal, truncated, real-time, end-to-end]
     parents:
       - name: "VAD"
@@ -272,6 +310,8 @@ methods:
     year: 2025
     code: "swc-17/SparseDrive"
     stars: 400
+    open_source: open
+    license: ""
     tags: [sparse, efficient, end-to-end, scene-representation]
     parents:
       - name: "UniAD"
@@ -286,6 +326,8 @@ methods:
     year: 2025
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [world-model, 4d, pre-training, scene-understanding, end-to-end]
     parents:
       - name: "DriveDreamer"
@@ -300,6 +342,8 @@ methods:
     year: 2025
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [vlm, foundation-model, end-to-end, generalist, driving]
     parents:
       - name: "Senna"

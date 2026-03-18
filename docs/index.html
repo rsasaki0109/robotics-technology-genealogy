@@ -15,6 +15,9 @@
   .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
   select { background: #1a1d23; color: #fff; border: 1px solid #444; border-radius: 6px; padding: 8px 12px; font-size: 14px; cursor: pointer; }
   select:hover { border-color: #666; }
+  .filter-btn { background: #1a1d23; color: #888; border: 1px solid #444; border-radius: 6px; padding: 6px 10px; font-size: 12px; cursor: pointer; }
+  .filter-btn.active { color: #fff; border-color: #22c55e; background: #1a2e1a; }
+  .filter-btn:hover { border-color: #666; }
   .stats { color: #888; font-size: 13px; white-space: nowrap; }
   #graph { width: 100%; height: calc(100vh - 70px); }
   .legend {
@@ -32,6 +35,9 @@
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
+    <button class="filter-btn" id="btn-oss" title="Show only open source">OSS Only</button>
+    <button class="filter-btn" id="btn-paper" title="Show only with paper">Paper Only</button>
+    <button class="filter-btn" id="btn-nopaper" title="Show only without paper">No Paper</button>
     <span class="stats" id="stats"></span>
   </div>
   <a href="https://github.com/rsasaki0109/robotics-paper-genealogy" target="_blank">GitHub</a>
@@ -47,12 +53,20 @@
   <span style="color:#eab308">╌╌▶</span> inspires<br>
   <b style="margin-top:4px;display:inline-block">Nodes</b><br>
   <span style="color:#f97316">●</span> Root &nbsp;
-  <span style="color:#3b82f6">●</span> Derived
+  <span style="color:#3b82f6">●</span> Derived<br>
+  <b style="margin-top:4px;display:inline-block">Border (OSS)</b><br>
+  <span style="color:#22c55e">◉</span> Open source<br>
+  <span style="color:#eab308">◉</span> Research only<br>
+  <span style="color:#f97316">◉</span> Partial<br>
+  <span style="color:#ef4444">◉</span> Closed<br>
+  <span style="color:#555">◉</span> Unknown
 </div>
 
 <script>
 let DATA;
 let network;
+let currentGraphData = null;
+let filters = { oss: false, paper: false, nopaper: false };
 
 const OPTIONS = {
   layout: {
@@ -69,17 +83,49 @@ const OPTIONS = {
   interaction: { hover: true, tooltipDelay: 100 }
 };
 
-function renderGraph(graphData) {
+function applyFilters(graphData) {
+  let nodes = graphData.nodes;
+  if (filters.oss) {
+    nodes = nodes.filter(n => n.oss === "open");
+  }
+  if (filters.paper) {
+    nodes = nodes.filter(n => n.hasPaper === true);
+  }
+  if (filters.nopaper) {
+    nodes = nodes.filter(n => n.hasPaper === false);
+  }
+  const nodeIds = new Set(nodes.map(n => n.id));
+  const edges = graphData.edges.filter(e => nodeIds.has(e.from) && nodeIds.has(e.to));
+  return { nodes, edges };
+}
+
+function renderGraph(graphData, save) {
+  if (save !== false) currentGraphData = graphData;
+  const filtered = applyFilters(graphData);
   const container = document.getElementById("graph");
   const data = {
-    nodes: new vis.DataSet(graphData.nodes),
-    edges: new vis.DataSet(graphData.edges)
+    nodes: new vis.DataSet(filtered.nodes),
+    edges: new vis.DataSet(filtered.edges)
   };
   if (network) network.destroy();
   network = new vis.Network(container, data, OPTIONS);
-  document.getElementById("stats").textContent =
-    graphData.nodes.length + " methods / " +
-    graphData.edges.length + " edges";
+  const total = graphData.nodes.length;
+  const shown = filtered.nodes.length;
+  const statsText = shown < total
+    ? shown + "/" + total + " methods (filtered) / " + filtered.edges.length + " edges"
+    : total + " methods / " + filtered.edges.length + " edges";
+  document.getElementById("stats").textContent = statsText;
+}
+
+function toggleFilter(key, btnId) {
+  filters[key] = !filters[key];
+  // nopaper and paper are mutually exclusive
+  if (key === "paper" && filters.paper) filters.nopaper = false;
+  if (key === "nopaper" && filters.nopaper) filters.paper = false;
+  document.getElementById("btn-oss").classList.toggle("active", filters.oss);
+  document.getElementById("btn-paper").classList.toggle("active", filters.paper);
+  document.getElementById("btn-nopaper").classList.toggle("active", filters.nopaper);
+  if (currentGraphData) renderGraph(currentGraphData, false);
 }
 
 function populateDomains(catName) {
@@ -129,6 +175,9 @@ fetch("data.json")
     }
     catSelect.addEventListener("change", onCategoryChange);
     document.getElementById("domain").addEventListener("change", onDomainChange);
+    document.getElementById("btn-oss").addEventListener("click", () => toggleFilter("oss"));
+    document.getElementById("btn-paper").addEventListener("click", () => toggleFilter("paper"));
+    document.getElementById("btn-nopaper").addEventListener("click", () => toggleFilter("nopaper"));
     onCategoryChange();
   });
 </script>

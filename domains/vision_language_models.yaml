@@ -14,6 +14,8 @@ methods:
     year: 2021
     code: "openai/CLIP"
     stars: 26000
+    open_source: open
+    license: "MIT"
     tags: [contrastive, vision-language, zero-shot, pretraining]
     parents: []
     description: "Contrastive image-text pretraining enabling zero-shot visual recognition"
@@ -24,6 +26,8 @@ methods:
     year: 2023
     code: "google-research/big_vision"
     stars: 2200
+    open_source: open
+    license: "Apache-2.0"
     tags: [contrastive, sigmoid-loss, vision-language]
     parents:
       - name: "CLIP"
@@ -37,6 +41,8 @@ methods:
     year: 2022
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [few-shot, visual-lm, cross-attention, proprietary]
     parents:
       - name: "CLIP"
@@ -49,6 +55,8 @@ methods:
     year: 2022
     code: "salesforce/BLIP"
     stars: 4800
+    open_source: open
+    license: "BSD-3"
     tags: [vision-language, captioning, vqa, bootstrapping]
     parents:
       - name: "CLIP"
@@ -61,6 +69,8 @@ methods:
     year: 2023
     code: "salesforce/LAVIS"
     stars: 9800
+    open_source: open
+    license: "BSD-3"
     tags: [vision-language, q-former, frozen-lm, efficient]
     parents:
       - name: "BLIP"
@@ -73,6 +83,8 @@ methods:
     year: 2023
     code: "salesforce/LAVIS"
     stars: 9800
+    open_source: open
+    license: "BSD-3"
     tags: [vision-language, instruction-tuning, q-former]
     parents:
       - name: "BLIP-2"
@@ -86,6 +98,8 @@ methods:
     year: 2022
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [vision-language, multilingual, scaling, proprietary]
     parents:
       - name: "CLIP"
@@ -98,6 +112,8 @@ methods:
     year: 2023
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [vision-language, multilingual, scaling, proprietary]
     parents:
       - name: "PaLI"
@@ -110,6 +126,8 @@ methods:
     year: 2023
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [multimodal, proprietary, reasoning, video]
     parents:
       - name: "PaLI-X"
@@ -124,6 +142,8 @@ methods:
     year: 2024
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [multimodal, long-context, moe, proprietary]
     parents:
       - name: "Gemini"
@@ -136,6 +156,8 @@ methods:
     year: 2025
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [multimodal, agentic, proprietary]
     parents:
       - name: "Gemini 1.5"
@@ -149,6 +171,8 @@ methods:
     year: 2023
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [multimodal, proprietary, reasoning, visual-qa]
     parents:
       - name: "CLIP"
@@ -162,6 +186,8 @@ methods:
     year: 2023
     code: "haotian-liu/LLaVA"
     stars: 21000
+    open_source: open
+    license: "Apache-2.0"
     tags: [multimodal, instruction-tuning, open-weight, visual-chat]
     parents:
       - name: "CLIP"
@@ -176,6 +202,8 @@ methods:
     year: 2023
     code: "haotian-liu/LLaVA"
     stars: 21000
+    open_source: open
+    license: "Apache-2.0"
     tags: [multimodal, instruction-tuning, open-weight, mlp-projector]
     parents:
       - name: "LLaVA"
@@ -188,6 +216,8 @@ methods:
     year: 2024
     code: "haotian-liu/LLaVA"
     stars: 21000
+    open_source: open
+    license: "Apache-2.0"
     tags: [multimodal, high-resolution, dynamic-resolution, open-weight]
     parents:
       - name: "LLaVA-1.5"
@@ -201,6 +231,8 @@ methods:
     year: 2023
     code: "Vision-CAIR/MiniGPT-4"
     stars: 25200
+    open_source: open
+    license: "BSD-3"
     tags: [multimodal, instruction-tuning, open-weight, lightweight]
     parents:
       - name: "BLIP-2"
@@ -214,6 +246,8 @@ methods:
     year: 2023
     code: "THUDM/CogVLM"
     stars: 6000
+    open_source: open
+    license: "Apache-2.0"
     tags: [multimodal, visual-expert, deep-fusion, open-weight]
     parents:
       - name: "BLIP-2"
@@ -228,6 +262,8 @@ methods:
     year: 2024
     code: "THUDM/CogVLM2"
     stars: 2200
+    open_source: open
+    license: "Apache-2.0"
     tags: [multimodal, video, high-resolution, open-weight]
     parents:
       - name: "CogVLM"
@@ -241,6 +277,8 @@ methods:
     year: 2023
     code: "QwenLM/Qwen-VL"
     stars: 4800
+    open_source: open
+    license: "Tongyi Qianwen License"
     tags: [multimodal, grounding, ocr, open-weight]
     parents:
       - name: "CLIP"
@@ -255,6 +293,8 @@ methods:
     year: 2024
     code: "QwenLM/Qwen2-VL"
     stars: 4200
+    open_source: open
+    license: "Apache-2.0"
     tags: [multimodal, dynamic-resolution, video, open-weight]
     parents:
       - name: "Qwen-VL"
@@ -267,6 +307,8 @@ methods:
     year: 2025
     code: "QwenLM/Qwen2.5-VL"
     stars: 6500
+    open_source: open
+    license: "Apache-2.0"
     tags: [multimodal, agentic, video, open-weight]
     parents:
       - name: "Qwen2-VL"
@@ -280,6 +322,8 @@ methods:
     year: 2024
     code: "OpenGVLab/InternVL"
     stars: 7500
+    open_source: open
+    license: "MIT"
     tags: [multimodal, scaling, open-weight, dynamic-resolution]
     parents:
       - name: "CLIP"
@@ -294,6 +338,8 @@ methods:
     year: 2024
     code: "OpenGVLab/InternVL"
     stars: 7500
+    open_source: open
+    license: "MIT"
     tags: [multimodal, open-weight, dynamic-resolution, progressive-training]
     parents:
       - name: "InternVL"
@@ -306,6 +352,8 @@ methods:
     year: 2025
     code: "OpenGVLab/InternVL3"
     stars: 1500
+    open_source: open
+    license: "MIT"
     tags: [multimodal, open-weight, test-time-compute, reasoning]
     parents:
       - name: "InternVL2"
@@ -319,6 +367,8 @@ methods:
     year: 2024
     code: "microsoft/Florence-2"
     stars: 3000
+    open_source: open
+    license: "MIT"
     tags: [multimodal, unified, grounding, captioning, open-weight]
     parents:
       - name: "CLIP"
@@ -332,6 +382,8 @@ methods:
     year: 2024
     code: "allenai/Molmo"
     stars: 1200
+    open_source: open
+    license: "Apache-2.0"
     tags: [multimodal, open-weight, open-data, pointing]
     parents:
       - name: "LLaVA"

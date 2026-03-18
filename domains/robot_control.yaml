@@ -18,6 +18,8 @@ methods:
     year: 1922
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [classical, feedback, linear, industrial]
     parents: []
     description: "Proportional-Integral-Derivative feedback controller, the foundational building block of classical control"
@@ -28,6 +30,8 @@ methods:
     year: 1978
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [classical, optimization, model-based, predictive]
     parents:
       - name: "PID"
@@ -40,6 +44,8 @@ methods:
     year: 2012
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [trajectory-optimization, iterative, model-based, classical]
     parents:
       - name: "MPC"
@@ -55,6 +61,8 @@ methods:
     year: 2016
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [reinforcement-learning, off-policy, actor-critic, continuous]
     parents: []
     description: "Deep deterministic policy gradient for continuous action spaces using actor-critic architecture"
@@ -65,6 +73,8 @@ methods:
     year: 2017
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [reinforcement-learning, on-policy, policy-gradient, stable]
     parents:
       - name: "DDPG"
@@ -77,6 +87,8 @@ methods:
     year: 2018
     code: "sfujim/TD3"
     stars: 3200
+    open_source: open
+    license: ""
     tags: [reinforcement-learning, off-policy, actor-critic, twin-critic]
     parents:
       - name: "DDPG"
@@ -89,6 +101,8 @@ methods:
     year: 2018
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [reinforcement-learning, off-policy, maximum-entropy, stochastic]
     parents:
       - name: "DDPG"
@@ -103,6 +117,8 @@ methods:
     year: 2023
     code: "danijar/dreamerv3"
     stars: 1300
+    open_source: open
+    license: "MIT"
     tags: [world-model, model-based-rl, imagination, general]
     parents:
       - name: "SAC"
@@ -115,6 +131,8 @@ methods:
     year: 2021
     code: "kzl/decision-transformer"
     stars: 2300
+    open_source: open
+    license: "MIT"
     tags: [transformer, offline-rl, sequence-modeling, return-conditioned]
     parents:
       - name: "PPO"
@@ -130,6 +148,8 @@ methods:
     year: 2023
     code: ""
     stars: 0
+    open_source: closed
+    license: ""
     tags: [transformer, manipulation, real-world, google, large-scale]
     parents:
       - name: "DecisionTransformer"
@@ -142,6 +162,8 @@ methods:
     year: 2023
     code: ""
     stars: 0
+    open_source: closed
+    license: ""
     tags: [vlm, manipulation, transfer, google, language-grounded]
     parents:
       - name: "RT-1"
@@ -154,6 +176,8 @@ methods:
     year: 2023
     code: "tonyzhaozh/act"
     stars: 2700
+    open_source: open
+    license: "MIT"
     tags: [imitation-learning, bimanual, action-chunking, transformer, manipulation]
     parents:
       - name: "RT-1"
@@ -166,6 +190,8 @@ methods:
     year: 2023
     code: "tonyzhaozh/aloha"
     stars: 5000
+    open_source: open
+    license: "MIT"
     tags: [teleoperation, bimanual, low-cost, hardware, manipulation]
     parents: []
     description: "Low-cost bimanual teleoperation system enabling high-quality demonstration collection for imitation learning"
@@ -176,6 +202,8 @@ methods:
     year: 2024
     code: "MarkFzp/mobile-aloha"
     stars: 4000
+    open_source: open
+    license: ""
     tags: [mobile, bimanual, teleoperation, whole-body, manipulation]
     parents:
       - name: "ALOHA"
@@ -190,6 +218,8 @@ methods:
     year: 2023
     code: "real-stanford/diffusion_policy"
     stars: 3500
+    open_source: open
+    license: "MIT"
     tags: [diffusion, imitation-learning, visuomotor, manipulation, multi-modal]
     parents:
       - name: "ACT"
@@ -204,6 +234,8 @@ methods:
     year: 2024
     code: "octo-models/octo"
     stars: 3700
+    open_source: open
+    license: "MIT"
     tags: [foundation-model, generalist, open-source, transformer, manipulation]
     parents:
       - name: "RT-2"
@@ -218,6 +250,8 @@ methods:
     year: 2024
     code: ""
     stars: 0
+    open_source: closed
+    license: ""
     tags: [foundation-model, vla, flow-matching, generalist, manipulation]
     parents:
       - name: "Octo"
@@ -237,6 +271,8 @@ methods:
     year: 2025
     code: ""
     stars: 0
+    open_source: closed
+    license: ""
     tags: [foundation-model, vla, open-world, generalist, manipulation]
     parents:
       - name: "pi0"
@@ -249,6 +285,8 @@ methods:
     year: 2024
     code: "openvla/openvla"
     stars: 3000
+    open_source: open
+    license: "MIT"
     tags: [open-source, vla, foundation-model, fine-tuning, manipulation]
     parents:
       - name: "RT-2"
@@ -263,6 +301,8 @@ methods:
     year: 2025
     code: ""
     stars: 0
+    open_source: open
+    license: ""
     tags: [vla, spatial, 3d, manipulation, foundation-model]
     parents:
       - name: "OpenVLA"
@@ -277,6 +317,8 @@ methods:
     year: 2024
     code: "MarkFzp/humanplus"
     stars: 1200
+    open_source: open
+    license: "MIT"
     tags: [humanoid, imitation-learning, whole-body, teleoperation]
     parents:
       - name: "MobileALOHA"
@@ -291,6 +333,8 @@ methods:
     year: 2025
     code: "huggingface/lerobot"
     stars: 8500
+    open_source: open
+    license: "Apache-2.0"
     tags: [vla, efficient, small, huggingface, manipulation]
     parents:
       - name: "OpenVLA"
