@@ -1,0 +1,110 @@
+name: Depth Completion
+description: >
+  Evolution of depth completion methods — from sparse LiDAR + image fusion
+  to self-supervised and transformer-based approaches.
+source_awesome_lists:
+  - https://github.com/wangq95/awesome-state-of-depth-completion
+
+methods:
+  # === Early Fusion ===
+  - name: "Sparse-to-Dense"
+    paper: "Sparse-to-Dense: Depth Prediction from Sparse Depth Samples and a Single Image"
+    arxiv: "1709.07492"
+    year: 2018
+    code: "fangchangma/sparse-to-dense.pytorch"
+    stars: 600
+    tags: [supervised, cnn, sparse-lidar]
+    parents: []
+    description: "Pioneering work on predicting dense depth from sparse LiDAR and RGB"
+
+  - name: "S2D with Self-Supervised"
+    paper: "Self-supervised Sparse-to-Dense: Self-supervised Depth Completion from LiDAR and Monocular Camera"
+    arxiv: "1807.00275"
+    year: 2019
+    code: "fangchangma/self-supervised-depth-completion"
+    stars: 400
+    tags: [self-supervised, sparse-lidar]
+    parents:
+      - name: "Sparse-to-Dense"
+        relation: extends
+    description: "Self-supervised extension eliminating need for dense ground truth"
+
+  # === Guide Networks ===
+  - name: "GuideNet"
+    paper: "Learning Guided Convolutional Network for Depth Completion"
+    arxiv: "1908.01238"
+    year: 2020
+    code: "kakaxi314/GuideNet"
+    stars: 100
+    tags: [guided-conv, image-guided]
+    parents:
+      - name: "Sparse-to-Dense"
+        relation: extends
+    description: "Image-guided convolution kernels for depth completion"
+
+  - name: "CSPN"
+    paper: "Learning Depth with Convolutional Spatial Propagation Network"
+    arxiv: "1810.02695"
+    year: 2019
+    code: "XinJCheng/CSPN"
+    stars: 300
+    tags: [spatial-propagation, cnn]
+    parents:
+      - name: "Sparse-to-Dense"
+        relation: extends
+    description: "Spatial propagation network for refining depth predictions"
+
+  - name: "NLSPN"
+    paper: "Non-Local Spatial Propagation Network for Depth Completion"
+    arxiv: "2007.10042"
+    year: 2020
+    code: "zzangjinsun/NLSPN_ECCV20"
+    stars: 200
+    tags: [spatial-propagation, non-local]
+    parents:
+      - name: "CSPN"
+        relation: extends
+    description: "Non-local extension of CSPN for long-range depth propagation"
+
+  - name: "DySPN"
+    paper: "Dynamic Spatial Propagation Network for Depth Completion"
+    arxiv: "2202.09769"
+    year: 2022
+    tags: [spatial-propagation, dynamic]
+    parents:
+      - name: "NLSPN"
+        relation: extends
+    description: "Dynamic kernel generation for spatial propagation"
+
+  # === Transformer ===
+  - name: "CompletionFormer"
+    paper: "CompletionFormer: Depth Completion with Convolutions and Vision Transformers"
+    arxiv: "2304.13030"
+    year: 2023
+    code: "youmi-zym/CompletionFormer"
+    stars: 250
+    tags: [transformer, cnn-transformer-hybrid]
+    parents:
+      - name: "NLSPN"
+        relation: extends
+    description: "Hybrid CNN-Transformer architecture for depth completion"
+
+  - name: "BPNet"
+    paper: "BPNet: Bilateral-Branch Point Completion Network"
+    arxiv: "2304.11123"
+    year: 2023
+    tags: [transformer, bilateral]
+    parents:
+      - name: "CompletionFormer"
+        relation: extends
+    description: "Bilateral-branch architecture combining local and global features"
+
+  # === Prompt-based ===
+  - name: "PromptDC"
+    paper: "Prompting Depth Completion with Vision Foundation Models"
+    year: 2024
+    tags: [foundation-model, prompt-tuning]
+    parents:
+      - name: "CompletionFormer"
+        relation: extends
+    description: "Leveraging vision foundation models via prompting for depth completion"
