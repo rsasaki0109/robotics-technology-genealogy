@@ -1,0 +1,191 @@
+name: Point Cloud Scene Flow
+description: >
+  Evolution of point cloud scene flow estimation methods — from early
+  deep learning approaches through optimization-based neural priors
+  to real-time feed-forward architectures for autonomous driving.
+source_awesome_lists:
+  - https://github.com/hiskuDN/awesome-point-cloud-scene-flow
+
+methods:
+  # === Pioneering Deep Learning ===
+  - name: "FlowNet3D"
+    paper: "FlowNet3D: Learning Scene Flow in 3D Point Clouds"
+    arxiv: "1806.01411"
+    year: 2019
+    code: "xingyul/flownet3d"
+    stars: 650
+    tags: [deep-learning, point-cloud, set-conv]
+    parents: []
+    description: "First end-to-end deep network for scene flow on raw point clouds using flow embedding layers"
+
+  - name: "HPLFlowNet"
+    paper: "HPLFlowNet: Hierarchical Permutohedral Lattice FlowNet for Scene Flow Estimation on Large-Scale Point Clouds"
+    arxiv: "1906.05332"
+    year: 2019
+    tags: [deep-learning, permutohedral-lattice, large-scale]
+    parents:
+      - name: "FlowNet3D"
+        relation: extends
+    description: "Bilateral convolutional layers on permutohedral lattice for efficient large-scale scene flow"
+
+  # === Cost Volume & Coarse-to-Fine ===
+  - name: "PointPWC-Net"
+    paper: "PointPWC-Net: Cost Volume on Point Clouds for (Self-)Supervised Scene Flow Estimation"
+    arxiv: "1911.12408"
+    year: 2020
+    code: "DylanWusworking/PointPWC"
+    stars: 350
+    tags: [deep-learning, cost-volume, coarse-to-fine, self-supervised]
+    parents:
+      - name: "FlowNet3D"
+        relation: extends
+    description: "Learnable cost volume on point clouds with coarse-to-fine flow refinement"
+
+  - name: "FLOT"
+    paper: "FLOT: Scene Flow on Point Clouds Guided by Optimal Transport"
+    arxiv: "2007.11142"
+    year: 2020
+    code: "valeoai/FLOT"
+    stars: 200
+    tags: [deep-learning, optimal-transport]
+    parents:
+      - name: "FlowNet3D"
+        relation: extends
+    description: "Optimal transport-based correspondence for scene flow without cost volume"
+
+  # === Neural Prior & Optimization ===
+  - name: "Neural Scene Flow Prior"
+    paper: "Neural Scene Flow Prior"
+    arxiv: "2111.01253"
+    year: 2021
+    code: "Lilac-Lee/Neural_Scene_Flow_Prior"
+    stars: 300
+    tags: [optimization, neural-prior, runtime-optimization]
+    parents:
+      - name: "FlowNet3D"
+        relation: inspires
+    description: "Runtime optimization of a neural network as a scene flow prior without training data"
+
+  # === Recurrent & Iterative ===
+  - name: "FlowStep3D"
+    paper: "FlowStep3D: Model Unrolling for Self-Supervised Scene Flow Estimation"
+    arxiv: "2111.01545"
+    year: 2022
+    code: "yairkit/FlowStep3D"
+    stars: 80
+    tags: [deep-learning, self-supervised, recurrent]
+    parents:
+      - name: "PointPWC-Net"
+        relation: extends
+    description: "Recurrent unrolling architecture for self-supervised scene flow with iterative refinement"
+
+  - name: "SCTN"
+    paper: "SCTN: Sparse Convolution-Transformer Network for Scene Flow Estimation"
+    arxiv: "2205.04839"
+    year: 2022
+    tags: [deep-learning, sparse-convolution, transformer]
+    parents:
+      - name: "PointPWC-Net"
+        relation: extends
+      - name: "FLOT"
+        relation: combines
+    description: "Combines sparse convolution with transformer attention for scene flow estimation"
+
+  # === Fast Feed-Forward ===
+  - name: "Fast Flow3D"
+    paper: "Fast Flow3D: Fast Neural Scene Flow Estimation on Real-World 3D Point Clouds"
+    arxiv: "2103.01306"
+    year: 2023
+    tags: [deep-learning, real-time, pillar-based]
+    parents:
+      - name: "FlowNet3D"
+        relation: extends
+    description: "Pillar-based architecture for real-time scene flow on full-scale LiDAR point clouds"
+
+  # === Neural Prior Extensions ===
+  - name: "NSFP++"
+    paper: "Fast Neural Scene Flow"
+    arxiv: "2304.09121"
+    year: 2024
+    tags: [optimization, neural-prior, fast]
+    parents:
+      - name: "Neural Scene Flow Prior"
+        relation: extends
+    description: "Accelerated neural scene flow prior with distance transform supervision and early stopping"
+
+  - name: "FastNSF"
+    paper: "FastNSF: A Fast Neural Scene Flow Estimation Approach using a Distance Transform"
+    arxiv: "2304.09121"
+    year: 2024
+    tags: [optimization, neural-prior, distance-transform]
+    parents:
+      - name: "Neural Scene Flow Prior"
+        relation: extends
+    description: "Speed up NSFP via precomputed distance transforms and efficient optimization"
+
+  # === Zero-Shot & Foundation ===
+  - name: "ZeroFlow"
+    paper: "ZeroFlow: Scalable Scene Flow via Distillation"
+    arxiv: "2305.10424"
+    year: 2024
+    code: "kylevedder/zeroflow"
+    stars: 200
+    tags: [distillation, scalable, pseudo-labels]
+    parents:
+      - name: "Neural Scene Flow Prior"
+        relation: inspires
+      - name: "Fast Flow3D"
+        relation: combines
+    description: "Distills optimization-based scene flow into a fast feed-forward network using pseudo-labels"
+
+  # === ICP-Inspired ===
+  - name: "ICP-Flow"
+    paper: "ICP-Flow: LiDAR Scene Flow Estimation with ICP"
+    arxiv: "2402.17351"
+    year: 2024
+    tags: [optimization, icp, classical-inspired]
+    parents:
+      - name: "Neural Scene Flow Prior"
+        relation: combines
+    description: "Combines classical ICP with neural scene flow for robust LiDAR motion estimation"
+
+  # === 4D & Spatiotemporal ===
+  - name: "DeFlow"
+    paper: "DeFlow: Decoder of Scene Flow Network in Autonomous Driving"
+    arxiv: "2401.16122"
+    year: 2024
+    code: "KTH-RPL/DeFlow"
+    stars: 150
+    tags: [deep-learning, decoder, autonomous-driving]
+    parents:
+      - name: "ZeroFlow"
+        relation: extends
+      - name: "Fast Flow3D"
+        relation: extends
+    description: "Decoder-focused architecture for scene flow with BEV features in autonomous driving"
+
+  - name: "Flow4D"
+    paper: "Flow4D: Leveraging 4D Voxel Network for LiDAR Scene Flow Estimation"
+    arxiv: "2407.07995"
+    year: 2024
+    code: "dgist-cvlab/Flow4D"
+    stars: 80
+    tags: [deep-learning, 4d-voxel, spatiotemporal]
+    parents:
+      - name: "DeFlow"
+        relation: extends
+      - name: "Fast Flow3D"
+        relation: extends
+    description: "4D spatiotemporal voxel network jointly encoding space and time for scene flow"
+
+  - name: "OptFlow"
+    paper: "OptFlow: Fast Optimization-based Scene Flow Estimation without Supervision"
+    arxiv: "2410.04766"
+    year: 2024
+    tags: [optimization, unsupervised, fast]
+    parents:
+      - name: "Neural Scene Flow Prior"
+        relation: extends
+      - name: "ICP-Flow"
+        relation: combines
+    description: "Fast optimization-based scene flow combining neural priors with geometric constraints"

@@ -183,3 +183,199 @@ methods:
       - name: "DreamFusion"
         relation: extends
     description: "Fast 3D generation combining Gaussians with score distillation"
+
+  # === Robustness / In-the-Wild ===
+  - name: "NeRF-W"
+    paper: "NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections"
+    arxiv: "2008.02268"
+    year: 2021
+    code: "kwea123/nerf_pl"
+    stars: 650
+    tags: [neural-rendering, in-the-wild, appearance-embedding]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Handles varying lighting and transient objects in uncontrolled photo collections"
+
+  # === Dynamic Scenes ===
+  - name: "D-NeRF"
+    paper: "D-NeRF: Neural Radiance Fields for Dynamic Scenes"
+    arxiv: "2011.13961"
+    year: 2021
+    code: "albertpumarola/D-NeRF"
+    stars: 600
+    tags: [neural-rendering, dynamic-scenes, deformation]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Extends NeRF to dynamic scenes via a deformation network"
+
+  - name: "Nerfies"
+    paper: "Nerfies: Deformable Neural Radiance Fields"
+    arxiv: "2011.12948"
+    year: 2021
+    code: "google/nerfies"
+    stars: 1300
+    tags: [neural-rendering, deformable, selfie]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Deformable NeRF for casual selfie videos and non-rigid scenes"
+
+  # === Generalizable / Few-shot ===
+  - name: "PixelNeRF"
+    paper: "pixelNeRF: Neural Radiance Fields from One or Few Images"
+    arxiv: "2012.02190"
+    year: 2021
+    code: "sxyu/pixel-nerf"
+    stars: 1200
+    tags: [neural-rendering, few-shot, generalizable]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Generalizable NeRF conditioned on pixel-aligned features from sparse views"
+
+  - name: "IBRNet"
+    paper: "IBRNet: Learning Multi-View Image-Based Rendering"
+    arxiv: "2102.13090"
+    year: 2021
+    code: "googleinterns/IBRNet"
+    stars: 500
+    tags: [neural-rendering, generalizable, image-based-rendering]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Generalizable view synthesis by aggregating features from nearby views"
+
+  # === Large-scale ===
+  - name: "Block-NeRF"
+    paper: "Block-NeRF: Scalable Large Scene Neural View Synthesis"
+    arxiv: "2202.05263"
+    year: 2022
+    code: ""
+    stars: 0
+    tags: [neural-rendering, large-scale, urban]
+    parents:
+      - name: "NeRF"
+        relation: extends
+      - name: "NeRF-W"
+        relation: extends
+    description: "City-scale neural scene reconstruction by composing multiple NeRFs"
+
+  # === Efficient Deployment ===
+  - name: "MobileNeRF"
+    paper: "MobileNeRF: Exploiting the Polygon Rasterization Pipeline for Efficient Neural Field Rendering on Mobile Architectures"
+    arxiv: "2208.00277"
+    year: 2023
+    code: "nicktancoder/MobileNeRF"
+    stars: 500
+    tags: [neural-rendering, mobile, real-time, mesh]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Renders NeRFs on mobile devices via polygon rasterization pipeline"
+
+  # === Hybrid Representations ===
+  - name: "K-Planes"
+    paper: "K-Planes: Explicit Radiance Fields in Space, Time, and Appearance"
+    arxiv: "2301.10241"
+    year: 2023
+    code: "sarafridov/K-Planes"
+    stars: 500
+    tags: [neural-rendering, plane-decomposition, dynamic-scenes]
+    parents:
+      - name: "TensoRF"
+        relation: extends
+    description: "Factored plane-based representation for static and dynamic radiance fields"
+
+  # === Language / Semantics ===
+  - name: "LERF"
+    paper: "LERF: Language Embedded Radiance Fields"
+    arxiv: "2303.09553"
+    year: 2023
+    code: "kerrj/lerf"
+    stars: 900
+    tags: [neural-rendering, language, semantic, clip]
+    parents:
+      - name: "NeRF"
+        relation: extends
+    description: "Embeds CLIP language features into NeRF for open-vocabulary 3D queries"
+
+  # === 3D Gaussian Splatting extensions ===
+  - name: "GaussianDreamer"
+    paper: "GaussianDreamer: Fast Generation from Text to 3D Gaussians by Bridging 2D and 3D Diffusion Models"
+    arxiv: "2310.08529"
+    year: 2024
+    code: "huber1234/GaussianDreamer"
+    stars: 600
+    tags: [gaussian-splatting, text-to-3d, generation]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+      - name: "DreamFusion"
+        relation: extends
+    description: "Text-to-3D generation bridging 2D and 3D diffusion with Gaussians"
+
+  - name: "LangSplat"
+    paper: "LangSplat: 3D Language Gaussian Splatting"
+    arxiv: "2312.16084"
+    year: 2024
+    code: "minghanqin/LangSplat"
+    stars: 800
+    tags: [gaussian-splatting, language, semantic, open-vocabulary]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+      - name: "LERF"
+        relation: inspires
+    description: "Embeds language features into 3D Gaussians for open-vocabulary queries"
+
+  - name: "Scaffold-GS"
+    paper: "Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering"
+    arxiv: "2312.00109"
+    year: 2024
+    code: "city-super/Scaffold-GS"
+    stars: 700
+    tags: [gaussian-splatting, structured, view-adaptive]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Anchor-based structured Gaussians for view-adaptive rendering"
+
+  - name: "PhysGaussian"
+    paper: "PhysGaussian: Physics-Integrated 3D Gaussians for Generative Dynamics"
+    arxiv: "2311.12198"
+    year: 2024
+    code: "XPandora/PhysGaussian"
+    stars: 500
+    tags: [gaussian-splatting, physics-simulation, dynamics]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Physics-based dynamics simulation integrated with 3D Gaussians"
+
+  - name: "4D Gaussian Splatting"
+    paper: "Real-time Photorealistic Dynamic Scene Representation and Rendering with 4D Gaussian Splatting"
+    arxiv: "2310.10642"
+    year: 2024
+    code: "hustvl/4DGaussians"
+    stars: 2000
+    tags: [gaussian-splatting, dynamic-scenes, real-time, 4d]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+      - name: "D-NeRF"
+        relation: inspires
+    description: "Extends 3D Gaussian Splatting to dynamic scenes with temporal modeling"
+
+  - name: "GS-SLAM"
+    paper: "GS-SLAM: Dense Visual SLAM with 3D Gaussian Splatting"
+    arxiv: "2311.11700"
+    year: 2024
+    code: "muskie82/GS-SLAM"
+    stars: 400
+    tags: [gaussian-splatting, slam, dense-mapping]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Dense visual SLAM using 3D Gaussian Splatting as the map representation"
