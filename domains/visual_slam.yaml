@@ -1,0 +1,334 @@
+name: Visual SLAM
+description: >
+  From classical feature-based SLAM to direct methods, learning-based approaches,
+  NeRF-based dense SLAM, and Gaussian Splatting SLAM — the full evolution of
+  Visual Simultaneous Localization and Mapping.
+source_awesome_lists:
+  - https://github.com/openMVG/awesome_3DReconstruction_list
+  - https://github.com/SilenceOverflow/Awesome-SLAM
+  - https://github.com/tzutalin/awesome-visual-slam
+
+methods:
+  # ===========================
+  # Classical Feature-Based SLAM
+  # ===========================
+  - name: "MonoSLAM"
+    paper: "MonoSLAM: Real-Time Single Camera SLAM"
+    arxiv: ""
+    year: 2007
+    code: ""
+    stars: 0
+    tags: [monocular, real-time, ekf, feature-based]
+    parents: []
+    description: "First real-time monocular SLAM using EKF and sparse features"
+
+  - name: "PTAM"
+    paper: "Parallel Tracking and Mapping for Small AR Workspaces"
+    arxiv: ""
+    year: 2007
+    code: ""
+    stars: 0
+    tags: [monocular, keyframe, feature-based, parallel]
+    parents:
+      - name: "MonoSLAM"
+        relation: extends
+    description: "Pioneered keyframe-based SLAM with parallel tracking and mapping threads"
+
+  - name: "ORB-SLAM"
+    paper: "ORB-SLAM: A Versatile and Accurate Monocular SLAM System"
+    arxiv: "1502.00956"
+    year: 2015
+    code: "raulmur/ORB_SLAM2"
+    stars: 9300
+    tags: [monocular, feature-based, loop-closure, relocalization]
+    parents:
+      - name: "PTAM"
+        relation: extends
+    description: "Feature-based monocular SLAM with ORB features, loop closing, and relocalization"
+
+  - name: "ORB-SLAM2"
+    paper: "ORB-SLAM2: An Open-Source SLAM System for Monocular, Stereo, and RGB-D Cameras"
+    arxiv: "1610.06475"
+    year: 2017
+    code: "raulmur/ORB_SLAM2"
+    stars: 9300
+    tags: [monocular, stereo, rgbd, feature-based, loop-closure]
+    parents:
+      - name: "ORB-SLAM"
+        relation: extends
+    description: "Extended ORB-SLAM to stereo and RGB-D cameras with improved mapping"
+
+  - name: "ORB-SLAM3"
+    paper: "ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial, and Multimap SLAM"
+    arxiv: "2007.11898"
+    year: 2021
+    code: "UZ-SLAMLab/ORB_SLAM3"
+    stars: 6600
+    tags: [monocular, stereo, rgbd, visual-inertial, multimap, feature-based]
+    parents:
+      - name: "ORB-SLAM2"
+        relation: extends
+      - name: "VINS-Mono"
+        relation: inspires
+    description: "Unified visual, visual-inertial, and multimap SLAM with improved robustness"
+
+  - name: "OpenVSLAM"
+    paper: "OpenVSLAM: A Versatile Visual SLAM Framework"
+    arxiv: "1910.01122"
+    year: 2019
+    code: "stella-cv/stella_vslam"
+    stars: 1500
+    tags: [monocular, stereo, rgbd, feature-based, framework]
+    parents:
+      - name: "ORB-SLAM2"
+        relation: inspires
+    description: "Modular visual SLAM framework supporting multiple camera models (continued as stella_vslam)"
+
+  # ===========================
+  # Direct Methods
+  # ===========================
+  - name: "LSD-SLAM"
+    paper: "LSD-SLAM: Large-Scale Direct Monocular SLAM"
+    arxiv: "1407.4760"
+    year: 2014
+    code: "tum-vision/lsd_slam"
+    stars: 2600
+    tags: [monocular, direct, semi-dense, large-scale]
+    parents:
+      - name: "PTAM"
+        relation: inspires
+    description: "Large-scale direct monocular SLAM using photometric consistency on semi-dense maps"
+
+  - name: "SVO"
+    paper: "SVO: Fast Semi-Direct Monocular Visual Odometry"
+    arxiv: "1408.3667"
+    year: 2014
+    code: "uzh-rpg/rpg_svo_pro_open"
+    stars: 3100
+    tags: [monocular, semi-direct, fast, visual-odometry]
+    parents:
+      - name: "PTAM"
+        relation: extends
+      - name: "LSD-SLAM"
+        relation: inspires
+    description: "Semi-direct visual odometry combining feature-based and direct methods for high speed"
+
+  - name: "DSO"
+    paper: "Direct Sparse Odometry"
+    arxiv: "1607.02565"
+    year: 2017
+    code: "JakobEngel/dso"
+    stars: 2200
+    tags: [monocular, direct, sparse, visual-odometry, photometric]
+    parents:
+      - name: "LSD-SLAM"
+        relation: extends
+    description: "Direct and sparse visual odometry with joint photometric and geometric optimization"
+
+  # ===========================
+  # Visual-Inertial SLAM
+  # ===========================
+  - name: "VINS-Mono"
+    paper: "VINS-Mono: A Robust and Versatile Monocular Visual-Inertial State Estimator"
+    arxiv: "1708.03852"
+    year: 2018
+    code: "HKUST-Aerial-Robotics/VINS-Mono"
+    stars: 4900
+    tags: [monocular, visual-inertial, imu, loop-closure, optimization]
+    parents:
+      - name: "ORB-SLAM"
+        relation: inspires
+    description: "Tightly-coupled monocular visual-inertial odometry with loop closure"
+
+  - name: "VINS-Fusion"
+    paper: "VINS-Fusion: Online Self-Calibration of Multi-Sensor Systems"
+    arxiv: ""
+    year: 2019
+    code: "HKUST-Aerial-Robotics/VINS-Fusion"
+    stars: 3400
+    tags: [stereo, visual-inertial, multi-sensor, gps-fusion]
+    parents:
+      - name: "VINS-Mono"
+        relation: extends
+    description: "Extended VINS-Mono with stereo cameras and GPS fusion for multi-sensor support"
+
+  # ===========================
+  # Semantic / Dense SLAM
+  # ===========================
+  - name: "Kimera"
+    paper: "Kimera: An Open-Source Library for Real-Time Metric-Semantic Localization and Mapping"
+    arxiv: "1910.02490"
+    year: 2020
+    code: "MIT-SPARK/Kimera"
+    stars: 1800
+    tags: [metric-semantic, mesh, real-time, visual-inertial]
+    parents:
+      - name: "VINS-Mono"
+        relation: inspires
+      - name: "ORB-SLAM2"
+        relation: inspires
+    description: "Real-time metric-semantic SLAM producing 3D meshes with semantic labels"
+
+  - name: "RTAB-Map"
+    paper: "RTAB-Map as an Open-Source Lidar and Visual SLAM Library for Large-Scale and Long-Term Online Operation"
+    arxiv: "1906.02985"
+    year: 2019
+    code: "introlab/rtabmap"
+    stars: 2800
+    tags: [rgbd, lidar, visual, loop-closure, long-term, graph-based]
+    parents:
+      - name: "ORB-SLAM2"
+        relation: inspires
+    description: "Appearance-based loop closure SLAM supporting RGB-D, stereo, and lidar for large-scale operation"
+
+  # ===========================
+  # Learning-Based SLAM
+  # ===========================
+  - name: "DROID-SLAM"
+    paper: "DROID-SLAM: Deep Visual SLAM for Monocular, Stereo, and RGB-D Cameras"
+    arxiv: "2108.10869"
+    year: 2021
+    code: "princeton-vl/DROID-SLAM"
+    stars: 1700
+    tags: [deep-learning, end-to-end, dense, differentiable, optical-flow]
+    parents:
+      - name: "ORB-SLAM2"
+        relation: replaces
+      - name: "DSO"
+        relation: inspires
+    description: "End-to-end differentiable SLAM using recurrent iterative updates of camera poses and depth"
+
+  - name: "DPVO"
+    paper: "Deep Patch Visual Odometry"
+    arxiv: "2208.04726"
+    year: 2023
+    code: "princeton-vl/DPVO"
+    stars: 600
+    tags: [deep-learning, visual-odometry, patch-based, efficient]
+    parents:
+      - name: "DROID-SLAM"
+        relation: extends
+    description: "Efficient deep visual odometry using patch-based recurrent updates"
+
+  # ===========================
+  # NeRF-Based Dense SLAM
+  # ===========================
+  - name: "iMAP"
+    paper: "iMAP: Implicit Mapping and Positioning in Real-Time"
+    arxiv: "2103.12352"
+    year: 2021
+    code: ""
+    stars: 0
+    tags: [implicit, neural, real-time, rgbd, dense-mapping]
+    parents:
+      - name: "ORB-SLAM2"
+        relation: inspires
+    description: "First real-time neural implicit representation SLAM using a single MLP as the map"
+
+  - name: "NICE-SLAM"
+    paper: "NICE-SLAM: Neural Implicit Scalable Encoding for SLAM"
+    arxiv: "2112.12130"
+    year: 2022
+    code: "cvg/nice-slam"
+    stars: 1600
+    tags: [implicit, neural, hierarchical, rgbd, dense-mapping]
+    parents:
+      - name: "iMAP"
+        relation: extends
+    description: "Hierarchical neural implicit encoding for scalable dense SLAM with multi-level features"
+
+  - name: "Co-SLAM"
+    paper: "Co-SLAM: Joint Coordinate and Sparse Parametric Encodings for Neural Real-Time SLAM"
+    arxiv: "2304.14377"
+    year: 2023
+    code: "HengyiWang/Co-SLAM"
+    stars: 500
+    tags: [implicit, neural, real-time, hash-encoding, dense-mapping]
+    parents:
+      - name: "NICE-SLAM"
+        relation: extends
+    description: "Real-time neural SLAM combining coordinate and hash encodings for fast convergence"
+
+  - name: "Point-SLAM"
+    paper: "Point-SLAM: Dense Neural Point Cloud-based SLAM"
+    arxiv: "2304.04278"
+    year: 2023
+    code: "eriksandstroem/Point-SLAM"
+    stars: 450
+    tags: [implicit, neural, point-cloud, dense-mapping, adaptive]
+    parents:
+      - name: "NICE-SLAM"
+        relation: extends
+    description: "Neural point cloud SLAM with adaptive point density for detailed dense reconstruction"
+
+  # ===========================
+  # 3D Gaussian Splatting SLAM
+  # ===========================
+  - name: "SplaTAM"
+    paper: "SplaTAM: Splat, Track & Map 3D Gaussians for Dense RGB-D SLAM"
+    arxiv: "2312.02126"
+    year: 2024
+    code: "spla-tam/SplaTAM"
+    stars: 1500
+    tags: [gaussian-splatting, rgbd, dense-mapping, real-time, differentiable]
+    parents:
+      - name: "NICE-SLAM"
+        relation: inspires
+      - name: "3DGS"
+        relation: extends
+    description: "First 3D Gaussian Splatting SLAM for dense RGB-D tracking and mapping"
+
+  - name: "MonoGS"
+    paper: "Gaussian Splatting SLAM"
+    arxiv: "2312.06741"
+    year: 2024
+    code: "muskie82/MonoGS"
+    stars: 1100
+    tags: [gaussian-splatting, monocular, dense-mapping, real-time]
+    parents:
+      - name: "DROID-SLAM"
+        relation: inspires
+      - name: "3DGS"
+        relation: extends
+    description: "Monocular Gaussian Splatting SLAM with joint camera tracking and 3DGS map optimization"
+
+  - name: "Photo-SLAM"
+    paper: "Photo-SLAM: Real-time Simultaneous Localization and Photorealistic Mapping for Monocular, Stereo, and RGB-D Cameras"
+    arxiv: "2311.16728"
+    year: 2024
+    code: "HuajianUP/Photo-SLAM"
+    stars: 800
+    tags: [gaussian-splatting, photorealistic, real-time, hyper-primitives]
+    parents:
+      - name: "ORB-SLAM3"
+        relation: extends
+      - name: "3DGS"
+        relation: combines
+    description: "Real-time photorealistic SLAM combining ORB-SLAM3 tracking with Gaussian Splatting mapping"
+
+  - name: "GS-SLAM"
+    paper: "GS-SLAM: Dense Visual SLAM with 3D Gaussian Splatting"
+    arxiv: "2311.11700"
+    year: 2024
+    code: ""
+    stars: 0
+    tags: [gaussian-splatting, rgbd, dense-mapping, adaptive]
+    parents:
+      - name: "NICE-SLAM"
+        relation: inspires
+      - name: "3DGS"
+        relation: extends
+    description: "Dense visual SLAM with adaptive 3D Gaussian Splatting for real-time reconstruction"
+
+  # ===========================
+  # Reference: 3D Gaussian Splatting (Rendering Foundation)
+  # ===========================
+  - name: "3DGS"
+    paper: "3D Gaussian Splatting for Real-Time Radiance Field Rendering"
+    arxiv: "2308.14737"
+    year: 2023
+    code: "graphdeco-inria/gaussian-splatting"
+    stars: 15000
+    tags: [gaussian-splatting, real-time, rendering, 3d-representation]
+    parents: []
+    description: "Real-time radiance field rendering using 3D Gaussian primitives (foundation for GS-SLAM)"
