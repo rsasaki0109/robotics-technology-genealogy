@@ -1,388 +1,494 @@
 name: Image Matching & Feature Detection
-description: >
-  Evolution of image matching methods — from handcrafted features to
-  transformer-based matchers.
+description: 'Evolution of image matching methods — from handcrafted features to transformer-based
+  matchers.
+
+  '
 source_awesome_lists:
-  - https://github.com/shamangary/awesome-local-feature-matching
-
+- https://github.com/shamangary/awesome-local-feature-matching
 methods:
-  # === Classical Foundations ===
-  - name: "SIFT"
-    paper: "Distinctive Image Features from Scale-Invariant Keypoints"
-    year: 2004
-    tags: [feature-detection, handcrafted, keypoint]
-    parents: []
-    description: "Scale-invariant feature transform — the foundation of local feature matching"
-
-  - name: "ORB"
-    paper: "ORB: An efficient alternative to SIFT or SURF"
-    year: 2011
-    code: "opencv/opencv"
-    tags: [feature-detection, handcrafted, binary-descriptor, real-time]
-    parents:
-      - name: "SIFT"
-        relation: replaces
-    description: "Fast binary descriptor as an efficient alternative to SIFT"
-
-  # === Learned Features ===
-  - name: "SuperPoint"
-    paper: "SuperPoint: Self-Supervised Interest Point Detection and Description"
-    arxiv: "1712.07629"
-    year: 2018
-    code: "magicleap/SuperPointPretrainedNetwork"
-    stars: 2400
-    tags: [feature-detection, learned, self-supervised]
-    parents:
-      - name: "SIFT"
-        relation: replaces
-    description: "Self-supervised CNN for joint keypoint detection and description"
-
-  - name: "D2-Net"
-    paper: "D2-Net: A Trainable CNN for Joint Description and Detection of Local Features"
-    arxiv: "1905.03561"
-    year: 2019
-    code: "mihaidusmanu/d2-net"
-    stars: 800
-    tags: [feature-detection, learned, dense]
-    parents:
-      - name: "SIFT"
-        relation: replaces
-    description: "Dense feature detection and description in a single forward pass"
-
-  # === Matchers ===
-  - name: "SuperGlue"
-    paper: "SuperGlue: Learning Feature Matching with Graph Neural Networks"
-    arxiv: "1911.11763"
-    year: 2020
-    code: "magicleap/SuperGluePretrainedNetwork"
-    stars: 3500
-    tags: [feature-matching, graph-neural-network, attention]
-    parents:
-      - name: "SuperPoint"
-        relation: extends
-    description: "GNN-based feature matcher with attention mechanism"
-
-  - name: "LoFTR"
-    paper: "LoFTR: Detector-Free Local Feature Matching with Transformers"
-    arxiv: "2104.00680"
-    year: 2021
-    code: "zju3dv/LoFTR"
-    stars: 3200
-    tags: [feature-matching, transformer, detector-free]
-    parents:
-      - name: "SuperGlue"
-        relation: replaces
-    description: "Detector-free matching using transformers on dense features"
-
-  - name: "LightGlue"
-    paper: "LightGlue: Local Feature Matching at Light Speed"
-    arxiv: "2306.13643"
-    year: 2023
-    code: "cvg/LightGlue"
-    stars: 3500
-    tags: [feature-matching, lightweight, adaptive]
-    parents:
-      - name: "SuperGlue"
-        relation: extends
-    description: "Lightweight and adaptive feature matcher, much faster than SuperGlue"
-
-  - name: "DUSt3R"
-    paper: "DUSt3R: Geometric 3D Vision Made Easy"
-    arxiv: "2312.14132"
-    year: 2024
-    code: "naver/dust3r"
-    stars: 5500
-    tags: [3d-reconstruction, dense-matching, transformer, end-to-end]
-    parents:
-      - name: "LoFTR"
-        relation: inspires
-    description: "End-to-end dense stereo from uncalibrated image pairs"
-
-  - name: "MASt3R"
-    paper: "Grounding Image Matching in 3D with MASt3R"
-    arxiv: "2406.09756"
-    year: 2024
-    code: "naver/mast3r"
-    stars: 2500
-    tags: [3d-reconstruction, feature-matching, transformer]
-    parents:
-      - name: "DUSt3R"
-        relation: extends
-    description: "Local feature matching grounded in 3D with DUSt3R backbone"
-
-  # === Additional Classical Features ===
-  - name: "SURF"
-    paper: "SURF: Speeded Up Robust Features"
-    year: 2006
-    tags: [feature-detection, handcrafted, keypoint, real-time]
-    parents:
-      - name: "SIFT"
-        relation: extends
-    description: "Speeded-up variant of SIFT using integral images and Hessian-based detector"
-
-  - name: "BRIEF"
-    paper: "BRIEF: Binary Robust Independent Elementary Features"
-    year: 2010
-    tags: [feature-detection, handcrafted, binary-descriptor]
-    parents:
-      - name: "SIFT"
-        relation: inspires
-    description: "Compact binary descriptor using pairwise intensity comparisons"
-
-  # === Additional Learned Features ===
-  - name: "R2D2"
-    paper: "R2D2: Reliable and Repeatable Detector and Descriptor"
-    arxiv: "1906.06195"
-    year: 2019
-    code: "naver/r2d2"
-    tags: [feature-detection, learned, repeatability]
-    parents:
-      - name: "D2-Net"
-        relation: extends
-    description: "Jointly learned keypoint detector and descriptor emphasizing reliability and repeatability"
-
-  - name: "DISK"
-    paper: "DISK: Learning local features with policy gradient"
-    arxiv: "2006.13566"
-    year: 2020
-    code: "cvlab-epfl/disk"
-    tags: [feature-detection, learned, reinforcement-learning]
-    parents:
-      - name: "D2-Net"
-        relation: extends
-    description: "Local feature learning via policy gradient without non-differentiable operations"
-
-  # === Additional Matchers (LoFTR family) ===
-  - name: "Patch2Pix"
-    paper: "Patch2Pix: Epipolar-Guided Pixel-Level Correspondences"
-    arxiv: "2012.01909"
-    year: 2021
-    code: "GrumpyZhou/patch2pix"
-    tags: [feature-matching, detector-free, refinement]
-    parents:
-      - name: "LoFTR"
-        relation: extends
-    description: "Epipolar-guided pixel-level correspondence refinement for detector-free matching"
-
-  - name: "ASpanFormer"
-    paper: "ASpanFormer: Detector-Free Image Matching with Adaptive Span Transformer"
-    arxiv: "2208.14201"
-    year: 2022
-    code: "apple/ml-aspanformer"
-    tags: [feature-matching, transformer, detector-free, adaptive]
-    parents:
-      - name: "LoFTR"
-        relation: extends
-    description: "Adaptive span transformer for detector-free matching with flow-based attention spans"
-
-  - name: "QuadTree Attention"
-    paper: "QuadTree Attention for Vision Transformers"
-    arxiv: "2201.02767"
-    year: 2022
-    code: "Tangshitao/QuadTreeAttention"
-    tags: [feature-matching, transformer, efficient-attention]
-    parents:
-      - name: "LoFTR"
-        relation: extends
-    description: "Hierarchical quadtree-based attention for efficient feature matching in transformers"
-
-  - name: "TopicFM"
-    paper: "TopicFM: Robust and Interpretable Topic-Assisted Feature Matching"
-    arxiv: "2207.00328"
-    year: 2023
-    code: "TruongKhang/TopicFM"
-    tags: [feature-matching, transformer, detector-free, topic-model]
-    parents:
-      - name: "LoFTR"
-        relation: extends
-    description: "Topic-assisted feature matching combining probabilistic topic models with transformers"
-
-  - name: "EfficientLoFTR"
-    paper: "EfficientLoFTR: Semi-Dense Local Feature Matching with Sparse-Like Speed"
-    arxiv: "2403.04765"
-    year: 2024
-    code: "zju3dv/EfficientLoFTR"
-    tags: [feature-matching, transformer, detector-free, efficient]
-    parents:
-      - name: "LoFTR"
-        relation: extends
-    description: "Efficient variant of LoFTR achieving sparse-method speed with semi-dense accuracy"
-
-  # === Additional Dense / General Matchers ===
-  - name: "RoMa"
-    paper: "RoMa: Robust Dense Feature Matching"
-    arxiv: "2305.15404"
-    year: 2024
-    code: "Parskatt/RoMa"
-    tags: [feature-matching, dense-matching, robust]
-    parents:
-      - name: "LoFTR"
-        relation: extends
-    description: "Robust dense feature matching using coarse-to-fine warp and certainty estimation"
-
-  - name: "GIM"
-    paper: "GIM: Learning Generalizable Image Matcher From Internet Videos"
-    arxiv: "2402.11095"
-    year: 2024
-    code: "xuelunshen/gim"
-    tags: [feature-matching, generalization, self-supervised]
-    parents:
-      - name: "SuperGlue"
-        relation: extends
-    description: "Generalizable image matcher trained on internet videos for broad domain matching"
-
-  - name: "XFeat"
-    paper: "XFeat: Accelerated Features for Lightweight Image Matching"
-    arxiv: "2404.19174"
-    year: 2024
-    code: "verlab/accelerated_features"
-    tags: [feature-detection, lightweight, real-time, learned]
-    parents:
-      - name: "SuperPoint"
-        relation: extends
-    description: "Lightweight and accelerated learned features for real-time image matching"
-
-  - name: "OmniGlue"
-    paper: "OmniGlue: Generalizable Feature Matching with Foundation Model Guidance"
-    arxiv: "2405.12979"
-    year: 2024
-    code: "google-research/omniglue"
-    tags: [feature-matching, foundation-model, generalizable]
-    parents:
-      - name: "LightGlue"
-        relation: extends
-    description: "Generalizable feature matcher guided by foundation model priors"
-
-  # === Additional 3D-Aware Methods ===
-  - name: "MASt3R-SfM"
-    paper: "MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion"
-    arxiv: "2409.19152"
-    year: 2024
-    code: "naver/mast3r"
-    tags: [3d-reconstruction, structure-from-motion, end-to-end]
-    parents:
-      - name: "MASt3R"
-        relation: extends
-    description: "Fully-integrated SfM pipeline built on MASt3R for unconstrained reconstruction"
-
-  - name: "VGGSfM"
-    paper: "VGGSfM: Visual Geometry Grounded Deep Structure From Motion"
-    arxiv: "2312.04563"
-    year: 2024
-    code: "facebookresearch/vggsfm"
-    tags: [3d-reconstruction, structure-from-motion, end-to-end, transformer]
-    parents:
-      - name: "DUSt3R"
-        relation: inspires
-    description: "End-to-end differentiable SfM grounded in visual geometry principles"
-
-  # === 2025-2026 Methods ===
-  - name: "Steerers"
-    paper: "Steerers: A Framework for Rotation Equivariant Keypoint Descriptors"
-    arxiv: "2312.02152"
-    year: 2025
-    code: "georg-bn/rotation-steerers"
-    tags: [feature-matching, equivariant, rotation-invariant, steerable]
-    parents:
-      - name: "LightGlue"
-        relation: extends
-      - name: "SuperPoint"
-        relation: extends
-    description: "Steerable framework for rotation-equivariant keypoint descriptors and matching"
-
-  - name: "MASt3R-Grasp"
-    paper: "Generalizable Visual Grasping with MASt3R"
-    year: 2025
-    tags: [3d-reconstruction, grasping, feature-matching, robotics]
-    parents:
-      - name: "MASt3R"
-        relation: extends
-    description: "MASt3R-based 3D feature matching applied to generalizable robotic grasping"
-
-  - name: "Spann3R"
-    paper: "Spann3R: Spatial Reconstruction with Pose-Free Feed-Forward Models"
-    arxiv: "2408.16061"
-    year: 2025
-    code: "HengyiWang/spann3r"
-    stars: 1000
-    tags: [3d-reconstruction, dense-matching, feed-forward, pose-free]
-    parents:
-      - name: "DUSt3R"
-        relation: extends
-    description: "Feed-forward spatial reconstruction extending DUSt3R to incremental multi-view without pose input"
-
-  - name: "MASt3R-SLAM"
-    paper: "MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors"
-    arxiv: "2412.12392"
-    year: 2025
-    code: "rmurai0610/MASt3R-SLAM"
-    stars: 500
-    tags: [slam, dense-matching, 3d-reconstruction, real-time]
-    parents:
-      - name: "MASt3R"
-        relation: extends
-      - name: "MASt3R-SfM"
-        relation: inspires
-    description: "Real-time dense SLAM system built on MASt3R 3D matching priors"
-
-  - name: "DUSt3R+"
-    paper: "Fast, Pair-free Multi-view 3D Reconstruction with DUSt3R"
-    year: 2025
-    tags: [3d-reconstruction, dense-matching, multi-view, efficient]
-    parents:
-      - name: "DUSt3R"
-        relation: extends
-      - name: "MASt3R"
-        relation: inspires
-    description: "Efficient multi-view extension of DUSt3R eliminating pairwise computation bottleneck"
-
-  # === SfM Pipelines ===
-  - name: "COLMAP"
-    paper: "Structure-from-Motion Revisited"
-    year: 2016
-    code: "colmap/colmap"
-    stars: 7500
-    tags: [structure-from-motion, multi-view-stereo, 3d-reconstruction, classical]
-    parents:
-      - name: "SIFT"
-        relation: inspires
-    description: "Dominant general-purpose structure-from-motion and multi-view stereo pipeline"
-
-  - name: "hloc"
-    paper: "Hierarchical Localization: From Coarse to Fine"
-    arxiv: "1812.03506"
-    year: 2019
-    code: "cvg/Hierarchical-Localization"
-    stars: 3500
-    tags: [localization, hierarchical, structure-from-motion, toolbox]
-    parents:
-      - name: "COLMAP"
-        relation: extends
-      - name: "SuperPoint"
-        relation: combines
-    description: "Hierarchical localization toolbox combining retrieval, local features, and COLMAP"
-
-  # === Additional Dense Matchers ===
-  - name: "CroCo"
-    paper: "CroCo: Self-Supervised Pre-training for 3D Vision Tasks by Cross-View Completion"
-    arxiv: "2210.10716"
-    year: 2022
-    code: "naver/croco"
-    stars: 700
-    tags: [self-supervised, pretraining, cross-view, 3d-vision]
-    parents:
-      - name: "LoFTR"
-        relation: inspires
-    description: "Cross-view completion pretraining for 3D vision tasks including matching and reconstruction"
-
-  - name: "DKM"
-    paper: "DKM: Dense Kernelized Feature Matching for Geometry Estimation"
-    arxiv: "2202.00667"
-    year: 2023
-    code: "Parskatt/DKM"
-    stars: 500
-    tags: [feature-matching, dense-matching, kernelized, geometry]
-    parents:
-      - name: "LoFTR"
-        relation: extends
-    description: "Dense kernelized feature matching using global correlation and kernel regression for geometry estimation"
+- name: SIFT
+  paper: Distinctive Image Features from Scale-Invariant Keypoints
+  year: 2004
+  tags:
+  - feature-detection
+  - handcrafted
+  - keypoint
+  parents: []
+  description: Scale-invariant feature transform — the foundation of local feature
+    matching
+- name: ORB
+  paper: 'ORB: An efficient alternative to SIFT or SURF'
+  year: 2011
+  code: opencv/opencv
+  tags:
+  - feature-detection
+  - handcrafted
+  - binary-descriptor
+  - real-time
+  parents:
+  - name: SIFT
+    relation: replaces
+  description: Fast binary descriptor as an efficient alternative to SIFT
+  stars: 86680
+- name: SuperPoint
+  paper: 'SuperPoint: Self-Supervised Interest Point Detection and Description'
+  arxiv: '1712.07629'
+  year: 2018
+  code: magicleap/SuperPointPretrainedNetwork
+  stars: 2151
+  tags:
+  - feature-detection
+  - learned
+  - self-supervised
+  parents:
+  - name: SIFT
+    relation: replaces
+  description: Self-supervised CNN for joint keypoint detection and description
+- name: D2-Net
+  paper: 'D2-Net: A Trainable CNN for Joint Description and Detection of Local Features'
+  arxiv: '1905.03561'
+  year: 2019
+  code: mihaidusmanu/d2-net
+  stars: 846
+  tags:
+  - feature-detection
+  - learned
+  - dense
+  parents:
+  - name: SIFT
+    relation: replaces
+  description: Dense feature detection and description in a single forward pass
+- name: SuperGlue
+  paper: 'SuperGlue: Learning Feature Matching with Graph Neural Networks'
+  arxiv: '1911.11763'
+  year: 2020
+  code: magicleap/SuperGluePretrainedNetwork
+  stars: 3969
+  tags:
+  - feature-matching
+  - graph-neural-network
+  - attention
+  parents:
+  - name: SuperPoint
+    relation: extends
+  description: GNN-based feature matcher with attention mechanism
+- name: LoFTR
+  paper: 'LoFTR: Detector-Free Local Feature Matching with Transformers'
+  arxiv: '2104.00680'
+  year: 2021
+  code: zju3dv/LoFTR
+  stars: 2840
+  tags:
+  - feature-matching
+  - transformer
+  - detector-free
+  parents:
+  - name: SuperGlue
+    relation: replaces
+  description: Detector-free matching using transformers on dense features
+- name: LightGlue
+  paper: 'LightGlue: Local Feature Matching at Light Speed'
+  arxiv: '2306.13643'
+  year: 2023
+  code: cvg/LightGlue
+  stars: 4430
+  tags:
+  - feature-matching
+  - lightweight
+  - adaptive
+  parents:
+  - name: SuperGlue
+    relation: extends
+  description: Lightweight and adaptive feature matcher, much faster than SuperGlue
+- name: DUSt3R
+  paper: 'DUSt3R: Geometric 3D Vision Made Easy'
+  arxiv: '2312.14132'
+  year: 2024
+  code: naver/dust3r
+  stars: 7024
+  tags:
+  - 3d-reconstruction
+  - dense-matching
+  - transformer
+  - end-to-end
+  parents:
+  - name: LoFTR
+    relation: inspires
+  description: End-to-end dense stereo from uncalibrated image pairs
+- name: MASt3R
+  paper: Grounding Image Matching in 3D with MASt3R
+  arxiv: '2406.09756'
+  year: 2024
+  code: naver/mast3r
+  stars: 2796
+  tags:
+  - 3d-reconstruction
+  - feature-matching
+  - transformer
+  parents:
+  - name: DUSt3R
+    relation: extends
+  description: Local feature matching grounded in 3D with DUSt3R backbone
+- name: SURF
+  paper: 'SURF: Speeded Up Robust Features'
+  year: 2006
+  tags:
+  - feature-detection
+  - handcrafted
+  - keypoint
+  - real-time
+  parents:
+  - name: SIFT
+    relation: extends
+  description: Speeded-up variant of SIFT using integral images and Hessian-based
+    detector
+- name: BRIEF
+  paper: 'BRIEF: Binary Robust Independent Elementary Features'
+  year: 2010
+  tags:
+  - feature-detection
+  - handcrafted
+  - binary-descriptor
+  parents:
+  - name: SIFT
+    relation: inspires
+  description: Compact binary descriptor using pairwise intensity comparisons
+- name: R2D2
+  paper: 'R2D2: Reliable and Repeatable Detector and Descriptor'
+  arxiv: '1906.06195'
+  year: 2019
+  code: naver/r2d2
+  tags:
+  - feature-detection
+  - learned
+  - repeatability
+  parents:
+  - name: D2-Net
+    relation: extends
+  description: Jointly learned keypoint detector and descriptor emphasizing reliability
+    and repeatability
+  stars: 518
+- name: DISK
+  paper: 'DISK: Learning local features with policy gradient'
+  arxiv: '2006.13566'
+  year: 2020
+  code: cvlab-epfl/disk
+  tags:
+  - feature-detection
+  - learned
+  - reinforcement-learning
+  parents:
+  - name: D2-Net
+    relation: extends
+  description: Local feature learning via policy gradient without non-differentiable
+    operations
+  stars: 371
+- name: Patch2Pix
+  paper: 'Patch2Pix: Epipolar-Guided Pixel-Level Correspondences'
+  arxiv: '2012.01909'
+  year: 2021
+  code: GrumpyZhou/patch2pix
+  tags:
+  - feature-matching
+  - detector-free
+  - refinement
+  parents:
+  - name: LoFTR
+    relation: extends
+  description: Epipolar-guided pixel-level correspondence refinement for detector-free
+    matching
+  stars: 294
+- name: ASpanFormer
+  paper: 'ASpanFormer: Detector-Free Image Matching with Adaptive Span Transformer'
+  arxiv: '2208.14201'
+  year: 2022
+  code: apple/ml-aspanformer
+  tags:
+  - feature-matching
+  - transformer
+  - detector-free
+  - adaptive
+  parents:
+  - name: LoFTR
+    relation: extends
+  description: Adaptive span transformer for detector-free matching with flow-based
+    attention spans
+  stars: 245
+- name: QuadTree Attention
+  paper: QuadTree Attention for Vision Transformers
+  arxiv: '2201.02767'
+  year: 2022
+  code: Tangshitao/QuadTreeAttention
+  tags:
+  - feature-matching
+  - transformer
+  - efficient-attention
+  parents:
+  - name: LoFTR
+    relation: extends
+  description: Hierarchical quadtree-based attention for efficient feature matching
+    in transformers
+  stars: 366
+- name: TopicFM
+  paper: 'TopicFM: Robust and Interpretable Topic-Assisted Feature Matching'
+  arxiv: '2207.00328'
+  year: 2023
+  code: TruongKhang/TopicFM
+  tags:
+  - feature-matching
+  - transformer
+  - detector-free
+  - topic-model
+  parents:
+  - name: LoFTR
+    relation: extends
+  description: Topic-assisted feature matching combining probabilistic topic models
+    with transformers
+  stars: 117
+- name: EfficientLoFTR
+  paper: 'EfficientLoFTR: Semi-Dense Local Feature Matching with Sparse-Like Speed'
+  arxiv: '2403.04765'
+  year: 2024
+  code: zju3dv/EfficientLoFTR
+  tags:
+  - feature-matching
+  - transformer
+  - detector-free
+  - efficient
+  parents:
+  - name: LoFTR
+    relation: extends
+  description: Efficient variant of LoFTR achieving sparse-method speed with semi-dense
+    accuracy
+  stars: 967
+- name: RoMa
+  paper: 'RoMa: Robust Dense Feature Matching'
+  arxiv: '2305.15404'
+  year: 2024
+  code: Parskatt/RoMa
+  tags:
+  - feature-matching
+  - dense-matching
+  - robust
+  parents:
+  - name: LoFTR
+    relation: extends
+  description: Robust dense feature matching using coarse-to-fine warp and certainty
+    estimation
+  stars: 1167
+- name: GIM
+  paper: 'GIM: Learning Generalizable Image Matcher From Internet Videos'
+  arxiv: '2402.11095'
+  year: 2024
+  code: xuelunshen/gim
+  tags:
+  - feature-matching
+  - generalization
+  - self-supervised
+  parents:
+  - name: SuperGlue
+    relation: extends
+  description: Generalizable image matcher trained on internet videos for broad domain
+    matching
+  stars: 875
+- name: XFeat
+  paper: 'XFeat: Accelerated Features for Lightweight Image Matching'
+  arxiv: '2404.19174'
+  year: 2024
+  code: verlab/accelerated_features
+  tags:
+  - feature-detection
+  - lightweight
+  - real-time
+  - learned
+  parents:
+  - name: SuperPoint
+    relation: extends
+  description: Lightweight and accelerated learned features for real-time image matching
+  stars: 1567
+- name: OmniGlue
+  paper: 'OmniGlue: Generalizable Feature Matching with Foundation Model Guidance'
+  arxiv: '2405.12979'
+  year: 2024
+  code: google-research/omniglue
+  tags:
+  - feature-matching
+  - foundation-model
+  - generalizable
+  parents:
+  - name: LightGlue
+    relation: extends
+  description: Generalizable feature matcher guided by foundation model priors
+  stars: 705
+- name: MASt3R-SfM
+  paper: 'MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion'
+  arxiv: '2409.19152'
+  year: 2024
+  code: naver/mast3r
+  tags:
+  - 3d-reconstruction
+  - structure-from-motion
+  - end-to-end
+  parents:
+  - name: MASt3R
+    relation: extends
+  description: Fully-integrated SfM pipeline built on MASt3R for unconstrained reconstruction
+  stars: 2796
+- name: VGGSfM
+  paper: 'VGGSfM: Visual Geometry Grounded Deep Structure From Motion'
+  arxiv: '2312.04563'
+  year: 2024
+  code: facebookresearch/vggsfm
+  tags:
+  - 3d-reconstruction
+  - structure-from-motion
+  - end-to-end
+  - transformer
+  parents:
+  - name: DUSt3R
+    relation: inspires
+  description: End-to-end differentiable SfM grounded in visual geometry principles
+  stars: 1369
+- name: Steerers
+  paper: 'Steerers: A Framework for Rotation Equivariant Keypoint Descriptors'
+  arxiv: '2312.02152'
+  year: 2025
+  code: georg-bn/rotation-steerers
+  tags:
+  - feature-matching
+  - equivariant
+  - rotation-invariant
+  - steerable
+  parents:
+  - name: LightGlue
+    relation: extends
+  - name: SuperPoint
+    relation: extends
+  description: Steerable framework for rotation-equivariant keypoint descriptors and
+    matching
+  stars: 93
+- name: MASt3R-Grasp
+  paper: Generalizable Visual Grasping with MASt3R
+  year: 2025
+  tags:
+  - 3d-reconstruction
+  - grasping
+  - feature-matching
+  - robotics
+  parents:
+  - name: MASt3R
+    relation: extends
+  description: MASt3R-based 3D feature matching applied to generalizable robotic grasping
+- name: Spann3R
+  paper: 'Spann3R: Spatial Reconstruction with Pose-Free Feed-Forward Models'
+  arxiv: '2408.16061'
+  year: 2025
+  code: HengyiWang/spann3r
+  stars: 1121
+  tags:
+  - 3d-reconstruction
+  - dense-matching
+  - feed-forward
+  - pose-free
+  parents:
+  - name: DUSt3R
+    relation: extends
+  description: Feed-forward spatial reconstruction extending DUSt3R to incremental
+    multi-view without pose input
+- name: MASt3R-SLAM
+  paper: 'MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors'
+  arxiv: '2412.12392'
+  year: 2025
+  code: rmurai0610/MASt3R-SLAM
+  stars: 2836
+  tags:
+  - slam
+  - dense-matching
+  - 3d-reconstruction
+  - real-time
+  parents:
+  - name: MASt3R
+    relation: extends
+  - name: MASt3R-SfM
+    relation: inspires
+  description: Real-time dense SLAM system built on MASt3R 3D matching priors
+- name: DUSt3R+
+  paper: Fast, Pair-free Multi-view 3D Reconstruction with DUSt3R
+  year: 2025
+  tags:
+  - 3d-reconstruction
+  - dense-matching
+  - multi-view
+  - efficient
+  parents:
+  - name: DUSt3R
+    relation: extends
+  - name: MASt3R
+    relation: inspires
+  description: Efficient multi-view extension of DUSt3R eliminating pairwise computation
+    bottleneck
+- name: COLMAP
+  paper: Structure-from-Motion Revisited
+  year: 2016
+  code: colmap/colmap
+  stars: 11181
+  tags:
+  - structure-from-motion
+  - multi-view-stereo
+  - 3d-reconstruction
+  - classical
+  parents:
+  - name: SIFT
+    relation: inspires
+  description: Dominant general-purpose structure-from-motion and multi-view stereo
+    pipeline
+- name: hloc
+  paper: 'Hierarchical Localization: From Coarse to Fine'
+  arxiv: '1812.03506'
+  year: 2019
+  code: cvg/Hierarchical-Localization
+  stars: 4000
+  tags:
+  - localization
+  - hierarchical
+  - structure-from-motion
+  - toolbox
+  parents:
+  - name: COLMAP
+    relation: extends
+  - name: SuperPoint
+    relation: combines
+  description: Hierarchical localization toolbox combining retrieval, local features,
+    and COLMAP
+- name: CroCo
+  paper: 'CroCo: Self-Supervised Pre-training for 3D Vision Tasks by Cross-View Completion'
+  arxiv: '2210.10716'
+  year: 2022
+  code: naver/croco
+  stars: 494
+  tags:
+  - self-supervised
+  - pretraining
+  - cross-view
+  - 3d-vision
+  parents:
+  - name: LoFTR
+    relation: inspires
+  description: Cross-view completion pretraining for 3D vision tasks including matching
+    and reconstruction
+- name: DKM
+  paper: 'DKM: Dense Kernelized Feature Matching for Geometry Estimation'
+  arxiv: '2202.00667'
+  year: 2023
+  code: Parskatt/DKM
+  stars: 475
+  tags:
+  - feature-matching
+  - dense-matching
+  - kernelized
+  - geometry
+  parents:
+  - name: LoFTR
+    relation: extends
+  description: Dense kernelized feature matching using global correlation and kernel
+    regression for geometry estimation

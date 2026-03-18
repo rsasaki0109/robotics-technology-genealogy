@@ -1,429 +1,544 @@
 name: End-to-End Autonomous Driving
-description: >
-  From the pioneering ALVINN network to modern vision-language-action models
-  for driving — the complete lineage of end-to-end autonomous driving methods
+description: 'From the pioneering ALVINN network to modern vision-language-action
+  models for driving — the complete lineage of end-to-end autonomous driving methods
   that learn to drive directly from sensor inputs to control outputs.
+
+  '
 source_awesome_lists:
-  - https://github.com/opendrivelab/End-to-end-Autonomous-Driving
-  - https://github.com/OpenDriveLab/DriveLM
-  - https://github.com/zhangyp15/BEVFormerV2
-
+- https://github.com/opendrivelab/End-to-end-Autonomous-Driving
+- https://github.com/OpenDriveLab/DriveLM
+- https://github.com/zhangyp15/BEVFormerV2
 methods:
-  # ===========================
-  # Pioneering Works
-  # ===========================
-  - name: "ALVINN"
-    paper: "ALVINN: An Autonomous Land Vehicle In a Neural Network"
-    arxiv: ""
-    year: 1989
-    code: ""
-    stars: 0
-    open_source: closed
-    license: ""
-    tags: [pioneer, neural-network, steering, end-to-end]
-    parents: []
-    description: "First neural network approach to end-to-end driving, mapping camera images directly to steering commands"
-
-  - name: "PilotNet"
-    paper: "End to End Learning for Self-Driving Cars"
-    arxiv: "1604.07316"
-    year: 2016
-    code: ""
-    stars: 0
-    open_source: closed
-    license: ""
-    tags: [cnn, nvidia, steering, end-to-end, imitation-learning]
-    parents:
-      - name: "ALVINN"
-        relation: extends
-    description: "NVIDIA's CNN mapping front camera images to steering angles, reviving end-to-end driving with deep learning"
-
-  - name: "ChauffeurNet"
-    paper: "ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the Worst"
-    arxiv: "1812.03079"
-    year: 2019
-    code: ""
-    stars: 0
-    open_source: closed
-    license: ""
-    tags: [imitation-learning, waymo, mid-to-mid, data-augmentation]
-    parents:
-      - name: "PilotNet"
-        relation: extends
-    description: "Waymo's imitation learning driving agent with exposure to synthesized worst-case scenarios for robustness"
-
-  # ===========================
-  # CARLA-Era End-to-End Methods
-  # ===========================
-  - name: "LBC"
-    paper: "Learning by Cheating"
-    arxiv: "1912.12294"
-    year: 2020
-    code: "dotchen/LearningByCheating"
-    stars: 600
-    open_source: open
-    license: "MIT"
-    tags: [privileged-learning, distillation, carla, imitation-learning]
-    parents:
-      - name: "ChauffeurNet"
-        relation: inspires
-    description: "Two-stage training: privileged agent learns from ground truth, then distilled to vision-only student"
-
-  - name: "Roach"
-    paper: "End-to-End Urban Driving by Imitating a Reinforcement Learning Coach"
-    arxiv: "2108.08265"
-    year: 2021
-    code: "zhejz/carla-roach"
-    stars: 500
-    open_source: open
-    license: ""
-    tags: [reinforcement-learning, imitation-learning, distillation, carla]
-    parents:
-      - name: "LBC"
-        relation: extends
-    description: "RL-trained privileged coach distilled into a vision-based student for robust end-to-end urban driving"
-
-  - name: "MILE"
-    paper: "Model-Based Imitation Learning for Urban Driving"
-    arxiv: "2210.07729"
-    year: 2022
-    code: "wayveai/mile"
-    stars: 400
-    open_source: open
-    license: ""
-    tags: [model-based, imitation-learning, world-model, carla]
-    parents:
-      - name: "LBC"
-        relation: inspires
-      - name: "Roach"
-        relation: inspires
-    description: "Model-based imitation learning jointly training a world model and driving policy for urban scenarios"
-
-  - name: "ST-P3"
-    paper: "ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature Learning"
-    arxiv: "2207.07601"
-    year: 2022
-    code: "OpenDriveLab/ST-P3"
-    stars: 400
-    open_source: open
-    license: ""
-    tags: [spatial-temporal, end-to-end, prediction, planning, nuscenes]
-    parents:
-      - name: "PilotNet"
-        relation: extends
-      - name: "ChauffeurNet"
-        relation: inspires
-    description: "End-to-end driving with spatial-temporal feature learning bridging perception, prediction, and planning"
-
-  - name: "TransFuser"
-    paper: "Multi-Modal Fusion Transformer for End-to-End Autonomous Driving"
-    arxiv: "2104.09224"
-    year: 2022
-    code: "autonomousvision/transfuser"
-    stars: 1100
-    open_source: open
-    license: ""
-    tags: [transformer, multi-modal, fusion, carla, lidar-camera]
-    parents:
-      - name: "LBC"
-        relation: extends
-      - name: "PilotNet"
-        relation: extends
-    description: "Transformer-based fusion of camera and LiDAR features for end-to-end driving in CARLA"
-
-  - name: "InterFuser"
-    paper: "Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer"
-    arxiv: "2207.14024"
-    year: 2022
-    code: "opendilab/InterFuser"
-    stars: 500
-    open_source: open
-    license: ""
-    tags: [transformer, safety, interpretable, multi-sensor, carla]
-    parents:
-      - name: "TransFuser"
-        relation: extends
-    description: "Interpretable sensor fusion transformer with safety-enhanced planning for autonomous driving"
-
-  - name: "TCP"
-    paper: "TCP: Trajectory-Conditioned Policy for Planning via Imitation Learning"
-    arxiv: "2206.08129"
-    year: 2023
-    code: "OpenDriveLab/TCP"
-    stars: 400
-    open_source: open
-    license: ""
-    tags: [trajectory-conditioned, imitation-learning, carla, planning]
-    parents:
-      - name: "TransFuser"
-        relation: extends
-      - name: "LBC"
-        relation: extends
-    description: "Combines trajectory planning and direct control via trajectory-conditioned policy learning"
-
-  - name: "ThinkTwice"
-    paper: "Think Twice before Driving: Towards Scalable Decoders for End-to-End Autonomous Driving"
-    arxiv: "2305.06242"
-    year: 2023
-    code: "OpenDriveLab/ThinkTwice"
-    stars: 300
-    open_source: open
-    license: ""
-    tags: [iterative-refinement, decoder, scalable, carla]
-    parents:
-      - name: "TCP"
-        relation: extends
-      - name: "TransFuser"
-        relation: extends
-    description: "Iteratively refines driving plans through multiple decoding passes for more robust control"
-
-  # ===========================
-  # Unified / nuScenes-Era Methods
-  # ===========================
-  - name: "UniAD"
-    paper: "Planning-oriented Autonomous Driving"
-    arxiv: "2212.10156"
-    year: 2023
-    code: "OpenDriveLab/UniAD"
-    stars: 5000
-    open_source: open
-    license: "Apache-2.0"
-    tags: [unified, multi-task, transformer, planning-oriented, nuscenes]
-    parents:
-      - name: "TransFuser"
-        relation: extends
-      - name: "ChauffeurNet"
-        relation: inspires
-    description: "Unified framework connecting detection, tracking, mapping, prediction, and planning in one network"
-
-  - name: "VAD"
-    paper: "VAD: Vectorized Scene Representation for Efficient Autonomous Driving"
-    arxiv: "2303.12077"
-    year: 2023
-    code: "hustvl/VAD"
-    stars: 1200
-    open_source: open
-    license: "Apache-2.0"
-    tags: [vectorized, efficient, end-to-end, nuscenes]
-    parents:
-      - name: "UniAD"
-        relation: extends
-    description: "Replaces dense BEV representations with vectorized scene modeling for efficient end-to-end driving"
-
-  - name: "GenAD"
-    paper: "GenAD: Generalized Predictive Model for Autonomous Driving"
-    arxiv: "2403.09630"
-    year: 2024
-    code: "OpenDriveLab/GenAD"
-    stars: 500
-    open_source: open
-    license: ""
-    tags: [generative, world-model, prediction, end-to-end]
-    parents:
-      - name: "VAD"
-        relation: extends
-      - name: "UniAD"
-        relation: extends
-    description: "Generalized predictive model combining future scene generation with planning for autonomous driving"
-
-  - name: "PARA-Drive"
-    paper: "PARA-Drive: Parallelized Architecture for Real-time Autonomous Driving"
-    arxiv: "2406.12742"
-    year: 2024
-    code: "wljungbergh/PARA-Drive"
-    stars: 100
-    open_source: open
-    license: ""
-    tags: [parallel, real-time, efficient, end-to-end]
-    parents:
-      - name: "UniAD"
-        relation: extends
-    description: "Parallelized architecture decoupling perception tasks for real-time end-to-end autonomous driving"
-
-  - name: "Bench2Drive"
-    paper: "Bench2Drive: Towards Multi-Ability Benchmarking of Closed-Loop End-to-End Autonomous Driving"
-    arxiv: "2406.03877"
-    year: 2024
-    code: "Thinklab-SJTU/Bench2Drive"
-    stars: 500
-    open_source: open
-    license: "Apache-2.0"
-    tags: [benchmark, closed-loop, carla, evaluation, multi-ability]
-    parents:
-      - name: "UniAD"
-        relation: inspires
-      - name: "TCP"
-        relation: inspires
-    description: "Comprehensive closed-loop benchmark evaluating multi-ability end-to-end driving in CARLA simulator"
-
-  # ===========================
-  # Vision-Language Driving Models
-  # ===========================
-  - name: "DriveVLM"
-    paper: "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
-    arxiv: "2402.12289"
-    year: 2024
-    code: ""
-    stars: 0
-    open_source: partial
-    license: ""
-    tags: [vlm, scene-understanding, chain-of-thought, language, driving]
-    parents:
-      - name: "UniAD"
-        relation: extends
-    description: "Integrates large vision-language models for scene understanding and chain-of-thought reasoning in driving"
-
-  - name: "Senna"
-    paper: "Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving"
-    arxiv: "2410.22313"
-    year: 2024
-    code: "hustvl/Senna"
-    stars: 300
-    open_source: open
-    license: ""
-    tags: [vlm, end-to-end, bridge, planning, language-grounded]
-    parents:
-      - name: "DriveVLM"
-        relation: extends
-      - name: "VAD"
-        relation: extends
-    description: "Bridges VLMs with end-to-end driving by integrating language reasoning into the planning pipeline"
-
-  - name: "GAIA-1"
-    paper: "GAIA-1: A Generative World Model for Autonomous Driving"
-    arxiv: "2309.17080"
-    year: 2023
-    code: ""
-    stars: 0
-    open_source: closed
-    license: ""
-    tags: [world-model, generative, video-prediction, wayve]
-    parents:
-      - name: "MILE"
-        relation: extends
-    description: "Wayve's generative world model predicting driving video and control for autonomous driving"
-
-  - name: "OccWorld"
-    paper: "OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving"
-    arxiv: "2311.16038"
-    year: 2024
-    code: "wzzheng/OccWorld"
-    stars: 500
-    open_source: open
-    license: ""
-    tags: [occupancy, world-model, 3d, prediction, autonomous-driving]
-    parents:
-      - name: "UniAD"
-        relation: inspires
-      - name: "GAIA-1"
-        relation: inspires
-    description: "3D occupancy-based world model predicting future scenes for autonomous driving planning"
-
-  - name: "DriveDreamer"
-    paper: "DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving"
-    arxiv: "2309.09777"
-    year: 2024
-    code: "JeffWang987/DriveDreamer"
-    stars: 500
-    open_source: open
-    license: ""
-    tags: [world-model, video-generation, simulation, driving]
-    parents:
-      - name: "UniAD"
-        relation: inspires
-    description: "World model generating realistic driving videos for data augmentation and planning validation"
-
-  # ===========================
-  # 2025-2026 Methods
-  # ===========================
-  - name: "LMDrive"
-    paper: "LMDrive: Closed-Loop End-to-End Driving with Large Language Models"
-    arxiv: "2312.07488"
-    year: 2024
-    code: "opendilab/LMDrive"
-    stars: 700
-    open_source: open
-    license: ""
-    tags: [llm, closed-loop, language, instruction, end-to-end]
-    parents:
-      - name: "DriveVLM"
-        relation: inspires
-      - name: "TCP"
-        relation: extends
-    description: "Closed-loop end-to-end driving agent that follows natural language navigation instructions via LLM reasoning"
-
-  - name: "DriveGPT"
-    paper: "DriveGPT4: Interpretable End-to-end Autonomous Driving via Large Language Model"
-    arxiv: "2310.01412"
-    year: 2024
-    code: ""
-    stars: 0
-    open_source: closed
-    license: ""
-    tags: [llm, interpretable, end-to-end, chain-of-thought, driving]
-    parents:
-      - name: "DriveVLM"
-        relation: inspires
-    description: "LLM-based driving agent generating interpretable explanations alongside control predictions"
-
-  - name: "DiffusionDrive"
-    paper: "DiffusionDrive: Truncated Diffusion Model for End-to-End Autonomous Driving"
-    arxiv: "2411.15139"
-    year: 2024
-    code: "hustvl/DiffusionDrive"
-    stars: 300
-    open_source: open
-    license: ""
-    tags: [diffusion, multi-modal, truncated, real-time, end-to-end]
-    parents:
-      - name: "VAD"
-        relation: extends
-    description: "Truncated diffusion model generating diverse multi-modal driving trajectories in real time"
-
-  - name: "SparseDrive"
-    paper: "SparseDrive: End-to-End Autonomous Driving via Sparse Scene Representation"
-    arxiv: "2405.19620"
-    year: 2025
-    code: "swc-17/SparseDrive"
-    stars: 400
-    open_source: open
-    license: ""
-    tags: [sparse, efficient, end-to-end, scene-representation]
-    parents:
-      - name: "UniAD"
-        relation: extends
-      - name: "VAD"
-        relation: extends
-    description: "Fully sparse end-to-end driving framework replacing dense BEV with sparse scene representations"
-
-  - name: "DriveWorld"
-    paper: "DriveWorld: 4D Pre-trained Scene Understanding via World Models for Autonomous Driving"
-    arxiv: "2405.04390"
-    year: 2025
-    code: ""
-    stars: 0
-    open_source: open
-    license: ""
-    tags: [world-model, 4d, pre-training, scene-understanding, end-to-end]
-    parents:
-      - name: "DriveDreamer"
-        relation: extends
-      - name: "GenAD"
-        relation: extends
-    description: "4D pre-trained world model for spatiotemporal scene understanding and end-to-end driving"
-
-  - name: "VLM-AD"
-    paper: "Towards Vision-Language Models for Autonomous Driving"
-    arxiv: ""
-    year: 2025
-    code: ""
-    stars: 0
-    open_source: open
-    license: ""
-    tags: [vlm, foundation-model, end-to-end, generalist, driving]
-    parents:
-      - name: "Senna"
-        relation: extends
-      - name: "DriveVLM"
-        relation: extends
-    description: "Next-generation VLM-based driving agents unifying perception, reasoning, and action in a single model"
+- name: ALVINN
+  paper: 'ALVINN: An Autonomous Land Vehicle In a Neural Network'
+  arxiv: ''
+  year: 1989
+  code: ''
+  stars: 0
+  open_source: closed
+  license: ''
+  tags:
+  - pioneer
+  - neural-network
+  - steering
+  - end-to-end
+  parents: []
+  description: First neural network approach to end-to-end driving, mapping camera
+    images directly to steering commands
+- name: PilotNet
+  paper: End to End Learning for Self-Driving Cars
+  arxiv: '1604.07316'
+  year: 2016
+  code: ''
+  stars: 0
+  open_source: closed
+  license: ''
+  tags:
+  - cnn
+  - nvidia
+  - steering
+  - end-to-end
+  - imitation-learning
+  parents:
+  - name: ALVINN
+    relation: extends
+  description: NVIDIA's CNN mapping front camera images to steering angles, reviving
+    end-to-end driving with deep learning
+- name: ChauffeurNet
+  paper: 'ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the
+    Worst'
+  arxiv: '1812.03079'
+  year: 2019
+  code: ''
+  stars: 0
+  open_source: closed
+  license: ''
+  tags:
+  - imitation-learning
+  - waymo
+  - mid-to-mid
+  - data-augmentation
+  parents:
+  - name: PilotNet
+    relation: extends
+  description: Waymo's imitation learning driving agent with exposure to synthesized
+    worst-case scenarios for robustness
+- name: LBC
+  paper: Learning by Cheating
+  arxiv: '1912.12294'
+  year: 2020
+  code: dotchen/LearningByCheating
+  stars: 334
+  open_source: open
+  license: MIT
+  tags:
+  - privileged-learning
+  - distillation
+  - carla
+  - imitation-learning
+  parents:
+  - name: ChauffeurNet
+    relation: inspires
+  description: 'Two-stage training: privileged agent learns from ground truth, then
+    distilled to vision-only student'
+- name: Roach
+  paper: End-to-End Urban Driving by Imitating a Reinforcement Learning Coach
+  arxiv: '2108.08265'
+  year: 2021
+  code: zhejz/carla-roach
+  stars: 386
+  open_source: open
+  license: ''
+  tags:
+  - reinforcement-learning
+  - imitation-learning
+  - distillation
+  - carla
+  parents:
+  - name: LBC
+    relation: extends
+  description: RL-trained privileged coach distilled into a vision-based student for
+    robust end-to-end urban driving
+- name: MILE
+  paper: Model-Based Imitation Learning for Urban Driving
+  arxiv: '2210.07729'
+  year: 2022
+  code: wayveai/mile
+  stars: 423
+  open_source: open
+  license: ''
+  tags:
+  - model-based
+  - imitation-learning
+  - world-model
+  - carla
+  parents:
+  - name: LBC
+    relation: inspires
+  - name: Roach
+    relation: inspires
+  description: Model-based imitation learning jointly training a world model and driving
+    policy for urban scenarios
+- name: ST-P3
+  paper: 'ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature
+    Learning'
+  arxiv: '2207.07601'
+  year: 2022
+  code: OpenDriveLab/ST-P3
+  stars: 427
+  open_source: open
+  license: ''
+  tags:
+  - spatial-temporal
+  - end-to-end
+  - prediction
+  - planning
+  - nuscenes
+  parents:
+  - name: PilotNet
+    relation: extends
+  - name: ChauffeurNet
+    relation: inspires
+  description: End-to-end driving with spatial-temporal feature learning bridging
+    perception, prediction, and planning
+- name: TransFuser
+  paper: Multi-Modal Fusion Transformer for End-to-End Autonomous Driving
+  arxiv: '2104.09224'
+  year: 2022
+  code: autonomousvision/transfuser
+  stars: 1523
+  open_source: open
+  license: ''
+  tags:
+  - transformer
+  - multi-modal
+  - fusion
+  - carla
+  - lidar-camera
+  parents:
+  - name: LBC
+    relation: extends
+  - name: PilotNet
+    relation: extends
+  description: Transformer-based fusion of camera and LiDAR features for end-to-end
+    driving in CARLA
+- name: InterFuser
+  paper: Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer
+  arxiv: '2207.14024'
+  year: 2022
+  code: opendilab/InterFuser
+  stars: 634
+  open_source: open
+  license: ''
+  tags:
+  - transformer
+  - safety
+  - interpretable
+  - multi-sensor
+  - carla
+  parents:
+  - name: TransFuser
+    relation: extends
+  description: Interpretable sensor fusion transformer with safety-enhanced planning
+    for autonomous driving
+- name: TCP
+  paper: 'TCP: Trajectory-Conditioned Policy for Planning via Imitation Learning'
+  arxiv: '2206.08129'
+  year: 2023
+  code: OpenDriveLab/TCP
+  stars: 475
+  open_source: open
+  license: ''
+  tags:
+  - trajectory-conditioned
+  - imitation-learning
+  - carla
+  - planning
+  parents:
+  - name: TransFuser
+    relation: extends
+  - name: LBC
+    relation: extends
+  description: Combines trajectory planning and direct control via trajectory-conditioned
+    policy learning
+- name: ThinkTwice
+  paper: 'Think Twice before Driving: Towards Scalable Decoders for End-to-End Autonomous
+    Driving'
+  arxiv: '2305.06242'
+  year: 2023
+  code: OpenDriveLab/ThinkTwice
+  stars: 252
+  open_source: open
+  license: ''
+  tags:
+  - iterative-refinement
+  - decoder
+  - scalable
+  - carla
+  parents:
+  - name: TCP
+    relation: extends
+  - name: TransFuser
+    relation: extends
+  description: Iteratively refines driving plans through multiple decoding passes
+    for more robust control
+- name: UniAD
+  paper: Planning-oriented Autonomous Driving
+  arxiv: '2212.10156'
+  year: 2023
+  code: OpenDriveLab/UniAD
+  stars: 4527
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - unified
+  - multi-task
+  - transformer
+  - planning-oriented
+  - nuscenes
+  parents:
+  - name: TransFuser
+    relation: extends
+  - name: ChauffeurNet
+    relation: inspires
+  description: Unified framework connecting detection, tracking, mapping, prediction,
+    and planning in one network
+- name: VAD
+  paper: 'VAD: Vectorized Scene Representation for Efficient Autonomous Driving'
+  arxiv: '2303.12077'
+  year: 2023
+  code: hustvl/VAD
+  stars: 1260
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - vectorized
+  - efficient
+  - end-to-end
+  - nuscenes
+  parents:
+  - name: UniAD
+    relation: extends
+  description: Replaces dense BEV representations with vectorized scene modeling for
+    efficient end-to-end driving
+- name: GenAD
+  paper: 'GenAD: Generalized Predictive Model for Autonomous Driving'
+  arxiv: '2403.09630'
+  year: 2024
+  code: OpenDriveLab/GenAD
+  stars: 500
+  open_source: open
+  license: ''
+  tags:
+  - generative
+  - world-model
+  - prediction
+  - end-to-end
+  parents:
+  - name: VAD
+    relation: extends
+  - name: UniAD
+    relation: extends
+  description: Generalized predictive model combining future scene generation with
+    planning for autonomous driving
+- name: PARA-Drive
+  paper: 'PARA-Drive: Parallelized Architecture for Real-time Autonomous Driving'
+  arxiv: '2406.12742'
+  year: 2024
+  code: wljungbergh/PARA-Drive
+  stars: 100
+  open_source: open
+  license: ''
+  tags:
+  - parallel
+  - real-time
+  - efficient
+  - end-to-end
+  parents:
+  - name: UniAD
+    relation: extends
+  description: Parallelized architecture decoupling perception tasks for real-time
+    end-to-end autonomous driving
+- name: Bench2Drive
+  paper: 'Bench2Drive: Towards Multi-Ability Benchmarking of Closed-Loop End-to-End
+    Autonomous Driving'
+  arxiv: '2406.03877'
+  year: 2024
+  code: Thinklab-SJTU/Bench2Drive
+  stars: 1826
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - benchmark
+  - closed-loop
+  - carla
+  - evaluation
+  - multi-ability
+  parents:
+  - name: UniAD
+    relation: inspires
+  - name: TCP
+    relation: inspires
+  description: Comprehensive closed-loop benchmark evaluating multi-ability end-to-end
+    driving in CARLA simulator
+- name: DriveVLM
+  paper: 'DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language
+    Models'
+  arxiv: '2402.12289'
+  year: 2024
+  code: ''
+  stars: 0
+  open_source: partial
+  license: ''
+  tags:
+  - vlm
+  - scene-understanding
+  - chain-of-thought
+  - language
+  - driving
+  parents:
+  - name: UniAD
+    relation: extends
+  description: Integrates large vision-language models for scene understanding and
+    chain-of-thought reasoning in driving
+- name: Senna
+  paper: 'Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving'
+  arxiv: '2410.22313'
+  year: 2024
+  code: hustvl/Senna
+  stars: 538
+  open_source: open
+  license: ''
+  tags:
+  - vlm
+  - end-to-end
+  - bridge
+  - planning
+  - language-grounded
+  parents:
+  - name: DriveVLM
+    relation: extends
+  - name: VAD
+    relation: extends
+  description: Bridges VLMs with end-to-end driving by integrating language reasoning
+    into the planning pipeline
+- name: GAIA-1
+  paper: 'GAIA-1: A Generative World Model for Autonomous Driving'
+  arxiv: '2309.17080'
+  year: 2023
+  code: ''
+  stars: 0
+  open_source: closed
+  license: ''
+  tags:
+  - world-model
+  - generative
+  - video-prediction
+  - wayve
+  parents:
+  - name: MILE
+    relation: extends
+  description: Wayve's generative world model predicting driving video and control
+    for autonomous driving
+- name: OccWorld
+  paper: 'OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving'
+  arxiv: '2311.16038'
+  year: 2024
+  code: wzzheng/OccWorld
+  stars: 526
+  open_source: open
+  license: ''
+  tags:
+  - occupancy
+  - world-model
+  - 3d
+  - prediction
+  - autonomous-driving
+  parents:
+  - name: UniAD
+    relation: inspires
+  - name: GAIA-1
+    relation: inspires
+  description: 3D occupancy-based world model predicting future scenes for autonomous
+    driving planning
+- name: DriveDreamer
+  paper: 'DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving'
+  arxiv: '2309.09777'
+  year: 2024
+  code: JeffWang987/DriveDreamer
+  stars: 550
+  open_source: open
+  license: ''
+  tags:
+  - world-model
+  - video-generation
+  - simulation
+  - driving
+  parents:
+  - name: UniAD
+    relation: inspires
+  description: World model generating realistic driving videos for data augmentation
+    and planning validation
+- name: LMDrive
+  paper: 'LMDrive: Closed-Loop End-to-End Driving with Large Language Models'
+  arxiv: '2312.07488'
+  year: 2024
+  code: opendilab/LMDrive
+  stars: 873
+  open_source: open
+  license: ''
+  tags:
+  - llm
+  - closed-loop
+  - language
+  - instruction
+  - end-to-end
+  parents:
+  - name: DriveVLM
+    relation: inspires
+  - name: TCP
+    relation: extends
+  description: Closed-loop end-to-end driving agent that follows natural language
+    navigation instructions via LLM reasoning
+- name: DriveGPT
+  paper: 'DriveGPT4: Interpretable End-to-end Autonomous Driving via Large Language
+    Model'
+  arxiv: '2310.01412'
+  year: 2024
+  code: ''
+  stars: 0
+  open_source: closed
+  license: ''
+  tags:
+  - llm
+  - interpretable
+  - end-to-end
+  - chain-of-thought
+  - driving
+  parents:
+  - name: DriveVLM
+    relation: inspires
+  description: LLM-based driving agent generating interpretable explanations alongside
+    control predictions
+- name: DiffusionDrive
+  paper: 'DiffusionDrive: Truncated Diffusion Model for End-to-End Autonomous Driving'
+  arxiv: '2411.15139'
+  year: 2024
+  code: hustvl/DiffusionDrive
+  stars: 1323
+  open_source: open
+  license: ''
+  tags:
+  - diffusion
+  - multi-modal
+  - truncated
+  - real-time
+  - end-to-end
+  parents:
+  - name: VAD
+    relation: extends
+  description: Truncated diffusion model generating diverse multi-modal driving trajectories
+    in real time
+- name: SparseDrive
+  paper: 'SparseDrive: End-to-End Autonomous Driving via Sparse Scene Representation'
+  arxiv: '2405.19620'
+  year: 2025
+  code: swc-17/SparseDrive
+  stars: 887
+  open_source: open
+  license: ''
+  tags:
+  - sparse
+  - efficient
+  - end-to-end
+  - scene-representation
+  parents:
+  - name: UniAD
+    relation: extends
+  - name: VAD
+    relation: extends
+  description: Fully sparse end-to-end driving framework replacing dense BEV with
+    sparse scene representations
+- name: DriveWorld
+  paper: 'DriveWorld: 4D Pre-trained Scene Understanding via World Models for Autonomous
+    Driving'
+  arxiv: '2405.04390'
+  year: 2025
+  code: ''
+  stars: 0
+  open_source: open
+  license: ''
+  tags:
+  - world-model
+  - 4d
+  - pre-training
+  - scene-understanding
+  - end-to-end
+  parents:
+  - name: DriveDreamer
+    relation: extends
+  - name: GenAD
+    relation: extends
+  description: 4D pre-trained world model for spatiotemporal scene understanding and
+    end-to-end driving
+- name: VLM-AD
+  paper: Towards Vision-Language Models for Autonomous Driving
+  arxiv: ''
+  year: 2025
+  code: ''
+  stars: 0
+  open_source: open
+  license: ''
+  tags:
+  - vlm
+  - foundation-model
+  - end-to-end
+  - generalist
+  - driving
+  parents:
+  - name: Senna
+    relation: extends
+  - name: DriveVLM
+    relation: extends
+  description: Next-generation VLM-based driving agents unifying perception, reasoning,
+    and action in a single model

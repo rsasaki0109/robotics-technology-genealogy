@@ -1,523 +1,668 @@
 name: 3D Object Detection
-description: >
-  From PointNet to BEV and multi-modal fusion — the evolution of 3D object detection
-  methods for autonomous driving and robotics, spanning point-cloud, camera-based,
+description: 'From PointNet to BEV and multi-modal fusion — the evolution of 3D object
+  detection methods for autonomous driving and robotics, spanning point-cloud, camera-based,
   and multi-modal approaches.
+
+  '
 source_awesome_lists:
-  - https://github.com/open-mmlab/OpenPCDet
-  - https://github.com/PointsCoder/Awesome-3D-Object-Detection-for-Autonomous-Driving
-
+- https://github.com/open-mmlab/OpenPCDet
+- https://github.com/PointsCoder/Awesome-3D-Object-Detection-for-Autonomous-Driving
 methods:
-  # ========================================
-  # Point-cloud Foundations
-  # ========================================
-  - name: "PointNet"
-    paper: "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation"
-    arxiv: "1612.00593"
-    year: 2017
-    code: "charlesq34/pointnet"
-    stars: 4400
-    tags: [point-cloud, classification, segmentation, foundation]
-    parents: []
-    description: "Pioneering deep learning architecture that directly consumes raw point clouds"
-
-  - name: "PointNet++"
-    paper: "PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space"
-    arxiv: "1706.02413"
-    year: 2017
-    code: "charlesq34/pointnet2"
-    stars: 3400
-    tags: [point-cloud, hierarchical, segmentation]
-    parents:
-      - name: "PointNet"
-        relation: extends
-    description: "Hierarchical point set learning with local neighborhood aggregation"
-
-  # ========================================
-  # Voxel-based Methods
-  # ========================================
-  - name: "VoxelNet"
-    paper: "VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection"
-    arxiv: "1711.06396"
-    year: 2018
-    code: ""
-    stars: 0
-    tags: [point-cloud, voxel, end-to-end, 3d-detection]
-    parents:
-      - name: "PointNet"
-        relation: inspires
-    description: "End-to-end voxel-based 3D detection with voxel feature encoding"
-
-  - name: "SECOND"
-    paper: "SECOND: Sparsely Embedded Convolutional Detection"
-    arxiv: "1801.05373"
-    year: 2018
-    code: "traveller59/second.pytorch"
-    stars: 1700
-    tags: [point-cloud, voxel, sparse-convolution, 3d-detection]
-    parents:
-      - name: "VoxelNet"
-        relation: extends
-    description: "Sparse convolution for efficient voxel-based 3D object detection"
-
-  - name: "PointPillars"
-    paper: "PointPillars: Fast Encoders for Object Detection from Point Clouds"
-    arxiv: "1812.05784"
-    year: 2019
-    code: "nutonomy/second.pytorch"
-    stars: 1700
-    tags: [point-cloud, pillar, real-time, 3d-detection]
-    parents:
-      - name: "VoxelNet"
-        relation: extends
-      - name: "SECOND"
-        relation: extends
-    description: "Pillar-based point cloud encoding for fast 3D detection"
-
-  - name: "Part-A2"
-    paper: "Part-A^2 Net: 3D Part-Aware and Aggregation Neural Network for Object Detection from Point Cloud"
-    arxiv: "1907.03670"
-    year: 2020
-    code: "open-mmlab/OpenPCDet"
-    stars: 4700
-    tags: [point-cloud, part-aware, two-stage, 3d-detection]
-    parents:
-      - name: "PointNet++"
-        relation: extends
-      - name: "SECOND"
-        relation: extends
-    description: "Part-aware and aggregation network for accurate 3D detection from point clouds"
-
-  - name: "PV-RCNN"
-    paper: "PV-RCNN: Point-Voxel Feature Set Abstraction for 3D Object Detection"
-    arxiv: "1912.13192"
-    year: 2020
-    code: "open-mmlab/OpenPCDet"
-    stars: 4700
-    tags: [point-cloud, point-voxel, two-stage, 3d-detection]
-    parents:
-      - name: "PointNet++"
-        relation: combines
-      - name: "SECOND"
-        relation: combines
-    description: "Integrates point-based and voxel-based features for high-quality 3D detection"
-
-  - name: "Voxel R-CNN"
-    paper: "Voxel R-CNN: Towards High Performance Voxel-based 3D Object Detection"
-    arxiv: "2012.15712"
-    year: 2021
-    code: "open-mmlab/OpenPCDet"
-    stars: 4700
-    tags: [point-cloud, voxel, two-stage, 3d-detection]
-    parents:
-      - name: "PV-RCNN"
-        relation: extends
-      - name: "SECOND"
-        relation: extends
-    description: "Voxel-only two-stage detector achieving point-based level accuracy"
-
-  - name: "CenterPoint"
-    paper: "Center-based 3D Object Detection and Tracking"
-    arxiv: "2006.11275"
-    year: 2021
-    code: "tianweiy/CenterPoint"
-    stars: 2000
-    tags: [point-cloud, center-based, anchor-free, tracking, 3d-detection]
-    parents:
-      - name: "VoxelNet"
-        relation: extends
-      - name: "PointPillars"
-        relation: extends
-    description: "Anchor-free center-based 3D detector with built-in tracking"
-
-  # ========================================
-  # Transformer-based Point Cloud Methods
-  # ========================================
-  - name: "VoTr"
-    paper: "Voxel Transformer for 3D Object Detection"
-    arxiv: "2109.02497"
-    year: 2021
-    code: ""
-    stars: 0
-    tags: [point-cloud, voxel, transformer, 3d-detection]
-    parents:
-      - name: "SECOND"
-        relation: extends
-    description: "Applies transformers to voxel-based 3D detection with sparse attention"
-
-  - name: "SST"
-    paper: "Embracing Single Stride 3D Object Detector with Sparse Transformer"
-    arxiv: "2112.06375"
-    year: 2022
-    code: "tusen-ai/SST"
-    stars: 500
-    tags: [point-cloud, transformer, single-stride, 3d-detection]
-    parents:
-      - name: "VoTr"
-        relation: extends
-      - name: "SECOND"
-        relation: extends
-    description: "Single-stride sparse transformer removing the need for feature pyramid in 3D detection"
-
-  - name: "FlatFormer"
-    paper: "FlatFormer: Flattened Window Attention for Efficient Point Cloud Transformer"
-    arxiv: "2301.08739"
-    year: 2023
-    code: ""
-    stars: 0
-    tags: [point-cloud, transformer, efficient, 3d-detection]
-    parents:
-      - name: "SST"
-        relation: extends
-    description: "Flattened window attention for real-time point cloud transformer detection"
-
-  - name: "DSVT"
-    paper: "DSVT: Dynamic Sparse Voxel Transformer with Rotated Sets"
-    arxiv: "2301.06051"
-    year: 2023
-    code: "Haiyang-W/DSVT"
-    stars: 600
-    tags: [point-cloud, transformer, dynamic-sparse, 3d-detection]
-    parents:
-      - name: "SST"
-        relation: extends
-      - name: "VoTr"
-        relation: extends
-    description: "Dynamic sparse voxel transformer with rotated set partitioning for 3D detection"
-
-  # ========================================
-  # Camera-based BEV Methods
-  # ========================================
-  - name: "DETR3D"
-    paper: "DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D Queries"
-    arxiv: "2110.06922"
-    year: 2021
-    code: "WangYueFt/detr3d"
-    stars: 700
-    tags: [camera, multi-view, transformer, query-based, 3d-detection]
-    parents: []
-    description: "Sparse 3D-to-2D query-based multi-view 3D detection from camera images"
-
-  - name: "BEVDet"
-    paper: "BEVDet: High-Performance Multi-Camera 3D Object Detection in Bird-Eye-View"
-    arxiv: "2112.11790"
-    year: 2022
-    code: "HuangJunJie2017/BEVDet"
-    stars: 1200
-    tags: [camera, bev, multi-view, 3d-detection]
-    parents:
-      - name: "DETR3D"
-        relation: inspires
-    description: "Explicit view transformation for multi-camera BEV 3D detection"
-
-  - name: "PETR"
-    paper: "PETR: Position Embedding Transformation for Multi-View 3D Object Detection"
-    arxiv: "2203.05625"
-    year: 2022
-    code: "megvii-research/PETR"
-    stars: 600
-    tags: [camera, multi-view, position-embedding, transformer, 3d-detection]
-    parents:
-      - name: "DETR3D"
-        relation: extends
-    description: "3D position-aware position embedding for implicit multi-view 3D detection"
-
-  - name: "BEVFormer"
-    paper: "BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers"
-    arxiv: "2203.17270"
-    year: 2022
-    code: "fundamentalvision/BEVFormer"
-    stars: 2200
-    tags: [camera, bev, transformer, spatiotemporal, 3d-detection]
-    parents:
-      - name: "DETR3D"
-        relation: extends
-      - name: "BEVDet"
-        relation: inspires
-    description: "Spatiotemporal transformer for learning BEV representations from multi-camera images"
-
-  - name: "StreamPETR"
-    paper: "Exploring Object-Centric Temporal Modeling for Efficient Multi-View 3D Object Detection"
-    arxiv: "2303.11926"
-    year: 2023
-    code: "exiawsh/StreamPETR"
-    stars: 500
-    tags: [camera, multi-view, temporal, streaming, 3d-detection]
-    parents:
-      - name: "PETR"
-        relation: extends
-      - name: "BEVFormer"
-        relation: inspires
-    description: "Object-centric temporal modeling for efficient streaming multi-view 3D detection"
-
-  # ========================================
-  # Multi-modal Fusion Methods
-  # ========================================
-  - name: "MVXNet"
-    paper: "MVX-Net: Multimodal VoxelNet for 3D Object Detection"
-    arxiv: "1904.01649"
-    year: 2019
-    code: ""
-    stars: 0
-    tags: [multi-modal, voxel, camera-lidar, fusion, 3d-detection]
-    parents:
-      - name: "VoxelNet"
-        relation: extends
-    description: "Early multi-modal fusion combining camera features with VoxelNet"
-
-  - name: "TransFusion"
-    paper: "TransFusion: Robust LiDAR-Camera Fusion for 3D Object Detection with Transformers"
-    arxiv: "2203.11496"
-    year: 2022
-    code: "XuyangBai/TransFusion"
-    stars: 600
-    tags: [multi-modal, transformer, camera-lidar, fusion, 3d-detection]
-    parents:
-      - name: "CenterPoint"
-        relation: extends
-      - name: "MVXNet"
-        relation: extends
-    description: "Transformer-based soft association for robust LiDAR-camera fusion"
-
-  - name: "BEVFusion"
-    paper: "BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird's-Eye View Representation"
-    arxiv: "2205.13542"
-    year: 2022
-    code: "mit-han-lab/bevfusion"
-    stars: 2200
-    tags: [multi-modal, bev, camera-lidar, fusion, multi-task, 3d-detection]
-    parents:
-      - name: "CenterPoint"
-        relation: combines
-      - name: "BEVDet"
-        relation: combines
-    description: "Unified BEV fusion of LiDAR and camera for multi-task 3D perception"
-
-  - name: "DeepFusion"
-    paper: "DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection"
-    arxiv: "2203.08195"
-    year: 2022
-    code: ""
-    stars: 0
-    tags: [multi-modal, deep-fusion, camera-lidar, 3d-detection]
-    parents:
-      - name: "MVXNet"
-        relation: extends
-      - name: "PointNet++"
-        relation: inspires
-    description: "Deep continuous feature-level fusion of LiDAR and camera"
-
-  - name: "CMT"
-    paper: "CMT: Cross Modal Transformer for End-to-End Multi-Modal 3D Object Detection"
-    arxiv: "2301.01283"
-    year: 2023
-    code: "junjie18/CMT"
-    stars: 300
-    tags: [multi-modal, transformer, cross-modal, end-to-end, 3d-detection]
-    parents:
-      - name: "TransFusion"
-        relation: extends
-      - name: "DETR3D"
-        relation: extends
-    description: "Cross-modal transformer for end-to-end multi-modal 3D detection"
-
-  - name: "UniTR"
-    paper: "UniTR: A Unified and Efficient Multi-Modal Transformer for Bird's-Eye-View Representation"
-    arxiv: "2308.07732"
-    year: 2023
-    code: "Haiyang-W/UniTR"
-    stars: 500
-    tags: [multi-modal, transformer, unified, bev, 3d-detection]
-    parents:
-      - name: "BEVFusion"
-        relation: extends
-      - name: "DSVT"
-        relation: extends
-    description: "Unified multi-modal transformer processing LiDAR and camera in a single model"
-
-  - name: "IS-Fusion"
-    paper: "IS-Fusion: Instance-Scene Collaborative Fusion for Multimodal 3D Object Detection"
-    arxiv: "2403.15241"
-    year: 2024
-    code: "yinjunbo/IS-Fusion"
-    stars: 100
-    tags: [multi-modal, instance-scene, fusion, 3d-detection]
-    parents:
-      - name: "BEVFusion"
-        relation: extends
-      - name: "TransFusion"
-        relation: extends
-    description: "Instance-scene collaborative fusion for robust multimodal 3D detection"
-
-  # ========================================
-  # 2025-2026 Methods
-  # ========================================
-  - name: "Far3D"
-    paper: "Far3D: Expanding the Horizon for Surround-view 3D Object Detection"
-    arxiv: "2308.09616"
-    year: 2025
-    code: "megvii-research/Far3D"
-    stars: 300
-    tags: [camera, multi-view, long-range, 3d-detection]
-    parents:
-      - name: "DETR3D"
-        relation: extends
-      - name: "StreamPETR"
-        relation: extends
-    description: "Long-range surround-view 3D detection with adaptive perspective refinement"
-
-  - name: "SparseFusion3D"
-    paper: "SparseFusion: Fusing Multi-Modal Sparse Representations for Multi-Sensor 3D Object Detection"
-    arxiv: "2304.14340"
-    year: 2025
-    code: "yichen928/SparseFusion"
-    stars: 200
-    tags: [multi-modal, sparse, camera-lidar, fusion, 3d-detection]
-    parents:
-      - name: "BEVFusion"
-        relation: extends
-      - name: "TransFusion"
-        relation: extends
-    description: "Multi-modal sparse representation fusion for efficient multi-sensor 3D detection"
-
-  - name: "UniPAD"
-    paper: "UniPAD: A Universal Pre-training Paradigm for Autonomous Driving"
-    arxiv: "2310.08370"
-    year: 2025
-    code: "Nightmare-n/UniPAD"
-    stars: 200
-    tags: [multi-modal, pre-training, autonomous-driving, 3d-detection]
-    parents:
-      - name: "BEVFormer"
-        relation: extends
-      - name: "BEVFusion"
-        relation: inspires
-    description: "Universal pre-training paradigm unifying multi-modal representation learning for autonomous driving"
-
-  - name: "SAFDNet"
-    paper: "SAFDNet: A Simple and Effective Network for Fully Sparse 3D Object Detection"
-    arxiv: "2403.05817"
-    year: 2025
-    code: "zhanggang001/hednet"
-    stars: 250
-    tags: [point-cloud, fully-sparse, anchor-free, 3d-detection]
-    parents:
-      - name: "CenterPoint"
-        relation: extends
-      - name: "DSVT"
-        relation: extends
-    description: "Simple and effective fully sparse 3D detection network extending CenterPoint with adaptive feature diffusion"
-
-  - name: "FocalFormer3D"
-    paper: "FocalFormer3D: Focusing on Hard Instance for 3D Object Detection"
-    arxiv: "2308.04556"
-    year: 2025
-    code: "NVlabs/FocalFormer3D"
-    stars: 250
-    tags: [multi-modal, transformer, hard-instance, 3d-detection]
-    parents:
-      - name: "BEVFusion"
-        relation: extends
-      - name: "DETR3D"
-        relation: extends
-    description: "Multi-stage focal-aware transformer focusing on hard instances for 3D detection"
-
-  - name: "Sparse4Dv3"
-    paper: "Sparse4D v3: Advancing End-to-End 3D Detection and Tracking"
-    arxiv: "2311.11722"
-    year: 2025
-    code: "linxuewu/Sparse4D"
-    stars: 500
-    tags: [camera, multi-view, sparse-query, temporal, end-to-end, 3d-detection]
-    parents:
-      - name: "StreamPETR"
-        relation: extends
-      - name: "DETR3D"
-        relation: extends
-    description: "Advancing sparse query-based end-to-end 3D detection and tracking with temporal fusion"
-
-  # === Additional Methods ===
-  - name: "LSS"
-    paper: "Lift, Splat, Shoot: Encoding Images from Arbitrary Camera Rigs by Implicitly Unprojecting to 3D"
-    arxiv: "2008.05711"
-    year: 2020
-    code: "nv-tlabs/lift-splat-shoot"
-    stars: 1800
-    tags: [camera, bev, view-transform, foundation]
-    parents: []
-    description: "Foundational BEV view transform lifting 2D image features to 3D via depth distribution"
-
-  - name: "PointRCNN"
-    paper: "PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud"
-    arxiv: "1812.04244"
-    year: 2019
-    code: "sshaoshuai/PointRCNN"
-    tags: [point-cloud, two-stage, 3d-detection]
-    parents:
-      - name: "PointNet++"
-        relation: extends
-    description: "First two-stage 3D object detector generating proposals directly from raw point clouds"
-
-  - name: "FCOS3D"
-    paper: "FCOS3D: Fully Convolutional One-Stage Monocular 3D Object Detection"
-    arxiv: "2104.10956"
-    year: 2021
-    tags: [camera, monocular, anchor-free, 3d-detection]
-    parents: []
-    description: "Anchor-free fully convolutional monocular 3D object detector extending FCOS to 3D"
-
-  - name: "CenterNet"
-    paper: "Objects as Points"
-    arxiv: "1904.07850"
-    year: 2019
-    code: "xingyizhou/CenterNet"
-    stars: 7000
-    tags: [anchor-free, center-based, 2d-detection, foundation]
-    parents: []
-    description: "Center-based anchor-free detection representing objects as single keypoints"
-
-  - name: "DETR"
-    paper: "End-to-End Object Detection with Transformers"
-    arxiv: "2005.12872"
-    year: 2020
-    code: "facebookresearch/detr"
-    stars: 13000
-    tags: [transformer, end-to-end, set-prediction, 2d-detection, foundation]
-    parents: []
-    description: "Transformer-based end-to-end object detection eliminating hand-crafted components like NMS"
-
-  - name: "BEVDepth"
-    paper: "BEVDepth: Acquisition of Reliable Depth for Multi-view 3D Object Detection"
-    arxiv: "2206.10092"
-    year: 2022
-    tags: [camera, bev, depth-supervision, multi-view, 3d-detection]
-    parents:
-      - name: "BEVDet"
-        relation: extends
-      - name: "LSS"
-        relation: extends
-    description: "Depth-supervised BEV detection improving view transform with explicit depth estimation"
-
-  - name: "MonoDETR"
-    paper: "MonoDETR: Depth-guided Transformer for Monocular 3D Object Detection"
-    arxiv: "2203.13310"
-    year: 2022
-    tags: [camera, monocular, transformer, depth-guided, 3d-detection]
-    parents:
-      - name: "DETR"
-        relation: extends
-      - name: "FCOS3D"
-        relation: inspires
-    description: "DETR-style transformer for monocular 3D detection with depth-guided query initialization"
-
-  - name: "PV-RCNN++"
-    paper: "PV-RCNN++: Point-Voxel Feature Set Abstraction With Local Vector Representation for 3D Object Detection"
-    arxiv: "2102.00463"
-    year: 2022
-    code: "open-mmlab/OpenPCDet"
-    stars: 4700
-    tags: [point-cloud, point-voxel, two-stage, 3d-detection]
-    parents:
-      - name: "PV-RCNN"
-        relation: extends
-    description: "Improved PV-RCNN with sectorized proposal-centric pooling for faster and more accurate 3D detection"
+- name: PointNet
+  paper: 'PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation'
+  arxiv: '1612.00593'
+  year: 2017
+  code: charlesq34/pointnet
+  stars: 5366
+  tags:
+  - point-cloud
+  - classification
+  - segmentation
+  - foundation
+  parents: []
+  description: Pioneering deep learning architecture that directly consumes raw point
+    clouds
+- name: PointNet++
+  paper: 'PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric
+    Space'
+  arxiv: '1706.02413'
+  year: 2017
+  code: charlesq34/pointnet2
+  stars: 3618
+  tags:
+  - point-cloud
+  - hierarchical
+  - segmentation
+  parents:
+  - name: PointNet
+    relation: extends
+  description: Hierarchical point set learning with local neighborhood aggregation
+- name: VoxelNet
+  paper: 'VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection'
+  arxiv: '1711.06396'
+  year: 2018
+  code: ''
+  stars: 0
+  tags:
+  - point-cloud
+  - voxel
+  - end-to-end
+  - 3d-detection
+  parents:
+  - name: PointNet
+    relation: inspires
+  description: End-to-end voxel-based 3D detection with voxel feature encoding
+- name: SECOND
+  paper: 'SECOND: Sparsely Embedded Convolutional Detection'
+  arxiv: '1801.05373'
+  year: 2018
+  code: traveller59/second.pytorch
+  stars: 1781
+  tags:
+  - point-cloud
+  - voxel
+  - sparse-convolution
+  - 3d-detection
+  parents:
+  - name: VoxelNet
+    relation: extends
+  description: Sparse convolution for efficient voxel-based 3D object detection
+- name: PointPillars
+  paper: 'PointPillars: Fast Encoders for Object Detection from Point Clouds'
+  arxiv: '1812.05784'
+  year: 2019
+  code: nutonomy/second.pytorch
+  stars: 1023
+  tags:
+  - point-cloud
+  - pillar
+  - real-time
+  - 3d-detection
+  parents:
+  - name: VoxelNet
+    relation: extends
+  - name: SECOND
+    relation: extends
+  description: Pillar-based point cloud encoding for fast 3D detection
+- name: Part-A2
+  paper: 'Part-A^2 Net: 3D Part-Aware and Aggregation Neural Network for Object Detection
+    from Point Cloud'
+  arxiv: '1907.03670'
+  year: 2020
+  code: open-mmlab/OpenPCDet
+  stars: 5500
+  tags:
+  - point-cloud
+  - part-aware
+  - two-stage
+  - 3d-detection
+  parents:
+  - name: PointNet++
+    relation: extends
+  - name: SECOND
+    relation: extends
+  description: Part-aware and aggregation network for accurate 3D detection from point
+    clouds
+- name: PV-RCNN
+  paper: 'PV-RCNN: Point-Voxel Feature Set Abstraction for 3D Object Detection'
+  arxiv: '1912.13192'
+  year: 2020
+  code: open-mmlab/OpenPCDet
+  stars: 5500
+  tags:
+  - point-cloud
+  - point-voxel
+  - two-stage
+  - 3d-detection
+  parents:
+  - name: PointNet++
+    relation: combines
+  - name: SECOND
+    relation: combines
+  description: Integrates point-based and voxel-based features for high-quality 3D
+    detection
+- name: Voxel R-CNN
+  paper: 'Voxel R-CNN: Towards High Performance Voxel-based 3D Object Detection'
+  arxiv: '2012.15712'
+  year: 2021
+  code: open-mmlab/OpenPCDet
+  stars: 5500
+  tags:
+  - point-cloud
+  - voxel
+  - two-stage
+  - 3d-detection
+  parents:
+  - name: PV-RCNN
+    relation: extends
+  - name: SECOND
+    relation: extends
+  description: Voxel-only two-stage detector achieving point-based level accuracy
+- name: CenterPoint
+  paper: Center-based 3D Object Detection and Tracking
+  arxiv: '2006.11275'
+  year: 2021
+  code: tianweiy/CenterPoint
+  stars: 2124
+  tags:
+  - point-cloud
+  - center-based
+  - anchor-free
+  - tracking
+  - 3d-detection
+  parents:
+  - name: VoxelNet
+    relation: extends
+  - name: PointPillars
+    relation: extends
+  description: Anchor-free center-based 3D detector with built-in tracking
+- name: VoTr
+  paper: Voxel Transformer for 3D Object Detection
+  arxiv: '2109.02497'
+  year: 2021
+  code: ''
+  stars: 0
+  tags:
+  - point-cloud
+  - voxel
+  - transformer
+  - 3d-detection
+  parents:
+  - name: SECOND
+    relation: extends
+  description: Applies transformers to voxel-based 3D detection with sparse attention
+- name: SST
+  paper: Embracing Single Stride 3D Object Detector with Sparse Transformer
+  arxiv: '2112.06375'
+  year: 2022
+  code: tusen-ai/SST
+  stars: 875
+  tags:
+  - point-cloud
+  - transformer
+  - single-stride
+  - 3d-detection
+  parents:
+  - name: VoTr
+    relation: extends
+  - name: SECOND
+    relation: extends
+  description: Single-stride sparse transformer removing the need for feature pyramid
+    in 3D detection
+- name: FlatFormer
+  paper: 'FlatFormer: Flattened Window Attention for Efficient Point Cloud Transformer'
+  arxiv: '2301.08739'
+  year: 2023
+  code: ''
+  stars: 0
+  tags:
+  - point-cloud
+  - transformer
+  - efficient
+  - 3d-detection
+  parents:
+  - name: SST
+    relation: extends
+  description: Flattened window attention for real-time point cloud transformer detection
+- name: DSVT
+  paper: 'DSVT: Dynamic Sparse Voxel Transformer with Rotated Sets'
+  arxiv: '2301.06051'
+  year: 2023
+  code: Haiyang-W/DSVT
+  stars: 452
+  tags:
+  - point-cloud
+  - transformer
+  - dynamic-sparse
+  - 3d-detection
+  parents:
+  - name: SST
+    relation: extends
+  - name: VoTr
+    relation: extends
+  description: Dynamic sparse voxel transformer with rotated set partitioning for
+    3D detection
+- name: DETR3D
+  paper: 'DETR3D: 3D Object Detection from Multi-view Images via 3D-to-2D Queries'
+  arxiv: '2110.06922'
+  year: 2021
+  code: WangYueFt/detr3d
+  stars: 901
+  tags:
+  - camera
+  - multi-view
+  - transformer
+  - query-based
+  - 3d-detection
+  parents: []
+  description: Sparse 3D-to-2D query-based multi-view 3D detection from camera images
+- name: BEVDet
+  paper: 'BEVDet: High-Performance Multi-Camera 3D Object Detection in Bird-Eye-View'
+  arxiv: '2112.11790'
+  year: 2022
+  code: HuangJunJie2017/BEVDet
+  stars: 1753
+  tags:
+  - camera
+  - bev
+  - multi-view
+  - 3d-detection
+  parents:
+  - name: DETR3D
+    relation: inspires
+  description: Explicit view transformation for multi-camera BEV 3D detection
+- name: PETR
+  paper: 'PETR: Position Embedding Transformation for Multi-View 3D Object Detection'
+  arxiv: '2203.05625'
+  year: 2022
+  code: megvii-research/PETR
+  stars: 1043
+  tags:
+  - camera
+  - multi-view
+  - position-embedding
+  - transformer
+  - 3d-detection
+  parents:
+  - name: DETR3D
+    relation: extends
+  description: 3D position-aware position embedding for implicit multi-view 3D detection
+- name: BEVFormer
+  paper: 'BEVFormer: Learning Bird''s-Eye-View Representation from Multi-Camera Images
+    via Spatiotemporal Transformers'
+  arxiv: '2203.17270'
+  year: 2022
+  code: fundamentalvision/BEVFormer
+  stars: 4370
+  tags:
+  - camera
+  - bev
+  - transformer
+  - spatiotemporal
+  - 3d-detection
+  parents:
+  - name: DETR3D
+    relation: extends
+  - name: BEVDet
+    relation: inspires
+  description: Spatiotemporal transformer for learning BEV representations from multi-camera
+    images
+- name: StreamPETR
+  paper: Exploring Object-Centric Temporal Modeling for Efficient Multi-View 3D Object
+    Detection
+  arxiv: '2303.11926'
+  year: 2023
+  code: exiawsh/StreamPETR
+  stars: 782
+  tags:
+  - camera
+  - multi-view
+  - temporal
+  - streaming
+  - 3d-detection
+  parents:
+  - name: PETR
+    relation: extends
+  - name: BEVFormer
+    relation: inspires
+  description: Object-centric temporal modeling for efficient streaming multi-view
+    3D detection
+- name: MVXNet
+  paper: 'MVX-Net: Multimodal VoxelNet for 3D Object Detection'
+  arxiv: '1904.01649'
+  year: 2019
+  code: ''
+  stars: 0
+  tags:
+  - multi-modal
+  - voxel
+  - camera-lidar
+  - fusion
+  - 3d-detection
+  parents:
+  - name: VoxelNet
+    relation: extends
+  description: Early multi-modal fusion combining camera features with VoxelNet
+- name: TransFusion
+  paper: 'TransFusion: Robust LiDAR-Camera Fusion for 3D Object Detection with Transformers'
+  arxiv: '2203.11496'
+  year: 2022
+  code: XuyangBai/TransFusion
+  stars: 746
+  tags:
+  - multi-modal
+  - transformer
+  - camera-lidar
+  - fusion
+  - 3d-detection
+  parents:
+  - name: CenterPoint
+    relation: extends
+  - name: MVXNet
+    relation: extends
+  description: Transformer-based soft association for robust LiDAR-camera fusion
+- name: BEVFusion
+  paper: 'BEVFusion: Multi-Task Multi-Sensor Fusion with Unified Bird''s-Eye View
+    Representation'
+  arxiv: '2205.13542'
+  year: 2022
+  code: mit-han-lab/bevfusion
+  stars: 3050
+  tags:
+  - multi-modal
+  - bev
+  - camera-lidar
+  - fusion
+  - multi-task
+  - 3d-detection
+  parents:
+  - name: CenterPoint
+    relation: combines
+  - name: BEVDet
+    relation: combines
+  description: Unified BEV fusion of LiDAR and camera for multi-task 3D perception
+- name: DeepFusion
+  paper: 'DeepFusion: Lidar-Camera Deep Fusion for Multi-Modal 3D Object Detection'
+  arxiv: '2203.08195'
+  year: 2022
+  code: ''
+  stars: 0
+  tags:
+  - multi-modal
+  - deep-fusion
+  - camera-lidar
+  - 3d-detection
+  parents:
+  - name: MVXNet
+    relation: extends
+  - name: PointNet++
+    relation: inspires
+  description: Deep continuous feature-level fusion of LiDAR and camera
+- name: CMT
+  paper: 'CMT: Cross Modal Transformer for End-to-End Multi-Modal 3D Object Detection'
+  arxiv: '2301.01283'
+  year: 2023
+  code: junjie18/CMT
+  stars: 410
+  tags:
+  - multi-modal
+  - transformer
+  - cross-modal
+  - end-to-end
+  - 3d-detection
+  parents:
+  - name: TransFusion
+    relation: extends
+  - name: DETR3D
+    relation: extends
+  description: Cross-modal transformer for end-to-end multi-modal 3D detection
+- name: UniTR
+  paper: 'UniTR: A Unified and Efficient Multi-Modal Transformer for Bird''s-Eye-View
+    Representation'
+  arxiv: '2308.07732'
+  year: 2023
+  code: Haiyang-W/UniTR
+  stars: 353
+  tags:
+  - multi-modal
+  - transformer
+  - unified
+  - bev
+  - 3d-detection
+  parents:
+  - name: BEVFusion
+    relation: extends
+  - name: DSVT
+    relation: extends
+  description: Unified multi-modal transformer processing LiDAR and camera in a single
+    model
+- name: IS-Fusion
+  paper: 'IS-Fusion: Instance-Scene Collaborative Fusion for Multimodal 3D Object
+    Detection'
+  arxiv: '2403.15241'
+  year: 2024
+  code: yinjunbo/IS-Fusion
+  stars: 202
+  tags:
+  - multi-modal
+  - instance-scene
+  - fusion
+  - 3d-detection
+  parents:
+  - name: BEVFusion
+    relation: extends
+  - name: TransFusion
+    relation: extends
+  description: Instance-scene collaborative fusion for robust multimodal 3D detection
+- name: Far3D
+  paper: 'Far3D: Expanding the Horizon for Surround-view 3D Object Detection'
+  arxiv: '2308.09616'
+  year: 2025
+  code: megvii-research/Far3D
+  stars: 195
+  tags:
+  - camera
+  - multi-view
+  - long-range
+  - 3d-detection
+  parents:
+  - name: DETR3D
+    relation: extends
+  - name: StreamPETR
+    relation: extends
+  description: Long-range surround-view 3D detection with adaptive perspective refinement
+- name: SparseFusion3D
+  paper: 'SparseFusion: Fusing Multi-Modal Sparse Representations for Multi-Sensor
+    3D Object Detection'
+  arxiv: '2304.14340'
+  year: 2025
+  code: yichen928/SparseFusion
+  stars: 261
+  tags:
+  - multi-modal
+  - sparse
+  - camera-lidar
+  - fusion
+  - 3d-detection
+  parents:
+  - name: BEVFusion
+    relation: extends
+  - name: TransFusion
+    relation: extends
+  description: Multi-modal sparse representation fusion for efficient multi-sensor
+    3D detection
+- name: UniPAD
+  paper: 'UniPAD: A Universal Pre-training Paradigm for Autonomous Driving'
+  arxiv: '2310.08370'
+  year: 2025
+  code: Nightmare-n/UniPAD
+  stars: 204
+  tags:
+  - multi-modal
+  - pre-training
+  - autonomous-driving
+  - 3d-detection
+  parents:
+  - name: BEVFormer
+    relation: extends
+  - name: BEVFusion
+    relation: inspires
+  description: Universal pre-training paradigm unifying multi-modal representation
+    learning for autonomous driving
+- name: SAFDNet
+  paper: 'SAFDNet: A Simple and Effective Network for Fully Sparse 3D Object Detection'
+  arxiv: '2403.05817'
+  year: 2025
+  code: zhanggang001/hednet
+  stars: 185
+  tags:
+  - point-cloud
+  - fully-sparse
+  - anchor-free
+  - 3d-detection
+  parents:
+  - name: CenterPoint
+    relation: extends
+  - name: DSVT
+    relation: extends
+  description: Simple and effective fully sparse 3D detection network extending CenterPoint
+    with adaptive feature diffusion
+- name: FocalFormer3D
+  paper: 'FocalFormer3D: Focusing on Hard Instance for 3D Object Detection'
+  arxiv: '2308.04556'
+  year: 2025
+  code: NVlabs/FocalFormer3D
+  stars: 207
+  tags:
+  - multi-modal
+  - transformer
+  - hard-instance
+  - 3d-detection
+  parents:
+  - name: BEVFusion
+    relation: extends
+  - name: DETR3D
+    relation: extends
+  description: Multi-stage focal-aware transformer focusing on hard instances for
+    3D detection
+- name: Sparse4Dv3
+  paper: 'Sparse4D v3: Advancing End-to-End 3D Detection and Tracking'
+  arxiv: '2311.11722'
+  year: 2025
+  code: linxuewu/Sparse4D
+  stars: 501
+  tags:
+  - camera
+  - multi-view
+  - sparse-query
+  - temporal
+  - end-to-end
+  - 3d-detection
+  parents:
+  - name: StreamPETR
+    relation: extends
+  - name: DETR3D
+    relation: extends
+  description: Advancing sparse query-based end-to-end 3D detection and tracking with
+    temporal fusion
+- name: LSS
+  paper: 'Lift, Splat, Shoot: Encoding Images from Arbitrary Camera Rigs by Implicitly
+    Unprojecting to 3D'
+  arxiv: '2008.05711'
+  year: 2020
+  code: nv-tlabs/lift-splat-shoot
+  stars: 1320
+  tags:
+  - camera
+  - bev
+  - view-transform
+  - foundation
+  parents: []
+  description: Foundational BEV view transform lifting 2D image features to 3D via
+    depth distribution
+- name: PointRCNN
+  paper: 'PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud'
+  arxiv: '1812.04244'
+  year: 2019
+  code: sshaoshuai/PointRCNN
+  tags:
+  - point-cloud
+  - two-stage
+  - 3d-detection
+  parents:
+  - name: PointNet++
+    relation: extends
+  description: First two-stage 3D object detector generating proposals directly from
+    raw point clouds
+  stars: 1819
+- name: FCOS3D
+  paper: 'FCOS3D: Fully Convolutional One-Stage Monocular 3D Object Detection'
+  arxiv: '2104.10956'
+  year: 2021
+  tags:
+  - camera
+  - monocular
+  - anchor-free
+  - 3d-detection
+  parents: []
+  description: Anchor-free fully convolutional monocular 3D object detector extending
+    FCOS to 3D
+- name: CenterNet
+  paper: Objects as Points
+  arxiv: '1904.07850'
+  year: 2019
+  code: xingyizhou/CenterNet
+  stars: 7548
+  tags:
+  - anchor-free
+  - center-based
+  - 2d-detection
+  - foundation
+  parents: []
+  description: Center-based anchor-free detection representing objects as single keypoints
+- name: DETR
+  paper: End-to-End Object Detection with Transformers
+  arxiv: '2005.12872'
+  year: 2020
+  code: facebookresearch/detr
+  stars: 15168
+  tags:
+  - transformer
+  - end-to-end
+  - set-prediction
+  - 2d-detection
+  - foundation
+  parents: []
+  description: Transformer-based end-to-end object detection eliminating hand-crafted
+    components like NMS
+- name: BEVDepth
+  paper: 'BEVDepth: Acquisition of Reliable Depth for Multi-view 3D Object Detection'
+  arxiv: '2206.10092'
+  year: 2022
+  tags:
+  - camera
+  - bev
+  - depth-supervision
+  - multi-view
+  - 3d-detection
+  parents:
+  - name: BEVDet
+    relation: extends
+  - name: LSS
+    relation: extends
+  description: Depth-supervised BEV detection improving view transform with explicit
+    depth estimation
+- name: MonoDETR
+  paper: 'MonoDETR: Depth-guided Transformer for Monocular 3D Object Detection'
+  arxiv: '2203.13310'
+  year: 2022
+  tags:
+  - camera
+  - monocular
+  - transformer
+  - depth-guided
+  - 3d-detection
+  parents:
+  - name: DETR
+    relation: extends
+  - name: FCOS3D
+    relation: inspires
+  description: DETR-style transformer for monocular 3D detection with depth-guided
+    query initialization
+- name: PV-RCNN++
+  paper: 'PV-RCNN++: Point-Voxel Feature Set Abstraction With Local Vector Representation
+    for 3D Object Detection'
+  arxiv: '2102.00463'
+  year: 2022
+  code: open-mmlab/OpenPCDet
+  stars: 5500
+  tags:
+  - point-cloud
+  - point-voxel
+  - two-stage
+  - 3d-detection
+  parents:
+  - name: PV-RCNN
+    relation: extends
+  description: Improved PV-RCNN with sectorized proposal-centric pooling for faster
+    and more accurate 3D detection

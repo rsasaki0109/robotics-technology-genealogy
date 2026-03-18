@@ -1,555 +1,694 @@
 name: LiDAR Odometry & SLAM
-description: >
-  Evolution of LiDAR-based odometry and SLAM methods — from classical ICP
-  to tightly-coupled LiDAR-inertial systems and learning-based approaches.
+description: 'Evolution of LiDAR-based odometry and SLAM methods — from classical
+  ICP to tightly-coupled LiDAR-inertial systems and learning-based approaches.
+
+  '
 source_awesome_lists:
-  - https://github.com/szenergy/awesome-lidar
-  - https://github.com/changhee-Han/awesome-SLAM
-
+- https://github.com/szenergy/awesome-lidar
+- https://github.com/changhee-Han/awesome-SLAM
 methods:
-  # === Classical Foundations ===
-  - name: "ICP"
-    paper: "A Method for Registration of 3-D Shapes"
-    year: 1992
-    tags: [point-cloud-registration, classical, iterative]
-    parents: []
-    description: "Iterative Closest Point — foundational algorithm for rigid point cloud alignment"
-
-  - name: "NDT"
-    paper: "The Normal Distributions Transform: A New Approach to Laser Scan Matching"
-    year: 2003
-    tags: [point-cloud-registration, classical, normal-distribution]
-    parents:
-      - name: "ICP"
-        relation: inspires
-    description: "Normal Distributions Transform for robust scan matching using probability density"
-
-  - name: "LOAM"
-    paper: "LOAM: Lidar Odometry and Mapping in Real-time"
-    year: 2014
-    code: "laboshinl/loam_velodyne"
-    stars: 1600
-    tags: [lidar-odometry, real-time, feature-based]
-    parents:
-      - name: "ICP"
-        relation: extends
-    description: "Real-time LiDAR odometry using edge and planar feature extraction"
-
-  # === LOAM Family ===
-  - name: "LeGO-LOAM"
-    paper: "LeGO-LOAM: Lightweight and Ground-Optimized Lidar Odometry and Mapping on Variable Terrain"
-    year: 2018
-    code: "RobustFieldAutonomyLab/LeGO-LOAM"
-    stars: 2300
-    tags: [lidar-odometry, lightweight, ground-segmentation]
-    parents:
-      - name: "LOAM"
-        relation: extends
-    description: "Lightweight LOAM variant with ground segmentation for variable terrain"
-
-  - name: "A-LOAM"
-    paper: "Advanced implementation of LOAM"
-    year: 2018
-    code: "HKUST-Aerial-Robotics/A-LOAM"
-    stars: 2100
-    tags: [lidar-odometry, ceres-solver, clean-implementation]
-    parents:
-      - name: "LOAM"
-        relation: extends
-    description: "Clean reimplementation of LOAM using Ceres Solver and Eigen"
-
-  - name: "F-LOAM"
-    paper: "F-LOAM: Fast LiDAR Odometry and Mapping"
-    arxiv: "2107.00822"
-    year: 2021
-    code: "wh200720041/floam"
-    stars: 600
-    tags: [lidar-odometry, fast, non-iterative]
-    parents:
-      - name: "LOAM"
-        relation: extends
-    description: "Faster LOAM variant with non-iterative two-stage distortion compensation"
-
-  # === Surfel-based ===
-  - name: "SuMa"
-    paper: "Efficient Surfel-Based SLAM using 3D Laser Range Data in Urban Environments"
-    year: 2018
-    code: "jbehley/SuMa"
-    stars: 800
-    tags: [lidar-slam, surfel, range-image]
-    parents:
-      - name: "ICP"
-        relation: extends
-    description: "Surfel-based SLAM using projective scan matching on range images"
-
-  - name: "SuMa++"
-    paper: "SuMa++: Efficient LiDAR-based Semantic SLAM"
-    arxiv: "1908.10515"
-    year: 2019
-    code: "PRBonn/semantic_suma"
-    stars: 900
-    tags: [lidar-slam, surfel, semantic]
-    parents:
-      - name: "SuMa"
-        relation: extends
-    description: "Extends SuMa with semantic information for improved loop closure and mapping"
-
-  # === Graph-based SLAM ===
-  - name: "hdl_graph_slam"
-    paper: "A Portable Three-Dimensional LIDAR-Based System for Long-Term and Wide-Area People Behavior Measurement"
-    year: 2019
-    code: "koide3/hdl_graph_slam"
-    stars: 1900
-    tags: [lidar-slam, graph-based, ros]
-    parents:
-      - name: "NDT"
-        relation: extends
-    description: "Graph-based 3D LiDAR SLAM with NDT scan matching and loop closure"
-
-  # === LiDAR-Inertial Odometry ===
-  - name: "LIO-SAM"
-    paper: "LIO-SAM: Tightly-coupled Lidar Inertial Odometry via Smoothing and Mapping"
-    arxiv: "2007.00258"
-    year: 2020
-    code: "TixiaoShan/LIO-SAM"
-    stars: 3400
-    tags: [lidar-inertial, factor-graph, tightly-coupled]
-    parents:
-      - name: "LeGO-LOAM"
-        relation: extends
-      - name: "LOAM"
-        relation: extends
-    description: "Tightly-coupled LiDAR-inertial odometry via factor graph optimization"
-
-  - name: "SC-LIO-SAM"
-    paper: "Scan Context: Egocentric Spatial Descriptor for Place Recognition within 3D Point Cloud Map"
-    year: 2021
-    code: "gisbi-kim/SC-LIO-SAM"
-    stars: 1000
-    tags: [lidar-inertial, loop-closure, place-recognition]
-    parents:
-      - name: "LIO-SAM"
-        relation: extends
-    description: "Extends LIO-SAM with Scan Context for robust loop closure detection"
-
-  - name: "FAST-LIO"
-    paper: "FAST-LIO: A Fast, Robust LiDAR-Inertial Odometry Package by Tightly-Coupled Iterated Kalman Filter"
-    arxiv: "2010.08196"
-    year: 2021
-    code: "hku-mars/FAST_LIO"
-    stars: 2800
-    tags: [lidar-inertial, kalman-filter, tightly-coupled]
-    parents:
-      - name: "LOAM"
-        relation: extends
-    description: "Fast tightly-coupled LiDAR-inertial odometry using iterated Kalman filter"
-
-  - name: "FAST-LIO2"
-    paper: "FAST-LIO2: Fast Direct LiDAR-Inertial Odometry"
-    arxiv: "2107.06829"
-    year: 2022
-    code: "hku-mars/FAST_LIO"
-    stars: 2800
-    tags: [lidar-inertial, ikd-tree, direct]
-    parents:
-      - name: "FAST-LIO"
-        relation: extends
-    description: "Direct LiDAR-inertial odometry with incremental k-d tree for efficient map management"
-
-  - name: "Faster-LIO"
-    paper: "Faster-LIO: Lightweight Tightly Coupled Lidar-Inertial Odometry Using Parallel Sparse Incremental Voxels"
-    arxiv: "2112.11514"
-    year: 2022
-    code: "gaoxiang12/faster-lio"
-    stars: 900
-    tags: [lidar-inertial, voxel, parallel]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-    description: "Faster variant of FAST-LIO2 using incremental voxel structure instead of ikd-tree"
-
-  - name: "Point-LIO"
-    paper: "Point-LIO: Robust High-Bandwidth Lidar-Inertial Odometry"
-    arxiv: "2306.10310"
-    year: 2023
-    code: "hku-mars/Point-LIO"
-    stars: 800
-    tags: [lidar-inertial, point-by-point, high-bandwidth]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-    description: "Point-by-point LiDAR-inertial odometry for high-bandwidth state estimation"
-
-  # === ICP-based Modern Methods ===
-  - name: "CT-ICP"
-    paper: "CT-ICP: Real-time Elastic LiDAR Odometry with Loop Closure"
-    arxiv: "2109.12979"
-    year: 2022
-    code: "jedeschaud/ct_icp"
-    stars: 600
-    tags: [lidar-odometry, continuous-time, elastic]
-    parents:
-      - name: "ICP"
-        relation: extends
-    description: "Continuous-time ICP for elastic motion compensation during LiDAR sweeps"
-
-  - name: "KISS-ICP"
-    paper: "KISS-ICP: In Defense of Point-to-Point ICP — Simple, Accurate, and Robust Registration with Point Clouds"
-    arxiv: "2209.15397"
-    year: 2023
-    code: "PRBonn/kiss-icp"
-    stars: 1700
-    tags: [lidar-odometry, simple, robust, point-to-point]
-    parents:
-      - name: "ICP"
-        relation: extends
-    description: "Simple and robust point-to-point ICP pipeline with adaptive thresholding"
-
-  - name: "Norlab ICP Mapper"
-    paper: "Robust and Accurate Mapping for Mobile Robots Based on ICP"
-    year: 2022
-    code: "norlab-ulaval/norlab_icp_mapper"
-    stars: 200
-    tags: [lidar-mapping, icp, dense-map]
-    parents:
-      - name: "ICP"
-        relation: extends
-    description: "ICP-based dense mapping framework from Northern Robotics Lab"
-
-  # === Direct Methods ===
-  - name: "DLO"
-    paper: "Direct LiDAR Odometry: Fast Localization with Dense Point Clouds"
-    arxiv: "2110.00605"
-    year: 2022
-    code: "vectr-ucla/direct_lidar_odometry"
-    stars: 800
-    tags: [lidar-odometry, direct, dense, keyframe]
-    parents:
-      - name: "LOAM"
-        relation: inspires
-      - name: "ICP"
-        relation: extends
-    description: "Direct LiDAR odometry using dense point clouds without feature extraction"
-
-  - name: "DLIO"
-    paper: "Direct LiDAR-Inertial Odometry: Lightweight LIO with Continuous-Time Motion Correction"
-    arxiv: "2203.03749"
-    year: 2023
-    code: "vectr-ucla/direct_lidar_inertial_odometry"
-    stars: 700
-    tags: [lidar-inertial, direct, continuous-time, lightweight]
-    parents:
-      - name: "DLO"
-        relation: extends
-    description: "Lightweight LiDAR-inertial odometry extending DLO with IMU and continuous-time correction"
-
-  # === Bundle Adjustment ===
-  - name: "BALM"
-    paper: "BALM: Bundle Adjustment for Lidar Mapping"
-    arxiv: "2010.08215"
-    year: 2021
-    code: "hku-mars/BALM"
-    stars: 600
-    tags: [lidar-mapping, bundle-adjustment, optimization]
-    parents:
-      - name: "LOAM"
-        relation: inspires
-    description: "Bundle adjustment formulation for LiDAR mapping with adaptive voxelization"
-
-  # === Recent Advanced Methods ===
-  - name: "Wildcat"
-    paper: "Wildcat: Online Continuous-Time 3D Lidar-Inertial SLAM"
-    arxiv: "2410.07875"
-    year: 2024
-    tags: [lidar-inertial, continuous-time, online]
-    parents:
-      - name: "CT-ICP"
-        relation: extends
-      - name: "FAST-LIO2"
-        relation: inspires
-    description: "Online continuous-time LiDAR-inertial SLAM with B-spline trajectory representation"
-
-  - name: "COIN-LIO"
-    paper: "COIN-LIO: Complementary Intensity-Augmented LiDAR Inertial Odometry"
-    arxiv: "2310.01235"
-    year: 2024
-    code: "ethz-asl/COIN-LIO"
-    stars: 300
-    tags: [lidar-inertial, intensity, complementary]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-    description: "LiDAR-inertial odometry augmented with intensity information for degraded geometry"
-
-  - name: "Traj-LO"
-    paper: "Traj-LO: In Defense of LiDAR-Only Odometry Using an Effective Continuous-Time Trajectory"
-    arxiv: "2402.02928"
-    year: 2024
-    code: "kevin2431/Traj-LO"
-    stars: 400
-    tags: [lidar-odometry, continuous-time, trajectory]
-    parents:
-      - name: "CT-ICP"
-        relation: extends
-      - name: "KISS-ICP"
-        relation: inspires
-    description: "LiDAR-only odometry using continuous-time trajectory with B-spline"
-
-  - name: "LOG-LIO2"
-    paper: "LOG-LIO2: A LiDAR-Inertial Odometry with Efficient Uncertainty Analysis"
-    arxiv: "2405.01316"
-    year: 2024
-    code: "tiev-tongji/LOG-LIO2"
-    stars: 200
-    tags: [lidar-inertial, uncertainty, logarithmic-map]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-    description: "LiDAR-inertial odometry with efficient local-global uncertainty analysis"
-
-  # === Learning-based Methods ===
-  - name: "LO-Net"
-    paper: "LO-Net: Deep Real-Time Lidar Odometry"
-    arxiv: "1904.08242"
-    year: 2019
-    tags: [lidar-odometry, deep-learning, end-to-end]
-    parents:
-      - name: "LOAM"
-        relation: inspires
-    description: "End-to-end deep learning framework for real-time LiDAR odometry"
-
-  - name: "DeepLO"
-    paper: "DeepLO: LiDAR Odometry with Deep Learning"
-    arxiv: "1902.10562"
-    year: 2019
-    tags: [lidar-odometry, deep-learning, vertex-map]
-    parents:
-      - name: "ICP"
-        relation: inspires
-    description: "Deep learning approach to LiDAR odometry using vertex and normal maps"
-
-  - name: "PWCLO-Net"
-    paper: "PWCLO-Net: Deep LiDAR Odometry in 3D Point Clouds Using Hierarchical Embedding Mask Optimization"
-    arxiv: "2012.00972"
-    year: 2021
-    tags: [lidar-odometry, deep-learning, hierarchical, point-cloud]
-    parents:
-      - name: "LO-Net"
-        relation: extends
-      - name: "DeepLO"
-        relation: inspires
-    description: "Hierarchical embedding and mask optimization for deep LiDAR odometry"
-
-  # === 2025-2026 Methods ===
-  - name: "GLIM"
-    paper: "GLIM: 3D Range-Inertial Localization and Mapping with GPU-Accelerated Scan Matching and Factor Graph Optimization"
-    arxiv: "2407.10344"
-    year: 2025
-    code: "koide3/glim"
-    stars: 500
-    tags: [lidar-inertial, gpu, graph-based, factor-graph, real-time]
-    parents:
-      - name: "hdl_graph_slam"
-        relation: extends
-      - name: "FAST-LIO2"
-        relation: inspires
-    description: "GPU-accelerated graph-based LiDAR-inertial SLAM extending hdl_graph_slam with real-time factor graph optimization"
-
-  - name: "Kinematic-ICP"
-    paper: "Kinematic-ICP: Enhancing LiDAR Odometry with Kinematic Constraints for Wheeled Mobile Robots"
-    arxiv: "2410.10277"
-    year: 2025
-    code: "PRBonn/kinematic-icp"
-    stars: 400
-    tags: [lidar-odometry, kinematic, wheeled-robot, icp]
-    parents:
-      - name: "KISS-ICP"
-        relation: extends
-    description: "Extends KISS-ICP with wheel odometry kinematic constraints for improved performance on wheeled robots"
-
-  - name: "KISS-ICP (v2 pipeline)"
-    paper: "KISS-ICP: In Defense of Point-to-Point ICP (extended journal version)"
-    arxiv: "2209.15397"
-    year: 2025
-    code: "PRBonn/kiss-icp"
-    stars: 1700
-    tags: [lidar-odometry, simple, robust, multi-sensor, pipeline]
-    parents:
-      - name: "KISS-ICP"
-        relation: extends
-    description: "Updated KISS-ICP pipeline with multi-sensor support, improved voxel hashing, and ROS2 integration"
-
-  - name: "iG-LIO"
-    paper: "iG-LIO: An Incremental GICP-Based Tightly-Coupled LiDAR-Inertial Odometry"
-    arxiv: "2407.18386"
-    year: 2025
-    code: "zijiechenrobotics/ig_lio"
-    stars: 400
-    tags: [lidar-inertial, gicp, tightly-coupled, incremental]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-      - name: "ICP"
-        relation: extends
-    description: "Tightly-coupled LIO using incremental GICP for scan-to-map registration"
-
-  - name: "LOG-LIO"
-    paper: "LOG-LIO: A LiDAR-Inertial Odometry with Efficient Local Geometric Information Estimation"
-    arxiv: "2307.02251"
-    year: 2025
-    code: "tiev-tongji/LOG-LIO"
-    stars: 300
-    tags: [lidar-inertial, local-geometry, normal-estimation]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-    description: "LiDAR-inertial odometry with efficient local geometric normal estimation for improved registration"
-
-  - name: "ImMesh"
-    paper: "ImMesh: An Immediate LiDAR Localization and Meshing Framework"
-    arxiv: "2301.05206"
-    year: 2025
-    code: "hku-mars/ImMesh"
-    stars: 700
-    tags: [lidar-inertial, mesh, real-time, dense-mapping]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-    description: "Real-time LiDAR meshing framework built on FAST-LIO2 for immediate dense mesh reconstruction"
-
-  - name: "HBA"
-    paper: "HBA: A Globally Consistent and Efficient Large-Scale LiDAR Mapping Module"
-    arxiv: "2308.11709"
-    year: 2025
-    code: "hku-mars/HBA"
-    stars: 500
-    tags: [lidar-mapping, bundle-adjustment, hierarchical, global-consistency]
-    parents:
-      - name: "BALM"
-        relation: extends
-      - name: "FAST-LIO2"
-        relation: inspires
-    description: "Hierarchical bundle adjustment for globally consistent large-scale LiDAR mapping"
-
-  # === Additional Methods ===
-  - name: "Cartographer"
-    paper: "Real-Time Loop Closure in 2D LIDAR SLAM"
-    year: 2016
-    code: "googlecartographer/cartographer"
-    stars: 7000
-    tags: [lidar-slam, graph-based, submap, real-time]
-    parents:
-      - name: "NDT"
-        relation: inspires
-    description: "Submap-based graph SLAM with real-time loop closure using branch-and-bound scan matching"
-
-  - name: "GICP"
-    paper: "Generalized-ICP"
-    year: 2009
-    tags: [point-cloud-registration, classical, plane-to-plane]
-    parents:
-      - name: "ICP"
-        relation: extends
-      - name: "NDT"
-        relation: combines
-    description: "Generalized ICP unifying point-to-point and point-to-plane with plane-to-plane matching"
-
-  - name: "R3LIVE"
-    paper: "R3LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual Tightly-Coupled State Estimation and Mapping Package"
-    arxiv: "2109.07982"
-    year: 2022
-    code: "hku-mars/r3live"
-    stars: 2000
-    tags: [lidar-inertial-visual, tightly-coupled, rgb, real-time]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-    description: "LiDAR-inertial-camera tightly-coupled SLAM with real-time RGB-colored dense mapping"
-
-  - name: "R2LIVE"
-    paper: "R2LIVE: A Robust, Real-time, LiDAR-Inertial-Visual Tightly-Coupled State Estimator and Mapping"
-    arxiv: "2102.12400"
-    year: 2021
-    code: "hku-mars/r2live"
-    tags: [lidar-inertial-visual, tightly-coupled, real-time]
-    parents:
-      - name: "FAST-LIO"
-        relation: extends
-    description: "Precursor to R3LIVE combining LiDAR-inertial-visual tightly-coupled state estimation"
-
-  - name: "LIO-Mapping"
-    paper: "LIO-Mapping: A Tightly Coupled 3D Lidar Inertial Odometry and Mapping Approach"
-    year: 2019
-    tags: [lidar-inertial, tightly-coupled, early]
-    parents:
-      - name: "LOAM"
-        relation: extends
-    description: "Early tightly-coupled LiDAR-inertial odometry and mapping approach"
-
-  - name: "LOCUS"
-    paper: "LOCUS: A Multi-Sensor Lidar-Centric Solution for High-Precision Odometry and 3D Mapping in Real-Time"
-    year: 2021
-    tags: [lidar-odometry, multi-resolution, surfel, real-time]
-    parents:
-      - name: "LOAM"
-        relation: inspires
-    description: "JPL multi-resolution surfel matching for high-precision LiDAR odometry in challenging environments"
-
-  - name: "MULLS"
-    paper: "MULLS: Versatile LiDAR SLAM via Multi-metric Linear Least Square"
-    year: 2021
-    code: "YuePanEdward/MULLS"
-    tags: [lidar-slam, multi-metric, icp, versatile]
-    parents:
-      - name: "GICP"
-        relation: extends
-    description: "Multi-metric linear least square ICP SLAM using point, line, and plane features"
-
-  # === Visual-LiDAR Fusion ===
-  - name: "LVI-SAM"
-    paper: "LVI-SAM: Tightly-coupled Lidar-Visual-Inertial Odometry via Smoothing and Mapping"
-    arxiv: "2104.10831"
-    year: 2021
-    code: "TixiaoShan/LVI-SAM"
-    stars: 3200
-    tags: [lidar-visual-inertial, tightly-coupled, factor-graph]
-    parents:
-      - name: "LIO-SAM"
-        relation: extends
-    description: "Tightly-coupled LiDAR-visual-inertial odometry combining LIO-SAM with visual features"
-
-  - name: "FAST-LIVO"
-    paper: "FAST-LIVO: Fast and Tightly-coupled Sparse-Direct LiDAR-Inertial-Visual Odometry"
-    arxiv: "2203.00893"
-    year: 2022
-    code: "hku-mars/FAST-LIVO"
-    stars: 1200
-    tags: [lidar-visual-inertial, tightly-coupled, direct]
-    parents:
-      - name: "FAST-LIO2"
-        relation: extends
-    description: "Extends FAST-LIO2 with tightly-coupled direct visual odometry"
-
-  - name: "FAST-LIVO2"
-    paper: "FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry"
-    arxiv: "2408.01916"
-    year: 2024
-    code: "hku-mars/FAST-LIVO2"
-    stars: 800
-    tags: [lidar-visual-inertial, tightly-coupled, direct, real-time]
-    parents:
-      - name: "FAST-LIVO"
-        relation: extends
-    description: "Improved direct LiDAR-inertial-visual odometry with better efficiency and accuracy"
-
-  - name: "CamVox"
-    paper: "CamVox: A Low-cost and Accurate Lidar-assisted Visual SLAM System"
-    arxiv: "2011.11357"
-    year: 2021
-    code: "ISEE-Technology/CamVox"
-    stars: 500
-    tags: [lidar-visual, low-cost, livox]
-    parents:
-      - name: "LOAM"
-        relation: inspires
-    description: "Low-cost LiDAR-assisted visual SLAM using Livox LiDAR"
+- name: ICP
+  paper: A Method for Registration of 3-D Shapes
+  year: 1992
+  tags:
+  - point-cloud-registration
+  - classical
+  - iterative
+  parents: []
+  description: Iterative Closest Point — foundational algorithm for rigid point cloud
+    alignment
+- name: NDT
+  paper: 'The Normal Distributions Transform: A New Approach to Laser Scan Matching'
+  year: 2003
+  tags:
+  - point-cloud-registration
+  - classical
+  - normal-distribution
+  parents:
+  - name: ICP
+    relation: inspires
+  description: Normal Distributions Transform for robust scan matching using probability
+    density
+- name: LOAM
+  paper: 'LOAM: Lidar Odometry and Mapping in Real-time'
+  year: 2014
+  code: laboshinl/loam_velodyne
+  stars: 1750
+  tags:
+  - lidar-odometry
+  - real-time
+  - feature-based
+  parents:
+  - name: ICP
+    relation: extends
+  description: Real-time LiDAR odometry using edge and planar feature extraction
+- name: LeGO-LOAM
+  paper: 'LeGO-LOAM: Lightweight and Ground-Optimized Lidar Odometry and Mapping on
+    Variable Terrain'
+  year: 2018
+  code: RobustFieldAutonomyLab/LeGO-LOAM
+  stars: 2703
+  tags:
+  - lidar-odometry
+  - lightweight
+  - ground-segmentation
+  parents:
+  - name: LOAM
+    relation: extends
+  description: Lightweight LOAM variant with ground segmentation for variable terrain
+- name: A-LOAM
+  paper: Advanced implementation of LOAM
+  year: 2018
+  code: HKUST-Aerial-Robotics/A-LOAM
+  stars: 2372
+  tags:
+  - lidar-odometry
+  - ceres-solver
+  - clean-implementation
+  parents:
+  - name: LOAM
+    relation: extends
+  description: Clean reimplementation of LOAM using Ceres Solver and Eigen
+- name: F-LOAM
+  paper: 'F-LOAM: Fast LiDAR Odometry and Mapping'
+  arxiv: '2107.00822'
+  year: 2021
+  code: wh200720041/floam
+  stars: 1140
+  tags:
+  - lidar-odometry
+  - fast
+  - non-iterative
+  parents:
+  - name: LOAM
+    relation: extends
+  description: Faster LOAM variant with non-iterative two-stage distortion compensation
+- name: SuMa
+  paper: Efficient Surfel-Based SLAM using 3D Laser Range Data in Urban Environments
+  year: 2018
+  code: jbehley/SuMa
+  stars: 594
+  tags:
+  - lidar-slam
+  - surfel
+  - range-image
+  parents:
+  - name: ICP
+    relation: extends
+  description: Surfel-based SLAM using projective scan matching on range images
+- name: SuMa++
+  paper: 'SuMa++: Efficient LiDAR-based Semantic SLAM'
+  arxiv: '1908.10515'
+  year: 2019
+  code: PRBonn/semantic_suma
+  stars: 999
+  tags:
+  - lidar-slam
+  - surfel
+  - semantic
+  parents:
+  - name: SuMa
+    relation: extends
+  description: Extends SuMa with semantic information for improved loop closure and
+    mapping
+- name: hdl_graph_slam
+  paper: A Portable Three-Dimensional LIDAR-Based System for Long-Term and Wide-Area
+    People Behavior Measurement
+  year: 2019
+  code: koide3/hdl_graph_slam
+  stars: 2254
+  tags:
+  - lidar-slam
+  - graph-based
+  - ros
+  parents:
+  - name: NDT
+    relation: extends
+  description: Graph-based 3D LiDAR SLAM with NDT scan matching and loop closure
+- name: LIO-SAM
+  paper: 'LIO-SAM: Tightly-coupled Lidar Inertial Odometry via Smoothing and Mapping'
+  arxiv: '2007.00258'
+  year: 2020
+  code: TixiaoShan/LIO-SAM
+  stars: 4620
+  tags:
+  - lidar-inertial
+  - factor-graph
+  - tightly-coupled
+  parents:
+  - name: LeGO-LOAM
+    relation: extends
+  - name: LOAM
+    relation: extends
+  description: Tightly-coupled LiDAR-inertial odometry via factor graph optimization
+- name: SC-LIO-SAM
+  paper: 'Scan Context: Egocentric Spatial Descriptor for Place Recognition within
+    3D Point Cloud Map'
+  year: 2021
+  code: gisbi-kim/SC-LIO-SAM
+  stars: 814
+  tags:
+  - lidar-inertial
+  - loop-closure
+  - place-recognition
+  parents:
+  - name: LIO-SAM
+    relation: extends
+  description: Extends LIO-SAM with Scan Context for robust loop closure detection
+- name: FAST-LIO
+  paper: 'FAST-LIO: A Fast, Robust LiDAR-Inertial Odometry Package by Tightly-Coupled
+    Iterated Kalman Filter'
+  arxiv: '2010.08196'
+  year: 2021
+  code: hku-mars/FAST_LIO
+  stars: 4436
+  tags:
+  - lidar-inertial
+  - kalman-filter
+  - tightly-coupled
+  parents:
+  - name: LOAM
+    relation: extends
+  description: Fast tightly-coupled LiDAR-inertial odometry using iterated Kalman
+    filter
+- name: FAST-LIO2
+  paper: 'FAST-LIO2: Fast Direct LiDAR-Inertial Odometry'
+  arxiv: '2107.06829'
+  year: 2022
+  code: hku-mars/FAST_LIO
+  stars: 4436
+  tags:
+  - lidar-inertial
+  - ikd-tree
+  - direct
+  parents:
+  - name: FAST-LIO
+    relation: extends
+  description: Direct LiDAR-inertial odometry with incremental k-d tree for efficient
+    map management
+- name: Faster-LIO
+  paper: 'Faster-LIO: Lightweight Tightly Coupled Lidar-Inertial Odometry Using Parallel
+    Sparse Incremental Voxels'
+  arxiv: '2112.11514'
+  year: 2022
+  code: gaoxiang12/faster-lio
+  stars: 1485
+  tags:
+  - lidar-inertial
+  - voxel
+  - parallel
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  description: Faster variant of FAST-LIO2 using incremental voxel structure instead
+    of ikd-tree
+- name: Point-LIO
+  paper: 'Point-LIO: Robust High-Bandwidth Lidar-Inertial Odometry'
+  arxiv: '2306.10310'
+  year: 2023
+  code: hku-mars/Point-LIO
+  stars: 1148
+  tags:
+  - lidar-inertial
+  - point-by-point
+  - high-bandwidth
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  description: Point-by-point LiDAR-inertial odometry for high-bandwidth state estimation
+- name: CT-ICP
+  paper: 'CT-ICP: Real-time Elastic LiDAR Odometry with Loop Closure'
+  arxiv: '2109.12979'
+  year: 2022
+  code: jedeschaud/ct_icp
+  stars: 881
+  tags:
+  - lidar-odometry
+  - continuous-time
+  - elastic
+  parents:
+  - name: ICP
+    relation: extends
+  description: Continuous-time ICP for elastic motion compensation during LiDAR sweeps
+- name: KISS-ICP
+  paper: 'KISS-ICP: In Defense of Point-to-Point ICP — Simple, Accurate, and Robust
+    Registration with Point Clouds'
+  arxiv: '2209.15397'
+  year: 2023
+  code: PRBonn/kiss-icp
+  stars: 2109
+  tags:
+  - lidar-odometry
+  - simple
+  - robust
+  - point-to-point
+  parents:
+  - name: ICP
+    relation: extends
+  description: Simple and robust point-to-point ICP pipeline with adaptive thresholding
+- name: Norlab ICP Mapper
+  paper: Robust and Accurate Mapping for Mobile Robots Based on ICP
+  year: 2022
+  code: norlab-ulaval/norlab_icp_mapper
+  stars: 70
+  tags:
+  - lidar-mapping
+  - icp
+  - dense-map
+  parents:
+  - name: ICP
+    relation: extends
+  description: ICP-based dense mapping framework from Northern Robotics Lab
+- name: DLO
+  paper: 'Direct LiDAR Odometry: Fast Localization with Dense Point Clouds'
+  arxiv: '2110.00605'
+  year: 2022
+  code: vectr-ucla/direct_lidar_odometry
+  stars: 1021
+  tags:
+  - lidar-odometry
+  - direct
+  - dense
+  - keyframe
+  parents:
+  - name: LOAM
+    relation: inspires
+  - name: ICP
+    relation: extends
+  description: Direct LiDAR odometry using dense point clouds without feature extraction
+- name: DLIO
+  paper: 'Direct LiDAR-Inertial Odometry: Lightweight LIO with Continuous-Time Motion
+    Correction'
+  arxiv: '2203.03749'
+  year: 2023
+  code: vectr-ucla/direct_lidar_inertial_odometry
+  stars: 944
+  tags:
+  - lidar-inertial
+  - direct
+  - continuous-time
+  - lightweight
+  parents:
+  - name: DLO
+    relation: extends
+  description: Lightweight LiDAR-inertial odometry extending DLO with IMU and continuous-time
+    correction
+- name: BALM
+  paper: 'BALM: Bundle Adjustment for Lidar Mapping'
+  arxiv: '2010.08215'
+  year: 2021
+  code: hku-mars/BALM
+  stars: 892
+  tags:
+  - lidar-mapping
+  - bundle-adjustment
+  - optimization
+  parents:
+  - name: LOAM
+    relation: inspires
+  description: Bundle adjustment formulation for LiDAR mapping with adaptive voxelization
+- name: Wildcat
+  paper: 'Wildcat: Online Continuous-Time 3D Lidar-Inertial SLAM'
+  arxiv: '2410.07875'
+  year: 2024
+  tags:
+  - lidar-inertial
+  - continuous-time
+  - online
+  parents:
+  - name: CT-ICP
+    relation: extends
+  - name: FAST-LIO2
+    relation: inspires
+  description: Online continuous-time LiDAR-inertial SLAM with B-spline trajectory
+    representation
+- name: COIN-LIO
+  paper: 'COIN-LIO: Complementary Intensity-Augmented LiDAR Inertial Odometry'
+  arxiv: '2310.01235'
+  year: 2024
+  code: ethz-asl/COIN-LIO
+  stars: 461
+  tags:
+  - lidar-inertial
+  - intensity
+  - complementary
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  description: LiDAR-inertial odometry augmented with intensity information for degraded
+    geometry
+- name: Traj-LO
+  paper: 'Traj-LO: In Defense of LiDAR-Only Odometry Using an Effective Continuous-Time
+    Trajectory'
+  arxiv: '2402.02928'
+  year: 2024
+  code: kevin2431/Traj-LO
+  stars: 363
+  tags:
+  - lidar-odometry
+  - continuous-time
+  - trajectory
+  parents:
+  - name: CT-ICP
+    relation: extends
+  - name: KISS-ICP
+    relation: inspires
+  description: LiDAR-only odometry using continuous-time trajectory with B-spline
+- name: LOG-LIO2
+  paper: 'LOG-LIO2: A LiDAR-Inertial Odometry with Efficient Uncertainty Analysis'
+  arxiv: '2405.01316'
+  year: 2024
+  code: tiev-tongji/LOG-LIO2
+  stars: 188
+  tags:
+  - lidar-inertial
+  - uncertainty
+  - logarithmic-map
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  description: LiDAR-inertial odometry with efficient local-global uncertainty analysis
+- name: LO-Net
+  paper: 'LO-Net: Deep Real-Time Lidar Odometry'
+  arxiv: '1904.08242'
+  year: 2019
+  tags:
+  - lidar-odometry
+  - deep-learning
+  - end-to-end
+  parents:
+  - name: LOAM
+    relation: inspires
+  description: End-to-end deep learning framework for real-time LiDAR odometry
+- name: DeepLO
+  paper: 'DeepLO: LiDAR Odometry with Deep Learning'
+  arxiv: '1902.10562'
+  year: 2019
+  tags:
+  - lidar-odometry
+  - deep-learning
+  - vertex-map
+  parents:
+  - name: ICP
+    relation: inspires
+  description: Deep learning approach to LiDAR odometry using vertex and normal maps
+- name: PWCLO-Net
+  paper: 'PWCLO-Net: Deep LiDAR Odometry in 3D Point Clouds Using Hierarchical Embedding
+    Mask Optimization'
+  arxiv: '2012.00972'
+  year: 2021
+  tags:
+  - lidar-odometry
+  - deep-learning
+  - hierarchical
+  - point-cloud
+  parents:
+  - name: LO-Net
+    relation: extends
+  - name: DeepLO
+    relation: inspires
+  description: Hierarchical embedding and mask optimization for deep LiDAR odometry
+- name: GLIM
+  paper: 'GLIM: 3D Range-Inertial Localization and Mapping with GPU-Accelerated Scan
+    Matching and Factor Graph Optimization'
+  arxiv: '2407.10344'
+  year: 2025
+  code: koide3/glim
+  stars: 1494
+  tags:
+  - lidar-inertial
+  - gpu
+  - graph-based
+  - factor-graph
+  - real-time
+  parents:
+  - name: hdl_graph_slam
+    relation: extends
+  - name: FAST-LIO2
+    relation: inspires
+  description: GPU-accelerated graph-based LiDAR-inertial SLAM extending hdl_graph_slam
+    with real-time factor graph optimization
+- name: Kinematic-ICP
+  paper: 'Kinematic-ICP: Enhancing LiDAR Odometry with Kinematic Constraints for Wheeled
+    Mobile Robots'
+  arxiv: '2410.10277'
+  year: 2025
+  code: PRBonn/kinematic-icp
+  stars: 316
+  tags:
+  - lidar-odometry
+  - kinematic
+  - wheeled-robot
+  - icp
+  parents:
+  - name: KISS-ICP
+    relation: extends
+  description: Extends KISS-ICP with wheel odometry kinematic constraints for improved
+    performance on wheeled robots
+- name: KISS-ICP (v2 pipeline)
+  paper: 'KISS-ICP: In Defense of Point-to-Point ICP (extended journal version)'
+  arxiv: '2209.15397'
+  year: 2025
+  code: PRBonn/kiss-icp
+  stars: 2109
+  tags:
+  - lidar-odometry
+  - simple
+  - robust
+  - multi-sensor
+  - pipeline
+  parents:
+  - name: KISS-ICP
+    relation: extends
+  description: Updated KISS-ICP pipeline with multi-sensor support, improved voxel
+    hashing, and ROS2 integration
+- name: iG-LIO
+  paper: 'iG-LIO: An Incremental GICP-Based Tightly-Coupled LiDAR-Inertial Odometry'
+  arxiv: '2407.18386'
+  year: 2025
+  code: zijiechenrobotics/ig_lio
+  stars: 499
+  tags:
+  - lidar-inertial
+  - gicp
+  - tightly-coupled
+  - incremental
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  - name: ICP
+    relation: extends
+  description: Tightly-coupled LIO using incremental GICP for scan-to-map registration
+- name: LOG-LIO
+  paper: 'LOG-LIO: A LiDAR-Inertial Odometry with Efficient Local Geometric Information
+    Estimation'
+  arxiv: '2307.02251'
+  year: 2025
+  code: tiev-tongji/LOG-LIO
+  stars: 176
+  tags:
+  - lidar-inertial
+  - local-geometry
+  - normal-estimation
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  description: LiDAR-inertial odometry with efficient local geometric normal estimation
+    for improved registration
+- name: ImMesh
+  paper: 'ImMesh: An Immediate LiDAR Localization and Meshing Framework'
+  arxiv: '2301.05206'
+  year: 2025
+  code: hku-mars/ImMesh
+  stars: 731
+  tags:
+  - lidar-inertial
+  - mesh
+  - real-time
+  - dense-mapping
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  description: Real-time LiDAR meshing framework built on FAST-LIO2 for immediate
+    dense mesh reconstruction
+- name: HBA
+  paper: 'HBA: A Globally Consistent and Efficient Large-Scale LiDAR Mapping Module'
+  arxiv: '2308.11709'
+  year: 2025
+  code: hku-mars/HBA
+  stars: 570
+  tags:
+  - lidar-mapping
+  - bundle-adjustment
+  - hierarchical
+  - global-consistency
+  parents:
+  - name: BALM
+    relation: extends
+  - name: FAST-LIO2
+    relation: inspires
+  description: Hierarchical bundle adjustment for globally consistent large-scale
+    LiDAR mapping
+- name: Cartographer
+  paper: Real-Time Loop Closure in 2D LIDAR SLAM
+  year: 2016
+  code: googlecartographer/cartographer
+  stars: 7801
+  tags:
+  - lidar-slam
+  - graph-based
+  - submap
+  - real-time
+  parents:
+  - name: NDT
+    relation: inspires
+  description: Submap-based graph SLAM with real-time loop closure using branch-and-bound
+    scan matching
+- name: GICP
+  paper: Generalized-ICP
+  year: 2009
+  tags:
+  - point-cloud-registration
+  - classical
+  - plane-to-plane
+  parents:
+  - name: ICP
+    relation: extends
+  - name: NDT
+    relation: combines
+  description: Generalized ICP unifying point-to-point and point-to-plane with plane-to-plane
+    matching
+- name: R3LIVE
+  paper: 'R3LIVE: A Robust, Real-time, RGB-colored, LiDAR-Inertial-Visual Tightly-Coupled
+    State Estimation and Mapping Package'
+  arxiv: '2109.07982'
+  year: 2022
+  code: hku-mars/r3live
+  stars: 2363
+  tags:
+  - lidar-inertial-visual
+  - tightly-coupled
+  - rgb
+  - real-time
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  description: LiDAR-inertial-camera tightly-coupled SLAM with real-time RGB-colored
+    dense mapping
+- name: R2LIVE
+  paper: 'R2LIVE: A Robust, Real-time, LiDAR-Inertial-Visual Tightly-Coupled State
+    Estimator and Mapping'
+  arxiv: '2102.12400'
+  year: 2021
+  code: hku-mars/r2live
+  tags:
+  - lidar-inertial-visual
+  - tightly-coupled
+  - real-time
+  parents:
+  - name: FAST-LIO
+    relation: extends
+  description: Precursor to R3LIVE combining LiDAR-inertial-visual tightly-coupled
+    state estimation
+  stars: 773
+- name: LIO-Mapping
+  paper: 'LIO-Mapping: A Tightly Coupled 3D Lidar Inertial Odometry and Mapping Approach'
+  year: 2019
+  tags:
+  - lidar-inertial
+  - tightly-coupled
+  - early
+  parents:
+  - name: LOAM
+    relation: extends
+  description: Early tightly-coupled LiDAR-inertial odometry and mapping approach
+- name: LOCUS
+  paper: 'LOCUS: A Multi-Sensor Lidar-Centric Solution for High-Precision Odometry
+    and 3D Mapping in Real-Time'
+  year: 2021
+  tags:
+  - lidar-odometry
+  - multi-resolution
+  - surfel
+  - real-time
+  parents:
+  - name: LOAM
+    relation: inspires
+  description: JPL multi-resolution surfel matching for high-precision LiDAR odometry
+    in challenging environments
+- name: MULLS
+  paper: 'MULLS: Versatile LiDAR SLAM via Multi-metric Linear Least Square'
+  year: 2021
+  code: YuePanEdward/MULLS
+  tags:
+  - lidar-slam
+  - multi-metric
+  - icp
+  - versatile
+  parents:
+  - name: GICP
+    relation: extends
+  description: Multi-metric linear least square ICP SLAM using point, line, and plane
+    features
+  stars: 652
+- name: LVI-SAM
+  paper: 'LVI-SAM: Tightly-coupled Lidar-Visual-Inertial Odometry via Smoothing and
+    Mapping'
+  arxiv: '2104.10831'
+  year: 2021
+  code: TixiaoShan/LVI-SAM
+  stars: 1799
+  tags:
+  - lidar-visual-inertial
+  - tightly-coupled
+  - factor-graph
+  parents:
+  - name: LIO-SAM
+    relation: extends
+  description: Tightly-coupled LiDAR-visual-inertial odometry combining LIO-SAM with
+    visual features
+- name: FAST-LIVO
+  paper: 'FAST-LIVO: Fast and Tightly-coupled Sparse-Direct LiDAR-Inertial-Visual
+    Odometry'
+  arxiv: '2203.00893'
+  year: 2022
+  code: hku-mars/FAST-LIVO
+  stars: 1556
+  tags:
+  - lidar-visual-inertial
+  - tightly-coupled
+  - direct
+  parents:
+  - name: FAST-LIO2
+    relation: extends
+  description: Extends FAST-LIO2 with tightly-coupled direct visual odometry
+- name: FAST-LIVO2
+  paper: 'FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry'
+  arxiv: '2408.01916'
+  year: 2024
+  code: hku-mars/FAST-LIVO2
+  stars: 3776
+  tags:
+  - lidar-visual-inertial
+  - tightly-coupled
+  - direct
+  - real-time
+  parents:
+  - name: FAST-LIVO
+    relation: extends
+  description: Improved direct LiDAR-inertial-visual odometry with better efficiency
+    and accuracy
+- name: CamVox
+  paper: 'CamVox: A Low-cost and Accurate Lidar-assisted Visual SLAM System'
+  arxiv: '2011.11357'
+  year: 2021
+  code: ISEE-Technology/CamVox
+  stars: 561
+  tags:
+  - lidar-visual
+  - low-cost
+  - livox
+  parents:
+  - name: LOAM
+    relation: inspires
+  description: Low-cost LiDAR-assisted visual SLAM using Livox LiDAR

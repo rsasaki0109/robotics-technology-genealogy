@@ -1,690 +1,849 @@
 name: Large Language Models
-description: >
-  The genealogy of large language models — from the Transformer architecture
+description: 'The genealogy of large language models — from the Transformer architecture
   through the BERT/GPT era to modern open-weight models and beyond.
+
+  '
 source_awesome_lists:
-  - https://github.com/Hannibal046/Awesome-LLM
-  - https://github.com/RUCAIBox/LLMSurvey
-
+- https://github.com/Hannibal046/Awesome-LLM
+- https://github.com/RUCAIBox/LLMSurvey
 methods:
-  # === Foundations ===
-  - name: "Transformer"
-    paper: "Attention Is All You Need"
-    arxiv: "1706.03762"
-    year: 2017
-    code: "tensorflow/tensor2tensor"
-    stars: 15500
-    open_source: open
-    license: "Apache-2.0"
-    tags: [attention, architecture, seq2seq]
-    parents: []
-    description: "Self-attention-based architecture that replaced recurrence for sequence modeling"
-
-  # === Encoder Models ===
-  - name: "BERT"
-    paper: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
-    arxiv: "1810.04805"
-    year: 2018
-    code: "google-research/bert"
-    stars: 38500
-    open_source: open
-    license: "Apache-2.0"
-    tags: [encoder, masked-lm, pretraining]
-    parents:
-      - name: "Transformer"
-        relation: extends
-    description: "Bidirectional pretraining via masked language modeling for NLU tasks"
-
-  # === Encoder-Decoder Models ===
-  - name: "T5"
-    paper: "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
-    arxiv: "1910.10683"
-    year: 2020
-    code: "google-research/text-to-text-transfer-transformer"
-    stars: 6200
-    open_source: open
-    license: "Apache-2.0"
-    tags: [encoder-decoder, text-to-text, pretraining]
-    parents:
-      - name: "Transformer"
-        relation: extends
-      - name: "BERT"
-        relation: inspires
-    description: "Unified text-to-text framework exploring transfer learning at scale"
-
-  # === GPT Family ===
-  - name: "GPT-1"
-    paper: "Improving Language Understanding by Generative Pre-Training"
-    arxiv: null
-    year: 2018
-    code: null
-    stars: null
-    open_source: closed
-    license: null
-    tags: [decoder, autoregressive, pretraining, generative]
-    parents:
-      - name: "Transformer"
-        relation: extends
-    description: "First GPT model demonstrating generative pretraining followed by discriminative fine-tuning"
-
-  - name: "GPT-2"
-    paper: "Language Models are Unsupervised Multitask Learners"
-    arxiv: null
-    year: 2019
-    code: "openai/gpt-2"
-    stars: 22500
-    open_source: open
-    license: "MIT"
-    tags: [decoder, autoregressive, generative]
-    parents:
-      - name: "GPT-1"
-        relation: extends
-    description: "Demonstrated zero-shot task transfer with autoregressive language modeling"
-
-  - name: "GPT-3"
-    paper: "Language Models are Few-Shot Learners"
-    arxiv: "2005.14165"
-    year: 2020
-    code: null
-    stars: null
-    open_source: closed
-    license: null
-    tags: [decoder, autoregressive, few-shot, scaling]
-    parents:
-      - name: "GPT-2"
-        relation: extends
-    description: "175B parameter model showing emergent few-shot learning capabilities"
-
-  - name: "InstructGPT"
-    paper: "Training language models to follow instructions with human feedback"
-    arxiv: "2203.02155"
-    year: 2022
-    code: null
-    stars: null
-    open_source: closed
-    license: null
-    tags: [decoder, rlhf, instruction-following, alignment]
-    parents:
-      - name: "GPT-3"
-        relation: extends
-    description: "Aligns GPT-3 to follow instructions via supervised fine-tuning and RLHF"
-
-  - name: "GPT-4"
-    paper: "GPT-4 Technical Report"
-    arxiv: "2303.08774"
-    year: 2023
-    code: null
-    stars: null
-    open_source: closed
-    license: null
-    tags: [decoder, multimodal, reasoning, proprietary]
-    parents:
-      - name: "GPT-3"
-        relation: extends
-    description: "Multimodal large language model with strong reasoning across diverse tasks"
-
-  # === Scaling Laws & Efficiency ===
-  - name: "Chinchilla"
-    paper: "Training Compute-Optimal Large Language Models"
-    arxiv: "2203.15556"
-    year: 2022
-    code: null
-    stars: null
-    open_source: closed
-    license: null
-    tags: [scaling-laws, compute-optimal, training]
-    parents:
-      - name: "GPT-3"
-        relation: inspires
-    description: "Derived compute-optimal scaling laws showing data should scale with parameters"
-
-  # === Google Models ===
-  - name: "PaLM"
-    paper: "PaLM: Scaling Language Modeling with Pathways"
-    arxiv: "2204.02311"
-    year: 2022
-    code: null
-    stars: null
-    open_source: closed
-    license: null
-    tags: [decoder, scaling, pathways, proprietary]
-    parents:
-      - name: "Transformer"
-        relation: extends
-      - name: "GPT-3"
-        relation: inspires
-    description: "540B parameter model trained on Pathways system with strong reasoning"
-
-  - name: "PaLM 2"
-    paper: "PaLM 2 Technical Report"
-    arxiv: "2305.10403"
-    year: 2023
-    code: null
-    stars: null
-    open_source: closed
-    license: null
-    tags: [decoder, multilingual, reasoning, proprietary]
-    parents:
-      - name: "PaLM"
-        relation: extends
-      - name: "Chinchilla"
-        relation: inspires
-    description: "Compute-optimal successor to PaLM with improved multilingual and reasoning"
-
-  # === Claude Family ===
-  - name: "Claude 1"
-    paper: null
-    arxiv: null
-    year: 2023
-    code: null
-    stars: null
-    open_source: closed
-    license: null
-    tags: [decoder, rlhf, safety, proprietary]
-    parents:
-      - name: "Transformer"
-        relation: extends
-    description: "Anthropic's first commercial safety-focused large language model"
-
-  # === LLaMA Family ===
-  - name: "LLaMA"
-    paper: "LLaMA: Open and Efficient Foundation Language Models"
-    arxiv: "2302.13971"
-    year: 2023
-    code: "meta-llama/llama"
-    stars: 56000
-    open_source: research
-    license: "LLaMA Community License"
-    tags: [decoder, open-weight, efficient]
-    parents:
-      - name: "Transformer"
-        relation: extends
-      - name: "Chinchilla"
-        relation: inspires
-    description: "Competitive open-weight models trained on publicly available data"
-
-  - name: "LLaMA 2"
-    paper: "Llama 2: Open Foundation and Fine-Tuned Chat Models"
-    arxiv: "2307.09288"
-    year: 2023
-    code: "meta-llama/llama"
-    stars: 56000
-    open_source: open
-    license: "LLaMA 2 Community License"
-    tags: [decoder, open-weight, rlhf, chat]
-    parents:
-      - name: "LLaMA"
-        relation: extends
-    description: "Open-weight LLM with RLHF-tuned chat variants up to 70B parameters"
-
-  - name: "LLaMA 3"
-    paper: "The Llama 3 Herd of Models"
-    arxiv: "2407.21783"
-    year: 2024
-    code: "meta-llama/llama3"
-    stars: 28000
-    open_source: open
-    license: "Llama 3 Community License"
-    tags: [decoder, open-weight, multilingual, scaling]
-    parents:
-      - name: "LLaMA 2"
-        relation: extends
-    description: "Next-generation Llama with 8B-405B variants and multilingual support"
-
-  - name: "LLaMA 4"
-    paper: "The Llama 4 Herd of Models"
-    arxiv: null
-    year: 2025
-    code: "meta-llama/llama4"
-    stars: 5000
-    open_source: open
-    license: "Llama 4 Community License"
-    tags: [decoder, moe, open-weight, multimodal]
-    parents:
-      - name: "LLaMA 3"
-        relation: extends
-    description: "Mixture-of-experts Llama models including Scout and Maverick variants"
-
-  - name: "CodeLlama"
-    paper: "Code Llama: Open Foundation Models for Code"
-    arxiv: "2308.12950"
-    year: 2023
-    code: "meta-llama/codellama"
-    stars: 16000
-    open_source: open
-    license: "LLaMA 2 Community License"
-    tags: [decoder, open-weight, code, fine-tuned]
-    parents:
-      - name: "LLaMA 2"
-        relation: extends
-    description: "Code-specialized LLaMA 2 fine-tuned on code data for generation, infilling, and instruction following"
-
-  # === InternLM Family ===
-  - name: "InternLM2"
-    paper: "InternLM2 Technical Report"
-    arxiv: "2403.17297"
-    year: 2024
-    code: "InternLM/InternLM"
-    stars: 6500
-    open_source: open
-    license: "Apache-2.0"
-    tags: [decoder, open-weight, multilingual, long-context]
-    parents:
-      - name: "Transformer"
-        relation: extends
-      - name: "LLaMA"
-        relation: inspires
-    description: "Open-source LLM with strong reasoning, long-context, and tool-use capabilities from Shanghai AI Lab"
-
-  # === Allen AI ===
-  - name: "OLMo"
-    paper: "OLMo: Accelerating the Science of Language Models"
-    arxiv: "2402.00838"
-    year: 2024
-    code: "allenai/OLMo"
-    stars: 4500
-    open_source: open
-    license: "Apache-2.0"
-    tags: [decoder, open-weight, open-data, reproducible]
-    parents:
-      - name: "LLaMA"
-        relation: inspires
-    description: "Fully open language model with open data, training code, and evaluation for reproducible LLM research"
-
-  # === Mistral Family ===
-  - name: "Mistral 7B"
-    paper: "Mistral 7B"
-    arxiv: "2310.06825"
-    year: 2023
-    code: "mistralai/mistral-src"
-    stars: 9500
-    open_source: open
-    license: "Apache-2.0"
-    tags: [decoder, open-weight, sliding-window-attention, efficient]
-    parents:
-      - name: "LLaMA"
-        relation: inspires
-    description: "Efficient 7B model with grouped-query and sliding-window attention"
-
-  - name: "Mixtral"
-    paper: "Mixtral of Experts"
-    arxiv: "2401.04088"
-    year: 2024
-    code: "mistralai/mistral-src"
-    stars: 9500
-    open_source: open
-    license: "Apache-2.0"
-    tags: [decoder, moe, open-weight, sparse]
-    parents:
-      - name: "Mistral 7B"
-        relation: extends
-    description: "Sparse mixture-of-experts model outperforming dense models at same inference cost"
-
-  # === Microsoft Phi Family ===
-  - name: "Phi-2"
-    paper: "Phi-2: The Surprising Power of Small Language Models"
-    arxiv: null
-    year: 2023
-    code: null
-    stars: null
-    open_source: open
-    license: "MIT"
-    tags: [decoder, small-lm, data-quality, efficient]
-    parents:
-      - name: "Transformer"
-        relation: extends
-    description: "2.7B model matching larger models via high-quality training data curation"
-
-  - name: "Phi-3"
-    paper: "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone"
-    arxiv: "2404.14219"
-    year: 2024
-    code: null
-    stars: null
-    open_source: open
-    license: "MIT"
-    tags: [decoder, small-lm, on-device, efficient]
-    parents:
-      - name: "Phi-2"
-        relation: extends
-    description: "3.8B model rivaling larger models, designed for on-device deployment"
-
-  # === Google Gemma ===
-  - name: "Gemma"
-    paper: "Gemma: Open Models Based on Gemini Research and Technology"
-    arxiv: "2403.08295"
-    year: 2024
-    code: "google/gemma"
-    stars: 600
-    open_source: open
-    license: "Gemma License"
-    tags: [decoder, open-weight, lightweight]
-    parents:
-      - name: "PaLM 2"
-        relation: inspires
-    description: "Open-weight lightweight models derived from Gemini research"
-
-  # === Alibaba Qwen Family ===
-  - name: "Qwen"
-    paper: "Qwen Technical Report"
-    arxiv: "2309.16609"
-    year: 2023
-    code: "QwenLM/Qwen"
-    stars: 13500
-    open_source: open
-    license: "Tongyi Qianwen License"
-    tags: [decoder, open-weight, multilingual]
-    parents:
-      - name: "Transformer"
-        relation: extends
-      - name: "LLaMA"
-        relation: inspires
-    description: "Alibaba's multilingual LLM series with strong coding and math abilities"
-
-  - name: "Qwen2"
-    paper: "Qwen2 Technical Report"
-    arxiv: "2407.10671"
-    year: 2024
-    code: "QwenLM/Qwen2"
-    stars: 4500
-    open_source: open
-    license: "Apache-2.0"
-    tags: [decoder, open-weight, multilingual, gqa]
-    parents:
-      - name: "Qwen"
-        relation: extends
-    description: "Second-generation Qwen with GQA and expanded multilingual support"
-
-  - name: "Qwen2.5"
-    paper: "Qwen2.5 Technical Report"
-    arxiv: "2412.15115"
-    year: 2025
-    code: "QwenLM/Qwen2.5"
-    stars: 12000
-    open_source: open
-    license: "Apache-2.0"
-    tags: [decoder, open-weight, long-context, coding]
-    parents:
-      - name: "Qwen2"
-        relation: extends
-    description: "Improved Qwen series with strong coding, math, and long-context abilities"
-
-  # === DeepSeek Family ===
-  - name: "DeepSeek-V2"
-    paper: "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"
-    arxiv: "2405.04434"
-    year: 2024
-    code: "deepseek-ai/DeepSeek-V2"
-    stars: 2500
-    open_source: open
-    license: "DeepSeek License"
-    tags: [decoder, moe, efficient, open-weight]
-    parents:
-      - name: "Transformer"
-        relation: extends
-      - name: "Mixtral"
-        relation: inspires
-    description: "MoE model with multi-head latent attention for efficient inference"
-
-  - name: "DeepSeek-V3"
-    paper: "DeepSeek-V3 Technical Report"
-    arxiv: "2412.19437"
-    year: 2025
-    code: "deepseek-ai/DeepSeek-V3"
-    stars: 22000
-    open_source: open
-    license: "DeepSeek License"
-    tags: [decoder, moe, fp8-training, open-weight]
-    parents:
-      - name: "DeepSeek-V2"
-        relation: extends
-    description: "671B MoE model with FP8 training achieving frontier-level performance"
-
-  - name: "DeepSeek-R1"
-    paper: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
-    arxiv: "2501.12948"
-    year: 2025
-    code: "deepseek-ai/DeepSeek-R1"
-    stars: 40000
-    open_source: open
-    license: "MIT"
-    tags: [decoder, reasoning, rl, chain-of-thought, open-weight]
-    parents:
-      - name: "DeepSeek-V3"
-        relation: extends
-    description: "Reasoning-focused model trained with RL to produce chain-of-thought solutions"
-
-  # === Falcon ===
-  - name: "Falcon"
-    paper: "The Falcon Series of Open Language Models"
-    arxiv: "2311.16867"
-    year: 2023
-    code: "tiiuae/falcon-40b"
-    stars: 900
-    open_source: open
-    license: "Apache-2.0"
-    tags: [decoder, open-weight, web-data]
-    parents:
-      - name: "Transformer"
-        relation: extends
-      - name: "GPT-3"
-        relation: inspires
-    description: "Open-weight LLMs trained on carefully curated web data by TII"
-
-  # === Alternative Architectures ===
-  - name: "RWKV"
-    paper: "RWKV: Reinventing RNNs for the Transformer Era"
-    arxiv: "2305.13048"
-    year: 2023
-    code: "BlinkDL/RWKV-LM"
-    stars: 13000
-    open_source: open
-    license: "Apache-2.0"
-    tags: [rnn, linear-attention, efficient-inference]
-    parents:
-      - name: "Transformer"
-        relation: replaces
-    description: "Linear-complexity RNN architecture combining transformer training with RNN inference"
-
-  - name: "Mamba"
-    paper: "Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
-    arxiv: "2312.00752"
-    year: 2024
-    code: "state-spaces/mamba"
-    stars: 14000
-    open_source: open
-    license: "Apache-2.0"
-    tags: [ssm, state-space, linear-time, efficient-inference]
-    parents:
-      - name: "Transformer"
-        relation: replaces
-    description: "Selective state-space model achieving linear-time sequence modeling"
-
-  # === Claude Family (Anthropic) ===
-  - name: "Claude 2"
-    year: 2023
-    open_source: closed
-    license: null
-    tags: [decoder, rlhf, safety, proprietary, 100k-context]
-    parents:
-      - name: "Claude 1"
-        relation: extends
-    description: "100K context window with improved reasoning and safety"
-
-  - name: "Claude 3 Opus"
-    year: 2024
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, reasoning, multimodal]
-    parents:
-      - name: "Claude 2"
-        relation: extends
-    description: "Near-frontier intelligence with strong vision and analysis capabilities"
-
-  - name: "Claude 3.5 Sonnet"
-    year: 2024
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, coding, reasoning, fast]
-    parents:
-      - name: "Claude 3 Opus"
-        relation: extends
-    description: "Surpassed Opus in most benchmarks with faster speed and strong coding ability"
-
-  - name: "Claude 3.5 Haiku"
-    year: 2024
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, fast, lightweight]
-    parents:
-      - name: "Claude 3.5 Sonnet"
-        relation: extends
-    description: "Fast and cost-effective model matching Sonnet 3.0 performance"
-
-  - name: "Claude 4 Opus"
-    year: 2025
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, coding, agentic, frontier]
-    parents:
-      - name: "Claude 3.5 Sonnet"
-        relation: extends
-    description: "Frontier model with strong agentic coding and sustained complex task performance"
-
-  - name: "Claude 4.5 Sonnet"
-    year: 2025
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, creative, hybrid-reasoning]
-    parents:
-      - name: "Claude 4 Opus"
-        relation: extends
-    description: "Hybrid extended thinking model with strong creative writing and analysis"
-
-  # === Gemini Family (Google) ===
-  - name: "Gemini 1.0"
-    year: 2023
-    open_source: closed
-    license: null
-    tags: [decoder, multimodal, proprietary, natively-multimodal]
-    parents:
-      - name: "PaLM 2"
-        relation: extends
-    description: "Google's natively multimodal model trained jointly on text, image, audio, and video"
-
-  - name: "Gemini 1.5 Pro"
-    year: 2024
-    arxiv: "2403.05530"
-    open_source: closed
-    license: null
-    tags: [decoder, multimodal, proprietary, long-context, moe]
-    parents:
-      - name: "Gemini 1.0"
-        relation: extends
-    description: "MoE architecture with 1M+ token context window and strong multimodal reasoning"
-
-  - name: "Gemini 2.0 Flash"
-    year: 2024
-    open_source: closed
-    license: null
-    tags: [decoder, multimodal, proprietary, agentic, fast]
-    parents:
-      - name: "Gemini 1.5 Pro"
-        relation: extends
-    description: "Agentic multimodal model with native tool use, code execution, and real-time capabilities"
-
-  - name: "Gemini 2.5 Pro"
-    year: 2025
-    open_source: closed
-    license: null
-    tags: [decoder, multimodal, proprietary, thinking, frontier]
-    parents:
-      - name: "Gemini 2.0 Flash"
-        relation: extends
-    description: "Frontier thinking model with state-of-the-art reasoning and coding benchmarks"
-
-  # === Grok Family (xAI) ===
-  - name: "Grok-1"
-    year: 2024
-    code: "xai-org/grok-1"
-    stars: 49000
-    open_source: open
-    license: "Apache-2.0"
-    tags: [decoder, moe, open-weight, 314b]
-    parents:
-      - name: "Transformer"
-        relation: extends
-      - name: "Mixtral"
-        relation: inspires
-    description: "xAI's 314B MoE model, fully open-sourced weights"
-
-  - name: "Grok-2"
-    year: 2024
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, reasoning, multimodal]
-    parents:
-      - name: "Grok-1"
-        relation: extends
-    description: "Frontier-competitive model with image understanding and generation"
-
-  - name: "Grok-3"
-    year: 2025
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, reasoning, thinking, frontier]
-    parents:
-      - name: "Grok-2"
-        relation: extends
-    description: "xAI's frontier model with DeepSearch and extended thinking capabilities"
-
-  # === ChatGPT / o-series (OpenAI) ===
-  - name: "ChatGPT"
-    year: 2022
-    open_source: closed
-    license: null
-    tags: [decoder, rlhf, chat, product]
-    parents:
-      - name: "InstructGPT"
-        relation: extends
-    description: "Conversational AI product built on InstructGPT/GPT-3.5 with RLHF fine-tuning"
-
-  - name: "GPT-4o"
-    year: 2024
-    open_source: closed
-    license: null
-    tags: [decoder, omni-modal, proprietary, real-time, voice]
-    parents:
-      - name: "GPT-4"
-        relation: extends
-    description: "Omni-modal model with native voice, vision, and text at GPT-4 level with faster speed"
-
-  - name: "o1"
-    year: 2024
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, reasoning, chain-of-thought, thinking]
-    parents:
-      - name: "GPT-4o"
-        relation: extends
-    description: "OpenAI's reasoning model using internal chain-of-thought for complex math and coding"
-
-  - name: "o3"
-    year: 2025
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, reasoning, frontier, thinking]
-    parents:
-      - name: "o1"
-        relation: extends
-    description: "Next-generation reasoning model with adaptive compute and frontier-level performance"
-
-  - name: "GPT-4.1"
-    year: 2025
-    open_source: closed
-    license: null
-    tags: [decoder, proprietary, coding, instruction-following, long-context]
-    parents:
-      - name: "GPT-4o"
-        relation: extends
-    description: "Improved GPT-4 with better coding, instruction following, and 1M token context"
+- name: Transformer
+  paper: Attention Is All You Need
+  arxiv: '1706.03762'
+  year: 2017
+  code: tensorflow/tensor2tensor
+  stars: 17074
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - attention
+  - architecture
+  - seq2seq
+  parents: []
+  description: Self-attention-based architecture that replaced recurrence for sequence
+    modeling
+- name: BERT
+  paper: 'BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding'
+  arxiv: '1810.04805'
+  year: 2018
+  code: google-research/bert
+  stars: 39920
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - encoder
+  - masked-lm
+  - pretraining
+  parents:
+  - name: Transformer
+    relation: extends
+  description: Bidirectional pretraining via masked language modeling for NLU tasks
+- name: T5
+  paper: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+  arxiv: '1910.10683'
+  year: 2020
+  code: google-research/text-to-text-transfer-transformer
+  stars: 6495
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - encoder-decoder
+  - text-to-text
+  - pretraining
+  parents:
+  - name: Transformer
+    relation: extends
+  - name: BERT
+    relation: inspires
+  description: Unified text-to-text framework exploring transfer learning at scale
+- name: GPT-1
+  paper: Improving Language Understanding by Generative Pre-Training
+  arxiv: null
+  year: 2018
+  code: null
+  stars: null
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - autoregressive
+  - pretraining
+  - generative
+  parents:
+  - name: Transformer
+    relation: extends
+  description: First GPT model demonstrating generative pretraining followed by discriminative
+    fine-tuning
+- name: GPT-2
+  paper: Language Models are Unsupervised Multitask Learners
+  arxiv: null
+  year: 2019
+  code: openai/gpt-2
+  stars: 24700
+  open_source: open
+  license: MIT
+  tags:
+  - decoder
+  - autoregressive
+  - generative
+  parents:
+  - name: GPT-1
+    relation: extends
+  description: Demonstrated zero-shot task transfer with autoregressive language modeling
+- name: GPT-3
+  paper: Language Models are Few-Shot Learners
+  arxiv: '2005.14165'
+  year: 2020
+  code: null
+  stars: null
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - autoregressive
+  - few-shot
+  - scaling
+  parents:
+  - name: GPT-2
+    relation: extends
+  description: 175B parameter model showing emergent few-shot learning capabilities
+- name: InstructGPT
+  paper: Training language models to follow instructions with human feedback
+  arxiv: '2203.02155'
+  year: 2022
+  code: null
+  stars: null
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - rlhf
+  - instruction-following
+  - alignment
+  parents:
+  - name: GPT-3
+    relation: extends
+  description: Aligns GPT-3 to follow instructions via supervised fine-tuning and
+    RLHF
+- name: GPT-4
+  paper: GPT-4 Technical Report
+  arxiv: '2303.08774'
+  year: 2023
+  code: null
+  stars: null
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - multimodal
+  - reasoning
+  - proprietary
+  parents:
+  - name: GPT-3
+    relation: extends
+  description: Multimodal large language model with strong reasoning across diverse
+    tasks
+- name: Chinchilla
+  paper: Training Compute-Optimal Large Language Models
+  arxiv: '2203.15556'
+  year: 2022
+  code: null
+  stars: null
+  open_source: closed
+  license: null
+  tags:
+  - scaling-laws
+  - compute-optimal
+  - training
+  parents:
+  - name: GPT-3
+    relation: inspires
+  description: Derived compute-optimal scaling laws showing data should scale with
+    parameters
+- name: PaLM
+  paper: 'PaLM: Scaling Language Modeling with Pathways'
+  arxiv: '2204.02311'
+  year: 2022
+  code: null
+  stars: null
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - scaling
+  - pathways
+  - proprietary
+  parents:
+  - name: Transformer
+    relation: extends
+  - name: GPT-3
+    relation: inspires
+  description: 540B parameter model trained on Pathways system with strong reasoning
+- name: PaLM 2
+  paper: PaLM 2 Technical Report
+  arxiv: '2305.10403'
+  year: 2023
+  code: null
+  stars: null
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - multilingual
+  - reasoning
+  - proprietary
+  parents:
+  - name: PaLM
+    relation: extends
+  - name: Chinchilla
+    relation: inspires
+  description: Compute-optimal successor to PaLM with improved multilingual and reasoning
+- name: Claude 1
+  paper: null
+  arxiv: null
+  year: 2023
+  code: null
+  stars: null
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - rlhf
+  - safety
+  - proprietary
+  parents:
+  - name: Transformer
+    relation: extends
+  description: Anthropic's first commercial safety-focused large language model
+- name: LLaMA
+  paper: 'LLaMA: Open and Efficient Foundation Language Models'
+  arxiv: '2302.13971'
+  year: 2023
+  code: meta-llama/llama
+  stars: 59240
+  open_source: research
+  license: LLaMA Community License
+  tags:
+  - decoder
+  - open-weight
+  - efficient
+  parents:
+  - name: Transformer
+    relation: extends
+  - name: Chinchilla
+    relation: inspires
+  description: Competitive open-weight models trained on publicly available data
+- name: LLaMA 2
+  paper: 'Llama 2: Open Foundation and Fine-Tuned Chat Models'
+  arxiv: '2307.09288'
+  year: 2023
+  code: meta-llama/llama
+  stars: 59240
+  open_source: open
+  license: LLaMA 2 Community License
+  tags:
+  - decoder
+  - open-weight
+  - rlhf
+  - chat
+  parents:
+  - name: LLaMA
+    relation: extends
+  description: Open-weight LLM with RLHF-tuned chat variants up to 70B parameters
+- name: LLaMA 3
+  paper: The Llama 3 Herd of Models
+  arxiv: '2407.21783'
+  year: 2024
+  code: meta-llama/llama3
+  stars: 29283
+  open_source: open
+  license: Llama 3 Community License
+  tags:
+  - decoder
+  - open-weight
+  - multilingual
+  - scaling
+  parents:
+  - name: LLaMA 2
+    relation: extends
+  description: Next-generation Llama with 8B-405B variants and multilingual support
+- name: LLaMA 4
+  paper: The Llama 4 Herd of Models
+  arxiv: null
+  year: 2025
+  code: meta-llama/llama4
+  stars: 5000
+  open_source: open
+  license: Llama 4 Community License
+  tags:
+  - decoder
+  - moe
+  - open-weight
+  - multimodal
+  parents:
+  - name: LLaMA 3
+    relation: extends
+  description: Mixture-of-experts Llama models including Scout and Maverick variants
+- name: CodeLlama
+  paper: 'Code Llama: Open Foundation Models for Code'
+  arxiv: '2308.12950'
+  year: 2023
+  code: meta-llama/codellama
+  stars: 16342
+  open_source: open
+  license: LLaMA 2 Community License
+  tags:
+  - decoder
+  - open-weight
+  - code
+  - fine-tuned
+  parents:
+  - name: LLaMA 2
+    relation: extends
+  description: Code-specialized LLaMA 2 fine-tuned on code data for generation, infilling,
+    and instruction following
+- name: InternLM2
+  paper: InternLM2 Technical Report
+  arxiv: '2403.17297'
+  year: 2024
+  code: InternLM/InternLM
+  stars: 7171
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - decoder
+  - open-weight
+  - multilingual
+  - long-context
+  parents:
+  - name: Transformer
+    relation: extends
+  - name: LLaMA
+    relation: inspires
+  description: Open-source LLM with strong reasoning, long-context, and tool-use capabilities
+    from Shanghai AI Lab
+- name: OLMo
+  paper: 'OLMo: Accelerating the Science of Language Models'
+  arxiv: '2402.00838'
+  year: 2024
+  code: allenai/OLMo
+  stars: 6404
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - decoder
+  - open-weight
+  - open-data
+  - reproducible
+  parents:
+  - name: LLaMA
+    relation: inspires
+  description: Fully open language model with open data, training code, and evaluation
+    for reproducible LLM research
+- name: Mistral 7B
+  paper: Mistral 7B
+  arxiv: '2310.06825'
+  year: 2023
+  code: mistralai/mistral-src
+  stars: 10723
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - decoder
+  - open-weight
+  - sliding-window-attention
+  - efficient
+  parents:
+  - name: LLaMA
+    relation: inspires
+  description: Efficient 7B model with grouped-query and sliding-window attention
+- name: Mixtral
+  paper: Mixtral of Experts
+  arxiv: '2401.04088'
+  year: 2024
+  code: mistralai/mistral-src
+  stars: 10723
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - decoder
+  - moe
+  - open-weight
+  - sparse
+  parents:
+  - name: Mistral 7B
+    relation: extends
+  description: Sparse mixture-of-experts model outperforming dense models at same
+    inference cost
+- name: Phi-2
+  paper: 'Phi-2: The Surprising Power of Small Language Models'
+  arxiv: null
+  year: 2023
+  code: null
+  stars: null
+  open_source: open
+  license: MIT
+  tags:
+  - decoder
+  - small-lm
+  - data-quality
+  - efficient
+  parents:
+  - name: Transformer
+    relation: extends
+  description: 2.7B model matching larger models via high-quality training data curation
+- name: Phi-3
+  paper: 'Phi-3 Technical Report: A Highly Capable Language Model Locally on Your
+    Phone'
+  arxiv: '2404.14219'
+  year: 2024
+  code: null
+  stars: null
+  open_source: open
+  license: MIT
+  tags:
+  - decoder
+  - small-lm
+  - on-device
+  - efficient
+  parents:
+  - name: Phi-2
+    relation: extends
+  description: 3.8B model rivaling larger models, designed for on-device deployment
+- name: Gemma
+  paper: 'Gemma: Open Models Based on Gemini Research and Technology'
+  arxiv: '2403.08295'
+  year: 2024
+  code: google/gemma
+  stars: 600
+  open_source: open
+  license: Gemma License
+  tags:
+  - decoder
+  - open-weight
+  - lightweight
+  parents:
+  - name: PaLM 2
+    relation: inspires
+  description: Open-weight lightweight models derived from Gemini research
+- name: Qwen
+  paper: Qwen Technical Report
+  arxiv: '2309.16609'
+  year: 2023
+  code: QwenLM/Qwen
+  stars: 20757
+  open_source: open
+  license: Tongyi Qianwen License
+  tags:
+  - decoder
+  - open-weight
+  - multilingual
+  parents:
+  - name: Transformer
+    relation: extends
+  - name: LLaMA
+    relation: inspires
+  description: Alibaba's multilingual LLM series with strong coding and math abilities
+- name: Qwen2
+  paper: Qwen2 Technical Report
+  arxiv: '2407.10671'
+  year: 2024
+  code: QwenLM/Qwen2
+  stars: 26949
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - decoder
+  - open-weight
+  - multilingual
+  - gqa
+  parents:
+  - name: Qwen
+    relation: extends
+  description: Second-generation Qwen with GQA and expanded multilingual support
+- name: Qwen2.5
+  paper: Qwen2.5 Technical Report
+  arxiv: '2412.15115'
+  year: 2025
+  code: QwenLM/Qwen2.5
+  stars: 26949
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - decoder
+  - open-weight
+  - long-context
+  - coding
+  parents:
+  - name: Qwen2
+    relation: extends
+  description: Improved Qwen series with strong coding, math, and long-context abilities
+- name: DeepSeek-V2
+  paper: 'DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language
+    Model'
+  arxiv: '2405.04434'
+  year: 2024
+  code: deepseek-ai/DeepSeek-V2
+  stars: 4998
+  open_source: open
+  license: DeepSeek License
+  tags:
+  - decoder
+  - moe
+  - efficient
+  - open-weight
+  parents:
+  - name: Transformer
+    relation: extends
+  - name: Mixtral
+    relation: inspires
+  description: MoE model with multi-head latent attention for efficient inference
+- name: DeepSeek-V3
+  paper: DeepSeek-V3 Technical Report
+  arxiv: '2412.19437'
+  year: 2025
+  code: deepseek-ai/DeepSeek-V3
+  stars: 102231
+  open_source: open
+  license: DeepSeek License
+  tags:
+  - decoder
+  - moe
+  - fp8-training
+  - open-weight
+  parents:
+  - name: DeepSeek-V2
+    relation: extends
+  description: 671B MoE model with FP8 training achieving frontier-level performance
+- name: DeepSeek-R1
+  paper: 'DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement
+    Learning'
+  arxiv: '2501.12948'
+  year: 2025
+  code: deepseek-ai/DeepSeek-R1
+  stars: 91961
+  open_source: open
+  license: MIT
+  tags:
+  - decoder
+  - reasoning
+  - rl
+  - chain-of-thought
+  - open-weight
+  parents:
+  - name: DeepSeek-V3
+    relation: extends
+  description: Reasoning-focused model trained with RL to produce chain-of-thought
+    solutions
+- name: Falcon
+  paper: The Falcon Series of Open Language Models
+  arxiv: '2311.16867'
+  year: 2023
+  code: tiiuae/falcon-40b
+  stars: 900
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - decoder
+  - open-weight
+  - web-data
+  parents:
+  - name: Transformer
+    relation: extends
+  - name: GPT-3
+    relation: inspires
+  description: Open-weight LLMs trained on carefully curated web data by TII
+- name: RWKV
+  paper: 'RWKV: Reinventing RNNs for the Transformer Era'
+  arxiv: '2305.13048'
+  year: 2023
+  code: BlinkDL/RWKV-LM
+  stars: 14424
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - rnn
+  - linear-attention
+  - efficient-inference
+  parents:
+  - name: Transformer
+    relation: replaces
+  description: Linear-complexity RNN architecture combining transformer training with
+    RNN inference
+- name: Mamba
+  paper: 'Mamba: Linear-Time Sequence Modeling with Selective State Spaces'
+  arxiv: '2312.00752'
+  year: 2024
+  code: state-spaces/mamba
+  stars: 17530
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - ssm
+  - state-space
+  - linear-time
+  - efficient-inference
+  parents:
+  - name: Transformer
+    relation: replaces
+  description: Selective state-space model achieving linear-time sequence modeling
+- name: Claude 2
+  year: 2023
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - rlhf
+  - safety
+  - proprietary
+  - 100k-context
+  parents:
+  - name: Claude 1
+    relation: extends
+  description: 100K context window with improved reasoning and safety
+- name: Claude 3 Opus
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - reasoning
+  - multimodal
+  parents:
+  - name: Claude 2
+    relation: extends
+  description: Near-frontier intelligence with strong vision and analysis capabilities
+- name: Claude 3.5 Sonnet
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - coding
+  - reasoning
+  - fast
+  parents:
+  - name: Claude 3 Opus
+    relation: extends
+  description: Surpassed Opus in most benchmarks with faster speed and strong coding
+    ability
+- name: Claude 3.5 Haiku
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - fast
+  - lightweight
+  parents:
+  - name: Claude 3.5 Sonnet
+    relation: extends
+  description: Fast and cost-effective model matching Sonnet 3.0 performance
+- name: Claude 4 Opus
+  year: 2025
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - coding
+  - agentic
+  - frontier
+  parents:
+  - name: Claude 3.5 Sonnet
+    relation: extends
+  description: Frontier model with strong agentic coding and sustained complex task
+    performance
+- name: Claude 4.5 Sonnet
+  year: 2025
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - creative
+  - hybrid-reasoning
+  parents:
+  - name: Claude 4 Opus
+    relation: extends
+  description: Hybrid extended thinking model with strong creative writing and analysis
+- name: Gemini 1.0
+  year: 2023
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - multimodal
+  - proprietary
+  - natively-multimodal
+  parents:
+  - name: PaLM 2
+    relation: extends
+  description: Google's natively multimodal model trained jointly on text, image,
+    audio, and video
+- name: Gemini 1.5 Pro
+  year: 2024
+  arxiv: '2403.05530'
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - multimodal
+  - proprietary
+  - long-context
+  - moe
+  parents:
+  - name: Gemini 1.0
+    relation: extends
+  description: MoE architecture with 1M+ token context window and strong multimodal
+    reasoning
+- name: Gemini 2.0 Flash
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - multimodal
+  - proprietary
+  - agentic
+  - fast
+  parents:
+  - name: Gemini 1.5 Pro
+    relation: extends
+  description: Agentic multimodal model with native tool use, code execution, and
+    real-time capabilities
+- name: Gemini 2.5 Pro
+  year: 2025
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - multimodal
+  - proprietary
+  - thinking
+  - frontier
+  parents:
+  - name: Gemini 2.0 Flash
+    relation: extends
+  description: Frontier thinking model with state-of-the-art reasoning and coding
+    benchmarks
+- name: Grok-1
+  year: 2024
+  code: xai-org/grok-1
+  stars: 51530
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - decoder
+  - moe
+  - open-weight
+  - 314b
+  parents:
+  - name: Transformer
+    relation: extends
+  - name: Mixtral
+    relation: inspires
+  description: xAI's 314B MoE model, fully open-sourced weights
+- name: Grok-2
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - reasoning
+  - multimodal
+  parents:
+  - name: Grok-1
+    relation: extends
+  description: Frontier-competitive model with image understanding and generation
+- name: Grok-3
+  year: 2025
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - reasoning
+  - thinking
+  - frontier
+  parents:
+  - name: Grok-2
+    relation: extends
+  description: xAI's frontier model with DeepSearch and extended thinking capabilities
+- name: ChatGPT
+  year: 2022
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - rlhf
+  - chat
+  - product
+  parents:
+  - name: InstructGPT
+    relation: extends
+  description: Conversational AI product built on InstructGPT/GPT-3.5 with RLHF fine-tuning
+- name: GPT-4o
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - omni-modal
+  - proprietary
+  - real-time
+  - voice
+  parents:
+  - name: GPT-4
+    relation: extends
+  description: Omni-modal model with native voice, vision, and text at GPT-4 level
+    with faster speed
+- name: o1
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - reasoning
+  - chain-of-thought
+  - thinking
+  parents:
+  - name: GPT-4o
+    relation: extends
+  description: OpenAI's reasoning model using internal chain-of-thought for complex
+    math and coding
+- name: o3
+  year: 2025
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - reasoning
+  - frontier
+  - thinking
+  parents:
+  - name: o1
+    relation: extends
+  description: Next-generation reasoning model with adaptive compute and frontier-level
+    performance
+- name: GPT-4.1
+  year: 2025
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - proprietary
+  - coding
+  - instruction-following
+  - long-context
+  parents:
+  - name: GPT-4o
+    relation: extends
+  description: Improved GPT-4 with better coding, instruction following, and 1M token
+    context
