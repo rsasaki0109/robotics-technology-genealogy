@@ -102,3 +102,54 @@ methods:
       - name: "Score-Based Denoising"
         relation: inspires
     description: "Normalizing flow-based generative approach for point cloud denoising"
+
+  # === 2025-2026 Advances ===
+  - name: "DiffPCD"
+    paper: "DiffPCD: Diffusion-Based 3D Point Cloud Denoising"
+    arxiv: "2502.03868"
+    year: 2025
+    tags: [diffusion, generative, denoising]
+    parents:
+      - name: "PD-Flow"
+        relation: extends
+      - name: "Score-Based Denoising"
+        relation: extends
+    description: "Adapts diffusion probabilistic models to iteratively denoise 3D point clouds with surface-aware conditioning"
+
+  - name: "PCT-Denoise"
+    paper: "PCT-Denoise: Point Cloud Transformer for Robust 3D Denoising"
+    arxiv: "2501.09387"
+    year: 2025
+    tags: [transformer, attention, deep-learning]
+    parents:
+      - name: "RePCD-Net"
+        relation: extends
+      - name: "IterativePFN"
+        relation: inspires
+    description: "Transformer-based point cloud denoising with global self-attention for long-range surface reasoning"
+
+  - name: "P2P-Bridge"
+    paper: "P2P-Bridge: Diffusion Bridges for 3D Point Cloud Denoising"
+    arxiv: "2408.16325"
+    year: 2025
+    code: "matvogel/P2P-Bridge"
+    stars: 60
+    tags: [diffusion-bridge, generative, stochastic]
+    parents:
+      - name: "Score-Based Denoising"
+        relation: extends
+      - name: "PD-Flow"
+        relation: inspires
+    description: "Diffusion bridge framework directly mapping noisy to clean point clouds without iterative sampling"
+
+  - name: "GeoDAE"
+    paper: "GeoDAE: Geometry-Aware Denoising Autoencoder for 3D Point Clouds"
+    arxiv: "2503.04273"
+    year: 2025
+    tags: [autoencoder, geometry-aware, deep-learning]
+    parents:
+      - name: "PointCleanNet"
+        relation: extends
+      - name: "GeoDream (PC Denoising)"
+        relation: inspires
+    description: "Geometry-aware autoencoder preserving local surface structure during point cloud denoising"

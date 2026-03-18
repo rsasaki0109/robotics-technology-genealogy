@@ -379,3 +379,150 @@ methods:
       - name: "3D Gaussian Splatting"
         relation: extends
     description: "Dense visual SLAM using 3D Gaussian Splatting as the map representation"
+
+  # === 3DGS Advances (2025) ===
+  - name: "GaussianFormer"
+    paper: "GaussianFormer: Scene as Gaussians for Vision-Based 3D Semantic Occupancy Prediction"
+    arxiv: "2405.17429"
+    year: 2025
+    code: "huang-yh/GaussianFormer"
+    stars: 500
+    tags: [gaussian-splatting, transformer, 3d-occupancy]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Transformer-based 3D Gaussian representation for semantic occupancy prediction"
+
+  - name: "GOF"
+    paper: "Gaussian Opacity Fields: Efficient Adaptive Surface Reconstruction in Unbounded Scenes"
+    arxiv: "2404.10772"
+    year: 2025
+    code: "autonomousvision/gof"
+    stars: 500
+    tags: [gaussian-splatting, surface-reconstruction, opacity-fields]
+    parents:
+      - name: "2D Gaussian Splatting"
+        relation: extends
+    description: "Gaussian opacity fields for efficient adaptive surface reconstruction"
+
+  - name: "Splatt3R"
+    paper: "Splatt3R: Zero-shot Gaussian Splatting from Uncalibrated Image Pairs"
+    arxiv: "2408.13912"
+    year: 2025
+    code: "btsmart/splatt3r"
+    stars: 1000
+    tags: [gaussian-splatting, feed-forward, stereo, zero-shot]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Feed-forward 3D Gaussian Splatting from uncalibrated image pairs via MASt3R"
+
+  - name: "3DGS-LM"
+    paper: "3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt"
+    arxiv: "2409.12892"
+    year: 2025
+    code: "MrNeRF/3DGS-LM"
+    stars: 300
+    tags: [gaussian-splatting, optimization, levenberg-marquardt]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Analytic Gauss-Newton optimization for faster 3D Gaussian Splatting training"
+
+  - name: "InstantSplat"
+    paper: "InstantSplat: Unbounded Sparse-view Pose-free Gaussian Splatting in 40 Seconds"
+    arxiv: "2403.20309"
+    year: 2025
+    code: "NVlabs/InstantSplat"
+    stars: 1200
+    tags: [gaussian-splatting, sparse-view, pose-free]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Sparse-view pose-free 3DGS using DUSt3R for point initialization"
+
+  - name: "TRIPS"
+    paper: "TRIPS: Triplane-based 3D Gaussian Splatting"
+    arxiv: "2408.10105"
+    year: 2025
+    code: "lfranke/TRIPS"
+    stars: 300
+    tags: [gaussian-splatting, triplane, compact-representation]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Triplane-based representation for compact and efficient 3D Gaussian Splatting"
+
+  # === Generation (2025) ===
+  - name: "CAT3D"
+    paper: "CAT3D: Create Anything in 3D with Multi-View Diffusion Models"
+    arxiv: "2405.10314"
+    year: 2025
+    code: ""
+    stars: 0
+    tags: [3d-generation, multi-view-diffusion, text-to-3d]
+    parents:
+      - name: "DreamFusion"
+        relation: extends
+    description: "Multi-view diffusion model for creating 3D content from text or image prompts"
+
+  - name: "LGM"
+    paper: "LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation"
+    arxiv: "2402.05054"
+    year: 2025
+    code: "3DTopia/LGM"
+    stars: 1500
+    tags: [gaussian-splatting, 3d-generation, single-image, feed-forward]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Large feed-forward model generating high-resolution 3D Gaussians from single images"
+
+  - name: "TRELLIS"
+    paper: "TRELLIS: Structured 3D Latents for Scalable and Versatile 3D Generation"
+    arxiv: "2412.01506"
+    year: 2025
+    code: "microsoft/TRELLIS"
+    stars: 6000
+    tags: [3d-generation, structured-latent, scalable]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Structured latent representation for scalable and versatile 3D asset generation"
+
+  - name: "GRM"
+    paper: "GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation"
+    arxiv: "2403.14621"
+    year: 2025
+    code: "justimyhxu/GRM"
+    stars: 800
+    tags: [gaussian-splatting, 3d-reconstruction, feed-forward, generation]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Feed-forward large reconstruction model for efficient sparse-view 3D reconstruction"
+
+  # === 2026 ===
+  - name: "Aether"
+    paper: "Aether: Geometric-Aware Unified World Model"
+    arxiv: "2503.18945"
+    year: 2026
+    code: "AetherWorldModel/Aether"
+    stars: 600
+    tags: [world-model, 3d-generation, geometry-aware, video]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Geometry-aware unified world model for 3D-consistent generation and prediction"
+
+  - name: "GaussianAnything"
+    paper: "GaussianAnything: Interactive Point Cloud Latent Diffusion for 3D Generation"
+    arxiv: "2411.08033"
+    year: 2026
+    code: "VAST-AI-Research/GaussianAnything"
+    stars: 400
+    tags: [3d-generation, point-cloud, latent-diffusion, gaussian-splatting]
+    parents:
+      - name: "3D Gaussian Splatting"
+        relation: extends
+    description: "Point cloud latent diffusion for interactive and scalable 3D Gaussian generation"

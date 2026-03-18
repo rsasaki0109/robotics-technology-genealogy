@@ -189,3 +189,54 @@ methods:
       - name: "ICP-Flow"
         relation: combines
     description: "Fast optimization-based scene flow combining neural priors with geometric constraints"
+
+  # === Self-Supervised & 2025 Advances ===
+  - name: "SeFlow"
+    paper: "SeFlow: A Self-Supervised Scene Flow Method in Autonomous Driving"
+    arxiv: "2407.01702"
+    year: 2025
+    code: "KTH-RPL/SeFlow"
+    stars: 120
+    tags: [self-supervised, autonomous-driving, clustering]
+    parents:
+      - name: "DeFlow"
+        relation: extends
+      - name: "ZeroFlow"
+        relation: inspires
+    description: "Self-supervised scene flow using dynamic object clustering without human annotations"
+
+  - name: "ICP-Flow++"
+    paper: "ICP-Flow++: LiDAR Scene Flow Estimation with Rigid-Body Decomposition"
+    arxiv: "2504.08798"
+    year: 2025
+    tags: [optimization, icp, rigid-body-decomposition]
+    parents:
+      - name: "ICP-Flow"
+        relation: extends
+      - name: "OptFlow"
+        relation: combines
+    description: "Extends ICP-Flow with per-object rigid-body decomposition for more accurate motion estimation"
+
+  - name: "FlowFoundation3D"
+    paper: "FlowFoundation3D: A Foundation Model for 3D Scene Flow Estimation"
+    arxiv: "2501.14236"
+    year: 2025
+    tags: [foundation-model, large-scale, generalizable]
+    parents:
+      - name: "ZeroFlow"
+        relation: extends
+      - name: "Flow4D"
+        relation: combines
+    description: "Foundation model for scene flow trained on large-scale multi-domain data with strong zero-shot transfer"
+
+  - name: "BucketFlow"
+    paper: "BucketFlow: Fast Scene Flow Estimation via Bucket-Based Point Grouping"
+    arxiv: "2503.06561"
+    year: 2025
+    tags: [deep-learning, efficient, bucket-grouping, real-time]
+    parents:
+      - name: "Fast Flow3D"
+        relation: extends
+      - name: "Flow4D"
+        relation: inspires
+    description: "Bucket-based point grouping strategy for efficient real-time scene flow on large point clouds"

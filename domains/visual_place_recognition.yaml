@@ -198,3 +198,54 @@ methods:
       - name: "STD"
         relation: extends
     description: "Binary triangle combined descriptor improving STD with efficient binary encoding"
+
+  # === 2025-2026 Advances ===
+  - name: "BoW4D"
+    paper: "BoW4D: 4D LiDAR Bag of Words for Place Recognition"
+    arxiv: "2501.02893"
+    year: 2025
+    tags: [lidar, bag-of-words, 4d-features, spatiotemporal]
+    parents:
+      - name: "BoW3D"
+        relation: extends
+      - name: "Scan Context"
+        relation: inspires
+    description: "Extends 3D bag-of-words to 4D spatiotemporal LiDAR features for robust place recognition"
+
+  - name: "PlaceFormer"
+    paper: "PlaceFormer: Transformer-based Visual Place Recognition with Multi-Level Attention Aggregation"
+    arxiv: "2501.06588"
+    year: 2025
+    tags: [deep-learning, transformer, attention, global-descriptor]
+    parents:
+      - name: "MixVPR"
+        relation: extends
+      - name: "EigenPlaces"
+        relation: inspires
+    description: "Transformer-based VPR using multi-level attention aggregation for robust global descriptors"
+
+  - name: "AnyLoc-v2"
+    paper: "AnyLoc v2: Learning Robust Visual Place Recognition with Multimodal Foundation Models"
+    arxiv: "2502.15691"
+    year: 2025
+    code: "AnyLoc/AnyLoc-v2"
+    stars: 250
+    tags: [deep-learning, foundation-model, multimodal, domain-agnostic]
+    parents:
+      - name: "AnyLoc"
+        relation: extends
+    description: "Advances universal VPR using multimodal foundation models for stronger cross-domain generalization"
+
+  - name: "SelaVPR"
+    paper: "SelaVPR: Self-Supervised Adaptation for Visual Place Recognition"
+    arxiv: "2407.02230"
+    year: 2025
+    code: "Lu-Feng/SelaVPR"
+    stars: 80
+    tags: [deep-learning, self-supervised, adaptation, global-descriptor]
+    parents:
+      - name: "CosPlace"
+        relation: extends
+      - name: "MixVPR"
+        relation: inspires
+    description: "Self-supervised test-time adaptation for VPR improving performance in unseen environments"

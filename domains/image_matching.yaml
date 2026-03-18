@@ -275,3 +275,63 @@ methods:
       - name: "DUSt3R"
         relation: inspires
     description: "End-to-end differentiable SfM grounded in visual geometry principles"
+
+  # === 2025-2026 Methods ===
+  - name: "Steerers"
+    paper: "Steerers: A Framework for Rotation Equivariant Keypoint Descriptors"
+    arxiv: "2312.02152"
+    year: 2025
+    code: "georg-bn/rotation-steerers"
+    tags: [feature-matching, equivariant, rotation-invariant, steerable]
+    parents:
+      - name: "LightGlue"
+        relation: extends
+      - name: "SuperPoint"
+        relation: extends
+    description: "Steerable framework for rotation-equivariant keypoint descriptors and matching"
+
+  - name: "MASt3R-Grasp"
+    paper: "Generalizable Visual Grasping with MASt3R"
+    year: 2025
+    tags: [3d-reconstruction, grasping, feature-matching, robotics]
+    parents:
+      - name: "MASt3R"
+        relation: extends
+    description: "MASt3R-based 3D feature matching applied to generalizable robotic grasping"
+
+  - name: "Spann3R"
+    paper: "Spann3R: Spatial Reconstruction with Pose-Free Feed-Forward Models"
+    arxiv: "2408.16061"
+    year: 2025
+    code: "HengyiWang/spann3r"
+    stars: 1000
+    tags: [3d-reconstruction, dense-matching, feed-forward, pose-free]
+    parents:
+      - name: "DUSt3R"
+        relation: extends
+    description: "Feed-forward spatial reconstruction extending DUSt3R to incremental multi-view without pose input"
+
+  - name: "MASt3R-SLAM"
+    paper: "MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors"
+    arxiv: "2412.12392"
+    year: 2025
+    code: "rmurai0610/MASt3R-SLAM"
+    stars: 500
+    tags: [slam, dense-matching, 3d-reconstruction, real-time]
+    parents:
+      - name: "MASt3R"
+        relation: extends
+      - name: "MASt3R-SfM"
+        relation: inspires
+    description: "Real-time dense SLAM system built on MASt3R 3D matching priors"
+
+  - name: "DUSt3R+"
+    paper: "Fast, Pair-free Multi-view 3D Reconstruction with DUSt3R"
+    year: 2025
+    tags: [3d-reconstruction, dense-matching, multi-view, efficient]
+    parents:
+      - name: "DUSt3R"
+        relation: extends
+      - name: "MASt3R"
+        relation: inspires
+    description: "Efficient multi-view extension of DUSt3R eliminating pairwise computation bottleneck"

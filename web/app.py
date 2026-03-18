@@ -31,17 +31,39 @@ def main() -> None:
     st.caption("Interactive genealogy tree of Computer Vision research methods")
 
     domains = load_domains()
-    domain_names = ["All Domains"] + [d.name for d in domains]
+
+    POINT_CLOUD_DOMAINS = {
+        "LiDAR Odometry & SLAM",
+        "Point Cloud Denoising",
+        "Point Cloud Scene Flow",
+        "3D Object Detection",
+        "Visual Place Recognition",
+    }
+    VISUAL_DOMAINS = {
+        "Neural Radiance Fields & 3D Gaussian Splatting",
+        "Image Matching & Feature Detection",
+        "Visual SLAM",
+        "Depth Completion",
+    }
+
+    GROUPS = {
+        "Point Cloud / LiDAR": [d for d in domains if d.name in POINT_CLOUD_DOMAINS],
+        "Visual / Camera": [d for d in domains if d.name in VISUAL_DOMAINS],
+        "All": domains,
+    }
 
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        selected = st.selectbox("Domain", domain_names)
+        category = st.selectbox("Category", list(GROUPS.keys()))
+        group_domains = GROUPS[category]
+        domain_options = ["All"] + [d.name for d in group_domains]
+        selected = st.selectbox("Domain", domain_options)
 
-        if selected == "All Domains":
-            graph = build_graph_from_domains(domains)
+        if selected == "All":
+            graph = build_graph_from_domains(group_domains)
         else:
-            domain = next(d for d in domains if d.name == selected)
+            domain = next(d for d in group_domains if d.name == selected)
             graph = build_graph(domain)
 
         # Filters
@@ -61,6 +83,7 @@ def main() -> None:
         st.metric("Methods", len(graph.nodes))
         roots = graph.get_roots()
         st.metric("Root methods", len(roots))
+
 
     with col2:
         # Apply filters: rebuild graph with filtered methods
