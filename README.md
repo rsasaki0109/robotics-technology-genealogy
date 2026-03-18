@@ -79,12 +79,35 @@ methods:
     description: "One-line description"
 ```
 
+## Web UI
+
+```bash
+pip install -e ".[web]"
+streamlit run web/app.py
+```
+
+Interactive graph visualization with filtering by domain, tags, and year range.
+
+## Auto-update Stars
+
+```bash
+# Manual run
+GITHUB_TOKEN=your_token python scripts/update_stars.py
+
+# Dry run (no file changes)
+python scripts/update_stars.py --dry-run
+```
+
+Also runs weekly via GitHub Actions (`.github/workflows/update_stars.yml`).
+
 ## Domains
 
 Currently included:
 
 - **Neural Radiance Fields & 3D Gaussian Splatting** — NeRF → 3DGS evolution
 - **Image Matching & Feature Detection** — SIFT → SuperPoint → LoFTR → DUSt3R evolution
+- **Point Cloud Denoising** — Bilateral filter → Score-based → Diffusion evolution
+- **Depth Completion** — Sparse-to-Dense → Spatial propagation → Transformer evolution
 
 ## License
 
