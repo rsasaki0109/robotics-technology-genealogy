@@ -1,632 +1,752 @@
 name: Neural Radiance Fields & 3D Gaussian Splatting
-description: >
-  From NeRF to 3D Gaussian Splatting — the evolution of neural 3D representation
+description: 'From NeRF to 3D Gaussian Splatting — the evolution of neural 3D representation
   and rendering methods.
+
+  '
 source_awesome_lists:
-  - https://github.com/awesome-NeRF/awesome-NeRF
-  - https://github.com/MrNeRF/awesome-3D-Gaussian-Splatting
-
+- https://github.com/awesome-NeRF/awesome-NeRF
+- https://github.com/MrNeRF/awesome-3D-Gaussian-Splatting
 methods:
-  # === Foundations ===
-  - name: "NeRF"
-    paper: "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"
-    arxiv: "2003.08934"
-    year: 2020
-    code: "bmild/nerf"
-    stars: 9800
-    tags: [neural-rendering, view-synthesis, implicit-representation]
-    parents: []
-    description: "Seminal work on neural radiance fields for novel view synthesis"
-
-  # === Speed / Efficiency ===
-  - name: "Instant-NGP"
-    paper: "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding"
-    arxiv: "2201.05989"
-    year: 2022
-    code: "NVlabs/instant-ngp"
-    stars: 16000
-    tags: [neural-rendering, real-time, hash-encoding]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Multiresolution hash encoding for instant NeRF training"
-
-  - name: "Plenoxels"
-    paper: "Plenoxels: Radiance Fields without Neural Networks"
-    arxiv: "2112.05131"
-    year: 2022
-    code: "sxyu/svox2"
-    stars: 2800
-    tags: [neural-rendering, voxel, no-mlp]
-    parents:
-      - name: "NeRF"
-        relation: replaces
-    description: "Sparse voxel grid optimization without neural networks"
-
-  - name: "TensoRF"
-    paper: "TensoRF: Tensorial Radiance Fields"
-    arxiv: "2203.09517"
-    year: 2022
-    code: "apchenstu/TensoRF"
-    stars: 1900
-    tags: [neural-rendering, tensor-decomposition]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Tensor decomposition for compact radiance field representation"
-
-  # === Quality ===
-  - name: "Mip-NeRF"
-    paper: "Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields"
-    arxiv: "2103.13415"
-    year: 2021
-    code: "google/mipnerf"
-    stars: 1100
-    tags: [neural-rendering, anti-aliasing, multiscale]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Anti-aliased NeRF using integrated positional encoding"
-
-  - name: "Mip-NeRF 360"
-    paper: "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields"
-    arxiv: "2111.12077"
-    year: 2022
-    code: "google-research/multinerf"
-    stars: 1500
-    tags: [neural-rendering, unbounded-scenes, anti-aliasing]
-    parents:
-      - name: "Mip-NeRF"
-        relation: extends
-    description: "Extension to unbounded 360-degree scenes"
-
-  - name: "Zip-NeRF"
-    paper: "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields"
-    arxiv: "2304.06706"
-    year: 2023
-    code: "jonbarron/camp_zipnerf"
-    stars: 700
-    tags: [neural-rendering, anti-aliasing, grid-based]
-    parents:
-      - name: "Mip-NeRF 360"
-        relation: extends
-      - name: "Instant-NGP"
-        relation: combines
-    description: "Combines Mip-NeRF 360 quality with Instant-NGP speed"
-
-  # === 3D Gaussian Splatting family ===
-  - name: "3D Gaussian Splatting"
-    paper: "3D Gaussian Splatting for Real-Time Radiance Field Rendering"
-    arxiv: "2308.14737"
-    year: 2023
-    code: "graphdeco-inria/gaussian-splatting"
-    stars: 20000
-    tags: [gaussian-splatting, real-time, explicit-representation]
-    parents:
-      - name: "NeRF"
-        relation: replaces
-    description: "Paradigm shift from implicit to explicit 3D Gaussian representation"
-
-  - name: "SuGaR"
-    paper: "SuGaR: Surface-Aligned Gaussian Splatting for Efficient 3D Mesh Reconstruction"
-    arxiv: "2311.12775"
-    year: 2024
-    code: "Anttwo/SuGaR"
-    stars: 2200
-    tags: [gaussian-splatting, mesh-reconstruction, surface]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Extract meshes from 3D Gaussians via surface alignment"
-
-  - name: "2D Gaussian Splatting"
-    paper: "2D Gaussian Splatting for Geometrically Accurate Radiance Fields"
-    arxiv: "2403.17888"
-    year: 2024
-    code: "hbb1/2d-gaussian-splatting"
-    stars: 2000
-    tags: [gaussian-splatting, geometry, surface-reconstruction]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "2D Gaussians for better geometry and surface reconstruction"
-
-  - name: "GaussianEditor"
-    paper: "GaussianEditor: Swift and Controllable 3D Editing with Gaussian Splatting"
-    arxiv: "2311.14521"
-    year: 2024
-    code: "buaacyw/GaussianEditor"
-    stars: 1500
-    tags: [gaussian-splatting, 3d-editing, controllable]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Text-guided 3D scene editing with Gaussian Splatting"
-
-  - name: "Mip-Splatting"
-    paper: "Mip-Splatting: Alias-free 3D Gaussian Splatting"
-    arxiv: "2311.16493"
-    year: 2024
-    code: "autonomousvision/mip-splatting"
-    stars: 1100
-    tags: [gaussian-splatting, anti-aliasing]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-      - name: "Mip-NeRF"
-        relation: inspires
-    description: "Anti-aliasing techniques applied to 3D Gaussian Splatting"
-
-  # === Generation ===
-  - name: "DreamFusion"
-    paper: "DreamFusion: Text-to-3D using 2D Diffusion"
-    arxiv: "2209.14988"
-    year: 2022
-    code: "ashawkey/stable-dreamfusion"
-    stars: 8200
-    tags: [text-to-3d, diffusion, sds]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Text-to-3D generation using score distillation sampling"
-
-  - name: "DreamGaussian"
-    paper: "DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation"
-    arxiv: "2309.16653"
-    year: 2023
-    code: "dreamgaussian/dreamgaussian"
-    stars: 4200
-    tags: [text-to-3d, gaussian-splatting, generation]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-      - name: "DreamFusion"
-        relation: extends
-    description: "Fast 3D generation combining Gaussians with score distillation"
-
-  # === Robustness / In-the-Wild ===
-  - name: "NeRF-W"
-    paper: "NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections"
-    arxiv: "2008.02268"
-    year: 2021
-    code: "kwea123/nerf_pl"
-    stars: 650
-    tags: [neural-rendering, in-the-wild, appearance-embedding]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Handles varying lighting and transient objects in uncontrolled photo collections"
-
-  # === Dynamic Scenes ===
-  - name: "D-NeRF"
-    paper: "D-NeRF: Neural Radiance Fields for Dynamic Scenes"
-    arxiv: "2011.13961"
-    year: 2021
-    code: "albertpumarola/D-NeRF"
-    stars: 600
-    tags: [neural-rendering, dynamic-scenes, deformation]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Extends NeRF to dynamic scenes via a deformation network"
-
-  - name: "Nerfies"
-    paper: "Nerfies: Deformable Neural Radiance Fields"
-    arxiv: "2011.12948"
-    year: 2021
-    code: "google/nerfies"
-    stars: 1300
-    tags: [neural-rendering, deformable, selfie]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Deformable NeRF for casual selfie videos and non-rigid scenes"
-
-  # === Generalizable / Few-shot ===
-  - name: "PixelNeRF"
-    paper: "pixelNeRF: Neural Radiance Fields from One or Few Images"
-    arxiv: "2012.02190"
-    year: 2021
-    code: "sxyu/pixel-nerf"
-    stars: 1200
-    tags: [neural-rendering, few-shot, generalizable]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Generalizable NeRF conditioned on pixel-aligned features from sparse views"
-
-  - name: "IBRNet"
-    paper: "IBRNet: Learning Multi-View Image-Based Rendering"
-    arxiv: "2102.13090"
-    year: 2021
-    code: "googleinterns/IBRNet"
-    stars: 500
-    tags: [neural-rendering, generalizable, image-based-rendering]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Generalizable view synthesis by aggregating features from nearby views"
-
-  # === Large-scale ===
-  - name: "Block-NeRF"
-    paper: "Block-NeRF: Scalable Large Scene Neural View Synthesis"
-    arxiv: "2202.05263"
-    year: 2022
-    code: ""
-    stars: 0
-    tags: [neural-rendering, large-scale, urban]
-    parents:
-      - name: "NeRF"
-        relation: extends
-      - name: "NeRF-W"
-        relation: extends
-    description: "City-scale neural scene reconstruction by composing multiple NeRFs"
-
-  # === Efficient Deployment ===
-  - name: "MobileNeRF"
-    paper: "MobileNeRF: Exploiting the Polygon Rasterization Pipeline for Efficient Neural Field Rendering on Mobile Architectures"
-    arxiv: "2208.00277"
-    year: 2023
-    code: "nicktancoder/MobileNeRF"
-    stars: 500
-    tags: [neural-rendering, mobile, real-time, mesh]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Renders NeRFs on mobile devices via polygon rasterization pipeline"
-
-  # === Hybrid Representations ===
-  - name: "K-Planes"
-    paper: "K-Planes: Explicit Radiance Fields in Space, Time, and Appearance"
-    arxiv: "2301.10241"
-    year: 2023
-    code: "sarafridov/K-Planes"
-    stars: 500
-    tags: [neural-rendering, plane-decomposition, dynamic-scenes]
-    parents:
-      - name: "TensoRF"
-        relation: extends
-    description: "Factored plane-based representation for static and dynamic radiance fields"
-
-  # === Language / Semantics ===
-  - name: "LERF"
-    paper: "LERF: Language Embedded Radiance Fields"
-    arxiv: "2303.09553"
-    year: 2023
-    code: "kerrj/lerf"
-    stars: 900
-    tags: [neural-rendering, language, semantic, clip]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Embeds CLIP language features into NeRF for open-vocabulary 3D queries"
-
-  # === 3D Gaussian Splatting extensions ===
-  - name: "GaussianDreamer"
-    paper: "GaussianDreamer: Fast Generation from Text to 3D Gaussians by Bridging 2D and 3D Diffusion Models"
-    arxiv: "2310.08529"
-    year: 2024
-    code: "huber1234/GaussianDreamer"
-    stars: 600
-    tags: [gaussian-splatting, text-to-3d, generation]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-      - name: "DreamFusion"
-        relation: extends
-    description: "Text-to-3D generation bridging 2D and 3D diffusion with Gaussians"
-
-  - name: "LangSplat"
-    paper: "LangSplat: 3D Language Gaussian Splatting"
-    arxiv: "2312.16084"
-    year: 2024
-    code: "minghanqin/LangSplat"
-    stars: 800
-    tags: [gaussian-splatting, language, semantic, open-vocabulary]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-      - name: "LERF"
-        relation: inspires
-    description: "Embeds language features into 3D Gaussians for open-vocabulary queries"
-
-  - name: "Scaffold-GS"
-    paper: "Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering"
-    arxiv: "2312.00109"
-    year: 2024
-    code: "city-super/Scaffold-GS"
-    stars: 700
-    tags: [gaussian-splatting, structured, view-adaptive]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Anchor-based structured Gaussians for view-adaptive rendering"
-
-  - name: "PhysGaussian"
-    paper: "PhysGaussian: Physics-Integrated 3D Gaussians for Generative Dynamics"
-    arxiv: "2311.12198"
-    year: 2024
-    code: "XPandora/PhysGaussian"
-    stars: 500
-    tags: [gaussian-splatting, physics-simulation, dynamics]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Physics-based dynamics simulation integrated with 3D Gaussians"
-
-  - name: "4D Gaussian Splatting"
-    paper: "Real-time Photorealistic Dynamic Scene Representation and Rendering with 4D Gaussian Splatting"
-    arxiv: "2310.10642"
-    year: 2024
-    code: "hustvl/4DGaussians"
-    stars: 2000
-    tags: [gaussian-splatting, dynamic-scenes, real-time, 4d]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-      - name: "D-NeRF"
-        relation: inspires
-    description: "Extends 3D Gaussian Splatting to dynamic scenes with temporal modeling"
-
-  - name: "GS-SLAM"
-    paper: "GS-SLAM: Dense Visual SLAM with 3D Gaussian Splatting"
-    arxiv: "2311.11700"
-    year: 2024
-    code: "muskie82/GS-SLAM"
-    stars: 400
-    tags: [gaussian-splatting, slam, dense-mapping]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Dense visual SLAM using 3D Gaussian Splatting as the map representation"
-
-  # === 3DGS Advances (2025) ===
-  - name: "GaussianFormer"
-    paper: "GaussianFormer: Scene as Gaussians for Vision-Based 3D Semantic Occupancy Prediction"
-    arxiv: "2405.17429"
-    year: 2025
-    code: "huang-yh/GaussianFormer"
-    stars: 500
-    tags: [gaussian-splatting, transformer, 3d-occupancy]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Transformer-based 3D Gaussian representation for semantic occupancy prediction"
-
-  - name: "GOF"
-    paper: "Gaussian Opacity Fields: Efficient Adaptive Surface Reconstruction in Unbounded Scenes"
-    arxiv: "2404.10772"
-    year: 2025
-    code: "autonomousvision/gof"
-    stars: 500
-    tags: [gaussian-splatting, surface-reconstruction, opacity-fields]
-    parents:
-      - name: "2D Gaussian Splatting"
-        relation: extends
-    description: "Gaussian opacity fields for efficient adaptive surface reconstruction"
-
-  - name: "Splatt3R"
-    paper: "Splatt3R: Zero-shot Gaussian Splatting from Uncalibrated Image Pairs"
-    arxiv: "2408.13912"
-    year: 2025
-    code: "btsmart/splatt3r"
-    stars: 1000
-    tags: [gaussian-splatting, feed-forward, stereo, zero-shot]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Feed-forward 3D Gaussian Splatting from uncalibrated image pairs via MASt3R"
-
-  - name: "3DGS-LM"
-    paper: "3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt"
-    arxiv: "2409.12892"
-    year: 2025
-    code: "MrNeRF/3DGS-LM"
-    stars: 300
-    tags: [gaussian-splatting, optimization, levenberg-marquardt]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Analytic Gauss-Newton optimization for faster 3D Gaussian Splatting training"
-
-  - name: "InstantSplat"
-    paper: "InstantSplat: Unbounded Sparse-view Pose-free Gaussian Splatting in 40 Seconds"
-    arxiv: "2403.20309"
-    year: 2025
-    code: "NVlabs/InstantSplat"
-    stars: 1200
-    tags: [gaussian-splatting, sparse-view, pose-free]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Sparse-view pose-free 3DGS using DUSt3R for point initialization"
-
-  - name: "TRIPS"
-    paper: "TRIPS: Triplane-based 3D Gaussian Splatting"
-    arxiv: "2408.10105"
-    year: 2025
-    code: "lfranke/TRIPS"
-    stars: 300
-    tags: [gaussian-splatting, triplane, compact-representation]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Triplane-based representation for compact and efficient 3D Gaussian Splatting"
-
-  # === Generation (2025) ===
-  - name: "CAT3D"
-    paper: "CAT3D: Create Anything in 3D with Multi-View Diffusion Models"
-    arxiv: "2405.10314"
-    year: 2025
-    code: ""
-    stars: 0
-    tags: [3d-generation, multi-view-diffusion, text-to-3d]
-    parents:
-      - name: "DreamFusion"
-        relation: extends
-    description: "Multi-view diffusion model for creating 3D content from text or image prompts"
-
-  - name: "LGM"
-    paper: "LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation"
-    arxiv: "2402.05054"
-    year: 2025
-    code: "3DTopia/LGM"
-    stars: 1500
-    tags: [gaussian-splatting, 3d-generation, single-image, feed-forward]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Large feed-forward model generating high-resolution 3D Gaussians from single images"
-
-  - name: "TRELLIS"
-    paper: "TRELLIS: Structured 3D Latents for Scalable and Versatile 3D Generation"
-    arxiv: "2412.01506"
-    year: 2025
-    code: "microsoft/TRELLIS"
-    stars: 6000
-    tags: [3d-generation, structured-latent, scalable]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Structured latent representation for scalable and versatile 3D asset generation"
-
-  - name: "GRM"
-    paper: "GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation"
-    arxiv: "2403.14621"
-    year: 2025
-    code: "justimyhxu/GRM"
-    stars: 800
-    tags: [gaussian-splatting, 3d-reconstruction, feed-forward, generation]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Feed-forward large reconstruction model for efficient sparse-view 3D reconstruction"
-
-  # === 2026 ===
-  - name: "Aether"
-    paper: "Aether: Geometric-Aware Unified World Model"
-    arxiv: "2503.18945"
-    year: 2026
-    code: "AetherWorldModel/Aether"
-    stars: 600
-    tags: [world-model, 3d-generation, geometry-aware, video]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Geometry-aware unified world model for 3D-consistent generation and prediction"
-
-  - name: "GaussianAnything"
-    paper: "GaussianAnything: Interactive Point Cloud Latent Diffusion for 3D Generation"
-    arxiv: "2411.08033"
-    year: 2026
-    code: "VAST-AI-Research/GaussianAnything"
-    stars: 400
-    tags: [3d-generation, point-cloud, latent-diffusion, gaussian-splatting]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Point cloud latent diffusion for interactive and scalable 3D Gaussian generation"
-
-  # === Surface Reconstruction ===
-  - name: "NeuS"
-    paper: "NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction"
-    arxiv: "2106.10689"
-    year: 2021
-    code: "Totoro97/NeuS"
-    stars: 1800
-    tags: [neural-rendering, sdf, surface-reconstruction, volume-rendering]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Neural implicit surface reconstruction using signed distance functions with volume rendering"
-
-  - name: "VolSDF"
-    paper: "Volume Rendering of Neural Implicit Surfaces"
-    arxiv: "2106.12052"
-    year: 2021
-    code: ""
-    stars: 0
-    tags: [neural-rendering, sdf, surface-reconstruction, volume-rendering]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Volume rendering formulation for neural implicit surfaces defined by signed distance functions"
-
-  - name: "Neuralangelo"
-    paper: "Neuralangelo: High-Fidelity Neural Surface Reconstruction"
-    arxiv: "2306.03092"
-    year: 2023
-    code: "NVlabs/neuralangelo"
-    stars: 3800
-    tags: [neural-rendering, surface-reconstruction, high-fidelity, hash-encoding]
-    parents:
-      - name: "NeuS"
-        relation: extends
-      - name: "Instant-NGP"
-        relation: combines
-    description: "High-fidelity neural surface reconstruction combining multi-resolution hash encoding with SDF"
-
-  # === 3D-Aware Generation ===
-  - name: "EG3D"
-    paper: "Efficient Geometry-aware 3D Generative Adversarial Networks"
-    arxiv: "2112.07945"
-    year: 2022
-    code: "NVlabs/eg3d"
-    stars: 3000
-    tags: [neural-rendering, 3d-gan, tri-plane, generative]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Efficient geometry-aware 3D GANs using tri-plane hybrid representation"
-
-  # === Platforms & Tools ===
-  - name: "Nerfstudio"
-    paper: "Nerfstudio: A Modular Framework for Neural Radiance Field Development"
-    arxiv: "2302.04264"
-    year: 2023
-    code: "nerfstudio-project/nerfstudio"
-    stars: 10000
-    tags: [neural-rendering, framework, modular, gaussian-splatting]
-    parents:
-      - name: "NeRF"
-        relation: inspires
-      - name: "Instant-NGP"
-        relation: inspires
-    description: "Modular framework for developing and benchmarking NeRF and Gaussian Splatting methods"
-
-  - name: "gsplat"
-    paper: "gsplat: An Open-Source Library for Gaussian Splatting"
-    arxiv: "2409.06765"
-    year: 2024
-    code: "nerfstudio-project/gsplat"
-    stars: 1800
-    tags: [gaussian-splatting, rasterization, library, efficient]
-    parents:
-      - name: "3D Gaussian Splatting"
-        relation: extends
-    description: "Open-source efficient rasterization library for 3D Gaussian Splatting"
-
-  # === Point-Based & Editing ===
-  - name: "Point-NeRF"
-    paper: "Point-NeRF: Point-based Neural Radiance Fields"
-    arxiv: "2201.08845"
-    year: 2022
-    code: "Xharlie/pointnerf"
-    stars: 900
-    tags: [neural-rendering, point-based, generalizable]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Point-based neural radiance field using neural point clouds for efficient rendering"
-
-  - name: "Instruct-NeRF2NeRF"
-    paper: "Instruct-NeRF2NeRF: Editing 3D Scenes with Instructions"
-    arxiv: "2303.12789"
-    year: 2023
-    code: "ayaanzhaque/instruct-nerf2nerf"
-    stars: 1200
-    tags: [neural-rendering, 3d-editing, text-instruction, diffusion]
-    parents:
-      - name: "NeRF"
-        relation: extends
-    description: "Text instruction-based editing of NeRF scenes using iterative dataset update with diffusion models"
+- name: NeRF
+  paper: 'NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis'
+  arxiv: '2003.08934'
+  year: 2020
+  code: bmild/nerf
+  stars: 10831
+  tags:
+  - neural-rendering
+  - view-synthesis
+  - implicit-representation
+  parents: []
+  description: Seminal work on neural radiance fields for novel view synthesis
+- name: Instant-NGP
+  paper: Instant Neural Graphics Primitives with a Multiresolution Hash Encoding
+  arxiv: '2201.05989'
+  year: 2022
+  code: NVlabs/instant-ngp
+  stars: 17320
+  tags:
+  - neural-rendering
+  - real-time
+  - hash-encoding
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Multiresolution hash encoding for instant NeRF training
+- name: Plenoxels
+  paper: 'Plenoxels: Radiance Fields without Neural Networks'
+  arxiv: '2112.05131'
+  year: 2022
+  code: sxyu/svox2
+  stars: 2884
+  tags:
+  - neural-rendering
+  - voxel
+  - no-mlp
+  parents:
+  - name: NeRF
+    relation: replaces
+  description: Sparse voxel grid optimization without neural networks
+- name: TensoRF
+  paper: 'TensoRF: Tensorial Radiance Fields'
+  arxiv: '2203.09517'
+  year: 2022
+  code: apchenstu/TensoRF
+  stars: 1237
+  tags:
+  - neural-rendering
+  - tensor-decomposition
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Tensor decomposition for compact radiance field representation
+- name: Mip-NeRF
+  paper: 'Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance
+    Fields'
+  arxiv: '2103.13415'
+  year: 2021
+  code: google/mipnerf
+  stars: 940
+  tags:
+  - neural-rendering
+  - anti-aliasing
+  - multiscale
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Anti-aliased NeRF using integrated positional encoding
+- name: Mip-NeRF 360
+  paper: 'Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields'
+  arxiv: '2111.12077'
+  year: 2022
+  code: google-research/multinerf
+  stars: 3795
+  tags:
+  - neural-rendering
+  - unbounded-scenes
+  - anti-aliasing
+  parents:
+  - name: Mip-NeRF
+    relation: extends
+  description: Extension to unbounded 360-degree scenes
+- name: Zip-NeRF
+  paper: 'Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields'
+  arxiv: '2304.06706'
+  year: 2023
+  code: jonbarron/camp_zipnerf
+  stars: 721
+  tags:
+  - neural-rendering
+  - anti-aliasing
+  - grid-based
+  parents:
+  - name: Mip-NeRF 360
+    relation: extends
+  - name: Instant-NGP
+    relation: combines
+  description: Combines Mip-NeRF 360 quality with Instant-NGP speed
+- name: 3D Gaussian Splatting
+  paper: 3D Gaussian Splatting for Real-Time Radiance Field Rendering
+  arxiv: '2308.14737'
+  year: 2023
+  code: graphdeco-inria/gaussian-splatting
+  stars: 21038
+  tags:
+  - gaussian-splatting
+  - real-time
+  - explicit-representation
+  parents:
+  - name: NeRF
+    relation: replaces
+  description: Paradigm shift from implicit to explicit 3D Gaussian representation
+- name: SuGaR
+  paper: 'SuGaR: Surface-Aligned Gaussian Splatting for Efficient 3D Mesh Reconstruction'
+  arxiv: '2311.12775'
+  year: 2024
+  code: Anttwo/SuGaR
+  stars: 3256
+  tags:
+  - gaussian-splatting
+  - mesh-reconstruction
+  - surface
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Extract meshes from 3D Gaussians via surface alignment
+- name: 2D Gaussian Splatting
+  paper: 2D Gaussian Splatting for Geometrically Accurate Radiance Fields
+  arxiv: '2403.17888'
+  year: 2024
+  code: hbb1/2d-gaussian-splatting
+  stars: 3075
+  tags:
+  - gaussian-splatting
+  - geometry
+  - surface-reconstruction
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: 2D Gaussians for better geometry and surface reconstruction
+- name: GaussianEditor
+  paper: 'GaussianEditor: Swift and Controllable 3D Editing with Gaussian Splatting'
+  arxiv: '2311.14521'
+  year: 2024
+  code: buaacyw/GaussianEditor
+  stars: 1409
+  tags:
+  - gaussian-splatting
+  - 3d-editing
+  - controllable
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Text-guided 3D scene editing with Gaussian Splatting
+- name: Mip-Splatting
+  paper: 'Mip-Splatting: Alias-free 3D Gaussian Splatting'
+  arxiv: '2311.16493'
+  year: 2024
+  code: autonomousvision/mip-splatting
+  stars: 1422
+  tags:
+  - gaussian-splatting
+  - anti-aliasing
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  - name: Mip-NeRF
+    relation: inspires
+  description: Anti-aliasing techniques applied to 3D Gaussian Splatting
+- name: DreamFusion
+  paper: 'DreamFusion: Text-to-3D using 2D Diffusion'
+  arxiv: '2209.14988'
+  year: 2022
+  code: ashawkey/stable-dreamfusion
+  stars: 8819
+  tags:
+  - text-to-3d
+  - diffusion
+  - sds
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Text-to-3D generation using score distillation sampling
+- name: DreamGaussian
+  paper: 'DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation'
+  arxiv: '2309.16653'
+  year: 2023
+  code: dreamgaussian/dreamgaussian
+  stars: 4307
+  tags:
+  - text-to-3d
+  - gaussian-splatting
+  - generation
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  - name: DreamFusion
+    relation: extends
+  description: Fast 3D generation combining Gaussians with score distillation
+- name: NeRF-W
+  paper: 'NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Collections'
+  arxiv: '2008.02268'
+  year: 2021
+  code: kwea123/nerf_pl
+  stars: 2805
+  tags:
+  - neural-rendering
+  - in-the-wild
+  - appearance-embedding
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Handles varying lighting and transient objects in uncontrolled photo
+    collections
+- name: D-NeRF
+  paper: 'D-NeRF: Neural Radiance Fields for Dynamic Scenes'
+  arxiv: '2011.13961'
+  year: 2021
+  code: albertpumarola/D-NeRF
+  stars: 585
+  tags:
+  - neural-rendering
+  - dynamic-scenes
+  - deformation
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Extends NeRF to dynamic scenes via a deformation network
+- name: Nerfies
+  paper: 'Nerfies: Deformable Neural Radiance Fields'
+  arxiv: '2011.12948'
+  year: 2021
+  code: google/nerfies
+  stars: 1940
+  tags:
+  - neural-rendering
+  - deformable
+  - selfie
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Deformable NeRF for casual selfie videos and non-rigid scenes
+- name: PixelNeRF
+  paper: 'pixelNeRF: Neural Radiance Fields from One or Few Images'
+  arxiv: '2012.02190'
+  year: 2021
+  code: sxyu/pixel-nerf
+  stars: 1467
+  tags:
+  - neural-rendering
+  - few-shot
+  - generalizable
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Generalizable NeRF conditioned on pixel-aligned features from sparse
+    views
+- name: IBRNet
+  paper: 'IBRNet: Learning Multi-View Image-Based Rendering'
+  arxiv: '2102.13090'
+  year: 2021
+  code: googleinterns/IBRNet
+  stars: 519
+  tags:
+  - neural-rendering
+  - generalizable
+  - image-based-rendering
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Generalizable view synthesis by aggregating features from nearby views
+- name: Block-NeRF
+  paper: 'Block-NeRF: Scalable Large Scene Neural View Synthesis'
+  arxiv: '2202.05263'
+  year: 2022
+  code: ''
+  stars: 0
+  tags:
+  - neural-rendering
+  - large-scale
+  - urban
+  parents:
+  - name: NeRF
+    relation: extends
+  - name: NeRF-W
+    relation: extends
+  description: City-scale neural scene reconstruction by composing multiple NeRFs
+- name: MobileNeRF
+  paper: 'MobileNeRF: Exploiting the Polygon Rasterization Pipeline for Efficient
+    Neural Field Rendering on Mobile Architectures'
+  arxiv: '2208.00277'
+  year: 2023
+  code: nicktancoder/MobileNeRF
+  stars: 500
+  tags:
+  - neural-rendering
+  - mobile
+  - real-time
+  - mesh
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Renders NeRFs on mobile devices via polygon rasterization pipeline
+- name: K-Planes
+  paper: 'K-Planes: Explicit Radiance Fields in Space, Time, and Appearance'
+  arxiv: '2301.10241'
+  year: 2023
+  code: sarafridov/K-Planes
+  stars: 525
+  tags:
+  - neural-rendering
+  - plane-decomposition
+  - dynamic-scenes
+  parents:
+  - name: TensoRF
+    relation: extends
+  description: Factored plane-based representation for static and dynamic radiance
+    fields
+- name: LERF
+  paper: 'LERF: Language Embedded Radiance Fields'
+  arxiv: '2303.09553'
+  year: 2023
+  code: kerrj/lerf
+  stars: 722
+  tags:
+  - neural-rendering
+  - language
+  - semantic
+  - clip
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Embeds CLIP language features into NeRF for open-vocabulary 3D queries
+- name: GaussianDreamer
+  paper: 'GaussianDreamer: Fast Generation from Text to 3D Gaussians by Bridging 2D
+    and 3D Diffusion Models'
+  arxiv: '2310.08529'
+  year: 2024
+  code: huber1234/GaussianDreamer
+  stars: 600
+  tags:
+  - gaussian-splatting
+  - text-to-3d
+  - generation
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  - name: DreamFusion
+    relation: extends
+  description: Text-to-3D generation bridging 2D and 3D diffusion with Gaussians
+- name: LangSplat
+  paper: 'LangSplat: 3D Language Gaussian Splatting'
+  arxiv: '2312.16084'
+  year: 2024
+  code: minghanqin/LangSplat
+  stars: 1007
+  tags:
+  - gaussian-splatting
+  - language
+  - semantic
+  - open-vocabulary
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  - name: LERF
+    relation: inspires
+  description: Embeds language features into 3D Gaussians for open-vocabulary queries
+- name: Scaffold-GS
+  paper: 'Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering'
+  arxiv: '2312.00109'
+  year: 2024
+  code: city-super/Scaffold-GS
+  stars: 1202
+  tags:
+  - gaussian-splatting
+  - structured
+  - view-adaptive
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Anchor-based structured Gaussians for view-adaptive rendering
+- name: PhysGaussian
+  paper: 'PhysGaussian: Physics-Integrated 3D Gaussians for Generative Dynamics'
+  arxiv: '2311.12198'
+  year: 2024
+  code: XPandora/PhysGaussian
+  stars: 1351
+  tags:
+  - gaussian-splatting
+  - physics-simulation
+  - dynamics
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Physics-based dynamics simulation integrated with 3D Gaussians
+- name: 4D Gaussian Splatting
+  paper: Real-time Photorealistic Dynamic Scene Representation and Rendering with
+    4D Gaussian Splatting
+  arxiv: '2310.10642'
+  year: 2024
+  code: hustvl/4DGaussians
+  stars: 3455
+  tags:
+  - gaussian-splatting
+  - dynamic-scenes
+  - real-time
+  - 4d
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  - name: D-NeRF
+    relation: inspires
+  description: Extends 3D Gaussian Splatting to dynamic scenes with temporal modeling
+- name: GS-SLAM
+  paper: 'GS-SLAM: Dense Visual SLAM with 3D Gaussian Splatting'
+  arxiv: '2311.11700'
+  year: 2024
+  code: muskie82/GS-SLAM
+  stars: 400
+  tags:
+  - gaussian-splatting
+  - slam
+  - dense-mapping
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Dense visual SLAM using 3D Gaussian Splatting as the map representation
+- name: GaussianFormer
+  paper: 'GaussianFormer: Scene as Gaussians for Vision-Based 3D Semantic Occupancy
+    Prediction'
+  arxiv: '2405.17429'
+  year: 2025
+  code: huang-yh/GaussianFormer
+  stars: 642
+  tags:
+  - gaussian-splatting
+  - transformer
+  - 3d-occupancy
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Transformer-based 3D Gaussian representation for semantic occupancy
+    prediction
+- name: GOF
+  paper: 'Gaussian Opacity Fields: Efficient Adaptive Surface Reconstruction in Unbounded
+    Scenes'
+  arxiv: '2404.10772'
+  year: 2025
+  code: autonomousvision/gof
+  stars: 500
+  tags:
+  - gaussian-splatting
+  - surface-reconstruction
+  - opacity-fields
+  parents:
+  - name: 2D Gaussian Splatting
+    relation: extends
+  description: Gaussian opacity fields for efficient adaptive surface reconstruction
+- name: Splatt3R
+  paper: 'Splatt3R: Zero-shot Gaussian Splatting from Uncalibrated Image Pairs'
+  arxiv: '2408.13912'
+  year: 2025
+  code: btsmart/splatt3r
+  stars: 780
+  tags:
+  - gaussian-splatting
+  - feed-forward
+  - stereo
+  - zero-shot
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Feed-forward 3D Gaussian Splatting from uncalibrated image pairs via
+    MASt3R
+- name: 3DGS-LM
+  paper: '3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt'
+  arxiv: '2409.12892'
+  year: 2025
+  code: MrNeRF/3DGS-LM
+  stars: 300
+  tags:
+  - gaussian-splatting
+  - optimization
+  - levenberg-marquardt
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Analytic Gauss-Newton optimization for faster 3D Gaussian Splatting
+    training
+- name: InstantSplat
+  paper: 'InstantSplat: Unbounded Sparse-view Pose-free Gaussian Splatting in 40 Seconds'
+  arxiv: '2403.20309'
+  year: 2025
+  code: NVlabs/InstantSplat
+  stars: 1645
+  tags:
+  - gaussian-splatting
+  - sparse-view
+  - pose-free
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Sparse-view pose-free 3DGS using DUSt3R for point initialization
+- name: TRIPS
+  paper: 'TRIPS: Triplane-based 3D Gaussian Splatting'
+  arxiv: '2408.10105'
+  year: 2025
+  code: lfranke/TRIPS
+  stars: 556
+  tags:
+  - gaussian-splatting
+  - triplane
+  - compact-representation
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Triplane-based representation for compact and efficient 3D Gaussian
+    Splatting
+- name: CAT3D
+  paper: 'CAT3D: Create Anything in 3D with Multi-View Diffusion Models'
+  arxiv: '2405.10314'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - 3d-generation
+  - multi-view-diffusion
+  - text-to-3d
+  parents:
+  - name: DreamFusion
+    relation: extends
+  description: Multi-view diffusion model for creating 3D content from text or image
+    prompts
+- name: LGM
+  paper: 'LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation'
+  arxiv: '2402.05054'
+  year: 2025
+  code: 3DTopia/LGM
+  stars: 2052
+  tags:
+  - gaussian-splatting
+  - 3d-generation
+  - single-image
+  - feed-forward
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Large feed-forward model generating high-resolution 3D Gaussians from
+    single images
+- name: TRELLIS
+  paper: 'TRELLIS: Structured 3D Latents for Scalable and Versatile 3D Generation'
+  arxiv: '2412.01506'
+  year: 2025
+  code: microsoft/TRELLIS
+  stars: 12012
+  tags:
+  - 3d-generation
+  - structured-latent
+  - scalable
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Structured latent representation for scalable and versatile 3D asset
+    generation
+- name: GRM
+  paper: 'GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction
+    and Generation'
+  arxiv: '2403.14621'
+  year: 2025
+  code: justimyhxu/GRM
+  stars: 631
+  tags:
+  - gaussian-splatting
+  - 3d-reconstruction
+  - feed-forward
+  - generation
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Feed-forward large reconstruction model for efficient sparse-view 3D
+    reconstruction
+- name: Aether
+  paper: 'Aether: Geometric-Aware Unified World Model'
+  arxiv: '2503.18945'
+  year: 2026
+  code: AetherWorldModel/Aether
+  stars: 600
+  tags:
+  - world-model
+  - 3d-generation
+  - geometry-aware
+  - video
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Geometry-aware unified world model for 3D-consistent generation and
+    prediction
+- name: GaussianAnything
+  paper: 'GaussianAnything: Interactive Point Cloud Latent Diffusion for 3D Generation'
+  arxiv: '2411.08033'
+  year: 2026
+  code: VAST-AI-Research/GaussianAnything
+  stars: 400
+  tags:
+  - 3d-generation
+  - point-cloud
+  - latent-diffusion
+  - gaussian-splatting
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Point cloud latent diffusion for interactive and scalable 3D Gaussian
+    generation
+- name: NeuS
+  paper: 'NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view
+    Reconstruction'
+  arxiv: '2106.10689'
+  year: 2021
+  code: Totoro97/NeuS
+  stars: 1764
+  tags:
+  - neural-rendering
+  - sdf
+  - surface-reconstruction
+  - volume-rendering
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Neural implicit surface reconstruction using signed distance functions
+    with volume rendering
+- name: VolSDF
+  paper: Volume Rendering of Neural Implicit Surfaces
+  arxiv: '2106.12052'
+  year: 2021
+  code: ''
+  stars: 0
+  tags:
+  - neural-rendering
+  - sdf
+  - surface-reconstruction
+  - volume-rendering
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Volume rendering formulation for neural implicit surfaces defined by
+    signed distance functions
+- name: Neuralangelo
+  paper: 'Neuralangelo: High-Fidelity Neural Surface Reconstruction'
+  arxiv: '2306.03092'
+  year: 2023
+  code: NVlabs/neuralangelo
+  stars: 4576
+  tags:
+  - neural-rendering
+  - surface-reconstruction
+  - high-fidelity
+  - hash-encoding
+  parents:
+  - name: NeuS
+    relation: extends
+  - name: Instant-NGP
+    relation: combines
+  description: High-fidelity neural surface reconstruction combining multi-resolution
+    hash encoding with SDF
+- name: EG3D
+  paper: Efficient Geometry-aware 3D Generative Adversarial Networks
+  arxiv: '2112.07945'
+  year: 2022
+  code: NVlabs/eg3d
+  stars: 3338
+  tags:
+  - neural-rendering
+  - 3d-gan
+  - tri-plane
+  - generative
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Efficient geometry-aware 3D GANs using tri-plane hybrid representation
+- name: Nerfstudio
+  paper: 'Nerfstudio: A Modular Framework for Neural Radiance Field Development'
+  arxiv: '2302.04264'
+  year: 2023
+  code: nerfstudio-project/nerfstudio
+  stars: 11336
+  tags:
+  - neural-rendering
+  - framework
+  - modular
+  - gaussian-splatting
+  parents:
+  - name: NeRF
+    relation: inspires
+  - name: Instant-NGP
+    relation: inspires
+  description: Modular framework for developing and benchmarking NeRF and Gaussian
+    Splatting methods
+- name: gsplat
+  paper: 'gsplat: An Open-Source Library for Gaussian Splatting'
+  arxiv: '2409.06765'
+  year: 2024
+  code: nerfstudio-project/gsplat
+  stars: 4674
+  tags:
+  - gaussian-splatting
+  - rasterization
+  - library
+  - efficient
+  parents:
+  - name: 3D Gaussian Splatting
+    relation: extends
+  description: Open-source efficient rasterization library for 3D Gaussian Splatting
+- name: Point-NeRF
+  paper: 'Point-NeRF: Point-based Neural Radiance Fields'
+  arxiv: '2201.08845'
+  year: 2022
+  code: Xharlie/pointnerf
+  stars: 1151
+  tags:
+  - neural-rendering
+  - point-based
+  - generalizable
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Point-based neural radiance field using neural point clouds for efficient
+    rendering
+- name: Instruct-NeRF2NeRF
+  paper: 'Instruct-NeRF2NeRF: Editing 3D Scenes with Instructions'
+  arxiv: '2303.12789'
+  year: 2023
+  code: ayaanzhaque/instruct-nerf2nerf
+  stars: 850
+  tags:
+  - neural-rendering
+  - 3d-editing
+  - text-instruction
+  - diffusion
+  parents:
+  - name: NeRF
+    relation: extends
+  description: Text instruction-based editing of NeRF scenes using iterative dataset
+    update with diffusion models

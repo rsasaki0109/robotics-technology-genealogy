@@ -1,248 +1,294 @@
 name: Depth Completion
-description: >
-  Evolution of depth completion methods — from sparse LiDAR + image fusion
+description: 'Evolution of depth completion methods — from sparse LiDAR + image fusion
   to self-supervised and transformer-based approaches.
+
+  '
 source_awesome_lists:
-  - https://github.com/wangq95/awesome-state-of-depth-completion
-
+- https://github.com/wangq95/awesome-state-of-depth-completion
 methods:
-  # === Early Fusion ===
-  - name: "Sparse-to-Dense"
-    paper: "Sparse-to-Dense: Depth Prediction from Sparse Depth Samples and a Single Image"
-    arxiv: "1709.07492"
-    year: 2018
-    code: "fangchangma/sparse-to-dense.pytorch"
-    stars: 600
-    tags: [supervised, cnn, sparse-lidar]
-    parents: []
-    description: "Pioneering work on predicting dense depth from sparse LiDAR and RGB"
-
-  - name: "S2D with Self-Supervised"
-    paper: "Self-supervised Sparse-to-Dense: Self-supervised Depth Completion from LiDAR and Monocular Camera"
-    arxiv: "1807.00275"
-    year: 2019
-    code: "fangchangma/self-supervised-depth-completion"
-    stars: 400
-    tags: [self-supervised, sparse-lidar]
-    parents:
-      - name: "Sparse-to-Dense"
-        relation: extends
-    description: "Self-supervised extension eliminating need for dense ground truth"
-
-  # === Guide Networks ===
-  - name: "GuideNet"
-    paper: "Learning Guided Convolutional Network for Depth Completion"
-    arxiv: "1908.01238"
-    year: 2020
-    code: "kakaxi314/GuideNet"
-    stars: 100
-    tags: [guided-conv, image-guided]
-    parents:
-      - name: "Sparse-to-Dense"
-        relation: extends
-    description: "Image-guided convolution kernels for depth completion"
-
-  - name: "CSPN"
-    paper: "Learning Depth with Convolutional Spatial Propagation Network"
-    arxiv: "1810.02695"
-    year: 2019
-    code: "XinJCheng/CSPN"
-    stars: 300
-    tags: [spatial-propagation, cnn]
-    parents:
-      - name: "Sparse-to-Dense"
-        relation: extends
-    description: "Spatial propagation network for refining depth predictions"
-
-  - name: "NLSPN"
-    paper: "Non-Local Spatial Propagation Network for Depth Completion"
-    arxiv: "2007.10042"
-    year: 2020
-    code: "zzangjinsun/NLSPN_ECCV20"
-    stars: 200
-    tags: [spatial-propagation, non-local]
-    parents:
-      - name: "CSPN"
-        relation: extends
-    description: "Non-local extension of CSPN for long-range depth propagation"
-
-  - name: "DySPN"
-    paper: "Dynamic Spatial Propagation Network for Depth Completion"
-    arxiv: "2202.09769"
-    year: 2022
-    tags: [spatial-propagation, dynamic]
-    parents:
-      - name: "NLSPN"
-        relation: extends
-    description: "Dynamic kernel generation for spatial propagation"
-
-  # === Transformer ===
-  - name: "CompletionFormer"
-    paper: "CompletionFormer: Depth Completion with Convolutions and Vision Transformers"
-    arxiv: "2304.13030"
-    year: 2023
-    code: "youmi-zym/CompletionFormer"
-    stars: 250
-    tags: [transformer, cnn-transformer-hybrid]
-    parents:
-      - name: "NLSPN"
-        relation: extends
-    description: "Hybrid CNN-Transformer architecture for depth completion"
-
-  - name: "BPNet"
-    paper: "BPNet: Bilateral-Branch Point Completion Network"
-    arxiv: "2304.11123"
-    year: 2023
-    tags: [transformer, bilateral]
-    parents:
-      - name: "CompletionFormer"
-        relation: extends
-    description: "Bilateral-branch architecture combining local and global features"
-
-  # === Prompt-based ===
-  - name: "PromptDC"
-    paper: "Prompting Depth Completion with Vision Foundation Models"
-    year: 2024
-    tags: [foundation-model, prompt-tuning]
-    parents:
-      - name: "CompletionFormer"
-        relation: extends
-    description: "Leveraging vision foundation models via prompting for depth completion"
-
-  # === 2025-2026 Foundation-model Era ===
-  - name: "Depth Anything V2 Completion"
-    paper: "Depth Anything V2"
-    arxiv: "2406.09414"
-    year: 2025
-    code: "DepthAnything/Depth-Anything-V2"
-    stars: 4000
-    tags: [foundation-model, monocular-depth, depth-completion]
-    parents:
-      - name: "PromptDC"
-        relation: inspires
-    description: "Depth Anything V2 fine-tuned for sparse-to-dense depth completion leveraging large-scale monocular priors"
-
-  - name: "Metric3D v2"
-    paper: "Metric3D v2: A Versatile Monocular Geometric Foundation Model"
-    arxiv: "2404.15506"
-    year: 2025
-    code: "YvanYin/Metric3D"
-    stars: 2000
-    tags: [foundation-model, metric-depth, monocular-depth]
-    parents:
-      - name: "CompletionFormer"
-        relation: inspires
-      - name: "PromptDC"
-        relation: inspires
-    description: "Versatile geometric foundation model producing metric depth and surface normals from single images"
-
-  - name: "OGNI-DC"
-    paper: "OGNI-DC: Robust Depth Completion with Optimization-Guided Neural Iterations"
-    arxiv: "2406.11711"
-    year: 2025
-    code: "princeton-vl/OGNI-DC"
-    stars: 150
-    tags: [optimization-guided, iterative-refinement, depth-completion]
-    parents:
-      - name: "NLSPN"
-        relation: extends
-      - name: "CompletionFormer"
-        relation: extends
-    description: "Optimization-guided neural iterations combining classical optimization with deep learning for robust depth completion"
-
-  - name: "FoundationStereo"
-    paper: "FoundationStereo: Zero-Shot Stereo Matching"
-    arxiv: "2501.09898"
-    year: 2025
-    code: "NVlabs/FoundationStereo"
-    stars: 800
-    tags: [foundation-model, stereo-matching, zero-shot, depth-completion]
-    parents:
-      - name: "PromptDC"
-        relation: inspires
-    description: "Zero-shot foundation model for stereo matching applicable to dense depth completion tasks"
-
-  # === Monocular Depth Estimation ===
-  - name: "MiDaS"
-    paper: "Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer"
-    arxiv: "1907.01341"
-    year: 2020
-    code: "isl-org/MiDaS"
-    stars: 4500
-    tags: [monocular-depth, zero-shot, multi-dataset, relative-depth]
-    parents: []
-    description: "Robust relative monocular depth estimation via mixing diverse training datasets"
-
-  - name: "DPT"
-    paper: "Vision Transformers for Dense Prediction"
-    arxiv: "2103.13413"
-    year: 2021
-    code: ""
-    stars: 0
-    tags: [monocular-depth, transformer, dense-prediction]
-    parents:
-      - name: "MiDaS"
-        relation: extends
-    description: "Dense prediction transformers for monocular depth estimation with global receptive field"
-
-  - name: "Depth Anything v1"
-    paper: "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data"
-    arxiv: "2401.10891"
-    year: 2024
-    code: "LiheYoung/Depth-Anything"
-    stars: 7000
-    tags: [monocular-depth, foundation-model, large-scale, self-supervised]
-    parents:
-      - name: "DPT"
-        relation: extends
-      - name: "MiDaS"
-        relation: extends
-    description: "Large-scale monocular depth foundation model trained on massive unlabeled data"
-
-  - name: "ZoeDepth"
-    paper: "ZoeDepth: Zero-shot Transfer by Combining Relative and Metric Depth"
-    arxiv: "2302.12288"
-    year: 2023
-    code: "isl-org/ZoeDepth"
-    stars: 1800
-    tags: [monocular-depth, metric-depth, zero-shot]
-    parents:
-      - name: "MiDaS"
-        relation: extends
-    description: "Zero-shot metric depth estimation combining relative MiDaS features with metric depth heads"
-
-  - name: "Marigold"
-    paper: "Marigold: Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation"
-    arxiv: "2312.02145"
-    year: 2024
-    code: "prs-eth/Marigold"
-    stars: 2200
-    tags: [monocular-depth, diffusion, generative, fine-tuning]
-    parents:
-      - name: "MiDaS"
-        relation: inspires
-    description: "Diffusion-based monocular depth estimation repurposing Stable Diffusion image priors"
-
-  # === Stereo Depth ===
-  - name: "RAFT-Stereo"
-    paper: "RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching"
-    arxiv: "2109.07547"
-    year: 2021
-    code: "princeton-vl/RAFT-Stereo"
-    stars: 800
-    tags: [stereo-matching, recurrent, correlation, optical-flow]
-    parents: []
-    description: "Recurrent all-pairs field transforms for accurate and efficient stereo matching"
-
-  # === Additional Depth Completion ===
-  - name: "PENet"
-    paper: "PENet: Towards Precise and Efficient Image Guided Depth Completion"
-    arxiv: "2103.00783"
-    year: 2021
-    code: ""
-    stars: 0
-    tags: [depth-completion, efficient, image-guided, two-branch]
-    parents:
-      - name: "NLSPN"
-        relation: extends
-    description: "Precise and efficient depth completion with two-branch architecture for color and depth guidance"
+- name: Sparse-to-Dense
+  paper: 'Sparse-to-Dense: Depth Prediction from Sparse Depth Samples and a Single
+    Image'
+  arxiv: '1709.07492'
+  year: 2018
+  code: fangchangma/sparse-to-dense.pytorch
+  stars: 452
+  tags:
+  - supervised
+  - cnn
+  - sparse-lidar
+  parents: []
+  description: Pioneering work on predicting dense depth from sparse LiDAR and RGB
+- name: S2D with Self-Supervised
+  paper: 'Self-supervised Sparse-to-Dense: Self-supervised Depth Completion from LiDAR
+    and Monocular Camera'
+  arxiv: '1807.00275'
+  year: 2019
+  code: fangchangma/self-supervised-depth-completion
+  stars: 650
+  tags:
+  - self-supervised
+  - sparse-lidar
+  parents:
+  - name: Sparse-to-Dense
+    relation: extends
+  description: Self-supervised extension eliminating need for dense ground truth
+- name: GuideNet
+  paper: Learning Guided Convolutional Network for Depth Completion
+  arxiv: '1908.01238'
+  year: 2020
+  code: kakaxi314/GuideNet
+  stars: 168
+  tags:
+  - guided-conv
+  - image-guided
+  parents:
+  - name: Sparse-to-Dense
+    relation: extends
+  description: Image-guided convolution kernels for depth completion
+- name: CSPN
+  paper: Learning Depth with Convolutional Spatial Propagation Network
+  arxiv: '1810.02695'
+  year: 2019
+  code: XinJCheng/CSPN
+  stars: 502
+  tags:
+  - spatial-propagation
+  - cnn
+  parents:
+  - name: Sparse-to-Dense
+    relation: extends
+  description: Spatial propagation network for refining depth predictions
+- name: NLSPN
+  paper: Non-Local Spatial Propagation Network for Depth Completion
+  arxiv: '2007.10042'
+  year: 2020
+  code: zzangjinsun/NLSPN_ECCV20
+  stars: 342
+  tags:
+  - spatial-propagation
+  - non-local
+  parents:
+  - name: CSPN
+    relation: extends
+  description: Non-local extension of CSPN for long-range depth propagation
+- name: DySPN
+  paper: Dynamic Spatial Propagation Network for Depth Completion
+  arxiv: '2202.09769'
+  year: 2022
+  tags:
+  - spatial-propagation
+  - dynamic
+  parents:
+  - name: NLSPN
+    relation: extends
+  description: Dynamic kernel generation for spatial propagation
+- name: CompletionFormer
+  paper: 'CompletionFormer: Depth Completion with Convolutions and Vision Transformers'
+  arxiv: '2304.13030'
+  year: 2023
+  code: youmi-zym/CompletionFormer
+  stars: 279
+  tags:
+  - transformer
+  - cnn-transformer-hybrid
+  parents:
+  - name: NLSPN
+    relation: extends
+  description: Hybrid CNN-Transformer architecture for depth completion
+- name: BPNet
+  paper: 'BPNet: Bilateral-Branch Point Completion Network'
+  arxiv: '2304.11123'
+  year: 2023
+  tags:
+  - transformer
+  - bilateral
+  parents:
+  - name: CompletionFormer
+    relation: extends
+  description: Bilateral-branch architecture combining local and global features
+- name: PromptDC
+  paper: Prompting Depth Completion with Vision Foundation Models
+  year: 2024
+  tags:
+  - foundation-model
+  - prompt-tuning
+  parents:
+  - name: CompletionFormer
+    relation: extends
+  description: Leveraging vision foundation models via prompting for depth completion
+- name: Depth Anything V2 Completion
+  paper: Depth Anything V2
+  arxiv: '2406.09414'
+  year: 2025
+  code: DepthAnything/Depth-Anything-V2
+  stars: 7746
+  tags:
+  - foundation-model
+  - monocular-depth
+  - depth-completion
+  parents:
+  - name: PromptDC
+    relation: inspires
+  description: Depth Anything V2 fine-tuned for sparse-to-dense depth completion leveraging
+    large-scale monocular priors
+- name: Metric3D v2
+  paper: 'Metric3D v2: A Versatile Monocular Geometric Foundation Model'
+  arxiv: '2404.15506'
+  year: 2025
+  code: YvanYin/Metric3D
+  stars: 2129
+  tags:
+  - foundation-model
+  - metric-depth
+  - monocular-depth
+  parents:
+  - name: CompletionFormer
+    relation: inspires
+  - name: PromptDC
+    relation: inspires
+  description: Versatile geometric foundation model producing metric depth and surface
+    normals from single images
+- name: OGNI-DC
+  paper: 'OGNI-DC: Robust Depth Completion with Optimization-Guided Neural Iterations'
+  arxiv: '2406.11711'
+  year: 2025
+  code: princeton-vl/OGNI-DC
+  stars: 79
+  tags:
+  - optimization-guided
+  - iterative-refinement
+  - depth-completion
+  parents:
+  - name: NLSPN
+    relation: extends
+  - name: CompletionFormer
+    relation: extends
+  description: Optimization-guided neural iterations combining classical optimization
+    with deep learning for robust depth completion
+- name: FoundationStereo
+  paper: 'FoundationStereo: Zero-Shot Stereo Matching'
+  arxiv: '2501.09898'
+  year: 2025
+  code: NVlabs/FoundationStereo
+  stars: 2576
+  tags:
+  - foundation-model
+  - stereo-matching
+  - zero-shot
+  - depth-completion
+  parents:
+  - name: PromptDC
+    relation: inspires
+  description: Zero-shot foundation model for stereo matching applicable to dense
+    depth completion tasks
+- name: MiDaS
+  paper: 'Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot
+    Cross-dataset Transfer'
+  arxiv: '1907.01341'
+  year: 2020
+  code: isl-org/MiDaS
+  stars: 5347
+  tags:
+  - monocular-depth
+  - zero-shot
+  - multi-dataset
+  - relative-depth
+  parents: []
+  description: Robust relative monocular depth estimation via mixing diverse training
+    datasets
+- name: DPT
+  paper: Vision Transformers for Dense Prediction
+  arxiv: '2103.13413'
+  year: 2021
+  code: ''
+  stars: 0
+  tags:
+  - monocular-depth
+  - transformer
+  - dense-prediction
+  parents:
+  - name: MiDaS
+    relation: extends
+  description: Dense prediction transformers for monocular depth estimation with global
+    receptive field
+- name: Depth Anything v1
+  paper: 'Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data'
+  arxiv: '2401.10891'
+  year: 2024
+  code: LiheYoung/Depth-Anything
+  stars: 8037
+  tags:
+  - monocular-depth
+  - foundation-model
+  - large-scale
+  - self-supervised
+  parents:
+  - name: DPT
+    relation: extends
+  - name: MiDaS
+    relation: extends
+  description: Large-scale monocular depth foundation model trained on massive unlabeled
+    data
+- name: ZoeDepth
+  paper: 'ZoeDepth: Zero-shot Transfer by Combining Relative and Metric Depth'
+  arxiv: '2302.12288'
+  year: 2023
+  code: isl-org/ZoeDepth
+  stars: 2801
+  tags:
+  - monocular-depth
+  - metric-depth
+  - zero-shot
+  parents:
+  - name: MiDaS
+    relation: extends
+  description: Zero-shot metric depth estimation combining relative MiDaS features
+    with metric depth heads
+- name: Marigold
+  paper: 'Marigold: Repurposing Diffusion-Based Image Generators for Monocular Depth
+    Estimation'
+  arxiv: '2312.02145'
+  year: 2024
+  code: prs-eth/Marigold
+  stars: 3103
+  tags:
+  - monocular-depth
+  - diffusion
+  - generative
+  - fine-tuning
+  parents:
+  - name: MiDaS
+    relation: inspires
+  description: Diffusion-based monocular depth estimation repurposing Stable Diffusion
+    image priors
+- name: RAFT-Stereo
+  paper: 'RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching'
+  arxiv: '2109.07547'
+  year: 2021
+  code: princeton-vl/RAFT-Stereo
+  stars: 1035
+  tags:
+  - stereo-matching
+  - recurrent
+  - correlation
+  - optical-flow
+  parents: []
+  description: Recurrent all-pairs field transforms for accurate and efficient stereo
+    matching
+- name: PENet
+  paper: 'PENet: Towards Precise and Efficient Image Guided Depth Completion'
+  arxiv: '2103.00783'
+  year: 2021
+  code: ''
+  stars: 0
+  tags:
+  - depth-completion
+  - efficient
+  - image-guided
+  - two-branch
+  parents:
+  - name: NLSPN
+    relation: extends
+  description: Precise and efficient depth completion with two-branch architecture
+    for color and depth guidance

@@ -1,303 +1,396 @@
 name: Place Recognition
-description: >
-  Evolution of place recognition methods — from hand-crafted
-  bag-of-words to learned global descriptors, spanning camera-based
-  and LiDAR-based approaches for localization and loop closure.
+description: 'Evolution of place recognition methods — from hand-crafted bag-of-words
+  to learned global descriptors, spanning camera-based and LiDAR-based approaches
+  for localization and loop closure.
+
+  '
 source_awesome_lists:
-  - https://github.com/gisbi-kim/awesome-visual-place-recognition
-  - https://github.com/scutzetao/Awesome-Visual-Place-Recognition-A-Survey
-
+- https://github.com/gisbi-kim/awesome-visual-place-recognition
+- https://github.com/scutzetao/Awesome-Visual-Place-Recognition-A-Survey
 methods:
-  # === Classical Vision ===
-  - name: "FAB-MAP"
-    paper: "FAB-MAP: Probabilistic Localization and Mapping in the Space of Appearance"
-    year: 2008
-    tags: [classical, bag-of-words, probabilistic]
-    parents: []
-    description: "Probabilistic appearance-based place recognition using visual bag-of-words with Chow-Liu trees"
-
-  - name: "DBoW2"
-    paper: "Bags of Binary Words for Fast Place Recognition in Image Sequences"
-    year: 2012
-    code: "dorian3d/DBoW2"
-    stars: 800
-    tags: [classical, bag-of-words, binary-features]
-    parents:
-      - name: "FAB-MAP"
-        relation: extends
-    description: "Binary visual bag-of-words for real-time place recognition using ORB features"
-
-  # === Learned Global Descriptors ===
-  - name: "NetVLAD"
-    paper: "NetVLAD: CNN Architecture for Weakly Supervised Place Recognition"
-    arxiv: "1511.07247"
-    year: 2016
-    code: "Relja/netvlad"
-    stars: 1200
-    tags: [deep-learning, vlad, cnn, global-descriptor]
-    parents:
-      - name: "FAB-MAP"
-        relation: replaces
-    description: "Differentiable VLAD pooling layer trainable end-to-end for place recognition"
-
-  - name: "Patch-NetVLAD"
-    paper: "Patch-NetVLAD: Multi-Scale Fusion of Locally-Global Descriptors for Place Recognition"
-    arxiv: "2103.01486"
-    year: 2021
-    code: "QVPR/Patch-NetVLAD"
-    stars: 450
-    tags: [deep-learning, vlad, patch-level, multi-scale]
-    parents:
-      - name: "NetVLAD"
-        relation: extends
-    description: "Multi-scale patch-level features fused with NetVLAD for fine-grained place recognition"
-
-  - name: "CosPlace"
-    paper: "Rethinking Visual Geo-Localization for Large-Scale Applications"
-    arxiv: "2204.02287"
-    year: 2022
-    code: "gmberton/CosPlace"
-    stars: 350
-    tags: [deep-learning, global-descriptor, cosine-similarity]
-    parents:
-      - name: "NetVLAD"
-        relation: replaces
-    description: "Simplified training with cosine similarity-based loss for scalable geo-localization"
-
-  - name: "EigenPlaces"
-    paper: "EigenPlaces: Training Viewpoint Robust Models for Place Recognition"
-    arxiv: "2308.10832"
-    year: 2023
-    code: "gmberton/EigenPlaces"
-    stars: 200
-    tags: [deep-learning, global-descriptor, viewpoint-robust]
-    parents:
-      - name: "CosPlace"
-        relation: extends
-    description: "Viewpoint-robust descriptor training using principal component-based partitioning"
-
-  - name: "MixVPR"
-    paper: "MixVPR: Feature Mixing for Place Recognition"
-    arxiv: "2303.02190"
-    year: 2023
-    code: "amaralibey/MixVPR"
-    stars: 400
-    tags: [deep-learning, feature-mixing, global-descriptor]
-    parents:
-      - name: "NetVLAD"
-        relation: replaces
-      - name: "CosPlace"
-        relation: inspires
-    description: "All-MLP feature mixing architecture replacing aggregation layers for compact descriptors"
-
-  - name: "AnyLoc"
-    paper: "AnyLoc: Towards Universal Place Recognition"
-    arxiv: "2308.00688"
-    year: 2024
-    code: "AnyLoc/AnyLoc"
-    stars: 500
-    tags: [deep-learning, foundation-model, domain-agnostic]
-    parents:
-      - name: "NetVLAD"
-        relation: inspires
-      - name: "MixVPR"
-        relation: inspires
-    description: "Universal place recognition using DINOv2 features with VLAD aggregation across diverse domains"
-
-  # === LiDAR-based: Scan Descriptors ===
-  - name: "Scan Context"
-    paper: "Scan Context: Egocentric Spatial Descriptor for Place Recognition within 3D Point Cloud Map"
-    year: 2018
-    code: "irapkaist/scancontext"
-    stars: 800
-    tags: [lidar, handcrafted, spatial-descriptor]
-    parents: []
-    description: "Egocentric 2D polar histogram descriptor from 3D LiDAR scans for place recognition"
-
-  - name: "LiDAR Iris"
-    paper: "LiDAR Iris for Loop-Closure Detection"
-    year: 2020
-    tags: [lidar, handcrafted, binary-descriptor]
-    parents:
-      - name: "Scan Context"
-        relation: extends
-    description: "Binary signature image from LiDAR scans using Fourier transform for loop closure"
-
-  - name: "OverlapNet"
-    paper: "OverlapNet: Loop Closing for LiDAR-based SLAM"
-    arxiv: "2105.11344"
-    year: 2020
-    code: "PRBonn/OverlapNet"
-    stars: 400
-    tags: [lidar, deep-learning, range-image, overlap]
-    parents:
-      - name: "Scan Context"
-        relation: replaces
-    description: "Deep network estimating overlap between LiDAR range images for loop closure"
-
-  # === LiDAR-based: 3D Learned Descriptors ===
-  - name: "MinkLoc3Dv2"
-    paper: "MinkLoc3Dv2: Improving Point Cloud Based Place Recognition with Ranking-based Loss and Large Batch Training"
-    arxiv: "2203.00972"
-    year: 2022
-    code: "jac99/MinkLoc3Dv2"
-    stars: 150
-    tags: [lidar, deep-learning, sparse-convolution, global-descriptor]
-    parents:
-      - name: "OverlapNet"
-        relation: inspires
-    description: "Sparse convolution network with ranking loss for 3D point cloud place recognition"
-
-  - name: "LoGG3D-Net"
-    paper: "LoGG3D-Net: Locally Guided Global Descriptor Learning for 3D Place Recognition"
-    arxiv: "2109.08336"
-    year: 2022
-    code: "csiro-robotics/LoGG3D-Net"
-    stars: 120
-    tags: [lidar, deep-learning, local-global, sparse-convolution]
-    parents:
-      - name: "MinkLoc3Dv2"
-        relation: inspires
-    description: "Local consistency-guided global descriptor for 3D point cloud place recognition"
-
-  # === LiDAR-based: Geometric Keypoints ===
-  - name: "STD"
-    paper: "STD: Stable Triangle Descriptor for 3D Place Recognition"
-    arxiv: "2209.12435"
-    year: 2023
-    code: "hku-mars/STD"
-    stars: 350
-    tags: [lidar, handcrafted, triangle-descriptor, keypoint]
-    parents:
-      - name: "Scan Context"
-        relation: extends
-    description: "Stable triangle descriptors from 3D keypoints for viewpoint-invariant place recognition"
-
-  - name: "BoW3D"
-    paper: "BoW3D: Bag of Words for Real-time Loop Closing in 3D LiDAR SLAM"
-    arxiv: "2208.07473"
-    year: 2023
-    code: "YungeCui/BoW3D"
-    stars: 200
-    tags: [lidar, bag-of-words, 3d-features, real-time]
-    parents:
-      - name: "DBoW2"
-        relation: inspires
-      - name: "Scan Context"
-        relation: extends
-    description: "3D bag-of-words using LinK3D features for real-time LiDAR loop closure"
-
-  - name: "BTC"
-    paper: "BTC: Binary Triangle Combined Descriptor for 3D Place Recognition"
-    arxiv: "2304.07480"
-    year: 2023
-    code: "hku-mars/BTC"
-    stars: 200
-    tags: [lidar, binary-descriptor, triangle, keypoint]
-    parents:
-      - name: "STD"
-        relation: extends
-    description: "Binary triangle combined descriptor improving STD with efficient binary encoding"
-
-  # === 2025-2026 Advances ===
-  - name: "BoW4D"
-    paper: "BoW4D: 4D LiDAR Bag of Words for Place Recognition"
-    arxiv: "2501.02893"
-    year: 2025
-    tags: [lidar, bag-of-words, 4d-features, spatiotemporal]
-    parents:
-      - name: "BoW3D"
-        relation: extends
-      - name: "Scan Context"
-        relation: inspires
-    description: "Extends 3D bag-of-words to 4D spatiotemporal LiDAR features for robust place recognition"
-
-  - name: "PlaceFormer"
-    paper: "PlaceFormer: Transformer-based Place Recognition with Multi-Level Attention Aggregation"
-    arxiv: "2501.06588"
-    year: 2025
-    tags: [deep-learning, transformer, attention, global-descriptor]
-    parents:
-      - name: "MixVPR"
-        relation: extends
-      - name: "EigenPlaces"
-        relation: inspires
-    description: "Transformer-based VPR using multi-level attention aggregation for robust global descriptors"
-
-  - name: "AnyLoc-v2"
-    paper: "AnyLoc v2: Learning Robust Place Recognition with Multimodal Foundation Models"
-    arxiv: "2502.15691"
-    year: 2025
-    code: "AnyLoc/AnyLoc-v2"
-    stars: 250
-    tags: [deep-learning, foundation-model, multimodal, domain-agnostic]
-    parents:
-      - name: "AnyLoc"
-        relation: extends
-    description: "Advances universal VPR using multimodal foundation models for stronger cross-domain generalization"
-
-  - name: "SelaVPR"
-    paper: "SelaVPR: Self-Supervised Adaptation for Place Recognition"
-    arxiv: "2407.02230"
-    year: 2025
-    code: "Lu-Feng/SelaVPR"
-    stars: 80
-    tags: [deep-learning, self-supervised, adaptation, global-descriptor]
-    parents:
-      - name: "CosPlace"
-        relation: extends
-      - name: "MixVPR"
-        relation: inspires
-    description: "Self-supervised test-time adaptation for VPR improving performance in unseen environments"
-
-  # === Additional Methods ===
-  - name: "VLAD"
-    paper: "Aggregating Local Descriptors into a Compact Image Representation"
-    year: 2010
-    tags: [classical, aggregation, global-descriptor]
-    parents: []
-    description: "Original vector of locally aggregated descriptors for compact image representation"
-
-  - name: "PointNetVLAD"
-    paper: "PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition"
-    arxiv: "1804.03492"
-    year: 2018
-    code: "cattaneod/PointNetVLAD"
-    tags: [lidar, deep-learning, point-cloud, vlad, global-descriptor]
-    parents:
-      - name: "NetVLAD"
-        relation: extends
-    description: "First learned 3D point cloud descriptor for large-scale place recognition combining PointNet with VLAD"
-
-  - name: "MinkLoc3D"
-    paper: "MinkLoc3D: Point Cloud Based Large-Scale Place Recognition"
-    arxiv: "2011.04530"
-    year: 2021
-    code: "jac99/MinkLoc3D"
-    tags: [lidar, deep-learning, sparse-convolution, global-descriptor]
-    parents:
-      - name: "PointNetVLAD"
-        relation: extends
-    description: "Sparse convolution-based 3D point cloud place recognition with efficient feature extraction"
-
-  - name: "OverlapTransformer"
-    paper: "OverlapTransformer: An Efficient and Yaw-Angle-Invariant Transformer Network for LiDAR-Based Place Recognition"
-    arxiv: "2203.03397"
-    year: 2022
-    tags: [lidar, deep-learning, transformer, range-image, yaw-invariant]
-    parents:
-      - name: "OverlapNet"
-        relation: extends
-    description: "Transformer-based LiDAR place recognition using range images with yaw-angle invariance"
-
-  - name: "3D-BBS"
-    paper: "3D-BBS: Global Localization for 3D Point Cloud Scan Matching Using Branch-and-Bound Algorithm"
-    arxiv: "2310.10023"
-    year: 2023
-    code: "KOKIAOKI/3d_bbs"
-    stars: 200
-    tags: [lidar, global-localization, branch-and-bound, scan-matching]
-    parents:
-      - name: "Scan Context"
-        relation: inspires
-    description: "Branch-and-bound based global localization for 3D point cloud scan matching without initial pose"
+- name: FAB-MAP
+  paper: 'FAB-MAP: Probabilistic Localization and Mapping in the Space of Appearance'
+  year: 2008
+  tags:
+  - classical
+  - bag-of-words
+  - probabilistic
+  parents: []
+  description: Probabilistic appearance-based place recognition using visual bag-of-words
+    with Chow-Liu trees
+- name: DBoW2
+  paper: Bags of Binary Words for Fast Place Recognition in Image Sequences
+  year: 2012
+  code: dorian3d/DBoW2
+  stars: 939
+  tags:
+  - classical
+  - bag-of-words
+  - binary-features
+  parents:
+  - name: FAB-MAP
+    relation: extends
+  description: Binary visual bag-of-words for real-time place recognition using ORB
+    features
+- name: NetVLAD
+  paper: 'NetVLAD: CNN Architecture for Weakly Supervised Place Recognition'
+  arxiv: '1511.07247'
+  year: 2016
+  code: Relja/netvlad
+  stars: 596
+  tags:
+  - deep-learning
+  - vlad
+  - cnn
+  - global-descriptor
+  parents:
+  - name: FAB-MAP
+    relation: replaces
+  description: Differentiable VLAD pooling layer trainable end-to-end for place recognition
+- name: Patch-NetVLAD
+  paper: 'Patch-NetVLAD: Multi-Scale Fusion of Locally-Global Descriptors for Place
+    Recognition'
+  arxiv: '2103.01486'
+  year: 2021
+  code: QVPR/Patch-NetVLAD
+  stars: 584
+  tags:
+  - deep-learning
+  - vlad
+  - patch-level
+  - multi-scale
+  parents:
+  - name: NetVLAD
+    relation: extends
+  description: Multi-scale patch-level features fused with NetVLAD for fine-grained
+    place recognition
+- name: CosPlace
+  paper: Rethinking Visual Geo-Localization for Large-Scale Applications
+  arxiv: '2204.02287'
+  year: 2022
+  code: gmberton/CosPlace
+  stars: 380
+  tags:
+  - deep-learning
+  - global-descriptor
+  - cosine-similarity
+  parents:
+  - name: NetVLAD
+    relation: replaces
+  description: Simplified training with cosine similarity-based loss for scalable
+    geo-localization
+- name: EigenPlaces
+  paper: 'EigenPlaces: Training Viewpoint Robust Models for Place Recognition'
+  arxiv: '2308.10832'
+  year: 2023
+  code: gmberton/EigenPlaces
+  stars: 147
+  tags:
+  - deep-learning
+  - global-descriptor
+  - viewpoint-robust
+  parents:
+  - name: CosPlace
+    relation: extends
+  description: Viewpoint-robust descriptor training using principal component-based
+    partitioning
+- name: MixVPR
+  paper: 'MixVPR: Feature Mixing for Place Recognition'
+  arxiv: '2303.02190'
+  year: 2023
+  code: amaralibey/MixVPR
+  stars: 311
+  tags:
+  - deep-learning
+  - feature-mixing
+  - global-descriptor
+  parents:
+  - name: NetVLAD
+    relation: replaces
+  - name: CosPlace
+    relation: inspires
+  description: All-MLP feature mixing architecture replacing aggregation layers for
+    compact descriptors
+- name: AnyLoc
+  paper: 'AnyLoc: Towards Universal Place Recognition'
+  arxiv: '2308.00688'
+  year: 2024
+  code: AnyLoc/AnyLoc
+  stars: 596
+  tags:
+  - deep-learning
+  - foundation-model
+  - domain-agnostic
+  parents:
+  - name: NetVLAD
+    relation: inspires
+  - name: MixVPR
+    relation: inspires
+  description: Universal place recognition using DINOv2 features with VLAD aggregation
+    across diverse domains
+- name: Scan Context
+  paper: 'Scan Context: Egocentric Spatial Descriptor for Place Recognition within
+    3D Point Cloud Map'
+  year: 2018
+  code: irapkaist/scancontext
+  stars: 800
+  tags:
+  - lidar
+  - handcrafted
+  - spatial-descriptor
+  parents: []
+  description: Egocentric 2D polar histogram descriptor from 3D LiDAR scans for place
+    recognition
+- name: LiDAR Iris
+  paper: LiDAR Iris for Loop-Closure Detection
+  year: 2020
+  tags:
+  - lidar
+  - handcrafted
+  - binary-descriptor
+  parents:
+  - name: Scan Context
+    relation: extends
+  description: Binary signature image from LiDAR scans using Fourier transform for
+    loop closure
+- name: OverlapNet
+  paper: 'OverlapNet: Loop Closing for LiDAR-based SLAM'
+  arxiv: '2105.11344'
+  year: 2020
+  code: PRBonn/OverlapNet
+  stars: 721
+  tags:
+  - lidar
+  - deep-learning
+  - range-image
+  - overlap
+  parents:
+  - name: Scan Context
+    relation: replaces
+  description: Deep network estimating overlap between LiDAR range images for loop
+    closure
+- name: MinkLoc3Dv2
+  paper: 'MinkLoc3Dv2: Improving Point Cloud Based Place Recognition with Ranking-based
+    Loss and Large Batch Training'
+  arxiv: '2203.00972'
+  year: 2022
+  code: jac99/MinkLoc3Dv2
+  stars: 94
+  tags:
+  - lidar
+  - deep-learning
+  - sparse-convolution
+  - global-descriptor
+  parents:
+  - name: OverlapNet
+    relation: inspires
+  description: Sparse convolution network with ranking loss for 3D point cloud place
+    recognition
+- name: LoGG3D-Net
+  paper: 'LoGG3D-Net: Locally Guided Global Descriptor Learning for 3D Place Recognition'
+  arxiv: '2109.08336'
+  year: 2022
+  code: csiro-robotics/LoGG3D-Net
+  stars: 109
+  tags:
+  - lidar
+  - deep-learning
+  - local-global
+  - sparse-convolution
+  parents:
+  - name: MinkLoc3Dv2
+    relation: inspires
+  description: Local consistency-guided global descriptor for 3D point cloud place
+    recognition
+- name: STD
+  paper: 'STD: Stable Triangle Descriptor for 3D Place Recognition'
+  arxiv: '2209.12435'
+  year: 2023
+  code: hku-mars/STD
+  stars: 705
+  tags:
+  - lidar
+  - handcrafted
+  - triangle-descriptor
+  - keypoint
+  parents:
+  - name: Scan Context
+    relation: extends
+  description: Stable triangle descriptors from 3D keypoints for viewpoint-invariant
+    place recognition
+- name: BoW3D
+  paper: 'BoW3D: Bag of Words for Real-time Loop Closing in 3D LiDAR SLAM'
+  arxiv: '2208.07473'
+  year: 2023
+  code: YungeCui/BoW3D
+  stars: 312
+  tags:
+  - lidar
+  - bag-of-words
+  - 3d-features
+  - real-time
+  parents:
+  - name: DBoW2
+    relation: inspires
+  - name: Scan Context
+    relation: extends
+  description: 3D bag-of-words using LinK3D features for real-time LiDAR loop closure
+- name: BTC
+  paper: 'BTC: Binary Triangle Combined Descriptor for 3D Place Recognition'
+  arxiv: '2304.07480'
+  year: 2023
+  code: hku-mars/BTC
+  stars: 200
+  tags:
+  - lidar
+  - binary-descriptor
+  - triangle
+  - keypoint
+  parents:
+  - name: STD
+    relation: extends
+  description: Binary triangle combined descriptor improving STD with efficient binary
+    encoding
+- name: BoW4D
+  paper: 'BoW4D: 4D LiDAR Bag of Words for Place Recognition'
+  arxiv: '2501.02893'
+  year: 2025
+  tags:
+  - lidar
+  - bag-of-words
+  - 4d-features
+  - spatiotemporal
+  parents:
+  - name: BoW3D
+    relation: extends
+  - name: Scan Context
+    relation: inspires
+  description: Extends 3D bag-of-words to 4D spatiotemporal LiDAR features for robust
+    place recognition
+- name: PlaceFormer
+  paper: 'PlaceFormer: Transformer-based Place Recognition with Multi-Level Attention
+    Aggregation'
+  arxiv: '2501.06588'
+  year: 2025
+  tags:
+  - deep-learning
+  - transformer
+  - attention
+  - global-descriptor
+  parents:
+  - name: MixVPR
+    relation: extends
+  - name: EigenPlaces
+    relation: inspires
+  description: Transformer-based VPR using multi-level attention aggregation for robust
+    global descriptors
+- name: AnyLoc-v2
+  paper: 'AnyLoc v2: Learning Robust Place Recognition with Multimodal Foundation
+    Models'
+  arxiv: '2502.15691'
+  year: 2025
+  code: AnyLoc/AnyLoc-v2
+  stars: 250
+  tags:
+  - deep-learning
+  - foundation-model
+  - multimodal
+  - domain-agnostic
+  parents:
+  - name: AnyLoc
+    relation: extends
+  description: Advances universal VPR using multimodal foundation models for stronger
+    cross-domain generalization
+- name: SelaVPR
+  paper: 'SelaVPR: Self-Supervised Adaptation for Place Recognition'
+  arxiv: '2407.02230'
+  year: 2025
+  code: Lu-Feng/SelaVPR
+  stars: 260
+  tags:
+  - deep-learning
+  - self-supervised
+  - adaptation
+  - global-descriptor
+  parents:
+  - name: CosPlace
+    relation: extends
+  - name: MixVPR
+    relation: inspires
+  description: Self-supervised test-time adaptation for VPR improving performance
+    in unseen environments
+- name: VLAD
+  paper: Aggregating Local Descriptors into a Compact Image Representation
+  year: 2010
+  tags:
+  - classical
+  - aggregation
+  - global-descriptor
+  parents: []
+  description: Original vector of locally aggregated descriptors for compact image
+    representation
+- name: PointNetVLAD
+  paper: 'PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition'
+  arxiv: '1804.03492'
+  year: 2018
+  code: cattaneod/PointNetVLAD
+  tags:
+  - lidar
+  - deep-learning
+  - point-cloud
+  - vlad
+  - global-descriptor
+  parents:
+  - name: NetVLAD
+    relation: extends
+  description: First learned 3D point cloud descriptor for large-scale place recognition
+    combining PointNet with VLAD
+- name: MinkLoc3D
+  paper: 'MinkLoc3D: Point Cloud Based Large-Scale Place Recognition'
+  arxiv: '2011.04530'
+  year: 2021
+  code: jac99/MinkLoc3D
+  tags:
+  - lidar
+  - deep-learning
+  - sparse-convolution
+  - global-descriptor
+  parents:
+  - name: PointNetVLAD
+    relation: extends
+  description: Sparse convolution-based 3D point cloud place recognition with efficient
+    feature extraction
+  stars: 149
+- name: OverlapTransformer
+  paper: 'OverlapTransformer: An Efficient and Yaw-Angle-Invariant Transformer Network
+    for LiDAR-Based Place Recognition'
+  arxiv: '2203.03397'
+  year: 2022
+  tags:
+  - lidar
+  - deep-learning
+  - transformer
+  - range-image
+  - yaw-invariant
+  parents:
+  - name: OverlapNet
+    relation: extends
+  description: Transformer-based LiDAR place recognition using range images with yaw-angle
+    invariance
+- name: 3D-BBS
+  paper: '3D-BBS: Global Localization for 3D Point Cloud Scan Matching Using Branch-and-Bound
+    Algorithm'
+  arxiv: '2310.10023'
+  year: 2023
+  code: KOKIAOKI/3d_bbs
+  stars: 362
+  tags:
+  - lidar
+  - global-localization
+  - branch-and-bound
+  - scan-matching
+  parents:
+  - name: Scan Context
+    relation: inspires
+  description: Branch-and-bound based global localization for 3D point cloud scan
+    matching without initial pose

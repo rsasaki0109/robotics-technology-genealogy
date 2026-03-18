@@ -1,155 +1,175 @@
 name: Point Cloud Denoising
-description: >
-  Evolution of point cloud denoising methods — from traditional filtering
+description: 'Evolution of point cloud denoising methods — from traditional filtering
   to deep learning and score-based approaches.
+
+  '
 source_awesome_lists:
-  - https://github.com/chaoyueziji/awesome-3d-point-cloud-denoising
-
+- https://github.com/chaoyueziji/awesome-3d-point-cloud-denoising
 methods:
-  # === Traditional ===
-  - name: "Bilateral Filter (PC)"
-    paper: "Bilateral Mesh Denoising"
-    year: 2003
-    tags: [traditional, filtering]
-    parents: []
-    description: "Bilateral filtering adapted for mesh/point cloud denoising"
-
-  - name: "Jet Fitting"
-    paper: "Estimating Differential Quantities Using Polynomial Fitting of Osculating Jets"
-    year: 2005
-    tags: [traditional, surface-fitting]
-    parents: []
-    description: "Polynomial jet fitting for surface estimation and denoising"
-
-  # === Early Learning ===
-  - name: "PointCleanNet"
-    paper: "PointCleanNet: Learning to Denoise and Remove Outliers from Dense Point Clouds"
-    arxiv: "1901.01060"
-    year: 2019
-    code: "mrakotosaon/pointcleannet"
-    stars: 200
-    tags: [deep-learning, outlier-removal]
-    parents:
-      - name: "Bilateral Filter (PC)"
-        relation: replaces
-    description: "First deep learning approach for point cloud denoising and outlier removal"
-
-  - name: "PCN (Total Denoising)"
-    paper: "Total Denoising: Unsupervised Learning of 3D Point Cloud Cleaning"
-    arxiv: "1904.07615"
-    year: 2019
-    tags: [deep-learning, unsupervised]
-    parents:
-      - name: "PointCleanNet"
-        relation: extends
-    description: "Unsupervised point cloud denoising without clean ground truth"
-
-  # === Score-based ===
-  - name: "Score-Based Denoising"
-    paper: "Score-Based Point Cloud Denoising"
-    arxiv: "2107.10981"
-    year: 2021
-    code: "luost26/score-denoise"
-    stars: 200
-    tags: [score-based, gradient-field]
-    parents:
-      - name: "PointCleanNet"
-        relation: replaces
-    description: "Estimates score (gradient of log-probability) of noise-free surface"
-
-  - name: "IterativePFN"
-    paper: "IterativePFN: True Iterative Point Cloud Filtering"
-    arxiv: "2304.01529"
-    year: 2023
-    code: "ddsediri/IterativePFN"
-    stars: 60
-    tags: [deep-learning, iterative]
-    parents:
-      - name: "Score-Based Denoising"
-        relation: extends
-    description: "Iterative filtering network with progressive denoising"
-
-  # === Transformer-based ===
-  - name: "RePCD-Net"
-    paper: "RePCD-Net: Feature-Aware Recurrent Point Cloud Denoising Network"
-    arxiv: "2202.00866"
-    year: 2022
-    tags: [deep-learning, recurrent, feature-aware]
-    parents:
-      - name: "PointCleanNet"
-        relation: extends
-    description: "Recurrent network leveraging multi-scale features for denoising"
-
-  - name: "GeoDream (PC Denoising)"
-    paper: "3D Point Cloud Denoising via Bipartite Graph Approximation and Resampling"
-    arxiv: "2310.09629"
-    year: 2024
-    tags: [graph-based, resampling]
-    parents:
-      - name: "Score-Based Denoising"
-        relation: extends
-    description: "Graph-based denoising with bipartite approximation"
-
-  # === Diffusion-based ===
-  - name: "PD-Flow"
-    paper: "PD-Flow: A Point Cloud Denoising Framework with Normalizing Flows"
-    arxiv: "2203.05940"
-    year: 2022
-    code: "unknownue/pdflow"
-    stars: 50
-    tags: [normalizing-flow, generative]
-    parents:
-      - name: "Score-Based Denoising"
-        relation: inspires
-    description: "Normalizing flow-based generative approach for point cloud denoising"
-
-  # === 2025-2026 Advances ===
-  - name: "DiffPCD"
-    paper: "DiffPCD: Diffusion-Based 3D Point Cloud Denoising"
-    arxiv: "2502.03868"
-    year: 2025
-    tags: [diffusion, generative, denoising]
-    parents:
-      - name: "PD-Flow"
-        relation: extends
-      - name: "Score-Based Denoising"
-        relation: extends
-    description: "Adapts diffusion probabilistic models to iteratively denoise 3D point clouds with surface-aware conditioning"
-
-  - name: "PCT-Denoise"
-    paper: "PCT-Denoise: Point Cloud Transformer for Robust 3D Denoising"
-    arxiv: "2501.09387"
-    year: 2025
-    tags: [transformer, attention, deep-learning]
-    parents:
-      - name: "RePCD-Net"
-        relation: extends
-      - name: "IterativePFN"
-        relation: inspires
-    description: "Transformer-based point cloud denoising with global self-attention for long-range surface reasoning"
-
-  - name: "P2P-Bridge"
-    paper: "P2P-Bridge: Diffusion Bridges for 3D Point Cloud Denoising"
-    arxiv: "2408.16325"
-    year: 2025
-    code: "matvogel/P2P-Bridge"
-    stars: 60
-    tags: [diffusion-bridge, generative, stochastic]
-    parents:
-      - name: "Score-Based Denoising"
-        relation: extends
-      - name: "PD-Flow"
-        relation: inspires
-    description: "Diffusion bridge framework directly mapping noisy to clean point clouds without iterative sampling"
-
-  - name: "GeoDAE"
-    paper: "GeoDAE: Geometry-Aware Denoising Autoencoder for 3D Point Clouds"
-    arxiv: "2503.04273"
-    year: 2025
-    tags: [autoencoder, geometry-aware, deep-learning]
-    parents:
-      - name: "PointCleanNet"
-        relation: extends
-      - name: "GeoDream (PC Denoising)"
-        relation: inspires
-    description: "Geometry-aware autoencoder preserving local surface structure during point cloud denoising"
+- name: Bilateral Filter (PC)
+  paper: Bilateral Mesh Denoising
+  year: 2003
+  tags:
+  - traditional
+  - filtering
+  parents: []
+  description: Bilateral filtering adapted for mesh/point cloud denoising
+- name: Jet Fitting
+  paper: Estimating Differential Quantities Using Polynomial Fitting of Osculating
+    Jets
+  year: 2005
+  tags:
+  - traditional
+  - surface-fitting
+  parents: []
+  description: Polynomial jet fitting for surface estimation and denoising
+- name: PointCleanNet
+  paper: 'PointCleanNet: Learning to Denoise and Remove Outliers from Dense Point
+    Clouds'
+  arxiv: '1901.01060'
+  year: 2019
+  code: mrakotosaon/pointcleannet
+  stars: 285
+  tags:
+  - deep-learning
+  - outlier-removal
+  parents:
+  - name: Bilateral Filter (PC)
+    relation: replaces
+  description: First deep learning approach for point cloud denoising and outlier
+    removal
+- name: PCN (Total Denoising)
+  paper: 'Total Denoising: Unsupervised Learning of 3D Point Cloud Cleaning'
+  arxiv: '1904.07615'
+  year: 2019
+  tags:
+  - deep-learning
+  - unsupervised
+  parents:
+  - name: PointCleanNet
+    relation: extends
+  description: Unsupervised point cloud denoising without clean ground truth
+- name: Score-Based Denoising
+  paper: Score-Based Point Cloud Denoising
+  arxiv: '2107.10981'
+  year: 2021
+  code: luost26/score-denoise
+  stars: 207
+  tags:
+  - score-based
+  - gradient-field
+  parents:
+  - name: PointCleanNet
+    relation: replaces
+  description: Estimates score (gradient of log-probability) of noise-free surface
+- name: IterativePFN
+  paper: 'IterativePFN: True Iterative Point Cloud Filtering'
+  arxiv: '2304.01529'
+  year: 2023
+  code: ddsediri/IterativePFN
+  stars: 67
+  tags:
+  - deep-learning
+  - iterative
+  parents:
+  - name: Score-Based Denoising
+    relation: extends
+  description: Iterative filtering network with progressive denoising
+- name: RePCD-Net
+  paper: 'RePCD-Net: Feature-Aware Recurrent Point Cloud Denoising Network'
+  arxiv: '2202.00866'
+  year: 2022
+  tags:
+  - deep-learning
+  - recurrent
+  - feature-aware
+  parents:
+  - name: PointCleanNet
+    relation: extends
+  description: Recurrent network leveraging multi-scale features for denoising
+- name: GeoDream (PC Denoising)
+  paper: 3D Point Cloud Denoising via Bipartite Graph Approximation and Resampling
+  arxiv: '2310.09629'
+  year: 2024
+  tags:
+  - graph-based
+  - resampling
+  parents:
+  - name: Score-Based Denoising
+    relation: extends
+  description: Graph-based denoising with bipartite approximation
+- name: PD-Flow
+  paper: 'PD-Flow: A Point Cloud Denoising Framework with Normalizing Flows'
+  arxiv: '2203.05940'
+  year: 2022
+  code: unknownue/pdflow
+  stars: 28
+  tags:
+  - normalizing-flow
+  - generative
+  parents:
+  - name: Score-Based Denoising
+    relation: inspires
+  description: Normalizing flow-based generative approach for point cloud denoising
+- name: DiffPCD
+  paper: 'DiffPCD: Diffusion-Based 3D Point Cloud Denoising'
+  arxiv: '2502.03868'
+  year: 2025
+  tags:
+  - diffusion
+  - generative
+  - denoising
+  parents:
+  - name: PD-Flow
+    relation: extends
+  - name: Score-Based Denoising
+    relation: extends
+  description: Adapts diffusion probabilistic models to iteratively denoise 3D point
+    clouds with surface-aware conditioning
+- name: PCT-Denoise
+  paper: 'PCT-Denoise: Point Cloud Transformer for Robust 3D Denoising'
+  arxiv: '2501.09387'
+  year: 2025
+  tags:
+  - transformer
+  - attention
+  - deep-learning
+  parents:
+  - name: RePCD-Net
+    relation: extends
+  - name: IterativePFN
+    relation: inspires
+  description: Transformer-based point cloud denoising with global self-attention
+    for long-range surface reasoning
+- name: P2P-Bridge
+  paper: 'P2P-Bridge: Diffusion Bridges for 3D Point Cloud Denoising'
+  arxiv: '2408.16325'
+  year: 2025
+  code: matvogel/P2P-Bridge
+  stars: 105
+  tags:
+  - diffusion-bridge
+  - generative
+  - stochastic
+  parents:
+  - name: Score-Based Denoising
+    relation: extends
+  - name: PD-Flow
+    relation: inspires
+  description: Diffusion bridge framework directly mapping noisy to clean point clouds
+    without iterative sampling
+- name: GeoDAE
+  paper: 'GeoDAE: Geometry-Aware Denoising Autoencoder for 3D Point Clouds'
+  arxiv: '2503.04273'
+  year: 2025
+  tags:
+  - autoencoder
+  - geometry-aware
+  - deep-learning
+  parents:
+  - name: PointCleanNet
+    relation: extends
+  - name: GeoDream (PC Denoising)
+    relation: inspires
+  description: Geometry-aware autoencoder preserving local surface structure during
+    point cloud denoising
