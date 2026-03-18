@@ -1,4 +1,4 @@
-"""Data models for vision paper genealogy."""
+"""Data models for robotics paper genealogy."""
 
 from __future__ import annotations
 
@@ -21,6 +21,14 @@ class Parent(BaseModel):
     relation: RelationType = RelationType.extends
 
 
+class OpenSourceStatus(str, Enum):
+    open = "open"              # Fully open source (MIT, Apache-2.0, BSD, etc.)
+    research = "research"      # Code available but restrictive license (non-commercial, research-only)
+    partial = "partial"        # Weights/model closed, code open; or limited release
+    closed = "closed"          # No public code/weights
+    unknown = "unknown"        # Not sure
+
+
 class Method(BaseModel):
     name: str
     paper: str | None = None
@@ -31,6 +39,21 @@ class Method(BaseModel):
     tags: list[str] = []
     parents: list[Parent] = []
     description: str | None = None
+    license: str | None = None                          # e.g. "MIT", "Apache-2.0", "CC-BY-NC-4.0"
+    open_source: OpenSourceStatus | None = None         # open / research / partial / closed
+
+    @property
+    def inferred_open_source(self) -> OpenSourceStatus:
+        """Infer open source status from available fields."""
+        if self.open_source is not None:
+            return self.open_source
+        if self.code:
+            return OpenSourceStatus.open
+        return OpenSourceStatus.unknown
+
+    @property
+    def has_paper(self) -> bool:
+        return bool(self.paper or self.arxiv)
 
 
 class Domain(BaseModel):

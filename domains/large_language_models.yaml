@@ -14,6 +14,8 @@ methods:
     year: 2017
     code: "tensorflow/tensor2tensor"
     stars: 15500
+    open_source: open
+    license: "Apache-2.0"
     tags: [attention, architecture, seq2seq]
     parents: []
     description: "Self-attention-based architecture that replaced recurrence for sequence modeling"
@@ -25,6 +27,8 @@ methods:
     year: 2018
     code: "google-research/bert"
     stars: 38500
+    open_source: open
+    license: "Apache-2.0"
     tags: [encoder, masked-lm, pretraining]
     parents:
       - name: "Transformer"
@@ -38,6 +42,8 @@ methods:
     year: 2020
     code: "google-research/text-to-text-transfer-transformer"
     stars: 6200
+    open_source: open
+    license: "Apache-2.0"
     tags: [encoder-decoder, text-to-text, pretraining]
     parents:
       - name: "Transformer"
@@ -53,6 +59,8 @@ methods:
     year: 2019
     code: "openai/gpt-2"
     stars: 22500
+    open_source: open
+    license: "MIT"
     tags: [decoder, autoregressive, generative]
     parents:
       - name: "Transformer"
@@ -65,6 +73,8 @@ methods:
     year: 2020
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [decoder, autoregressive, few-shot, scaling]
     parents:
       - name: "GPT-2"
@@ -77,6 +87,8 @@ methods:
     year: 2023
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [decoder, multimodal, reasoning, proprietary]
     parents:
       - name: "GPT-3"
@@ -90,6 +102,8 @@ methods:
     year: 2022
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [scaling-laws, compute-optimal, training]
     parents:
       - name: "GPT-3"
@@ -103,6 +117,8 @@ methods:
     year: 2022
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [decoder, scaling, pathways, proprietary]
     parents:
       - name: "Transformer"
@@ -117,6 +133,8 @@ methods:
     year: 2023
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [decoder, multilingual, reasoning, proprietary]
     parents:
       - name: "PaLM"
@@ -132,6 +150,8 @@ methods:
     year: 2023
     code: null
     stars: null
+    open_source: closed
+    license: null
     tags: [decoder, rlhf, safety, proprietary]
     parents:
       - name: "Transformer"
@@ -145,6 +165,8 @@ methods:
     year: 2023
     code: "meta-llama/llama"
     stars: 56000
+    open_source: research
+    license: "LLaMA Community License"
     tags: [decoder, open-weight, efficient]
     parents:
       - name: "Transformer"
@@ -159,6 +181,8 @@ methods:
     year: 2023
     code: "meta-llama/llama"
     stars: 56000
+    open_source: open
+    license: "LLaMA 2 Community License"
     tags: [decoder, open-weight, rlhf, chat]
     parents:
       - name: "LLaMA"
@@ -171,6 +195,8 @@ methods:
     year: 2024
     code: "meta-llama/llama3"
     stars: 28000
+    open_source: open
+    license: "Llama 3 Community License"
     tags: [decoder, open-weight, multilingual, scaling]
     parents:
       - name: "LLaMA 2"
@@ -183,6 +209,8 @@ methods:
     year: 2025
     code: "meta-llama/llama4"
     stars: 5000
+    open_source: open
+    license: "Llama 4 Community License"
     tags: [decoder, moe, open-weight, multimodal]
     parents:
       - name: "LLaMA 3"
@@ -196,6 +224,8 @@ methods:
     year: 2023
     code: "mistralai/mistral-src"
     stars: 9500
+    open_source: open
+    license: "Apache-2.0"
     tags: [decoder, open-weight, sliding-window-attention, efficient]
     parents:
       - name: "LLaMA"
@@ -208,6 +238,8 @@ methods:
     year: 2024
     code: "mistralai/mistral-src"
     stars: 9500
+    open_source: open
+    license: "Apache-2.0"
     tags: [decoder, moe, open-weight, sparse]
     parents:
       - name: "Mistral 7B"
@@ -221,6 +253,8 @@ methods:
     year: 2023
     code: null
     stars: null
+    open_source: open
+    license: "MIT"
     tags: [decoder, small-lm, data-quality, efficient]
     parents:
       - name: "Transformer"
@@ -233,6 +267,8 @@ methods:
     year: 2024
     code: null
     stars: null
+    open_source: open
+    license: "MIT"
     tags: [decoder, small-lm, on-device, efficient]
     parents:
       - name: "Phi-2"
@@ -246,6 +282,8 @@ methods:
     year: 2024
     code: "google/gemma"
     stars: 600
+    open_source: open
+    license: "Gemma License"
     tags: [decoder, open-weight, lightweight]
     parents:
       - name: "PaLM 2"
@@ -259,6 +297,8 @@ methods:
     year: 2023
     code: "QwenLM/Qwen"
     stars: 13500
+    open_source: open
+    license: "Tongyi Qianwen License"
     tags: [decoder, open-weight, multilingual]
     parents:
       - name: "Transformer"
@@ -273,6 +313,8 @@ methods:
     year: 2024
     code: "QwenLM/Qwen2"
     stars: 4500
+    open_source: open
+    license: "Apache-2.0"
     tags: [decoder, open-weight, multilingual, gqa]
     parents:
       - name: "Qwen"
@@ -285,6 +327,8 @@ methods:
     year: 2025
     code: "QwenLM/Qwen2.5"
     stars: 12000
+    open_source: open
+    license: "Apache-2.0"
     tags: [decoder, open-weight, long-context, coding]
     parents:
       - name: "Qwen2"
@@ -298,6 +342,8 @@ methods:
     year: 2024
     code: "deepseek-ai/DeepSeek-V2"
     stars: 2500
+    open_source: open
+    license: "DeepSeek License"
     tags: [decoder, moe, efficient, open-weight]
     parents:
       - name: "Transformer"
@@ -312,6 +358,8 @@ methods:
     year: 2025
     code: "deepseek-ai/DeepSeek-V3"
     stars: 22000
+    open_source: open
+    license: "DeepSeek License"
     tags: [decoder, moe, fp8-training, open-weight]
     parents:
       - name: "DeepSeek-V2"
@@ -324,6 +372,8 @@ methods:
     year: 2025
     code: "deepseek-ai/DeepSeek-R1"
     stars: 40000
+    open_source: open
+    license: "MIT"
     tags: [decoder, reasoning, rl, chain-of-thought, open-weight]
     parents:
       - name: "DeepSeek-V3"
@@ -337,6 +387,8 @@ methods:
     year: 2023
     code: "tiiuae/falcon-40b"
     stars: 900
+    open_source: open
+    license: "Apache-2.0"
     tags: [decoder, open-weight, web-data]
     parents:
       - name: "Transformer"
@@ -352,6 +404,8 @@ methods:
     year: 2023
     code: "BlinkDL/RWKV-LM"
     stars: 13000
+    open_source: open
+    license: "Apache-2.0"
     tags: [rnn, linear-attention, efficient-inference]
     parents:
       - name: "Transformer"
@@ -364,6 +418,8 @@ methods:
     year: 2024
     code: "state-spaces/mamba"
     stars: 14000
+    open_source: open
+    license: "Apache-2.0"
     tags: [ssm, state-space, linear-time, efficient-inference]
     parents:
       - name: "Transformer"

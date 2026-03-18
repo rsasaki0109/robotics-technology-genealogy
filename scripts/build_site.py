@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 from robotics_paper_genealogy.graph.builder import build_graph, build_graph_from_domains
-from robotics_paper_genealogy.models import Domain, RelationType, load_all_domains
+from robotics_paper_genealogy.models import Domain, OpenSourceStatus, RelationType, load_all_domains
 
 RELATION_COLORS = {
     RelationType.extends: "#22c55e",
@@ -82,24 +82,46 @@ def domain_to_graph_data(domains: list[Domain]) -> dict:
             elif m.stars > 1000:
                 size = 32
 
+        oss = m.inferred_open_source
+        oss_str = f"\n🔓 {oss.value}" if oss != OpenSourceStatus.unknown else ""
+        license_str = f"\n📜 {m.license}" if m.license else ""
         stars_str = f"\n★ {m.stars:,}" if m.stars else ""
         code_str = f"\n📦 github.com/{m.code}" if m.code else ""
         arxiv_str = f"\n📄 arxiv.org/abs/{m.arxiv}" if m.arxiv else ""
+        paper_str = "" if m.has_paper else "\n⚠️ No paper (code/product only)"
         tags_str = f"\nTags: {', '.join(m.tags)}" if m.tags else ""
         desc_str = f"\n{m.description}" if m.description else ""
 
-        title = f"{m.name} [{m.year}]{stars_str}{desc_str}{code_str}{arxiv_str}{tags_str}"
+        title = f"{m.name} [{m.year}]{oss_str}{license_str}{stars_str}{desc_str}{code_str}{arxiv_str}{paper_str}{tags_str}"
 
-        color = "#f97316" if not node.parent_nodes else "#3b82f6"
+        # Base color by root/derived
+        base_color = "#f97316" if not node.parent_nodes else "#3b82f6"
+
+        # Border indicates open source status
+        BORDER_COLORS = {
+            OpenSourceStatus.open: "#22c55e",      # green
+            OpenSourceStatus.research: "#eab308",   # yellow
+            OpenSourceStatus.partial: "#f97316",    # orange
+            OpenSourceStatus.closed: "#ef4444",     # red
+            OpenSourceStatus.unknown: "#555555",    # gray
+        }
+        border_color = BORDER_COLORS[oss]
 
         nodes.append({
             "id": name,
             "label": f"{m.name}\n[{m.year}]",
             "title": title,
             "size": size,
-            "color": color,
+            "color": {
+                "background": base_color,
+                "border": border_color,
+                "highlight": {"background": base_color, "border": "#ffffff"},
+            },
+            "borderWidth": 3,
             "font": {"size": 18, "color": "white"},
             "level": year_to_level[m.year],
+            "oss": oss.value,
+            "hasPaper": m.has_paper,
         })
 
     for name, node in graph.nodes.items():
@@ -159,6 +181,9 @@ INDEX_HTML = """\
   .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
   select { background: #1a1d23; color: #fff; border: 1px solid #444; border-radius: 6px; padding: 8px 12px; font-size: 14px; cursor: pointer; }
   select:hover { border-color: #666; }
+  .filter-btn { background: #1a1d23; color: #888; border: 1px solid #444; border-radius: 6px; padding: 6px 10px; font-size: 12px; cursor: pointer; }
+  .filter-btn.active { color: #fff; border-color: #22c55e; background: #1a2e1a; }
+  .filter-btn:hover { border-color: #666; }
   .stats { color: #888; font-size: 13px; white-space: nowrap; }
   #graph { width: 100%; height: calc(100vh - 70px); }
   .legend {
@@ -176,6 +201,9 @@ INDEX_HTML = """\
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
+    <button class="filter-btn" id="btn-oss" title="Show only open source">OSS Only</button>
+    <button class="filter-btn" id="btn-paper" title="Show only with paper">Paper Only</button>
+    <button class="filter-btn" id="btn-nopaper" title="Show only without paper">No Paper</button>
     <span class="stats" id="stats"></span>
   </div>
   <a href="https://github.com/rsasaki0109/robotics-paper-genealogy" target="_blank">GitHub</a>
@@ -191,12 +219,20 @@ INDEX_HTML = """\
   <span style="color:#eab308">╌╌▶</span> inspires<br>
   <b style="margin-top:4px;display:inline-block">Nodes</b><br>
   <span style="color:#f97316">●</span> Root &nbsp;
-  <span style="color:#3b82f6">●</span> Derived
+  <span style="color:#3b82f6">●</span> Derived<br>
+  <b style="margin-top:4px;display:inline-block">Border (OSS)</b><br>
+  <span style="color:#22c55e">◉</span> Open source<br>
+  <span style="color:#eab308">◉</span> Research only<br>
+  <span style="color:#f97316">◉</span> Partial<br>
+  <span style="color:#ef4444">◉</span> Closed<br>
+  <span style="color:#555">◉</span> Unknown
 </div>
 
 <script>
 let DATA;
 let network;
+let currentGraphData = null;
+let filters = { oss: false, paper: false, nopaper: false };
 
 const OPTIONS = {
   layout: {
@@ -213,17 +249,49 @@ const OPTIONS = {
   interaction: { hover: true, tooltipDelay: 100 }
 };
 
-function renderGraph(graphData) {
+function applyFilters(graphData) {
+  let nodes = graphData.nodes;
+  if (filters.oss) {
+    nodes = nodes.filter(n => n.oss === "open");
+  }
+  if (filters.paper) {
+    nodes = nodes.filter(n => n.hasPaper === true);
+  }
+  if (filters.nopaper) {
+    nodes = nodes.filter(n => n.hasPaper === false);
+  }
+  const nodeIds = new Set(nodes.map(n => n.id));
+  const edges = graphData.edges.filter(e => nodeIds.has(e.from) && nodeIds.has(e.to));
+  return { nodes, edges };
+}
+
+function renderGraph(graphData, save) {
+  if (save !== false) currentGraphData = graphData;
+  const filtered = applyFilters(graphData);
   const container = document.getElementById("graph");
   const data = {
-    nodes: new vis.DataSet(graphData.nodes),
-    edges: new vis.DataSet(graphData.edges)
+    nodes: new vis.DataSet(filtered.nodes),
+    edges: new vis.DataSet(filtered.edges)
   };
   if (network) network.destroy();
   network = new vis.Network(container, data, OPTIONS);
-  document.getElementById("stats").textContent =
-    graphData.nodes.length + " methods / " +
-    graphData.edges.length + " edges";
+  const total = graphData.nodes.length;
+  const shown = filtered.nodes.length;
+  const statsText = shown < total
+    ? shown + "/" + total + " methods (filtered) / " + filtered.edges.length + " edges"
+    : total + " methods / " + filtered.edges.length + " edges";
+  document.getElementById("stats").textContent = statsText;
+}
+
+function toggleFilter(key, btnId) {
+  filters[key] = !filters[key];
+  // nopaper and paper are mutually exclusive
+  if (key === "paper" && filters.paper) filters.nopaper = false;
+  if (key === "nopaper" && filters.nopaper) filters.paper = false;
+  document.getElementById("btn-oss").classList.toggle("active", filters.oss);
+  document.getElementById("btn-paper").classList.toggle("active", filters.paper);
+  document.getElementById("btn-nopaper").classList.toggle("active", filters.nopaper);
+  if (currentGraphData) renderGraph(currentGraphData, false);
 }
 
 function populateDomains(catName) {
@@ -273,6 +341,9 @@ fetch("data.json")
     }
     catSelect.addEventListener("change", onCategoryChange);
     document.getElementById("domain").addEventListener("change", onDomainChange);
+    document.getElementById("btn-oss").addEventListener("click", () => toggleFilter("oss"));
+    document.getElementById("btn-paper").addEventListener("click", () => toggleFilter("paper"));
+    document.getElementById("btn-nopaper").addEventListener("click", () => toggleFilter("nopaper"));
     onCategoryChange();
   });
 </script>
