@@ -289,3 +289,15 @@ methods:
       - name: "OverlapNet"
         relation: extends
     description: "Transformer-based LiDAR place recognition using range images with yaw-angle invariance"
+
+  - name: "3D-BBS"
+    paper: "3D-BBS: Global Localization for 3D Point Cloud Scan Matching Using Branch-and-Bound Algorithm"
+    arxiv: "2310.10023"
+    year: 2023
+    code: "KOKIAOKI/3d_bbs"
+    stars: 200
+    tags: [lidar, global-localization, branch-and-bound, scan-matching]
+    parents:
+      - name: "Scan Context"
+        relation: inspires
+    description: "Branch-and-bound based global localization for 3D point cloud scan matching without initial pose"
