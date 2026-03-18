@@ -266,24 +266,62 @@ methods:
   - name: ROS
     relation: inspires
   description: Baidu's open autonomous driving platform with custom CyberRT middleware
-- name: Autoware
+- name: Autoware (Original)
   paper: 'Autoware on Board: Enabling Autonomous Vehicles with a Generic Software
     Stack'
-  year: 2018
+  year: 2015
   code: autowarefoundation/autoware
   stars: 11276
   tags:
   - ad-stack
   - full-stack
-  - ros2
+  - ros
   - open-source
+  - tier-iv
   parents:
   - name: ROS
     relation: extends
+  description: Original open-source autonomous driving stack by Nagoya University / Tier IV on ROS 1
+- name: Autoware.Universe
+  year: 2022
+  code: autowarefoundation/autoware.universe
+  stars: 1200
+  tags:
+  - ad-stack
+  - full-stack
+  - ros2
+  - open-source
+  - modular
+  parents:
+  - name: Autoware (Original)
+    relation: extends
   - name: ROS 2
     relation: extends
-  description: Open-source full-stack autonomous driving software built on ROS/ROS
-    2
+  description: Community-driven ROS 2 modular AD stack with perception, planning, and control components
+- name: Autoware Core
+  year: 2022
+  tags:
+  - ad-stack
+  - ros2
+  - stable
+  - tier-iv
+  parents:
+  - name: Autoware (Original)
+    relation: extends
+  - name: ROS 2
+    relation: extends
+  description: Tier IV maintained stable core components of Autoware for production deployment
+- name: Autoware.AI (Legacy)
+  year: 2018
+  code: autowarefoundation/autoware_ai
+  tags:
+  - ad-stack
+  - ros
+  - legacy
+  parents:
+  - name: Autoware (Original)
+    relation: extends
+  description: Legacy ROS 1 based Autoware maintained for backward compatibility
 - name: rosbag
   year: 2010
   tags:
