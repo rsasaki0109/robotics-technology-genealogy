@@ -34,23 +34,38 @@ def build_pyvis_network(graph: GenealogyGraph, height: str = "700px") -> Network
         font_color="white",
         notebook=False,
     )
-    net.barnes_hut(
-        gravity=-3000,
-        central_gravity=0.3,
-        spring_length=200,
-        spring_strength=0.05,
-    )
+    # Hierarchical layout: left-to-right by year
+    net.set_options("""
+    {
+      "layout": {
+        "hierarchical": {
+          "enabled": true,
+          "direction": "LR",
+          "sortMethod": "directed",
+          "levelSeparation": 300,
+          "nodeSpacing": 150
+        }
+      },
+      "physics": {
+        "enabled": false
+      }
+    }
+    """)
+
+    # Assign level based on year for chronological ordering
+    years = sorted({n.method.year for n in graph.nodes.values()})
+    year_to_level = {y: i for i, y in enumerate(years)}
 
     for name, node in graph.nodes.items():
         m = node.method
-        size = 15
+        size = 25
         if m.stars:
             if m.stars > 10000:
-                size = 40
+                size = 55
             elif m.stars > 5000:
-                size = 30
+                size = 42
             elif m.stars > 1000:
-                size = 22
+                size = 32
 
         stars_str = f"\n★ {m.stars:,}" if m.stars else ""
         code_str = f"\n📦 github.com/{m.code}" if m.code else ""
@@ -70,7 +85,8 @@ def build_pyvis_network(graph: GenealogyGraph, height: str = "700px") -> Network
             title=title,
             size=size,
             color=color,
-            font={"size": 12, "color": "white"},
+            font={"size": 18, "color": "white"},
+            level=year_to_level[m.year],
         )
 
     for name, node in graph.nodes.items():
@@ -85,10 +101,29 @@ def build_pyvis_network(graph: GenealogyGraph, height: str = "700px") -> Network
                     title=parent_ref.relation.value,
                     dashes=dashes,
                     arrows="to",
-                    width=2,
+                    width=3,
                 )
 
     return net
+
+
+LEGEND_HTML = """\
+<div style="
+    position: absolute; top: 12px; right: 12px; z-index: 9999;
+    background: rgba(14,17,23,0.85); border: 1px solid #333; border-radius: 8px;
+    padding: 10px 14px; font-family: sans-serif; font-size: 13px; color: #ccc;
+    pointer-events: none; line-height: 1.7;
+">
+  <div style="font-weight:bold; color:#fff; margin-bottom:4px;">Edges</div>
+  <span style="color:#22c55e">━━▶</span> extends<br>
+  <span style="color:#06b6d4">━━▶</span> combines<br>
+  <span style="color:#ef4444">━━▶</span> replaces<br>
+  <span style="color:#eab308">╌╌▶</span> inspires<br>
+  <div style="font-weight:bold; color:#fff; margin-top:6px; margin-bottom:4px;">Nodes</div>
+  <span style="color:#f97316">●</span> Root &nbsp;
+  <span style="color:#3b82f6">●</span> Derived
+</div>
+"""
 
 
 def export_html(graph: GenealogyGraph, output_path: str | Path, height: str = "700px") -> Path:
@@ -96,4 +131,10 @@ def export_html(graph: GenealogyGraph, output_path: str | Path, height: str = "7
     output_path = Path(output_path)
     net = build_pyvis_network(graph, height=height)
     net.save_graph(str(output_path))
+
+    # Inject legend overlay into the HTML
+    html = output_path.read_text()
+    html = html.replace("<body>", f"<body>\n{LEGEND_HTML}")
+    output_path.write_text(html)
+
     return output_path

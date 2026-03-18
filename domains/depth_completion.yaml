@@ -108,3 +108,56 @@ methods:
       - name: "CompletionFormer"
         relation: extends
     description: "Leveraging vision foundation models via prompting for depth completion"
+
+  # === 2025-2026 Foundation-model Era ===
+  - name: "Depth Anything V2 Completion"
+    paper: "Depth Anything V2"
+    arxiv: "2406.09414"
+    year: 2025
+    code: "DepthAnything/Depth-Anything-V2"
+    stars: 4000
+    tags: [foundation-model, monocular-depth, depth-completion]
+    parents:
+      - name: "PromptDC"
+        relation: inspires
+    description: "Depth Anything V2 fine-tuned for sparse-to-dense depth completion leveraging large-scale monocular priors"
+
+  - name: "Metric3D v2"
+    paper: "Metric3D v2: A Versatile Monocular Geometric Foundation Model"
+    arxiv: "2404.15506"
+    year: 2025
+    code: "YvanYin/Metric3D"
+    stars: 2000
+    tags: [foundation-model, metric-depth, monocular-depth]
+    parents:
+      - name: "CompletionFormer"
+        relation: inspires
+      - name: "PromptDC"
+        relation: inspires
+    description: "Versatile geometric foundation model producing metric depth and surface normals from single images"
+
+  - name: "OGNI-DC"
+    paper: "OGNI-DC: Robust Depth Completion with Optimization-Guided Neural Iterations"
+    arxiv: "2406.11711"
+    year: 2025
+    code: "princeton-vl/OGNI-DC"
+    stars: 150
+    tags: [optimization-guided, iterative-refinement, depth-completion]
+    parents:
+      - name: "NLSPN"
+        relation: extends
+      - name: "CompletionFormer"
+        relation: extends
+    description: "Optimization-guided neural iterations combining classical optimization with deep learning for robust depth completion"
+
+  - name: "FoundationStereo"
+    paper: "FoundationStereo: Zero-Shot Stereo Matching"
+    arxiv: "2501.09898"
+    year: 2025
+    code: "NVlabs/FoundationStereo"
+    stars: 800
+    tags: [foundation-model, stereo-matching, zero-shot, depth-completion]
+    parents:
+      - name: "PromptDC"
+        relation: inspires
+    description: "Zero-shot foundation model for stereo matching applicable to dense depth completion tasks"

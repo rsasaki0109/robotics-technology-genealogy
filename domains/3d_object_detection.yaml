@@ -348,3 +348,90 @@ methods:
       - name: "TransFusion"
         relation: extends
     description: "Instance-scene collaborative fusion for robust multimodal 3D detection"
+
+  # ========================================
+  # 2025-2026 Methods
+  # ========================================
+  - name: "Far3D"
+    paper: "Far3D: Expanding the Horizon for Surround-view 3D Object Detection"
+    arxiv: "2308.09616"
+    year: 2025
+    code: "megvii-research/Far3D"
+    stars: 300
+    tags: [camera, multi-view, long-range, 3d-detection]
+    parents:
+      - name: "DETR3D"
+        relation: extends
+      - name: "StreamPETR"
+        relation: extends
+    description: "Long-range surround-view 3D detection with adaptive perspective refinement"
+
+  - name: "SparseFusion3D"
+    paper: "SparseFusion: Fusing Multi-Modal Sparse Representations for Multi-Sensor 3D Object Detection"
+    arxiv: "2304.14340"
+    year: 2025
+    code: "yichen928/SparseFusion"
+    stars: 200
+    tags: [multi-modal, sparse, camera-lidar, fusion, 3d-detection]
+    parents:
+      - name: "BEVFusion"
+        relation: extends
+      - name: "TransFusion"
+        relation: extends
+    description: "Multi-modal sparse representation fusion for efficient multi-sensor 3D detection"
+
+  - name: "UniPAD"
+    paper: "UniPAD: A Universal Pre-training Paradigm for Autonomous Driving"
+    arxiv: "2310.08370"
+    year: 2025
+    code: "Nightmare-n/UniPAD"
+    stars: 200
+    tags: [multi-modal, pre-training, autonomous-driving, 3d-detection]
+    parents:
+      - name: "BEVFormer"
+        relation: extends
+      - name: "BEVFusion"
+        relation: inspires
+    description: "Universal pre-training paradigm unifying multi-modal representation learning for autonomous driving"
+
+  - name: "SAFDNet"
+    paper: "SAFDNet: A Simple and Effective Network for Fully Sparse 3D Object Detection"
+    arxiv: "2403.05817"
+    year: 2025
+    code: "zhanggang001/hednet"
+    stars: 250
+    tags: [point-cloud, fully-sparse, anchor-free, 3d-detection]
+    parents:
+      - name: "CenterPoint"
+        relation: extends
+      - name: "DSVT"
+        relation: extends
+    description: "Simple and effective fully sparse 3D detection network extending CenterPoint with adaptive feature diffusion"
+
+  - name: "FocalFormer3D"
+    paper: "FocalFormer3D: Focusing on Hard Instance for 3D Object Detection"
+    arxiv: "2308.04556"
+    year: 2025
+    code: "NVlabs/FocalFormer3D"
+    stars: 250
+    tags: [multi-modal, transformer, hard-instance, 3d-detection]
+    parents:
+      - name: "BEVFusion"
+        relation: extends
+      - name: "DETR3D"
+        relation: extends
+    description: "Multi-stage focal-aware transformer focusing on hard instances for 3D detection"
+
+  - name: "Sparse4Dv3"
+    paper: "Sparse4D v3: Advancing End-to-End 3D Detection and Tracking"
+    arxiv: "2311.11722"
+    year: 2025
+    code: "linxuewu/Sparse4D"
+    stars: 500
+    tags: [camera, multi-view, sparse-query, temporal, end-to-end, 3d-detection]
+    parents:
+      - name: "StreamPETR"
+        relation: extends
+      - name: "DETR3D"
+        relation: extends
+    description: "Advancing sparse query-based end-to-end 3D detection and tracking with temporal fusion"

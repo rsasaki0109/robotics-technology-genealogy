@@ -332,3 +332,131 @@ methods:
     tags: [gaussian-splatting, real-time, rendering, 3d-representation]
     parents: []
     description: "Real-time radiance field rendering using 3D Gaussian primitives (foundation for GS-SLAM)"
+
+  # ===========================
+  # Reference: Dense Stereo Foundation (MASt3R)
+  # ===========================
+  - name: "DUSt3R"
+    paper: "DUSt3R: Geometric 3D Vision Made Easy"
+    arxiv: "2312.14132"
+    year: 2024
+    code: "naver/dust3r"
+    stars: 5200
+    tags: [dense-stereo, transformer, pointmap, foundation]
+    parents: []
+    description: "Dense and unconstrained stereo 3D reconstruction from image pairs using pointmap regression"
+
+  - name: "MASt3R"
+    paper: "Grounding Image Matching in 3D with MASt3R"
+    arxiv: "2406.09756"
+    year: 2024
+    code: "naver/mast3r"
+    stars: 2500
+    tags: [dense-matching, stereo, transformer, local-features]
+    parents:
+      - name: "DUSt3R"
+        relation: extends
+    description: "Extends DUSt3R with dense local feature matching for robust 3D reconstruction"
+
+  # ===========================
+  # 2025-2026 Learning-Based Visual Odometry & SLAM
+  # ===========================
+  - name: "MAC-VO"
+    paper: "MAC-VO: Metrics-aware Covariance for Learning-based Stereo Visual Odometry"
+    arxiv: "2409.09479"
+    year: 2025
+    code: "MAC-VO/MAC-VO"
+    stars: 200
+    tags: [deep-learning, stereo, visual-odometry, covariance, metrics-aware]
+    parents:
+      - name: "DPVO"
+        relation: inspires
+      - name: "DROID-SLAM"
+        relation: inspires
+    description: "Learning-based stereo visual odometry with metrics-aware covariance estimation for robust pose prediction"
+
+  - name: "MASt3R-SLAM"
+    paper: "MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors"
+    arxiv: "2412.12392"
+    year: 2025
+    code: "edexheim/MASt3R-SLAM"
+    stars: 800
+    tags: [dense-slam, transformer, real-time, reconstruction-prior]
+    parents:
+      - name: "MASt3R"
+        relation: extends
+      - name: "DROID-SLAM"
+        relation: inspires
+    description: "Real-time dense SLAM leveraging MASt3R reconstruction priors for tracking and mapping"
+
+  - name: "SLAM3R"
+    paper: "SLAM3R: Real-Time Dense Scene Reconstruction from Monocular RGB Videos"
+    arxiv: "2412.09401"
+    year: 2025
+    code: "PKU-VCL-3DV/SLAM3R"
+    stars: 600
+    tags: [dense-slam, transformer, monocular, real-time, feed-forward]
+    parents:
+      - name: "MASt3R"
+        relation: extends
+      - name: "DUSt3R"
+        relation: extends
+    description: "Feed-forward real-time dense SLAM extending MASt3R with temporal multi-frame fusion"
+
+  # ===========================
+  # 2025-2026 Gaussian Splatting SLAM
+  # ===========================
+  - name: "Splat-SLAM"
+    paper: "Splat-SLAM: Globally Optimized RGB-only SLAM with 3D Gaussians"
+    arxiv: "2405.16544"
+    year: 2025
+    code: "eriksandstroem/Splat-SLAM"
+    stars: 500
+    tags: [gaussian-splatting, monocular, global-optimization, dense-mapping]
+    parents:
+      - name: "SplaTAM"
+        relation: extends
+      - name: "MonoGS"
+        relation: inspires
+    description: "Globally optimized RGB-only SLAM with 3D Gaussians, removing the need for depth input"
+
+  - name: "CaRtGS"
+    paper: "CaRtGS: Computational Alignment for Real-Time Gaussian Splatting SLAM"
+    arxiv: "2410.00486"
+    year: 2025
+    code: "DreamWaQ/CaRtGS"
+    stars: 200
+    tags: [gaussian-splatting, real-time, computational-alignment, dense-mapping]
+    parents:
+      - name: "MonoGS"
+        relation: extends
+      - name: "3DGS"
+        relation: extends
+    description: "Real-time Gaussian Splatting SLAM with computational alignment for efficient tracking and mapping"
+
+  # ===========================
+  # 2025-2026 Visual-Inertial Methods
+  # ===========================
+  - name: "MASt3R-SfM"
+    paper: "MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion"
+    arxiv: "2409.19152"
+    year: 2025
+    code: "naver/mast3r"
+    stars: 2500
+    tags: [structure-from-motion, dense, transformer, global-alignment]
+    parents:
+      - name: "MASt3R"
+        relation: extends
+    description: "Fully-integrated SfM pipeline built on MASt3R for unconstrained scene reconstruction"
+
+  - name: "ORB-SLAM3-Stereo-Fixed"
+    paper: "ORB-SLAM3 community stereo-inertial improvements"
+    arxiv: ""
+    year: 2025
+    code: "UZ-SLAMLab/ORB_SLAM3"
+    stars: 6600
+    tags: [stereo, visual-inertial, feature-based, community-maintained]
+    parents:
+      - name: "ORB-SLAM3"
+        relation: extends
+    description: "Community-maintained ORB-SLAM3 with stereo-inertial bug fixes and improved initialization"
