@@ -10,22 +10,24 @@ Interactive genealogy tree visualizer for Robotics & AI technologies.
 
 ## Features
 
-- **769 technologies** across **25 domains** — from classical algorithms to frontier AI
 - Interactive graph with chronological left-to-right layout
-- Search any method and jump to its domain tree
+- Click any node to see arXiv / GitHub links, stars, tags, license
+- Search any technology and jump to its domain tree
 - Filter by OSS status (open/closed/research), paper availability
+- Stats dashboard (methods per year, OSS ratio, top repos)
 - Category browsing: Perception, Planning, Robot Learning, Foundation Models, etc.
 - GitHub star counts auto-updated weekly via GitHub Actions
+- Mobile responsive
 
-## Domains (25)
+## Domains
 
 | Category | Domains |
 |----------|---------|
 | **Perception (LiDAR/3D)** | LiDAR SLAM, 3D Detection, Point Cloud Denoising, Scene Flow, Place Recognition |
-| **Perception (Visual)** | NeRF/3DGS, Image Matching, Visual SLAM, Depth, 2D Detection, Segmentation |
+| **Perception (Visual)** | NeRF/3DGS, Image Matching, Visual SLAM, Depth, 2D Detection, Segmentation, Optical Flow, Object Tracking |
 | **Planning & Control** | Motion Planning, Robot Control, E2E Autonomous Driving |
 | **Robot Learning** | Imitation Learning, World Models, Legged Robots, Grasp Planning |
-| **Foundation Models** | LLM, VLM, Diffusion Models, Vision Backbone |
+| **Foundation Models** | LLM, VLM, Diffusion Models, Vision Backbone, Reinforcement Learning |
 | **Platforms & Simulation** | Robot Simulation, Robot Middleware, Medical Robotics |
 
 ## Relation Types
@@ -70,7 +72,7 @@ streamlit run web/app.py
 
 ## Adding a Domain
 
-Create a YAML file in `domains/`:
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ```yaml
 name: Your Domain Name
