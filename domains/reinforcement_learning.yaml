@@ -1,0 +1,421 @@
+name: Reinforcement Learning
+description: >
+  From tabular Q-learning to deep RL, model-based imagination, offline RL,
+  multi-agent coordination, and RL for language model alignment — the full
+  genealogy of reinforcement learning algorithms.
+source_awesome_lists:
+- https://github.com/aikorea/awesome-rl
+- https://github.com/opendilab/awesome-rl
+
+methods:
+- name: Q-Learning
+  paper: Learning from Delayed Rewards
+  arxiv: ''
+  year: 1989
+  code: ''
+  stars: 0
+  tags:
+  - tabular
+  - model-free
+  - value-based
+  - off-policy
+  parents: []
+  description: Foundational off-policy value-based algorithm learning action-value function
+
+- name: REINFORCE
+  paper: Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning
+  arxiv: ''
+  year: 1992
+  code: ''
+  stars: 0
+  tags:
+  - policy-gradient
+  - model-free
+  - on-policy
+  parents: []
+  description: Monte Carlo policy gradient algorithm using likelihood ratio trick
+
+- name: DQN
+  paper: Human-level Control through Deep Reinforcement Learning
+  arxiv: '1312.5602'
+  year: 2015
+  code: ''
+  stars: 0
+  tags:
+  - deep-learning
+  - value-based
+  - off-policy
+  - experience-replay
+  parents:
+  - name: Q-Learning
+    relation: extends
+  description: Deep Q-Network with experience replay and target networks for Atari-level play
+
+- name: TRPO
+  paper: Trust Region Policy Optimization
+  arxiv: '1502.05477'
+  year: 2015
+  code: ''
+  stars: 0
+  tags:
+  - policy-gradient
+  - on-policy
+  - trust-region
+  parents:
+  - name: REINFORCE
+    relation: extends
+  description: Monotonic policy improvement via constrained optimization in trust regions
+
+- name: A3C
+  paper: Asynchronous Methods for Deep Reinforcement Learning
+  arxiv: '1602.01783'
+  year: 2016
+  code: ''
+  stars: 0
+  tags:
+  - actor-critic
+  - on-policy
+  - parallel
+  - asynchronous
+  parents:
+  - name: REINFORCE
+    relation: extends
+  - name: DQN
+    relation: combines
+  description: Asynchronous advantage actor-critic with parallel workers for stable training
+
+- name: DDPG
+  paper: Continuous Control with Deep Reinforcement Learning
+  arxiv: '1509.02971'
+  year: 2016
+  code: ''
+  stars: 0
+  tags:
+  - actor-critic
+  - off-policy
+  - continuous-control
+  - deterministic
+  parents:
+  - name: DQN
+    relation: extends
+  description: Off-policy actor-critic for continuous action spaces using deterministic policy gradient
+
+- name: PPO
+  paper: Proximal Policy Optimization Algorithms
+  arxiv: '1707.06347'
+  year: 2017
+  code: ''
+  stars: 0
+  tags:
+  - policy-gradient
+  - on-policy
+  - clipped-surrogate
+  - widely-used
+  parents:
+  - name: TRPO
+    relation: extends
+  description: Simplified trust-region method using clipped surrogate objective for stable training
+
+- name: Rainbow
+  paper: Rainbow — Combining Improvements in Deep Reinforcement Learning
+  arxiv: '1710.02298'
+  year: 2018
+  code: ''
+  stars: 0
+  tags:
+  - value-based
+  - off-policy
+  - combined-improvements
+  parents:
+  - name: DQN
+    relation: extends
+  description: Combines six DQN extensions including prioritized replay, dueling, and noisy nets
+
+- name: TD3
+  paper: Addressing Function Approximation Error in Actor-Critic Methods
+  arxiv: '1802.09477'
+  year: 2018
+  code: sfujim/TD3
+  stars: 2500
+  tags:
+  - actor-critic
+  - off-policy
+  - continuous-control
+  - twin-critic
+  parents:
+  - name: DDPG
+    relation: extends
+  description: Twin delayed critics with target policy smoothing to address overestimation in DDPG
+
+- name: SAC
+  paper: 'Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor'
+  arxiv: '1801.01290'
+  year: 2018
+  code: ''
+  stars: 0
+  tags:
+  - actor-critic
+  - off-policy
+  - maximum-entropy
+  - stochastic
+  parents:
+  - name: DDPG
+    relation: extends
+  description: Maximum entropy RL with stochastic policies for robust and sample-efficient learning
+
+- name: MPO
+  paper: 'Maximum a Posteriori Policy Optimisation'
+  arxiv: '1806.06920'
+  year: 2018
+  code: ''
+  stars: 0
+  tags:
+  - policy-optimization
+  - off-policy
+  - kl-constraint
+  parents:
+  - name: TRPO
+    relation: extends
+  - name: SAC
+    relation: inspires
+  description: EM-based policy optimization with KL constraints for stable off-policy learning
+
+- name: QMIX
+  paper: 'QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning'
+  arxiv: '1803.11485'
+  year: 2018
+  code: oxwhirl/pymarl
+  stars: 900
+  tags:
+  - multi-agent
+  - value-decomposition
+  - cooperative
+  parents:
+  - name: DQN
+    relation: extends
+  description: Monotonic value function factorization for cooperative multi-agent RL
+
+- name: CQL
+  paper: 'Conservative Q-Learning for Offline Reinforcement Learning'
+  arxiv: '2006.04779'
+  year: 2020
+  code: aviralkumar2907/CQL
+  stars: 500
+  tags:
+  - offline-RL
+  - value-based
+  - conservative
+  parents:
+  - name: DQN
+    relation: extends
+  - name: SAC
+    relation: extends
+  description: Conservative Q-function learning that lower-bounds values to avoid overestimation offline
+
+- name: Dreamer
+  paper: 'Dream to Control: Learning Behaviors by Latent Imagination'
+  arxiv: '1912.01603'
+  year: 2020
+  code: danijar/dreamer
+  stars: 800
+  tags:
+  - model-based
+  - world-model
+  - latent-imagination
+  parents:
+  - name: A3C
+    relation: inspires
+  description: Model-based RL learning behaviors by imagining trajectories in a learned world model
+
+- name: DreamerV2
+  paper: 'Mastering Atari with Discrete World Models'
+  arxiv: '2010.02193'
+  year: 2021
+  code: danijar/dreamerv2
+  stars: 1000
+  tags:
+  - model-based
+  - world-model
+  - discrete-latents
+  parents:
+  - name: Dreamer
+    relation: extends
+  description: Improved world model with discrete latent representations achieving Atari mastery
+
+- name: Decision Transformer
+  paper: 'Decision Transformer: Reinforcement Learning via Sequence Modeling'
+  arxiv: '2106.01345'
+  year: 2021
+  code: kzl/decision-transformer
+  stars: 2500
+  tags:
+  - offline-RL
+  - transformer
+  - sequence-modeling
+  parents:
+  - name: CQL
+    relation: inspires
+  description: Casts offline RL as sequence modeling with transformers conditioned on desired returns
+
+- name: IQL
+  paper: 'Offline Reinforcement Learning with Implicit Q-Learning'
+  arxiv: '2110.06169'
+  year: 2022
+  code: ikostrikov/implicit_q_learning
+  stars: 500
+  tags:
+  - offline-RL
+  - implicit
+  - value-based
+  parents:
+  - name: CQL
+    relation: extends
+  description: Offline RL avoiding querying out-of-distribution actions via implicit Q-learning
+
+- name: TD-MPC
+  paper: 'Temporal Difference Learning for Model Predictive Control'
+  arxiv: '2203.04955'
+  year: 2022
+  code: nicklashansen/tdmpc
+  stars: 400
+  tags:
+  - model-based
+  - model-predictive-control
+  - td-learning
+  parents:
+  - name: Dreamer
+    relation: inspires
+  - name: SAC
+    relation: combines
+  description: Combines temporal difference learning with model predictive control in latent space
+
+- name: RLHF
+  paper: 'Training language models to follow instructions with human feedback'
+  arxiv: '2203.02155'
+  year: 2022
+  code: ''
+  stars: 0
+  tags:
+  - language-model
+  - human-feedback
+  - reward-modeling
+  - alignment
+  parents:
+  - name: PPO
+    relation: extends
+  description: Aligns language models to human preferences via reward modeling and PPO fine-tuning
+
+- name: MAPPO
+  paper: 'The Surprising Effectiveness of PPO in Cooperative Multi-Agent Games'
+  arxiv: '2103.01955'
+  year: 2022
+  code: marlbenchmark/on-policy
+  stars: 900
+  tags:
+  - multi-agent
+  - cooperative
+  - policy-gradient
+  parents:
+  - name: PPO
+    relation: extends
+  - name: QMIX
+    relation: inspires
+  description: Shows PPO with parameter sharing is surprisingly effective for cooperative MARL
+
+- name: DreamerV3
+  paper: 'Mastering Diverse Domains through World Models'
+  arxiv: '2301.04104'
+  year: 2023
+  code: danijar/dreamerv3
+  stars: 1500
+  tags:
+  - model-based
+  - world-model
+  - general-algorithm
+  - fixed-hyperparams
+  parents:
+  - name: DreamerV2
+    relation: extends
+  description: General world model agent mastering diverse domains with fixed hyperparameters
+
+- name: DPO
+  paper: 'Direct Preference Optimization: Your Language Model Is Secretly a Reward Model'
+  arxiv: '2305.18290'
+  year: 2023
+  code: ''
+  stars: 0
+  tags:
+  - language-model
+  - preference-optimization
+  - alignment
+  - reward-free
+  parents:
+  - name: RLHF
+    relation: replaces
+  description: Directly optimizes policy from preferences without explicit reward model training
+
+- name: TD-MPC2
+  paper: 'TD-MPC2: Scalable, Robust World Models for Continuous Control'
+  arxiv: '2310.16828'
+  year: 2023
+  code: nicklashansen/tdmpc2
+  stars: 600
+  tags:
+  - model-based
+  - model-predictive-control
+  - scalable
+  parents:
+  - name: TD-MPC
+    relation: extends
+  description: Scalable world model for continuous control with single model across diverse tasks
+
+- name: GRPO
+  paper: 'DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models'
+  arxiv: '2402.03300'
+  year: 2024
+  code: deepseek-ai/DeepSeek-Math
+  stars: 2000
+  tags:
+  - language-model
+  - group-relative
+  - policy-optimization
+  - alignment
+  parents:
+  - name: PPO
+    relation: extends
+  - name: DPO
+    relation: inspires
+  description: Group relative policy optimization enabling efficient RL for language model reasoning
+
+- name: REBEL
+  paper: 'REBEL: Reinforcement Learning via Regressing Relative Rewards'
+  arxiv: '2404.16767'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - language-model
+  - alignment
+  - regression-based
+  parents:
+  - name: DPO
+    relation: extends
+  - name: GRPO
+    relation: inspires
+  description: Simplifies RLHF by regressing relative rewards directly without complex RL optimization
+
+- name: DAPO
+  paper: 'DAPO: An Open-Source LLM Reinforcement Learning System'
+  arxiv: '2503.14476'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - language-model
+  - alignment
+  - open-source
+  - distributed
+  parents:
+  - name: GRPO
+    relation: extends
+  description: Open-source distributed RL system for large language model alignment training

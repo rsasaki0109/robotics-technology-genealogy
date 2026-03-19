@@ -1,0 +1,280 @@
+name: Optical Flow
+description: >
+  From classical variational methods to deep learning-based optical flow estimation —
+  covering dense flow prediction, cost volume approaches, recurrent refinement,
+  transformer-based matching, and unified dense correspondence methods.
+source_awesome_lists:
+- https://github.com/hzwer/Awesome-Optical-Flow
+
+methods:
+- name: Horn-Schunck
+  paper: Determining Optical Flow
+  arxiv: ''
+  year: 1981
+  code: ''
+  stars: 0
+  tags:
+  - classical
+  - variational
+  - dense-flow
+  parents: []
+  description: Foundational variational method for dense optical flow using global smoothness constraint
+
+- name: Lucas-Kanade
+  paper: An Iterative Image Registration Technique with an Application to Stereo Vision
+  arxiv: ''
+  year: 1981
+  code: ''
+  stars: 0
+  tags:
+  - classical
+  - local
+  - sparse-flow
+  parents: []
+  description: Local differential method assuming constant flow in small neighborhoods
+
+- name: FlowNet
+  paper: 'FlowNet: Learning Optical Flow with Convolutional Networks'
+  arxiv: '1504.06852'
+  year: 2015
+  code: ''
+  stars: 0
+  tags:
+  - deep-learning
+  - encoder-decoder
+  - end-to-end
+  parents:
+  - name: Horn-Schunck
+    relation: replaces
+  - name: Lucas-Kanade
+    relation: replaces
+  description: First end-to-end CNN for optical flow with FlowNetS and FlowNetC architectures
+
+- name: SpyNet
+  paper: Optical Flow Estimation using a Spatial Pyramid Network
+  arxiv: '1611.00850'
+  year: 2017
+  code: ''
+  stars: 0
+  tags:
+  - deep-learning
+  - coarse-to-fine
+  - lightweight
+  parents:
+  - name: FlowNet
+    relation: extends
+  description: Lightweight spatial pyramid network for coarse-to-fine optical flow estimation
+
+- name: FlowNet2
+  paper: 'FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks'
+  arxiv: '1612.01925'
+  year: 2017
+  code: NVIDIA/flownet2-pytorch
+  stars: 3000
+  tags:
+  - deep-learning
+  - stacking
+  - high-accuracy
+  parents:
+  - name: FlowNet
+    relation: extends
+  description: Stacked architecture of multiple FlowNets with scheduling for improved accuracy
+
+- name: PWC-Net
+  paper: 'PWC-Net: CNNs for Optical Flow Using Pyramid, Warping, and Cost Volume'
+  arxiv: '1709.02371'
+  year: 2018
+  code: NVlabs/PWC-Net
+  stars: 1800
+  tags:
+  - deep-learning
+  - cost-volume
+  - pyramid
+  - warping
+  parents:
+  - name: FlowNet2
+    relation: extends
+  - name: SpyNet
+    relation: combines
+  description: Compact model using pyramidal features, warping, and cost volumes for efficient flow
+
+- name: RAFT
+  paper: 'RAFT: Recurrent All-Pairs Field Transforms for Optical Flow'
+  arxiv: '2003.12039'
+  year: 2020
+  code: princeton-vl/RAFT
+  stars: 3500
+  tags:
+  - deep-learning
+  - recurrent
+  - all-pairs-correlation
+  - iterative-refinement
+  parents:
+  - name: PWC-Net
+    relation: replaces
+  description: Iterative refinement with all-pairs correlation volumes and GRU-based updates
+
+- name: GMA
+  paper: Learning to Estimate Hidden Motions with Global Motion Aggregation
+  arxiv: '2104.02409'
+  year: 2021
+  code: zacjiang/GMA
+  stars: 400
+  tags:
+  - deep-learning
+  - attention
+  - occlusion
+  parents:
+  - name: RAFT
+    relation: extends
+  description: Adds global motion aggregation with self-attention to handle occluded regions
+
+- name: GMFlow
+  paper: 'GMFlow: Learning Optical Flow via Global Matching'
+  arxiv: '2111.13680'
+  year: 2022
+  code: haofeixu/gmflow
+  stars: 1000
+  tags:
+  - deep-learning
+  - transformer
+  - global-matching
+  parents:
+  - name: RAFT
+    relation: inspires
+  description: Reformulates optical flow as global feature matching with transformers
+
+- name: FlowFormer
+  paper: 'FlowFormer: A Transformer Architecture for Optical Flow'
+  arxiv: '2203.16194'
+  year: 2022
+  code: drinkingcoder/FlowFormer-Official
+  stars: 350
+  tags:
+  - deep-learning
+  - transformer
+  - cost-volume-tokenization
+  parents:
+  - name: RAFT
+    relation: extends
+  - name: GMFlow
+    relation: combines
+  description: Transformer-based architecture that tokenizes cost volumes for optical flow estimation
+
+- name: UniMatch
+  paper: Unifying Flow, Stereo and Depth Estimation
+  arxiv: '2211.05783'
+  year: 2023
+  code: autonomousvision/unimatch
+  stars: 1600
+  tags:
+  - deep-learning
+  - unified
+  - flow
+  - stereo
+  - depth
+  parents:
+  - name: GMFlow
+    relation: extends
+  description: Unified transformer framework for optical flow, stereo matching, and depth estimation
+
+- name: FlowFormer++
+  paper: 'FlowFormer++: Masked Cost Volume Autoencoding for Pretraining Optical Flow Estimation'
+  arxiv: '2303.01237'
+  year: 2023
+  code: XiaoyuShi97/FlowFormerPlusPlus
+  stars: 250
+  tags:
+  - deep-learning
+  - transformer
+  - pretraining
+  - masked-autoencoding
+  parents:
+  - name: FlowFormer
+    relation: extends
+  description: Self-supervised pretraining via masked cost volume autoencoding for flow estimation
+
+- name: VideoFlow
+  paper: 'VideoFlow: Exploiting Temporal Cues for Multi-frame Optical Flow Estimation'
+  arxiv: '2303.08340'
+  year: 2023
+  code: XiaoyuShi97/VideoFlow
+  stars: 300
+  tags:
+  - deep-learning
+  - multi-frame
+  - temporal
+  - video
+  parents:
+  - name: FlowFormer
+    relation: extends
+  - name: RAFT
+    relation: extends
+  description: Multi-frame optical flow exploiting temporal cues across video sequences
+
+- name: SEA-RAFT
+  paper: 'SEA-RAFT: Simple, Efficient, Accurate RAFT for Optical Flow'
+  arxiv: '2405.14793'
+  year: 2024
+  code: princeton-vl/SEA-RAFT
+  stars: 400
+  tags:
+  - deep-learning
+  - efficient
+  - recurrent
+  - simplified
+  parents:
+  - name: RAFT
+    relation: extends
+  description: Simplified and more efficient RAFT variant with improved accuracy and speed
+
+- name: MemFlow
+  paper: 'MemFlow: Optical Flow Estimation and Prediction with Memory'
+  arxiv: '2404.04808'
+  year: 2024
+  code: DQiaole/MemFlow
+  stars: 200
+  tags:
+  - deep-learning
+  - memory
+  - temporal
+  - prediction
+  parents:
+  - name: RAFT
+    relation: extends
+  - name: VideoFlow
+    relation: inspires
+  description: Memory-augmented optical flow for temporal consistency and flow prediction
+
+- name: CCMR
+  paper: 'CCMR: High Resolution Optical Flow Estimation via Coarse-to-Fine Context-Guided Motion Reasoning'
+  arxiv: '2406.00998'
+  year: 2024
+  code: cv-stuttgart/CCMR
+  stars: 100
+  tags:
+  - deep-learning
+  - high-resolution
+  - coarse-to-fine
+  - context-guided
+  parents:
+  - name: RAFT
+    relation: extends
+  description: High-resolution optical flow via coarse-to-fine context-guided motion reasoning
+
+- name: DiffFlow
+  paper: 'DiffFlow: Diffusion-Based Optical Flow Estimation'
+  arxiv: '2501.11595'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - deep-learning
+  - diffusion
+  - generative
+  parents:
+  - name: RAFT
+    relation: inspires
+  - name: FlowFormer
+    relation: inspires
+  description: Applies diffusion models to optical flow estimation as a conditional generation task

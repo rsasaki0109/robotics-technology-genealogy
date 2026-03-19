@@ -47,6 +47,8 @@ def main() -> None:
             "Depth Completion",
             "2D Object Detection",
             "Semantic Segmentation",
+            "Optical Flow",
+            "Object Tracking",
         },
         "Planning & Control": {
             "Motion Planning",
@@ -64,6 +66,7 @@ def main() -> None:
             "Vision-Language Models",
             "Diffusion Models",
             "Vision Backbone & Foundation",
+            "Reinforcement Learning",
         },
         "Platforms & Simulation": {
             "Robot Simulation",
