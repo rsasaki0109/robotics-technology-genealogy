@@ -492,3 +492,22 @@ methods:
     relation: extends
   description: Dense kernelized feature matching using global correlation and kernel
     regression for geometry estimation
+# === Visual Geometry Transformer ===
+- name: VGGT
+  paper: "VGGT: Visual Geometry Grounded Transformer"
+  arxiv: "2503.11651"
+  year: 2025
+  code: facebookresearch/vggt
+  stars: 2500
+  tags:
+  - 3d-reconstruction
+  - visual-geometry
+  - transformer
+  - feed-forward
+  - unified
+  parents:
+  - name: VGGSfM
+    relation: extends
+  - name: DUSt3R
+    relation: inspires
+  description: "Feed-forward transformer predicting cameras, depth, point maps, and 3D points from unposed images in a single forward pass"
