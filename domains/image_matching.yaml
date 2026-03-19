@@ -27,7 +27,7 @@ methods:
   - real-time
   parents:
   - name: SIFT
-    relation: replaces
+    relation: extends
   description: Fast binary descriptor as an efficient alternative to SIFT
   stars: 86680
 - name: SuperPoint
@@ -42,7 +42,7 @@ methods:
   - self-supervised
   parents:
   - name: SIFT
-    relation: replaces
+    relation: inspires
   description: Self-supervised CNN for joint keypoint detection and description
 - name: D2-Net
   paper: 'D2-Net: A Trainable CNN for Joint Description and Detection of Local Features'
@@ -56,7 +56,7 @@ methods:
   - dense
   parents:
   - name: SIFT
-    relation: replaces
+    relation: inspires
   description: Dense feature detection and description in a single forward pass
 - name: SuperGlue
   paper: 'SuperGlue: Learning Feature Matching with Graph Neural Networks'
@@ -84,7 +84,7 @@ methods:
   - detector-free
   parents:
   - name: SuperGlue
-    relation: replaces
+    relation: inspires
   description: Detector-free matching using transformers on dense features
 - name: LightGlue
   paper: 'LightGlue: Local Feature Matching at Light Speed'

@@ -58,7 +58,7 @@ methods:
   - predictive
   parents:
   - name: PID
-    relation: extends
+    relation: inspires
   description: Optimization-based control that plans optimal actions over a receding
     horizon using a dynamics model
 - name: Impedance Control
@@ -76,7 +76,7 @@ methods:
   - manipulation
   parents:
   - name: PID
-    relation: extends
+    relation: inspires
   description: Controls dynamic interaction between robot and environment by regulating
     mechanical impedance
 - name: Operational Space Control

@@ -239,7 +239,7 @@ methods:
   - optical-flow
   parents:
   - name: ORB-SLAM2
-    relation: replaces
+    relation: inspires
   - name: DSO
     relation: inspires
   description: End-to-end differentiable SLAM using recurrent iterative updates of

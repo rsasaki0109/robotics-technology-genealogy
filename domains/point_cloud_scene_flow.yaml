@@ -327,7 +327,7 @@ methods:
   - all-pairs
   parents:
   - name: PWC-Net
-    relation: replaces
+    relation: extends
   description: Recurrent all-pairs field transforms achieving state-of-the-art optical
     flow with iterative refinement
 - name: CamLiFlow
