@@ -68,7 +68,7 @@ methods:
   - domain-randomization
   parents:
   - name: CPG
-    relation: replaces
+    relation: inspires
   description: Pioneering sim-to-real transfer for quadruped locomotion using domain
     randomization and RL
 - name: RaiSim
@@ -148,7 +148,7 @@ methods:
   - sim-to-real
   parents:
   - name: CPG
-    relation: replaces
+    relation: inspires
   description: First robust sim-to-real RL locomotion on ANYmal, replacing hand-crafted
     controllers
 - name: AMP

@@ -567,7 +567,7 @@ methods:
   - efficient-inference
   parents:
   - name: Transformer
-    relation: replaces
+    relation: inspires
   description: Linear-complexity RNN architecture combining transformer training with
     RNN inference
 - name: Mamba
@@ -585,7 +585,7 @@ methods:
   - efficient-inference
   parents:
   - name: Transformer
-    relation: replaces
+    relation: inspires
   description: Selective state-space model achieving linear-time sequence modeling
 - name: Claude 2
   year: 2023

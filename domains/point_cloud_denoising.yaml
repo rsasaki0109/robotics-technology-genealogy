@@ -35,7 +35,7 @@ methods:
   - outlier-removal
   parents:
   - name: Bilateral Filter (PC)
-    relation: replaces
+    relation: inspires
   description: First deep learning approach for point cloud denoising and outlier
     removal
 - name: PCN (Total Denoising)
@@ -60,7 +60,7 @@ methods:
   - gradient-field
   parents:
   - name: PointCleanNet
-    relation: replaces
+    relation: inspires
   description: Estimates score (gradient of log-probability) of noise-free surface
 - name: IterativePFN
   paper: 'IterativePFN: True Iterative Point Cloud Filtering'

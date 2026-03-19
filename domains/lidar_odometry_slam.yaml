@@ -139,7 +139,7 @@ methods:
   - name: LeGO-LOAM
     relation: extends
   - name: LOAM
-    relation: extends
+    relation: inspires
   description: Tightly-coupled LiDAR-inertial odometry via factor graph optimization
 - name: SC-LIO-SAM
   paper: 'Scan Context: Egocentric Spatial Descriptor for Place Recognition within
@@ -555,7 +555,7 @@ methods:
   - name: ICP
     relation: extends
   - name: NDT
-    relation: combines
+    relation: inspires
   description: Generalized ICP unifying point-to-point and point-to-plane with plane-to-plane
     matching
 - name: R3LIVE

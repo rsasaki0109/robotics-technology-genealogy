@@ -45,7 +45,7 @@ methods:
   - no-mlp
   parents:
   - name: NeRF
-    relation: replaces
+    relation: inspires
   description: Sparse voxel grid optimization without neural networks
 - name: TensoRF
   paper: 'TensoRF: Tensorial Radiance Fields'
@@ -188,7 +188,7 @@ methods:
   - sds
   parents:
   - name: NeRF
-    relation: extends
+    relation: combines
   description: Text-to-3D generation using score distillation sampling
 - name: DreamGaussian
   paper: 'DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation'

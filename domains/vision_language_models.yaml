@@ -327,7 +327,7 @@ methods:
   - visual-chat
   parents:
   - name: CLIP
-    relation: combines
+    relation: extends
   - name: BLIP-2
     relation: inspires
   description: Visual instruction tuning connecting CLIP vision encoder with LLM via

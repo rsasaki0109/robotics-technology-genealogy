@@ -116,7 +116,7 @@ methods:
   - heuristic
   parents:
   - name: InformedRRT*
-    relation: extends
+    relation: combines
   - name: RRT*
     relation: extends
   description: Combines graph-based and sampling-based planning using batch processing
@@ -165,7 +165,7 @@ methods:
   - classical
   parents:
   - name: D*
-    relation: replaces
+    relation: extends
   - name: A*
     relation: extends
   description: Simplified and more efficient incremental replanning algorithm based
@@ -281,7 +281,7 @@ methods:
   - ros
   parents:
   - name: DWA
-    relation: replaces
+    relation: extends
   description: Timed Elastic Band local planner optimizing trajectory timing and shape
     under kinodynamic constraints
 - name: MPPI

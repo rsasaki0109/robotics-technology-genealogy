@@ -45,7 +45,7 @@ methods:
   - global-descriptor
   parents:
   - name: FAB-MAP
-    relation: replaces
+    relation: inspires
   description: Differentiable VLAD pooling layer trainable end-to-end for place recognition
 - name: Patch-NetVLAD
   paper: 'Patch-NetVLAD: Multi-Scale Fusion of Locally-Global Descriptors for Place
@@ -76,7 +76,7 @@ methods:
   - cosine-similarity
   parents:
   - name: NetVLAD
-    relation: replaces
+    relation: extends
   description: Simplified training with cosine similarity-based loss for scalable
     geo-localization
 - name: EigenPlaces
@@ -106,7 +106,7 @@ methods:
   - global-descriptor
   parents:
   - name: NetVLAD
-    relation: replaces
+    relation: extends
   - name: CosPlace
     relation: inspires
   description: All-MLP feature mixing architecture replacing aggregation layers for
@@ -166,7 +166,7 @@ methods:
   - overlap
   parents:
   - name: Scan Context
-    relation: replaces
+    relation: extends
   description: Deep network estimating overlap between LiDAR range images for loop
     closure
 - name: MinkLoc3Dv2
@@ -233,7 +233,7 @@ methods:
   - name: DBoW2
     relation: inspires
   - name: Scan Context
-    relation: extends
+    relation: inspires
   description: 3D bag-of-words using LinK3D features for real-time LiDAR loop closure
 - name: BTC
   paper: 'BTC: Binary Triangle Combined Descriptor for 3D Place Recognition'

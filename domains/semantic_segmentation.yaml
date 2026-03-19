@@ -157,7 +157,7 @@ methods:
   - efficient
   parents:
   - name: DeepLab v3+
-    relation: replaces
+    relation: inspires
   description: Hierarchical vision transformer encoder with lightweight MLP decoder
     for efficient segmentation
 - name: SegNeXt
@@ -188,7 +188,7 @@ methods:
   - foundation
   parents:
   - name: FCN
-    relation: combines
+    relation: extends
   description: Extends Faster R-CNN with a parallel mask branch for per-instance segmentation
 - name: SOLO
   paper: 'SOLO: Segmenting Objects by Locations'
@@ -202,7 +202,7 @@ methods:
   - location-based
   parents:
   - name: Mask R-CNN
-    relation: replaces
+    relation: inspires
   description: Box-free instance segmentation by predicting category and mask at each
     spatial location
 - name: SOLOv2
@@ -232,7 +232,7 @@ methods:
   - single-stage
   parents:
   - name: Mask R-CNN
-    relation: replaces
+    relation: inspires
   description: Instance-aware conditional convolution filters for dynamic mask generation
 - name: Panoptic-FPN
   paper: Panoptic Feature Pyramid Networks
@@ -262,7 +262,7 @@ methods:
   - mask-classification
   parents:
   - name: Panoptic-FPN
-    relation: replaces
+    relation: extends
   description: Unifies semantic and panoptic segmentation via mask classification
     with transformer decoder
 - name: Mask2Former
@@ -421,7 +421,7 @@ methods:
   - yolo-based
   parents:
   - name: SAM
-    relation: replaces
+    relation: extends
   description: Real-time segment anything using YOLOv8-based architecture at 50x speed
     of SAM
 - name: MobileSAM
