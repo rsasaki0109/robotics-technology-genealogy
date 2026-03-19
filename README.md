@@ -1,24 +1,41 @@
 # robotics-technology-genealogy
 
-Interactive genealogy tree visualizer for Computer Vision research methods.
+Interactive genealogy tree visualizer for Robotics & AI technologies.
 
-論文の手法がどこから派生し、どう分岐したかをインタラクティブな系譜図で表示します。
+ロボティクス・AI技術がどこから派生し、どう分岐したかをインタラクティブな系譜図で表示します。
 
-## Concept
+**[Live Demo](https://rsasaki0109.github.io/robotics-technology-genealogy/)**
 
-```
-NeRF [2020] ★9,800
-├── (↑ extends) Instant-NGP [2022] ★16,000
-├── (↑ extends) Mip-NeRF [2021] ★1,100
-│   └── (↑ extends) Mip-NeRF 360 [2022] ★1,500
-│       └── (+ combines) Zip-NeRF [2023] ★700
-├── (⇨ replaces) Plenoxels [2022] ★2,800
-├── (↑ extends) DreamFusion [2022] ★8,200
-└── (⇨ replaces) 3D Gaussian Splatting [2023] ★20,000
-    ├── (↑ extends) SuGaR [2024] ★2,200
-    ├── (↑ extends) 2D Gaussian Splatting [2024] ★2,000
-    └── (↑ extends) DreamGaussian [2023] ★4,200
-```
+![screenshot](docs/screenshot.png)
+
+## Features
+
+- **769 technologies** across **25 domains** — from classical algorithms to frontier AI
+- Interactive graph with chronological left-to-right layout
+- Search any method and jump to its domain tree
+- Filter by OSS status (open/closed/research), paper availability
+- Category browsing: Perception, Planning, Robot Learning, Foundation Models, etc.
+- GitHub star counts auto-updated weekly via GitHub Actions
+
+## Domains (25)
+
+| Category | Domains |
+|----------|---------|
+| **Perception (LiDAR/3D)** | LiDAR SLAM, 3D Detection, Point Cloud Denoising, Scene Flow, Place Recognition |
+| **Perception (Visual)** | NeRF/3DGS, Image Matching, Visual SLAM, Depth, 2D Detection, Segmentation |
+| **Planning & Control** | Motion Planning, Robot Control, E2E Autonomous Driving |
+| **Robot Learning** | Imitation Learning, World Models, Legged Robots, Grasp Planning |
+| **Foundation Models** | LLM, VLM, Diffusion Models, Vision Backbone |
+| **Platforms & Simulation** | Robot Simulation, Robot Middleware, Medical Robotics |
+
+## Relation Types
+
+| Color | Type | Meaning |
+|-------|------|---------|
+| Green `━━▶` | `extends` | Direct extension of the same approach |
+| Cyan `━━▶` | `combines` | Merges ideas from multiple methods |
+| Red `━━▶` | `replaces` | Paradigm shift (rare) |
+| Yellow `╌╌▶` | `inspires` | Indirect influence |
 
 ## Install
 
@@ -26,34 +43,30 @@ NeRF [2020] ★9,800
 pip install -e .
 ```
 
-## Usage
+## CLI Usage
 
 ```bash
-# Show genealogy tree for all domains
+# Show genealogy tree
 robotics-technology-genealogy show
-
-# Show a specific domain
 robotics-technology-genealogy show neural_radiance_fields
 
-# Trace ancestors of a method
+# Trace ancestors
 robotics-technology-genealogy ancestors "3D Gaussian Splatting"
 
-# Show detailed info about a method
+# Show details
 robotics-technology-genealogy info "LoFTR"
 
-# List all methods (filter by tag or year)
+# List with filters
 robotics-technology-genealogy list --tag transformer
-robotics-technology-genealogy list --year 2024
+robotics-technology-genealogy list --year 2025
 ```
 
-## Relation Types
+## Web UI (Local)
 
-| Symbol | Type | Meaning |
-|--------|------|---------|
-| ↑ | `extends` | Direct extension of the parent method |
-| + | `combines` | Combines ideas from multiple methods |
-| ⇨ | `replaces` | Paradigm shift — replaces the parent approach |
-| ✱ | `inspires` | Indirect influence, not a direct derivative |
+```bash
+pip install -e ".[web]"
+streamlit run web/app.py
+```
 
 ## Adding a Domain
 
@@ -62,8 +75,6 @@ Create a YAML file in `domains/`:
 ```yaml
 name: Your Domain Name
 description: Brief description
-source_awesome_lists:
-  - https://github.com/...
 
 methods:
   - name: "MethodName"
@@ -72,6 +83,8 @@ methods:
     year: 2024
     code: "github-user/repo"
     stars: 1000
+    open_source: open  # open | research | partial | closed
+    license: "MIT"
     tags: [tag1, tag2]
     parents:
       - name: "ParentMethod"
@@ -79,35 +92,13 @@ methods:
     description: "One-line description"
 ```
 
-## Web UI
-
-```bash
-pip install -e ".[web]"
-streamlit run web/app.py
-```
-
-Interactive graph visualization with filtering by domain, tags, and year range.
-
 ## Auto-update Stars
 
+Runs weekly via GitHub Actions. Manual:
+
 ```bash
-# Manual run
 GITHUB_TOKEN=your_token python scripts/update_stars.py
-
-# Dry run (no file changes)
-python scripts/update_stars.py --dry-run
 ```
-
-Also runs weekly via GitHub Actions (`.github/workflows/update_stars.yml`).
-
-## Domains
-
-Currently included:
-
-- **Neural Radiance Fields & 3D Gaussian Splatting** — NeRF → 3DGS evolution
-- **Image Matching & Feature Detection** — SIFT → SuperPoint → LoFTR → DUSt3R evolution
-- **Point Cloud Denoising** — Bilateral filter → Score-based → Diffusion evolution
-- **Depth Completion** — Sparse-to-Dense → Spatial propagation → Transformer evolution
 
 ## License
 
