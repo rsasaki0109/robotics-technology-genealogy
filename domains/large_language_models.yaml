@@ -847,3 +847,147 @@ methods:
     relation: extends
   description: Improved GPT-4 with better coding, instruction following, and 1M token
     context
+
+# === Moonshot / Kimi ===
+- name: Kimi (Moonshot AI)
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - long-context
+  - proprietary
+  - china
+  parents:
+  - name: Transformer
+    relation: extends
+  description: "Moonshot AI's long-context LLM supporting 200K+ tokens, popular in China"
+
+- name: Kimi k1.5
+  year: 2025
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - reasoning
+  - long-context
+  - proprietary
+  parents:
+  - name: Kimi (Moonshot AI)
+    relation: extends
+  description: "Reasoning-enhanced Kimi with reinforcement learning and multi-modal thinking"
+
+# === Qwen3 ===
+- name: Qwen3
+  year: 2025
+  code: QwenLM/Qwen3
+  stars: 20000
+  open_source: open
+  license: "Apache-2.0"
+  tags:
+  - decoder
+  - open-weight
+  - hybrid-thinking
+  - moe
+  parents:
+  - name: Qwen2.5
+    relation: extends
+  description: "Hybrid thinking mode (fast/deep) with MoE variants, strong multilingual and agentic capabilities"
+
+# === Yi ===
+- name: Yi
+  year: 2024
+  code: 01-ai/Yi
+  stars: 8000
+  open_source: open
+  license: "Apache-2.0"
+  tags:
+  - decoder
+  - open-weight
+  - long-context
+  - bilingual
+  parents:
+  - name: LLaMA
+    relation: inspires
+  description: "01.AI's bilingual LLM with strong long-context capabilities"
+
+# === Baichuan ===
+- name: Baichuan 2
+  year: 2023
+  code: baichuan-inc/Baichuan2
+  stars: 4000
+  open_source: open
+  license: "Baichuan License"
+  tags:
+  - decoder
+  - open-weight
+  - bilingual
+  - china
+  parents:
+  - name: LLaMA
+    relation: inspires
+  description: "Baichuan's open bilingual LLM series optimized for Chinese"
+
+# === Cohere ===
+- name: Command R+
+  year: 2024
+  open_source: closed
+  license: null
+  tags:
+  - decoder
+  - rag
+  - enterprise
+  - proprietary
+  parents:
+  - name: Transformer
+    relation: extends
+  description: "Cohere's RAG-optimized enterprise LLM with tool use and citation generation"
+
+# === Gemma 2 ===
+- name: Gemma 2
+  year: 2024
+  code: google/gemma
+  stars: 600
+  open_source: open
+  license: "Gemma License"
+  tags:
+  - decoder
+  - open-weight
+  - efficient
+  - distillation
+  parents:
+  - name: Gemma
+    relation: extends
+  description: "Improved Gemma with knowledge distillation and logit soft-capping"
+
+# === Phi-4 ===
+- name: Phi-4
+  year: 2024
+  open_source: open
+  license: "MIT"
+  tags:
+  - decoder
+  - small-lm
+  - reasoning
+  - synthetic-data
+  parents:
+  - name: Phi-3
+    relation: extends
+  description: "14B model with strong reasoning from synthetic data and post-training innovation"
+
+# === Llama 3.1 ===
+- name: LLaMA 3.1
+  year: 2024
+  code: meta-llama/llama-models
+  stars: 7000
+  open_source: open
+  license: "Llama 3.1 Community License"
+  tags:
+  - decoder
+  - open-weight
+  - 128k-context
+  - 405b
+  parents:
+  - name: LLaMA 3
+    relation: extends
+  description: "Extended context (128K) Llama 3 with 405B flagship variant"

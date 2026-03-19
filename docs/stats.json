@@ -1,14 +1,14 @@
 {
-  "total_methods": 832,
+  "total_methods": 841,
   "total_domains": 28,
   "methods_per_domain": [
     {
-      "domain": "LiDAR Odometry & SLAM",
-      "count": 56
+      "domain": "Large Language Models",
+      "count": 60
     },
     {
-      "domain": "Large Language Models",
-      "count": 51
+      "domain": "LiDAR Odometry & SLAM",
+      "count": 56
     },
     {
       "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
@@ -270,15 +270,15 @@
     },
     {
       "year": 2023,
-      "count": 135
+      "count": 136
     },
     {
       "year": 2024,
-      "count": 160
+      "count": 166
     },
     {
       "year": 2025,
-      "count": 86
+      "count": 88
     },
     {
       "year": 2026,
@@ -286,10 +286,10 @@
     }
   ],
   "oss_breakdown": {
-    "open": 594,
+    "open": 600,
     "research": 1,
     "partial": 6,
-    "closed": 68,
+    "closed": 71,
     "unknown": 163
   },
   "top_by_stars": [
