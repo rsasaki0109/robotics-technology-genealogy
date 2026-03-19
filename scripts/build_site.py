@@ -41,6 +41,8 @@ CATEGORY_MAP = {
         "Depth Completion",
         "2D Object Detection",
         "Semantic Segmentation",
+            "Optical Flow",
+            "Object Tracking",
     ],
     "Planning & Control": [
         "Motion Planning",
@@ -58,6 +60,7 @@ CATEGORY_MAP = {
         "Vision-Language Models",
         "Diffusion Models",
             "Vision Backbone & Foundation",
+            "Reinforcement Learning",
     ],
     "Platforms & Simulation": [
         "Robot Simulation",
@@ -128,6 +131,13 @@ def domain_to_graph_data(domains: list[Domain]) -> dict:
             "level": year_to_level[m.year],
             "oss": oss.value,
             "hasPaper": m.has_paper,
+            "year": m.year,
+            "arxiv": m.arxiv or "",
+            "code": m.code or "",
+            "stars": m.stars or 0,
+            "licenseName": m.license or "",
+            "description": m.description or "",
+            "tags": m.tags or [],
         })
 
     for name, node in graph.nodes.items():
@@ -200,12 +210,62 @@ INDEX_HTML = """\
   .filter-btn:hover { border-color: #666; }
   .stats { color: #888; font-size: 13px; white-space: nowrap; }
   #graph { width: 100%; height: calc(100vh - 70px); }
+  #info-panel {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000;
+    background: #161b22; border-top: 1px solid #333; padding: 16px 24px;
+    font-size: 14px; color: #ccc; max-height: 220px; overflow-y: auto;
+  }
+  #info-panel.visible { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  #info-panel .info-main { flex: 1; min-width: 280px; }
+  #info-panel h2 { color: #fff; font-size: 18px; margin-bottom: 6px; }
+  #info-panel .info-year { color: #888; font-size: 14px; margin-bottom: 8px; }
+  #info-panel .info-desc { color: #aaa; margin-bottom: 8px; line-height: 1.5; }
+  #info-panel .info-links { display: flex; gap: 16px; margin-bottom: 8px; flex-wrap: wrap; }
+  #info-panel .info-links a { color: #58a6ff; text-decoration: none; font-size: 13px; }
+  #info-panel .info-links a:hover { text-decoration: underline; }
+  #info-panel .info-meta { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 13px; color: #888; }
+  #info-panel .tag { display: inline-block; background: #21262d; border: 1px solid #333; border-radius: 12px; padding: 2px 10px; font-size: 12px; color: #8b949e; margin: 2px 2px; }
+  #info-panel .close-btn {
+    position: absolute; top: 10px; right: 16px; background: none; border: none;
+    color: #888; font-size: 20px; cursor: pointer; line-height: 1;
+  }
+  #info-panel .close-btn:hover { color: #fff; }
   .legend {
     position: fixed; top: 80px; right: 16px; z-index: 9999;
     background: rgba(14,17,23,0.9); border: 1px solid #333; border-radius: 8px;
     padding: 10px 14px; font-size: 13px; line-height: 1.7; pointer-events: none;
   }
   .legend b { color: #fff; }
+  #stats-overlay {
+    display: none; position: fixed; inset: 0; z-index: 20000;
+    background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
+  }
+  #stats-overlay.visible { display: flex; }
+  .stats-panel {
+    background: #161b22; border: 1px solid #333; border-radius: 12px;
+    padding: 28px 32px; max-width: 720px; width: 90%; max-height: 85vh;
+    overflow-y: auto; color: #ccc; font-size: 14px; position: relative;
+  }
+  .stats-panel h2 { color: #fff; font-size: 22px; margin-bottom: 20px; }
+  .stats-panel h3 { color: #ddd; font-size: 15px; margin: 18px 0 8px; }
+  .stats-panel .close-btn {
+    position: absolute; top: 12px; right: 16px; background: none; border: none;
+    color: #888; font-size: 22px; cursor: pointer;
+  }
+  .stats-panel .close-btn:hover { color: #fff; }
+  .stats-big { display: flex; gap: 40px; margin-bottom: 12px; }
+  .stats-big .num { font-size: 42px; font-weight: 700; color: #3b82f6; }
+  .stats-big .label { font-size: 13px; color: #888; }
+  .bar-row { display: flex; align-items: center; gap: 8px; margin: 2px 0; font-size: 12px; font-family: monospace; }
+  .bar-row .bar-label { width: 40px; text-align: right; color: #888; }
+  .bar-row .bar { background: #3b82f6; height: 14px; border-radius: 2px; min-width: 2px; }
+  .bar-row .bar-count { color: #888; width: 30px; }
+  .oss-row { display: flex; align-items: center; gap: 8px; margin: 3px 0; font-size: 13px; }
+  .oss-row .oss-bar { height: 16px; border-radius: 3px; }
+  .star-row { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; font-size: 13px; border-bottom: 1px solid #222; }
+  .star-row a { color: #58a6ff; text-decoration: none; }
+  .star-row a:hover { text-decoration: underline; }
+  .star-row .star-count { color: #eab308; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -220,12 +280,42 @@ INDEX_HTML = """\
     <button class="filter-btn" id="btn-oss" title="Show only open source">OSS Only</button>
     <button class="filter-btn" id="btn-paper" title="Show only with paper">Paper Only</button>
     <button class="filter-btn" id="btn-nopaper" title="Show only without paper">No Paper</button>
+    <button class="filter-btn" id="btn-stats" title="Show project statistics">Stats</button>
     <span class="stats" id="stats"></span>
   </div>
   <a href="https://github.com/rsasaki0109/robotics-technology-genealogy" target="_blank">GitHub</a>
 </div>
 
 <div id="graph"></div>
+
+<div id="info-panel">
+  <button class="close-btn" onclick="closeInfoPanel()">&times;</button>
+  <div class="info-main">
+    <h2 id="info-name"></h2>
+    <div class="info-year" id="info-year"></div>
+    <div class="info-desc" id="info-desc"></div>
+    <div class="info-links" id="info-links"></div>
+    <div class="info-meta" id="info-meta"></div>
+    <div id="info-tags" style="margin-top:6px"></div>
+  </div>
+</div>
+
+<div id="stats-overlay">
+  <div class="stats-panel">
+    <button class="close-btn" onclick="toggleStatsPanel()">&times;</button>
+    <h2>Project Statistics</h2>
+    <div class="stats-big">
+      <div><div class="num" id="st-methods">-</div><div class="label">Methods</div></div>
+      <div><div class="num" id="st-domains">-</div><div class="label">Domains</div></div>
+    </div>
+    <h3>Methods per Year</h3>
+    <div id="st-year-chart"></div>
+    <h3>Open Source Breakdown</h3>
+    <div id="st-oss"></div>
+    <h3>Top 10 Repos by Stars</h3>
+    <div id="st-top-stars"></div>
+  </div>
+</div>
 
 <div class="legend">
   <b>Edges</b><br>
@@ -291,12 +381,68 @@ function renderGraph(graphData, save) {
   };
   if (network) network.destroy();
   network = new vis.Network(container, data, OPTIONS);
+  network.on("click", function(params) {
+    if (params.nodes.length === 1) {
+      const nodeId = params.nodes[0];
+      const nodeData = data.nodes.get(nodeId);
+      if (nodeData) showInfoPanel(nodeData);
+    } else {
+      closeInfoPanel();
+    }
+  });
   const total = graphData.nodes.length;
   const shown = filtered.nodes.length;
   const statsText = shown < total
     ? shown + "/" + total + " methods (filtered) / " + filtered.edges.length + " edges"
     : total + " methods / " + filtered.edges.length + " edges";
   document.getElementById("stats").textContent = statsText;
+}
+
+function closeInfoPanel() {
+  document.getElementById("info-panel").classList.remove("visible");
+}
+
+function showInfoPanel(nodeData) {
+  const panel = document.getElementById("info-panel");
+  document.getElementById("info-name").textContent = nodeData.label.replace(/\\n/g, " ");
+  document.getElementById("info-year").textContent = "Year: " + (nodeData.year || "N/A");
+  document.getElementById("info-desc").textContent = nodeData.description || "";
+
+  const linksEl = document.getElementById("info-links");
+  linksEl.innerHTML = "";
+  if (nodeData.arxiv) {
+    const a = document.createElement("a");
+    a.href = "https://arxiv.org/abs/" + nodeData.arxiv;
+    a.target = "_blank";
+    a.textContent = "arXiv: " + nodeData.arxiv;
+    linksEl.appendChild(a);
+  }
+  if (nodeData.code) {
+    const a = document.createElement("a");
+    a.href = "https://github.com/" + nodeData.code;
+    a.target = "_blank";
+    a.textContent = "GitHub: " + nodeData.code;
+    linksEl.appendChild(a);
+  }
+
+  const metaEl = document.getElementById("info-meta");
+  metaEl.innerHTML = "";
+  if (nodeData.stars) { metaEl.innerHTML += "<span>★ " + nodeData.stars.toLocaleString() + "</span>"; }
+  if (nodeData.oss && nodeData.oss !== "unknown") { metaEl.innerHTML += "<span>OSS: " + nodeData.oss + "</span>"; }
+  if (nodeData.licenseName) { metaEl.innerHTML += "<span>License: " + nodeData.licenseName + "</span>"; }
+
+  const tagsEl = document.getElementById("info-tags");
+  tagsEl.innerHTML = "";
+  if (nodeData.tags && nodeData.tags.length) {
+    nodeData.tags.forEach(function(t) {
+      const span = document.createElement("span");
+      span.className = "tag";
+      span.textContent = t;
+      tagsEl.appendChild(span);
+    });
+  }
+
+  panel.classList.add("visible");
 }
 
 function toggleFilter(key, btnId) {
@@ -378,6 +524,63 @@ function onDomainChange() {
   }
 }
 
+let STATS = null;
+
+function toggleStatsPanel() {
+  const overlay = document.getElementById("stats-overlay");
+  const btn = document.getElementById("btn-stats");
+  const isVisible = overlay.classList.toggle("visible");
+  btn.classList.toggle("active", isVisible);
+}
+
+function renderStatsPanel(stats) {
+  document.getElementById("st-methods").textContent = stats.total_methods;
+  document.getElementById("st-domains").textContent = stats.total_domains;
+
+  // Year histogram
+  const yearDiv = document.getElementById("st-year-chart");
+  yearDiv.innerHTML = "";
+  const maxCount = Math.max(...stats.methods_per_year.map(d => d.count));
+  const barMaxWidth = 320;
+  stats.methods_per_year.forEach(d => {
+    const w = Math.round((d.count / maxCount) * barMaxWidth);
+    yearDiv.innerHTML += '<div class="bar-row"><span class="bar-label">' + d.year +
+      '</span><div class="bar" style="width:' + w + 'px"></div><span class="bar-count">' +
+      d.count + '</span></div>';
+  });
+
+  // OSS breakdown
+  const ossDiv = document.getElementById("st-oss");
+  ossDiv.innerHTML = "";
+  const ossColors = { open: "#22c55e", research: "#eab308", partial: "#f97316", closed: "#ef4444", unknown: "#555" };
+  const ossTotal = Object.values(stats.oss_breakdown).reduce((a, b) => a + b, 0);
+  // Stacked bar
+  let stackedHtml = '<div style="display:flex;border-radius:4px;overflow:hidden;height:22px;margin-bottom:8px">';
+  for (const [key, count] of Object.entries(stats.oss_breakdown)) {
+    if (count === 0) continue;
+    const pct = (count / ossTotal * 100).toFixed(1);
+    stackedHtml += '<div style="width:' + pct + '%;background:' + ossColors[key] + '" title="' + key + ': ' + count + '"></div>';
+  }
+  stackedHtml += '</div>';
+  ossDiv.innerHTML = stackedHtml;
+  for (const [key, count] of Object.entries(stats.oss_breakdown)) {
+    const pct = (count / ossTotal * 100).toFixed(1);
+    ossDiv.innerHTML += '<div class="oss-row"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:' +
+      ossColors[key] + '"></span> ' + key + ': ' + count + ' (' + pct + '%)</div>';
+  }
+
+  // Top 10 stars
+  const starsDiv = document.getElementById("st-top-stars");
+  starsDiv.innerHTML = "";
+  stats.top_by_stars.slice(0, 10).forEach(m => {
+    const link = m.code ? '<a href="https://github.com/' + m.code + '" target="_blank">' + m.name + '</a>' : m.name;
+    starsDiv.innerHTML += '<div class="star-row"><span>' + link + ' <span style="color:#888">(' + m.year +
+      ')</span></span><span class="star-count">★ ' + m.stars.toLocaleString() + '</span></div>';
+  });
+}
+
+fetch("stats.json").then(r => r.json()).then(s => { STATS = s; renderStatsPanel(s); }).catch(() => {});
+
 fetch("data.json")
   .then(r => r.json())
   .then(d => {
@@ -394,6 +597,7 @@ fetch("data.json")
     document.getElementById("btn-oss").addEventListener("click", () => toggleFilter("oss"));
     document.getElementById("btn-paper").addEventListener("click", () => toggleFilter("paper"));
     document.getElementById("btn-nopaper").addEventListener("click", () => toggleFilter("nopaper"));
+    document.getElementById("btn-stats").addEventListener("click", () => toggleStatsPanel());
     const searchInput = document.getElementById("search");
     searchInput.addEventListener("change", (e) => { searchMethod(e.target.value); e.target.value = ""; });
     searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") { searchMethod(e.target.value); e.target.value = ""; } });
@@ -420,6 +624,13 @@ def main() -> None:
     with data_path.open("w") as f:
         json.dump(site_data, f, separators=(",", ":"))
     print(f"  data.json: {data_path.stat().st_size / 1024:.0f} KB")
+
+    print("Building stats...")
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent))
+    from build_stats import generate_stats_json
+    stats_path = generate_stats_json(domains, OUTPUT_DIR)
+    print(f"  stats.json: {stats_path.stat().st_size / 1024:.1f} KB")
 
     index_path = OUTPUT_DIR / "index.html"
     index_path.write_text(INDEX_HTML)
