@@ -483,7 +483,7 @@ methods:
   paper: Parting with Misconceptions about Learning-based Vehicle Motion Planning
   arxiv: '2306.07962'
   year: 2023
-  code: tudelft-iv/PDM-Lite
+  code: autonomousvision/tuplan_garage
   stars: 300
   tags:
   - rule-based
@@ -498,7 +498,7 @@ methods:
   paper: 'PDM-Open: An Open Planner for Learning-based Motion Planning'
   arxiv: ''
   year: 2024
-  code: tudelft-iv/PDM-Lite
+  code: autonomousvision/tuplan_garage
   stars: 300
   tags:
   - hybrid
@@ -534,7 +534,7 @@ methods:
   paper: 'GenAD: Generalized Predictive Model for Autonomous Driving'
   arxiv: '2403.09630'
   year: 2024
-  code: OpenDriveLab/GenAD
+  code: OpenDriveLab/DriveAGI
   stars: 500
   tags:
   - generative
@@ -553,7 +553,7 @@ methods:
   paper: 'PARA-Drive: Parallelized Architecture for Real-time Autonomous Driving'
   arxiv: '2406.12742'
   year: 2024
-  code: wljungbergh/PARA-Drive
+  code: null
   stars: 100
   tags:
   - parallel

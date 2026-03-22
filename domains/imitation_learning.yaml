@@ -577,7 +577,7 @@ methods:
   paper: 'CrossFormer: Cross-Robot Policy Transfer with Foundation Models'
   arxiv: '2409.12917'
   year: 2024
-  code: cross-formerr/crossformer
+  code: rail-berkeley/crossformer
   stars: 200
   open_source: open
   license: ''

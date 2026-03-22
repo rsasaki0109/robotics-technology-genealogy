@@ -278,7 +278,7 @@ methods:
     Task-Oriented Grasping'
   arxiv: '2307.13204'
   year: 2024
-  code: mkt1412/GraspGPT
+  code: mkt1412/GraspGPT_public
   stars: 100
   tags:
   - llm

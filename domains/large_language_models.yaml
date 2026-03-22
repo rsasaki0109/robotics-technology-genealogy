@@ -271,7 +271,7 @@ methods:
   paper: The Llama 4 Herd of Models
   arxiv: null
   year: 2025
-  code: meta-llama/llama4
+  code: meta-llama/llama-models
   stars: 5000
   open_source: open
   license: Llama 4 Community License
@@ -414,7 +414,7 @@ methods:
   paper: 'Gemma: Open Models Based on Gemini Research and Technology'
   arxiv: '2403.08295'
   year: 2024
-  code: google/gemma
+  code: google-deepmind/gemma
   stars: 600
   open_source: open
   license: Gemma License
@@ -539,7 +539,7 @@ methods:
   paper: The Falcon Series of Open Language Models
   arxiv: '2311.16867'
   year: 2023
-  code: tiiuae/falcon-40b
+  code: tiiuae/Falcon-H1
   stars: 900
   open_source: open
   license: Apache-2.0
@@ -936,7 +936,7 @@ methods:
   description: Cohere's RAG-optimized enterprise LLM with tool use and citation generation
 - name: Gemma 2
   year: 2024
-  code: google/gemma
+  code: google-deepmind/gemma
   stars: 600
   open_source: open
   license: Gemma License

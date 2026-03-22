@@ -523,7 +523,7 @@ methods:
     Multimodal Models'
   arxiv: '2504.10479'
   year: 2025
-  code: OpenGVLab/InternVL3
+  code: OpenGVLab/InternVL
   stars: 1500
   open_source: open
   license: MIT
@@ -540,7 +540,7 @@ methods:
   paper: 'Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks'
   arxiv: '2311.06242'
   year: 2024
-  code: microsoft/Florence-2
+  code: null
   stars: 3000
   open_source: open
   license: MIT

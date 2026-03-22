@@ -286,130 +286,130 @@
     }
   ],
   "oss_breakdown": {
-    "open": 600,
+    "open": 596,
     "research": 1,
     "partial": 6,
     "closed": 71,
-    "unknown": 163
+    "unknown": 167
   },
   "top_by_stars": [
     {
       "name": "Idefics2",
-      "stars": 158078,
+      "stars": 158284,
       "code": "huggingface/transformers",
       "year": 2024
     },
     {
       "name": "DeepSeek-V3",
-      "stars": 102231,
+      "stars": 102319,
       "code": "deepseek-ai/DeepSeek-V3",
       "year": 2025
     },
     {
       "name": "DeepSeek-R1",
-      "stars": 91961,
+      "stars": 91980,
       "code": "deepseek-ai/DeepSeek-R1",
       "year": 2025
     },
     {
       "name": "ORB",
-      "stars": 86680,
+      "stars": 86741,
       "code": "opencv/opencv",
       "year": 2011
     },
     {
       "name": "OpenPilot",
-      "stars": 60362,
+      "stars": 60406,
       "code": "commaai/openpilot",
       "year": 2016
     },
     {
       "name": "LLaMA",
-      "stars": 59240,
+      "stars": 59250,
       "code": "meta-llama/llama",
       "year": 2023
     },
     {
       "name": "LLaMA 2",
-      "stars": 59240,
+      "stars": 59250,
       "code": "meta-llama/llama",
       "year": 2023
     },
     {
       "name": "YOLOv5",
-      "stars": 57056,
+      "stars": 57072,
       "code": "ultralytics/yolov5",
       "year": 2020
     },
     {
       "name": "YOLOv8",
-      "stars": 54666,
+      "stars": 54848,
       "code": "ultralytics/ultralytics",
       "year": 2023
     },
     {
       "name": "YOLO11",
-      "stars": 54666,
+      "stars": 54848,
       "code": "ultralytics/ultralytics",
       "year": 2024
     },
     {
       "name": "SAM",
-      "stars": 53707,
+      "stars": 53743,
       "code": "facebookresearch/segment-anything",
       "year": 2023
     },
     {
       "name": "Grok-1",
-      "stars": 51530,
+      "stars": 51528,
       "code": "xai-org/grok-1",
       "year": 2024
     },
     {
       "name": "BERT",
-      "stars": 39920,
+      "stars": 39931,
       "code": "google-research/bert",
       "year": 2018
     },
     {
       "name": "Stable Diffusion",
       "stars": 39000,
-      "code": "Stability-AI/stablediffusion",
+      "code": "CompVis/stable-diffusion",
       "year": 2022
     },
     {
       "name": "Faster R-CNN",
-      "stars": 34230,
+      "stars": 34247,
       "code": "facebookresearch/detectron2",
       "year": 2015
     },
     {
       "name": "FPN",
-      "stars": 34230,
+      "stars": 34247,
       "code": "facebookresearch/detectron2",
       "year": 2017
     },
     {
       "name": "RetinaNet",
-      "stars": 34230,
+      "stars": 34247,
       "code": "facebookresearch/detectron2",
       "year": 2017
     },
     {
       "name": "Mask R-CNN",
-      "stars": 34230,
+      "stars": 34247,
       "code": "facebookresearch/detectron2",
       "year": 2017
     },
     {
       "name": "Panoptic-FPN",
-      "stars": 34230,
+      "stars": 34247,
       "code": "facebookresearch/detectron2",
       "year": 2019
     },
     {
       "name": "CLIP",
-      "stars": 32869,
+      "stars": 32910,
       "code": "openai/CLIP",
       "year": 2021
     }

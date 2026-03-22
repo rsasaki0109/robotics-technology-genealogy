@@ -265,7 +265,7 @@ methods:
   paper: 'GenAD: Generalized Predictive Model for Autonomous Driving'
   arxiv: '2403.09630'
   year: 2024
-  code: OpenDriveLab/GenAD
+  code: OpenDriveLab/DriveAGI
   stars: 500
   open_source: open
   license: ''
@@ -285,7 +285,7 @@ methods:
   paper: 'PARA-Drive: Parallelized Architecture for Real-time Autonomous Driving'
   arxiv: '2406.12742'
   year: 2024
-  code: wljungbergh/PARA-Drive
+  code: null
   stars: 100
   open_source: open
   license: ''

@@ -189,7 +189,7 @@ methods:
   paper: Rapid Locomotion via Reinforcement Learning
   arxiv: '2205.02824'
   year: 2022
-  code: Improbable-AI/rapid-locomotion
+  code: Improbable-AI/rapid-locomotion-rl
   stars: 350
   tags:
   - quadruped
@@ -225,7 +225,7 @@ methods:
     via Deep Reinforcement Learning'
   arxiv: '2301.10602'
   year: 2023
-  code: inmo-jang/dreamwaq
+  code: Manaro-Alpha/DreamWaQ
   stars: 200
   tags:
   - quadruped

@@ -94,7 +94,7 @@ methods:
   paper: High-Resolution Image Synthesis with Latent Diffusion Models
   arxiv: '2112.10752'
   year: 2022
-  code: Stability-AI/stablediffusion
+  code: CompVis/stable-diffusion
   stars: 39000
   tags:
   - text-to-image
