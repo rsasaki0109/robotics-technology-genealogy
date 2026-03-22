@@ -132,7 +132,7 @@ methods:
   paper: 'Scan Context: Egocentric Spatial Descriptor for Place Recognition within
     3D Point Cloud Map'
   year: 2018
-  code: irapkaist/scancontext
+  code: gisbi-kim/scancontext
   stars: 800
   tags:
   - lidar
@@ -239,7 +239,7 @@ methods:
   paper: 'BTC: Binary Triangle Combined Descriptor for 3D Place Recognition'
   arxiv: '2304.07480'
   year: 2023
-  code: hku-mars/BTC
+  code: hku-mars/btc_descriptor
   stars: 200
   tags:
   - lidar
@@ -289,7 +289,7 @@ methods:
     Models'
   arxiv: '2502.15691'
   year: 2025
-  code: AnyLoc/AnyLoc-v2
+  code: AnyLoc/AnyLoc
   stars: 250
   tags:
   - deep-learning
@@ -333,7 +333,7 @@ methods:
   paper: 'PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition'
   arxiv: '1804.03492'
   year: 2018
-  code: cattaneod/PointNetVLAD
+  code: mikacuy/pointnetvlad
   tags:
   - lidar
   - deep-learning

@@ -501,7 +501,7 @@ methods:
   paper: 'Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks'
   arxiv: '2311.06242'
   year: 2024
-  code: microsoft/Florence-2
+  code: null
   stars: 3000
   tags:
   - foundation

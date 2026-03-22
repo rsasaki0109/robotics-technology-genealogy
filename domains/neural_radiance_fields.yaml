@@ -299,7 +299,7 @@ methods:
     Neural Field Rendering on Mobile Architectures'
   arxiv: '2208.00277'
   year: 2023
-  code: nicktancoder/MobileNeRF
+  code: null
   stars: 500
   tags:
   - neural-rendering
@@ -345,7 +345,7 @@ methods:
     and 3D Diffusion Models'
   arxiv: '2310.08529'
   year: 2024
-  code: huber1234/GaussianDreamer
+  code: hustvl/GaussianDreamer
   stars: 600
   tags:
   - gaussian-splatting
@@ -424,7 +424,7 @@ methods:
   paper: 'GS-SLAM: Dense Visual SLAM with 3D Gaussian Splatting'
   arxiv: '2311.11700'
   year: 2024
-  code: muskie82/GS-SLAM
+  code: null
   stars: 400
   tags:
   - gaussian-splatting
@@ -455,7 +455,7 @@ methods:
     Scenes'
   arxiv: '2404.10772'
   year: 2025
-  code: autonomousvision/gof
+  code: autonomousvision/gaussian-opacity-fields
   stars: 500
   tags:
   - gaussian-splatting
@@ -485,7 +485,7 @@ methods:
   paper: '3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt'
   arxiv: '2409.12892'
   year: 2025
-  code: MrNeRF/3DGS-LM
+  code: lukasHoel/3DGS-LM
   stars: 300
   tags:
   - gaussian-splatting
@@ -592,7 +592,7 @@ methods:
   paper: 'Aether: Geometric-Aware Unified World Model'
   arxiv: '2503.18945'
   year: 2026
-  code: AetherWorldModel/Aether
+  code: OpenRobotLab/Aether
   stars: 600
   tags:
   - world-model
@@ -608,7 +608,7 @@ methods:
   paper: 'GaussianAnything: Interactive Point Cloud Latent Diffusion for 3D Generation'
   arxiv: '2411.08033'
   year: 2026
-  code: VAST-AI-Research/GaussianAnything
+  code: NIRVANALAN/GaussianAnything
   stars: 400
   tags:
   - 3d-generation

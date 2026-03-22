@@ -467,7 +467,7 @@ methods:
   paper: 'MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors'
   arxiv: '2412.12392'
   year: 2025
-  code: edexheim/MASt3R-SLAM
+  code: rmurai0610/MASt3R-SLAM
   stars: 800
   tags:
   - dense-slam
@@ -522,7 +522,7 @@ methods:
   paper: 'CaRtGS: Computational Alignment for Real-Time Gaussian Splatting SLAM'
   arxiv: '2410.00486'
   year: 2025
-  code: DreamWaQ/CaRtGS
+  code: DapengFeng/cartgs
   stars: 200
   tags:
   - gaussian-splatting

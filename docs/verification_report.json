@@ -1,0 +1,2067 @@
+{
+  "total_methods": 841,
+  "arxiv_checked": 654,
+  "arxiv_valid": 524,
+  "arxiv_invalid": [
+    {
+      "domain": "2D Object Detection",
+      "method": "DINO",
+      "arxiv_id": "2203.03605",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "2D Object Detection",
+      "method": "Co-DETR",
+      "arxiv_id": "2211.12860",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "2D Object Detection",
+      "method": "RT-DETR",
+      "arxiv_id": "2304.08069",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "2D Object Detection",
+      "method": "OWLv2",
+      "arxiv_id": "2306.09683",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "2D Object Detection",
+      "method": "Grounding DINO",
+      "arxiv_id": "2303.05499",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "2D Object Detection",
+      "method": "YOLO-World",
+      "arxiv_id": "2401.17270",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "2D Object Detection",
+      "method": "Florence-2",
+      "arxiv_id": "2311.06242",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "PointNet",
+      "arxiv_id": "1612.00593",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "PointNet++",
+      "arxiv_id": "1706.02413",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "SECOND",
+      "arxiv_id": "1801.05373",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "PointPillars",
+      "arxiv_id": "1812.05784",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "Part-A2",
+      "arxiv_id": "1907.03670",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "PV-RCNN",
+      "arxiv_id": "1912.13192",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "Voxel R-CNN",
+      "arxiv_id": "2012.15712",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "VoTr",
+      "arxiv_id": "2109.02497",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "SST",
+      "arxiv_id": "2112.06375",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "FlatFormer",
+      "arxiv_id": "2301.08739",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "DSVT",
+      "arxiv_id": "2301.06051",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "DETR3D",
+      "arxiv_id": "2110.06922",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "BEVDet",
+      "arxiv_id": "2112.11790",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "PETR",
+      "arxiv_id": "2203.05625",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "StreamPETR",
+      "arxiv_id": "2303.11926",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "MVXNet",
+      "arxiv_id": "1904.01649",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "TransFusion",
+      "arxiv_id": "2203.11496",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "BEVFusion",
+      "arxiv_id": "2205.13542",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "CMT",
+      "arxiv_id": "2301.01283",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "UniTR",
+      "arxiv_id": "2308.07732",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "IS-Fusion",
+      "arxiv_id": "2403.15241",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "Far3D",
+      "arxiv_id": "2308.09616",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "SparseFusion3D",
+      "arxiv_id": "2304.14340",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "UniPAD",
+      "arxiv_id": "2310.08370",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "SAFDNet",
+      "arxiv_id": "2403.05817",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "FocalFormer3D",
+      "arxiv_id": "2308.04556",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "Sparse4Dv3",
+      "arxiv_id": "2311.11722",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "LSS",
+      "arxiv_id": "2008.05711",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "PointRCNN",
+      "arxiv_id": "1812.04244",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "FCOS3D",
+      "arxiv_id": "2104.10956",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "BEVDepth",
+      "arxiv_id": "2206.10092",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "MonoDETR",
+      "arxiv_id": "2203.13310",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "3D Object Detection",
+      "method": "PV-RCNN++",
+      "arxiv_id": "2102.00463",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "Sparse-to-Dense",
+      "arxiv_id": "1709.07492",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "S2D with Self-Supervised",
+      "arxiv_id": "1807.00275",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "GuideNet",
+      "arxiv_id": "1908.01238",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "CSPN",
+      "arxiv_id": "1810.02695",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "NLSPN",
+      "arxiv_id": "2007.10042",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "DySPN",
+      "arxiv_id": "2202.09769",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "CompletionFormer",
+      "arxiv_id": "2304.13030",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "BPNet",
+      "arxiv_id": "2304.11123",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "Depth Anything V2 Completion",
+      "arxiv_id": "2406.09414",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "Metric3D v2",
+      "arxiv_id": "2404.15506",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "OGNI-DC",
+      "arxiv_id": "2406.11711",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Depth Completion",
+      "method": "FoundationStereo",
+      "arxiv_id": "2501.09898",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "InternLM2",
+      "arxiv_id": "2403.17297",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "OLMo",
+      "arxiv_id": "2402.00838",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Mistral 7B",
+      "arxiv_id": "2310.06825",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Mixtral",
+      "arxiv_id": "2401.04088",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Gemma",
+      "arxiv_id": "2403.08295",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Qwen",
+      "arxiv_id": "2309.16609",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Qwen2",
+      "arxiv_id": "2407.10671",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "DeepSeek-V2",
+      "arxiv_id": "2405.04434",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "DeepSeek-R1",
+      "arxiv_id": "2501.12948",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Falcon",
+      "arxiv_id": "2311.16867",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "RWKV",
+      "arxiv_id": "2305.13048",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Gemini 1.5 Pro",
+      "arxiv_id": "2403.05530",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "RaiSim",
+      "arxiv_id": "1909.05765",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Isaac Gym",
+      "arxiv_id": "2108.10470",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "ANYmal RL Locomotion",
+      "arxiv_id": "1901.08652",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "AMP",
+      "arxiv_id": "2104.02180",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "RMA",
+      "arxiv_id": "2107.04034",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Rapid Locomotion",
+      "arxiv_id": "2205.02824",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Walk These Ways",
+      "arxiv_id": "2212.03238",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "DribbleBot",
+      "arxiv_id": "2304.01159",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Extreme Parkour",
+      "arxiv_id": "2309.14341",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Agile But Safe",
+      "arxiv_id": "2401.17583",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Parkour Learning ETH",
+      "arxiv_id": "2309.05665",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Unitree H1 Locomotion",
+      "arxiv_id": "2403.04436",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Unitree Go2 RL Control",
+      "arxiv_id": "2409.10923",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Whole-Body RL Control",
+      "arxiv_id": "2502.09218",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "F-LOAM",
+      "arxiv_id": "2107.00822",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "SuMa++",
+      "arxiv_id": "1908.10515",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "LIO-SAM",
+      "arxiv_id": "2007.00258",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "FAST-LIO",
+      "arxiv_id": "2010.08196",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "FAST-LIO2",
+      "arxiv_id": "2107.06829",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "Faster-LIO",
+      "arxiv_id": "2112.11514",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "Point-LIO",
+      "arxiv_id": "2306.10310",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "CT-ICP",
+      "arxiv_id": "2109.12979",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "KISS-ICP",
+      "arxiv_id": "2209.15397",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "DLO",
+      "arxiv_id": "2110.00605",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "DLIO",
+      "arxiv_id": "2203.03749",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "BALM",
+      "arxiv_id": "2010.08215",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "Wildcat",
+      "arxiv_id": "2410.07875",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "COIN-LIO",
+      "arxiv_id": "2310.01235",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "Traj-LO",
+      "arxiv_id": "2402.02928",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "LOG-LIO2",
+      "arxiv_id": "2405.01316",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "LO-Net",
+      "arxiv_id": "1904.08242",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "DeepLO",
+      "arxiv_id": "1902.10562",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "PWCLO-Net",
+      "arxiv_id": "2012.00972",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "GLIM",
+      "arxiv_id": "2407.10344",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "Kinematic-ICP",
+      "arxiv_id": "2410.10277",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "KISS-ICP (v2 pipeline)",
+      "arxiv_id": "2209.15397",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "LiDAR Odometry & SLAM",
+      "method": "iG-LIO",
+      "arxiv_id": "2407.18386",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Reinforcement Learning",
+      "method": "DreamerV3",
+      "arxiv_id": "2301.04104",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Reinforcement Learning",
+      "method": "TD-MPC2",
+      "arxiv_id": "2310.16828",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Reinforcement Learning",
+      "method": "GRPO",
+      "arxiv_id": "2402.03300",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Reinforcement Learning",
+      "method": "REBEL",
+      "arxiv_id": "2404.16767",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Robot Control",
+      "method": "SpatialVLA",
+      "arxiv_id": "2501.15830",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "OpenAI Gym",
+      "arxiv_id": "1606.01540",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "DMControl",
+      "arxiv_id": "1801.00690",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "AI2-THOR",
+      "arxiv_id": "1712.05474",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "Habitat",
+      "arxiv_id": "1904.01201",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "Robosuite",
+      "arxiv_id": "2009.12293",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "MetaWorld",
+      "arxiv_id": "1910.10897",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "SAPIEN",
+      "arxiv_id": "2003.08515",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "LGSVL Simulator",
+      "arxiv_id": "2005.03778",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Robot Simulation",
+      "method": "Isaac Gym",
+      "arxiv_id": "2108.10470",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Vision-Language Models",
+      "method": "InternVL3",
+      "arxiv_id": "2504.10479",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Vision-Language Models",
+      "method": "Florence-2",
+      "arxiv_id": "2311.06242",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Vision-Language Models",
+      "method": "Molmo",
+      "arxiv_id": "2409.17146",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "NetVLAD",
+      "arxiv_id": "1511.07247",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "Patch-NetVLAD",
+      "arxiv_id": "2103.01486",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "CosPlace",
+      "arxiv_id": "2204.02287",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "EigenPlaces",
+      "arxiv_id": "2308.10832",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "MixVPR",
+      "arxiv_id": "2303.02190",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "AnyLoc",
+      "arxiv_id": "2308.00688",
+      "error": "HTTP Error 429: Unknown Error"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "OverlapNet",
+      "arxiv_id": "2105.11344",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "MinkLoc3Dv2",
+      "arxiv_id": "2203.00972",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "LoGG3D-Net",
+      "arxiv_id": "2109.08336",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "STD",
+      "arxiv_id": "2209.12435",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "BoW3D",
+      "arxiv_id": "2208.07473",
+      "error": "The read operation timed out"
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "BTC",
+      "arxiv_id": "2304.07480",
+      "error": "The read operation timed out"
+    }
+  ],
+  "github_checked": 585,
+  "github_valid": 550,
+  "github_invalid": [
+    {
+      "domain": "2D Object Detection",
+      "method": "Florence-2",
+      "repo": "microsoft/Florence-2",
+      "error": 404
+    },
+    {
+      "domain": "Diffusion Models",
+      "method": "Stable Diffusion",
+      "repo": "Stability-AI/stablediffusion",
+      "error": 404
+    },
+    {
+      "domain": "End-to-End Autonomous Driving",
+      "method": "GenAD",
+      "repo": "OpenDriveLab/GenAD",
+      "error": 404
+    },
+    {
+      "domain": "End-to-End Autonomous Driving",
+      "method": "PARA-Drive",
+      "repo": "wljungbergh/PARA-Drive",
+      "error": 404
+    },
+    {
+      "domain": "Grasp Planning & Manipulation",
+      "method": "GraspGPT",
+      "repo": "mkt1412/GraspGPT",
+      "error": 404
+    },
+    {
+      "domain": "Imitation Learning & Robot Foundation Models",
+      "method": "CrossFormer",
+      "repo": "cross-formerr/crossformer",
+      "error": 404
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "LLaMA 4",
+      "repo": "meta-llama/llama4",
+      "error": 404
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Gemma",
+      "repo": "google/gemma",
+      "error": 404
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Falcon",
+      "repo": "tiiuae/falcon-40b",
+      "error": 404
+    },
+    {
+      "domain": "Large Language Models",
+      "method": "Gemma 2",
+      "repo": "google/gemma",
+      "error": 404
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "Rapid Locomotion",
+      "repo": "Improbable-AI/rapid-locomotion",
+      "error": 404
+    },
+    {
+      "domain": "Legged Robot Control",
+      "method": "DreamWaQ",
+      "repo": "inmo-jang/dreamwaq",
+      "error": 404
+    },
+    {
+      "domain": "Motion Planning",
+      "method": "PDM-Closed",
+      "repo": "tudelft-iv/PDM-Lite",
+      "error": 404
+    },
+    {
+      "domain": "Motion Planning",
+      "method": "PDM-Open",
+      "repo": "tudelft-iv/PDM-Lite",
+      "error": 404
+    },
+    {
+      "domain": "Motion Planning",
+      "method": "GenAD",
+      "repo": "OpenDriveLab/GenAD",
+      "error": 404
+    },
+    {
+      "domain": "Motion Planning",
+      "method": "PARA-Drive",
+      "repo": "wljungbergh/PARA-Drive",
+      "error": 404
+    },
+    {
+      "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
+      "method": "MobileNeRF",
+      "repo": "nicktancoder/MobileNeRF",
+      "error": 404
+    },
+    {
+      "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
+      "method": "GaussianDreamer",
+      "repo": "huber1234/GaussianDreamer",
+      "error": 404
+    },
+    {
+      "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
+      "method": "GS-SLAM",
+      "repo": "muskie82/GS-SLAM",
+      "error": 404
+    },
+    {
+      "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
+      "method": "GOF",
+      "repo": "autonomousvision/gof",
+      "error": 404
+    },
+    {
+      "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
+      "method": "3DGS-LM",
+      "repo": "MrNeRF/3DGS-LM",
+      "error": 404
+    },
+    {
+      "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
+      "method": "Aether",
+      "repo": "AetherWorldModel/Aether",
+      "error": 404
+    },
+    {
+      "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
+      "method": "GaussianAnything",
+      "repo": "VAST-AI-Research/GaussianAnything",
+      "error": 404
+    },
+    {
+      "domain": "Object Tracking",
+      "method": "StrongSORT",
+      "repo": "dyhBIT/StrongSORT",
+      "error": 404
+    },
+    {
+      "domain": "Point Cloud Scene Flow",
+      "method": "PointPWC-Net",
+      "repo": "DylanWusworking/PointPWC",
+      "error": 404
+    },
+    {
+      "domain": "Vision-Language Models",
+      "method": "InternVL3",
+      "repo": "OpenGVLab/InternVL3",
+      "error": 404
+    },
+    {
+      "domain": "Vision-Language Models",
+      "method": "Florence-2",
+      "repo": "microsoft/Florence-2",
+      "error": 404
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "Scan Context",
+      "repo": "irapkaist/scancontext",
+      "error": 404
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "BTC",
+      "repo": "hku-mars/BTC",
+      "error": 404
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "AnyLoc-v2",
+      "repo": "AnyLoc/AnyLoc-v2",
+      "error": 404
+    },
+    {
+      "domain": "Place Recognition",
+      "method": "PointNetVLAD",
+      "repo": "cattaneod/PointNetVLAD",
+      "error": 404
+    },
+    {
+      "domain": "Visual SLAM",
+      "method": "MASt3R-SLAM",
+      "repo": "edexheim/MASt3R-SLAM",
+      "error": 404
+    },
+    {
+      "domain": "Visual SLAM",
+      "method": "CaRtGS",
+      "repo": "DreamWaQ/CaRtGS",
+      "error": 404
+    },
+    {
+      "domain": "World Models for Robotics & Embodied AI",
+      "method": "Aether",
+      "repo": "AetherWorldModel/Aether",
+      "error": 404
+    },
+    {
+      "domain": "World Models for Robotics & Embodied AI",
+      "method": "Oasis",
+      "repo": "etched-ai/oasis",
+      "error": 404
+    }
+  ],
+  "year_mismatches": [],
+  "domains": {
+    "2D Object Detection": {
+      "methods": [
+        {
+          "name": "DINO",
+          "issues": [
+            "arXiv 2203.03605: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Co-DETR",
+          "issues": [
+            "arXiv 2211.12860: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "RT-DETR",
+          "issues": [
+            "arXiv 2304.08069: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "OWLv2",
+          "issues": [
+            "arXiv 2306.09683: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Grounding DINO",
+          "issues": [
+            "arXiv 2303.05499: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "YOLO-World",
+          "issues": [
+            "arXiv 2401.17270: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Florence-2",
+          "issues": [
+            "arXiv 2311.06242: HTTP Error 429: Unknown Error",
+            "GitHub microsoft/Florence-2: 404"
+          ]
+        }
+      ]
+    },
+    "3D Object Detection": {
+      "methods": [
+        {
+          "name": "PointNet",
+          "issues": [
+            "arXiv 1612.00593: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "PointNet++",
+          "issues": [
+            "arXiv 1706.02413: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "SECOND",
+          "issues": [
+            "arXiv 1801.05373: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "PointPillars",
+          "issues": [
+            "arXiv 1812.05784: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Part-A2",
+          "issues": [
+            "arXiv 1907.03670: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "PV-RCNN",
+          "issues": [
+            "arXiv 1912.13192: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Voxel R-CNN",
+          "issues": [
+            "arXiv 2012.15712: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "VoTr",
+          "issues": [
+            "arXiv 2109.02497: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "SST",
+          "issues": [
+            "arXiv 2112.06375: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "FlatFormer",
+          "issues": [
+            "arXiv 2301.08739: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "DSVT",
+          "issues": [
+            "arXiv 2301.06051: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "DETR3D",
+          "issues": [
+            "arXiv 2110.06922: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "BEVDet",
+          "issues": [
+            "arXiv 2112.11790: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "PETR",
+          "issues": [
+            "arXiv 2203.05625: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "StreamPETR",
+          "issues": [
+            "arXiv 2303.11926: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "MVXNet",
+          "issues": [
+            "arXiv 1904.01649: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "TransFusion",
+          "issues": [
+            "arXiv 2203.11496: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "BEVFusion",
+          "issues": [
+            "arXiv 2205.13542: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "CMT",
+          "issues": [
+            "arXiv 2301.01283: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "UniTR",
+          "issues": [
+            "arXiv 2308.07732: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "IS-Fusion",
+          "issues": [
+            "arXiv 2403.15241: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Far3D",
+          "issues": [
+            "arXiv 2308.09616: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "SparseFusion3D",
+          "issues": [
+            "arXiv 2304.14340: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "UniPAD",
+          "issues": [
+            "arXiv 2310.08370: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "SAFDNet",
+          "issues": [
+            "arXiv 2403.05817: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "FocalFormer3D",
+          "issues": [
+            "arXiv 2308.04556: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Sparse4Dv3",
+          "issues": [
+            "arXiv 2311.11722: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "LSS",
+          "issues": [
+            "arXiv 2008.05711: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "PointRCNN",
+          "issues": [
+            "arXiv 1812.04244: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "FCOS3D",
+          "issues": [
+            "arXiv 2104.10956: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "BEVDepth",
+          "issues": [
+            "arXiv 2206.10092: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "MonoDETR",
+          "issues": [
+            "arXiv 2203.13310: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "PV-RCNN++",
+          "issues": [
+            "arXiv 2102.00463: HTTP Error 429: Unknown Error"
+          ]
+        }
+      ]
+    },
+    "Depth Completion": {
+      "methods": [
+        {
+          "name": "Sparse-to-Dense",
+          "issues": [
+            "arXiv 1709.07492: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "S2D with Self-Supervised",
+          "issues": [
+            "arXiv 1807.00275: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "GuideNet",
+          "issues": [
+            "arXiv 1908.01238: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "CSPN",
+          "issues": [
+            "arXiv 1810.02695: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "NLSPN",
+          "issues": [
+            "arXiv 2007.10042: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "DySPN",
+          "issues": [
+            "arXiv 2202.09769: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "CompletionFormer",
+          "issues": [
+            "arXiv 2304.13030: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "BPNet",
+          "issues": [
+            "arXiv 2304.11123: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Depth Anything V2 Completion",
+          "issues": [
+            "arXiv 2406.09414: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Metric3D v2",
+          "issues": [
+            "arXiv 2404.15506: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "OGNI-DC",
+          "issues": [
+            "arXiv 2406.11711: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "FoundationStereo",
+          "issues": [
+            "arXiv 2501.09898: HTTP Error 429: Unknown Error"
+          ]
+        }
+      ]
+    },
+    "Diffusion Models": {
+      "methods": [
+        {
+          "name": "Stable Diffusion",
+          "issues": [
+            "GitHub Stability-AI/stablediffusion: 404"
+          ],
+          "arxiv_title": "High-Resolution Image Synthesis with Latent Diffusion Models"
+        }
+      ]
+    },
+    "End-to-End Autonomous Driving": {
+      "methods": [
+        {
+          "name": "GenAD",
+          "issues": [
+            "GitHub OpenDriveLab/GenAD: 404"
+          ],
+          "arxiv_title": "GenAD: Generalized Predictive Model for Autonomous Driving"
+        },
+        {
+          "name": "PARA-Drive",
+          "issues": [
+            "GitHub wljungbergh/PARA-Drive: 404"
+          ],
+          "arxiv_title": "Benchmarking Multi-Image Understanding in Vision and Language Models: Perception, Knowledge, Reasoning, and Multi-Hop Reasoning"
+        }
+      ]
+    },
+    "Grasp Planning & Manipulation": {
+      "methods": [
+        {
+          "name": "GraspGPT",
+          "issues": [
+            "GitHub mkt1412/GraspGPT: 404"
+          ],
+          "arxiv_title": "GraspGPT: Leveraging Semantic Knowledge from a Large Language Model for Task-Oriented Grasping"
+        }
+      ]
+    },
+    "Imitation Learning & Robot Foundation Models": {
+      "methods": [
+        {
+          "name": "CrossFormer",
+          "issues": [
+            "GitHub cross-formerr/crossformer: 404"
+          ],
+          "arxiv_title": "Training Language Models to Self-Correct via Reinforcement Learning"
+        }
+      ]
+    },
+    "Large Language Models": {
+      "methods": [
+        {
+          "name": "LLaMA 4",
+          "issues": [
+            "GitHub meta-llama/llama4: 404"
+          ]
+        },
+        {
+          "name": "InternLM2",
+          "issues": [
+            "arXiv 2403.17297: The read operation timed out"
+          ]
+        },
+        {
+          "name": "OLMo",
+          "issues": [
+            "arXiv 2402.00838: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Mistral 7B",
+          "issues": [
+            "arXiv 2310.06825: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Mixtral",
+          "issues": [
+            "arXiv 2401.04088: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Gemma",
+          "issues": [
+            "arXiv 2403.08295: The read operation timed out",
+            "GitHub google/gemma: 404"
+          ]
+        },
+        {
+          "name": "Qwen",
+          "issues": [
+            "arXiv 2309.16609: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Qwen2",
+          "issues": [
+            "arXiv 2407.10671: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "DeepSeek-V2",
+          "issues": [
+            "arXiv 2405.04434: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "DeepSeek-R1",
+          "issues": [
+            "arXiv 2501.12948: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Falcon",
+          "issues": [
+            "arXiv 2311.16867: HTTP Error 429: Unknown Error",
+            "GitHub tiiuae/falcon-40b: 404"
+          ]
+        },
+        {
+          "name": "RWKV",
+          "issues": [
+            "arXiv 2305.13048: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Gemini 1.5 Pro",
+          "issues": [
+            "arXiv 2403.05530: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Gemma 2",
+          "issues": [
+            "GitHub google/gemma: 404"
+          ]
+        }
+      ]
+    },
+    "Legged Robot Control": {
+      "methods": [
+        {
+          "name": "RaiSim",
+          "issues": [
+            "arXiv 1909.05765: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Isaac Gym",
+          "issues": [
+            "arXiv 2108.10470: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "ANYmal RL Locomotion",
+          "issues": [
+            "arXiv 1901.08652: The read operation timed out"
+          ]
+        },
+        {
+          "name": "AMP",
+          "issues": [
+            "arXiv 2104.02180: The read operation timed out"
+          ]
+        },
+        {
+          "name": "RMA",
+          "issues": [
+            "arXiv 2107.04034: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Rapid Locomotion",
+          "issues": [
+            "arXiv 2205.02824: HTTP Error 429: Unknown Error",
+            "GitHub Improbable-AI/rapid-locomotion: 404"
+          ]
+        },
+        {
+          "name": "Walk These Ways",
+          "issues": [
+            "arXiv 2212.03238: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "DreamWaQ",
+          "issues": [
+            "GitHub inmo-jang/dreamwaq: 404"
+          ],
+          "arxiv_title": "DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination via Deep Reinforcement Learning"
+        },
+        {
+          "name": "DribbleBot",
+          "issues": [
+            "arXiv 2304.01159: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Extreme Parkour",
+          "issues": [
+            "arXiv 2309.14341: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Agile But Safe",
+          "issues": [
+            "arXiv 2401.17583: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Parkour Learning ETH",
+          "issues": [
+            "arXiv 2309.05665: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Unitree H1 Locomotion",
+          "issues": [
+            "arXiv 2403.04436: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Unitree Go2 RL Control",
+          "issues": [
+            "arXiv 2409.10923: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Whole-Body RL Control",
+          "issues": [
+            "arXiv 2502.09218: The read operation timed out"
+          ]
+        }
+      ]
+    },
+    "LiDAR Odometry & SLAM": {
+      "methods": [
+        {
+          "name": "F-LOAM",
+          "issues": [
+            "arXiv 2107.00822: The read operation timed out"
+          ]
+        },
+        {
+          "name": "SuMa++",
+          "issues": [
+            "arXiv 1908.10515: The read operation timed out"
+          ]
+        },
+        {
+          "name": "LIO-SAM",
+          "issues": [
+            "arXiv 2007.00258: The read operation timed out"
+          ]
+        },
+        {
+          "name": "FAST-LIO",
+          "issues": [
+            "arXiv 2010.08196: The read operation timed out"
+          ]
+        },
+        {
+          "name": "FAST-LIO2",
+          "issues": [
+            "arXiv 2107.06829: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Faster-LIO",
+          "issues": [
+            "arXiv 2112.11514: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Point-LIO",
+          "issues": [
+            "arXiv 2306.10310: The read operation timed out"
+          ]
+        },
+        {
+          "name": "CT-ICP",
+          "issues": [
+            "arXiv 2109.12979: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "KISS-ICP",
+          "issues": [
+            "arXiv 2209.15397: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "DLO",
+          "issues": [
+            "arXiv 2110.00605: The read operation timed out"
+          ]
+        },
+        {
+          "name": "DLIO",
+          "issues": [
+            "arXiv 2203.03749: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "BALM",
+          "issues": [
+            "arXiv 2010.08215: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Wildcat",
+          "issues": [
+            "arXiv 2410.07875: The read operation timed out"
+          ]
+        },
+        {
+          "name": "COIN-LIO",
+          "issues": [
+            "arXiv 2310.01235: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Traj-LO",
+          "issues": [
+            "arXiv 2402.02928: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "LOG-LIO2",
+          "issues": [
+            "arXiv 2405.01316: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "LO-Net",
+          "issues": [
+            "arXiv 1904.08242: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "DeepLO",
+          "issues": [
+            "arXiv 1902.10562: The read operation timed out"
+          ]
+        },
+        {
+          "name": "PWCLO-Net",
+          "issues": [
+            "arXiv 2012.00972: The read operation timed out"
+          ]
+        },
+        {
+          "name": "GLIM",
+          "issues": [
+            "arXiv 2407.10344: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Kinematic-ICP",
+          "issues": [
+            "arXiv 2410.10277: The read operation timed out"
+          ]
+        },
+        {
+          "name": "KISS-ICP (v2 pipeline)",
+          "issues": [
+            "arXiv 2209.15397: The read operation timed out"
+          ]
+        },
+        {
+          "name": "iG-LIO",
+          "issues": [
+            "arXiv 2407.18386: The read operation timed out"
+          ]
+        }
+      ]
+    },
+    "Motion Planning": {
+      "methods": [
+        {
+          "name": "PDM-Closed",
+          "issues": [
+            "GitHub tudelft-iv/PDM-Lite: 404"
+          ],
+          "arxiv_title": "Parting with Misconceptions about Learning-based Vehicle Motion Planning"
+        },
+        {
+          "name": "PDM-Open",
+          "issues": [
+            "GitHub tudelft-iv/PDM-Lite: 404"
+          ]
+        },
+        {
+          "name": "GenAD",
+          "issues": [
+            "GitHub OpenDriveLab/GenAD: 404"
+          ],
+          "arxiv_title": "GenAD: Generalized Predictive Model for Autonomous Driving"
+        },
+        {
+          "name": "PARA-Drive",
+          "issues": [
+            "GitHub wljungbergh/PARA-Drive: 404"
+          ],
+          "arxiv_title": "Benchmarking Multi-Image Understanding in Vision and Language Models: Perception, Knowledge, Reasoning, and Multi-Hop Reasoning"
+        }
+      ]
+    },
+    "Neural Radiance Fields & 3D Gaussian Splatting": {
+      "methods": [
+        {
+          "name": "MobileNeRF",
+          "issues": [
+            "GitHub nicktancoder/MobileNeRF: 404"
+          ],
+          "arxiv_title": "MobileNeRF: Exploiting the Polygon Rasterization Pipeline for Efficient Neural Field Rendering on Mobile Architectures"
+        },
+        {
+          "name": "GaussianDreamer",
+          "issues": [
+            "GitHub huber1234/GaussianDreamer: 404"
+          ],
+          "arxiv_title": "GaussianDreamer: Fast Generation from Text to 3D Gaussians by Bridging 2D and 3D Diffusion Models"
+        },
+        {
+          "name": "GS-SLAM",
+          "issues": [
+            "GitHub muskie82/GS-SLAM: 404"
+          ],
+          "arxiv_title": "GS-SLAM: Dense Visual SLAM with 3D Gaussian Splatting"
+        },
+        {
+          "name": "GOF",
+          "issues": [
+            "GitHub autonomousvision/gof: 404"
+          ],
+          "arxiv_title": "Gaussian Opacity Fields: Efficient Adaptive Surface Reconstruction in Unbounded Scenes"
+        },
+        {
+          "name": "3DGS-LM",
+          "issues": [
+            "GitHub MrNeRF/3DGS-LM: 404"
+          ],
+          "arxiv_title": "3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt"
+        },
+        {
+          "name": "Aether",
+          "issues": [
+            "GitHub AetherWorldModel/Aether: 404"
+          ],
+          "arxiv_title": "Aether: Geometric-Aware Unified World Modeling"
+        },
+        {
+          "name": "GaussianAnything",
+          "issues": [
+            "GitHub VAST-AI-Research/GaussianAnything: 404"
+          ],
+          "arxiv_title": "GaussianAnything: Interactive Point Cloud Flow Matching For 3D Object Generation"
+        }
+      ]
+    },
+    "Object Tracking": {
+      "methods": [
+        {
+          "name": "StrongSORT",
+          "issues": [
+            "GitHub dyhBIT/StrongSORT: 404"
+          ],
+          "arxiv_title": "StrongSORT: Make DeepSORT Great Again"
+        }
+      ]
+    },
+    "Point Cloud Scene Flow": {
+      "methods": [
+        {
+          "name": "PointPWC-Net",
+          "issues": [
+            "GitHub DylanWusworking/PointPWC: 404"
+          ],
+          "arxiv_title": "PointPWC-Net: A Coarse-to-Fine Network for Supervised and Self-Supervised Scene Flow Estimation on 3D Point Clouds"
+        }
+      ]
+    },
+    "Reinforcement Learning": {
+      "methods": [
+        {
+          "name": "DreamerV3",
+          "issues": [
+            "arXiv 2301.04104: The read operation timed out"
+          ]
+        },
+        {
+          "name": "TD-MPC2",
+          "issues": [
+            "arXiv 2310.16828: The read operation timed out"
+          ]
+        },
+        {
+          "name": "GRPO",
+          "issues": [
+            "arXiv 2402.03300: The read operation timed out"
+          ]
+        },
+        {
+          "name": "REBEL",
+          "issues": [
+            "arXiv 2404.16767: The read operation timed out"
+          ]
+        }
+      ]
+    },
+    "Robot Control": {
+      "methods": [
+        {
+          "name": "SpatialVLA",
+          "issues": [
+            "arXiv 2501.15830: HTTP Error 429: Unknown Error"
+          ]
+        }
+      ]
+    },
+    "Robot Simulation": {
+      "methods": [
+        {
+          "name": "OpenAI Gym",
+          "issues": [
+            "arXiv 1606.01540: The read operation timed out"
+          ]
+        },
+        {
+          "name": "DMControl",
+          "issues": [
+            "arXiv 1801.00690: The read operation timed out"
+          ]
+        },
+        {
+          "name": "AI2-THOR",
+          "issues": [
+            "arXiv 1712.05474: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Habitat",
+          "issues": [
+            "arXiv 1904.01201: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Robosuite",
+          "issues": [
+            "arXiv 2009.12293: The read operation timed out"
+          ]
+        },
+        {
+          "name": "MetaWorld",
+          "issues": [
+            "arXiv 1910.10897: The read operation timed out"
+          ]
+        },
+        {
+          "name": "SAPIEN",
+          "issues": [
+            "arXiv 2003.08515: The read operation timed out"
+          ]
+        },
+        {
+          "name": "LGSVL Simulator",
+          "issues": [
+            "arXiv 2005.03778: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Isaac Gym",
+          "issues": [
+            "arXiv 2108.10470: The read operation timed out"
+          ]
+        }
+      ]
+    },
+    "Vision-Language Models": {
+      "methods": [
+        {
+          "name": "InternVL3",
+          "issues": [
+            "arXiv 2504.10479: The read operation timed out",
+            "GitHub OpenGVLab/InternVL3: 404"
+          ]
+        },
+        {
+          "name": "Florence-2",
+          "issues": [
+            "arXiv 2311.06242: The read operation timed out",
+            "GitHub microsoft/Florence-2: 404"
+          ]
+        },
+        {
+          "name": "Molmo",
+          "issues": [
+            "arXiv 2409.17146: The read operation timed out"
+          ]
+        }
+      ]
+    },
+    "Place Recognition": {
+      "methods": [
+        {
+          "name": "NetVLAD",
+          "issues": [
+            "arXiv 1511.07247: The read operation timed out"
+          ]
+        },
+        {
+          "name": "Patch-NetVLAD",
+          "issues": [
+            "arXiv 2103.01486: The read operation timed out"
+          ]
+        },
+        {
+          "name": "CosPlace",
+          "issues": [
+            "arXiv 2204.02287: The read operation timed out"
+          ]
+        },
+        {
+          "name": "EigenPlaces",
+          "issues": [
+            "arXiv 2308.10832: The read operation timed out"
+          ]
+        },
+        {
+          "name": "MixVPR",
+          "issues": [
+            "arXiv 2303.02190: The read operation timed out"
+          ]
+        },
+        {
+          "name": "AnyLoc",
+          "issues": [
+            "arXiv 2308.00688: HTTP Error 429: Unknown Error"
+          ]
+        },
+        {
+          "name": "Scan Context",
+          "issues": [
+            "GitHub irapkaist/scancontext: 404"
+          ]
+        },
+        {
+          "name": "OverlapNet",
+          "issues": [
+            "arXiv 2105.11344: The read operation timed out"
+          ]
+        },
+        {
+          "name": "MinkLoc3Dv2",
+          "issues": [
+            "arXiv 2203.00972: The read operation timed out"
+          ]
+        },
+        {
+          "name": "LoGG3D-Net",
+          "issues": [
+            "arXiv 2109.08336: The read operation timed out"
+          ]
+        },
+        {
+          "name": "STD",
+          "issues": [
+            "arXiv 2209.12435: The read operation timed out"
+          ]
+        },
+        {
+          "name": "BoW3D",
+          "issues": [
+            "arXiv 2208.07473: The read operation timed out"
+          ]
+        },
+        {
+          "name": "BTC",
+          "issues": [
+            "arXiv 2304.07480: The read operation timed out",
+            "GitHub hku-mars/BTC: 404"
+          ]
+        },
+        {
+          "name": "AnyLoc-v2",
+          "issues": [
+            "GitHub AnyLoc/AnyLoc-v2: 404"
+          ],
+          "arxiv_title": "The Synergy of Automated Pipelines with Prompt Engineering and Generative AI in Web Crawling"
+        },
+        {
+          "name": "PointNetVLAD",
+          "issues": [
+            "GitHub cattaneod/PointNetVLAD: 404"
+          ],
+          "arxiv_title": "PointNetVLAD: Deep Point Cloud Based Retrieval for Large-Scale Place Recognition"
+        }
+      ]
+    },
+    "Visual SLAM": {
+      "methods": [
+        {
+          "name": "MASt3R-SLAM",
+          "issues": [
+            "GitHub edexheim/MASt3R-SLAM: 404"
+          ],
+          "arxiv_title": "MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors"
+        },
+        {
+          "name": "CaRtGS",
+          "issues": [
+            "GitHub DreamWaQ/CaRtGS: 404"
+          ],
+          "arxiv_title": "CaRtGS: Computational Alignment for Real-Time Gaussian Splatting SLAM"
+        }
+      ]
+    },
+    "World Models for Robotics & Embodied AI": {
+      "methods": [
+        {
+          "name": "Aether",
+          "issues": [
+            "GitHub AetherWorldModel/Aether: 404"
+          ],
+          "arxiv_title": "Aether: Geometric-Aware Unified World Modeling"
+        },
+        {
+          "name": "Oasis",
+          "issues": [
+            "GitHub etched-ai/oasis: 404"
+          ],
+          "arxiv_title": "MFF-FTNet: Multi-scale Feature Fusion across Frequency and Temporal Domains for Time Series Forecasting"
+        }
+      ]
+    }
+  }
+}

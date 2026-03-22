@@ -194,7 +194,7 @@ methods:
   paper: 'StrongSORT: Make DeepSORT Great Again'
   arxiv: '2202.13514'
   year: 2023
-  code: dyhBIT/StrongSORT
+  code: dyhBUPT/StrongSORT
   stars: 500
   tags:
   - MOT

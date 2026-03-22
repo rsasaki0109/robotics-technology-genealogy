@@ -329,7 +329,7 @@ methods:
   paper: 'Aether: Geometric-Aware Unified World Model'
   arxiv: '2503.18945'
   year: 2025
-  code: AetherWorldModel/Aether
+  code: OpenRobotLab/Aether
   stars: 800
   tags:
   - 3d-world-model
@@ -363,7 +363,7 @@ methods:
   paper: 'Oasis: A Universe in a Transformer'
   arxiv: '2411.17382'
   year: 2024
-  code: etched-ai/oasis
+  code: etched-ai/open-oasis
   stars: 5000
   tags:
   - interactive
