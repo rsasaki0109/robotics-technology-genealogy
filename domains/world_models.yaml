@@ -60,7 +60,7 @@ methods:
   arxiv: '2010.02193'
   year: 2021
   code: danijar/dreamerv2
-  stars: 1014
+  stars: 1015
   tags:
   - discrete-latents
   - atari
@@ -92,7 +92,7 @@ methods:
   arxiv: '2301.04104'
   year: 2023
   code: danijar/dreamerv3
-  stars: 2944
+  stars: 2958
   tags:
   - general-purpose
   - symlog
@@ -108,7 +108,7 @@ methods:
   arxiv: '1911.08265'
   year: 2020
   code: google-deepmind/mctx
-  stars: 2600
+  stars: 2601
   tags:
   - mcts
   - planning
@@ -124,7 +124,7 @@ methods:
   arxiv: '2203.04955'
   year: 2023
   code: nicklashansen/tdmpc
-  stars: 504
+  stars: 505
   tags:
   - model-predictive-control
   - td-learning
@@ -142,7 +142,7 @@ methods:
   arxiv: '2310.16828'
   year: 2024
   code: nicklashansen/tdmpc2
-  stars: 771
+  stars: 774
   tags:
   - model-predictive-control
   - scalable
@@ -259,7 +259,7 @@ methods:
   arxiv: '2411.00769'
   year: 2024
   code: GameGen-X/GameGen-X
-  stars: 324
+  stars: 325
   tags:
   - game-generation
   - interactive
@@ -296,7 +296,7 @@ methods:
   arxiv: '2409.18964'
   year: 2024
   code: Genesis-Embodied-AI/Genesis
-  stars: 28312
+  stars: 28319
   tags:
   - physics-engine
   - generative
@@ -312,7 +312,7 @@ methods:
   arxiv: '2501.03575'
   year: 2025
   code: NVIDIA/Cosmos
-  stars: 8089
+  stars: 8096
   tags:
   - foundation-model
   - physical-ai
@@ -348,7 +348,7 @@ methods:
   arxiv: '2404.08471'
   year: 2024
   code: facebookresearch/jepa
-  stars: 3613
+  stars: 3618
   tags:
   - self-supervised
   - video-prediction

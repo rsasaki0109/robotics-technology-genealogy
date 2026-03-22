@@ -12,7 +12,7 @@ methods:
   arxiv: '1706.03762'
   year: 2017
   code: tensorflow/tensor2tensor
-  stars: 17074
+  stars: 17090
   open_source: open
   license: Apache-2.0
   tags:
@@ -27,7 +27,7 @@ methods:
   arxiv: '1810.04805'
   year: 2018
   code: google-research/bert
-  stars: 39920
+  stars: 39931
   open_source: open
   license: Apache-2.0
   tags:
@@ -43,7 +43,7 @@ methods:
   arxiv: '1910.10683'
   year: 2020
   code: google-research/text-to-text-transfer-transformer
-  stars: 6495
+  stars: 6494
   open_source: open
   license: Apache-2.0
   tags:
@@ -79,7 +79,7 @@ methods:
   arxiv: null
   year: 2019
   code: openai/gpt-2
-  stars: 24700
+  stars: 24706
   open_source: open
   license: MIT
   tags:
@@ -220,7 +220,7 @@ methods:
   arxiv: '2302.13971'
   year: 2023
   code: meta-llama/llama
-  stars: 59240
+  stars: 59250
   open_source: research
   license: LLaMA Community License
   tags:
@@ -238,7 +238,7 @@ methods:
   arxiv: '2307.09288'
   year: 2023
   code: meta-llama/llama
-  stars: 59240
+  stars: 59250
   open_source: open
   license: LLaMA 2 Community License
   tags:
@@ -255,7 +255,7 @@ methods:
   arxiv: '2407.21783'
   year: 2024
   code: meta-llama/llama3
-  stars: 29283
+  stars: 29291
   open_source: open
   license: Llama 3 Community License
   tags:
@@ -289,7 +289,7 @@ methods:
   arxiv: '2308.12950'
   year: 2023
   code: meta-llama/codellama
-  stars: 16342
+  stars: 16338
   open_source: open
   license: LLaMA 2 Community License
   tags:
@@ -307,7 +307,7 @@ methods:
   arxiv: '2403.17297'
   year: 2024
   code: InternLM/InternLM
-  stars: 7171
+  stars: 7174
   open_source: open
   license: Apache-2.0
   tags:
@@ -327,7 +327,7 @@ methods:
   arxiv: '2402.00838'
   year: 2024
   code: allenai/OLMo
-  stars: 6404
+  stars: 6414
   open_source: open
   license: Apache-2.0
   tags:
@@ -345,7 +345,7 @@ methods:
   arxiv: '2310.06825'
   year: 2023
   code: mistralai/mistral-src
-  stars: 10723
+  stars: 10732
   open_source: open
   license: Apache-2.0
   tags:
@@ -362,7 +362,7 @@ methods:
   arxiv: '2401.04088'
   year: 2024
   code: mistralai/mistral-src
-  stars: 10723
+  stars: 10732
   open_source: open
   license: Apache-2.0
   tags:
@@ -431,7 +431,7 @@ methods:
   arxiv: '2309.16609'
   year: 2023
   code: QwenLM/Qwen
-  stars: 20757
+  stars: 20800
   open_source: open
   license: Tongyi Qianwen License
   tags:
@@ -449,7 +449,7 @@ methods:
   arxiv: '2407.10671'
   year: 2024
   code: QwenLM/Qwen2
-  stars: 26949
+  stars: 26985
   open_source: open
   license: Apache-2.0
   tags:
@@ -466,7 +466,7 @@ methods:
   arxiv: '2412.15115'
   year: 2025
   code: QwenLM/Qwen2.5
-  stars: 26949
+  stars: 26985
   open_source: open
   license: Apache-2.0
   tags:
@@ -484,7 +484,7 @@ methods:
   arxiv: '2405.04434'
   year: 2024
   code: deepseek-ai/DeepSeek-V2
-  stars: 4998
+  stars: 5002
   open_source: open
   license: DeepSeek License
   tags:
@@ -503,7 +503,7 @@ methods:
   arxiv: '2412.19437'
   year: 2025
   code: deepseek-ai/DeepSeek-V3
-  stars: 102231
+  stars: 102319
   open_source: open
   license: DeepSeek License
   tags:
@@ -521,7 +521,7 @@ methods:
   arxiv: '2501.12948'
   year: 2025
   code: deepseek-ai/DeepSeek-R1
-  stars: 91961
+  stars: 91980
   open_source: open
   license: MIT
   tags:
@@ -558,7 +558,7 @@ methods:
   arxiv: '2305.13048'
   year: 2023
   code: BlinkDL/RWKV-LM
-  stars: 14424
+  stars: 14428
   open_source: open
   license: Apache-2.0
   tags:
@@ -575,7 +575,7 @@ methods:
   arxiv: '2312.00752'
   year: 2024
   code: state-spaces/mamba
-  stars: 17530
+  stars: 17650
   open_source: open
   license: Apache-2.0
   tags:
@@ -733,7 +733,7 @@ methods:
 - name: Grok-1
   year: 2024
   code: xai-org/grok-1
-  stars: 51530
+  stars: 51528
   open_source: open
   license: Apache-2.0
   tags:
@@ -847,8 +847,6 @@ methods:
     relation: extends
   description: Improved GPT-4 with better coding, instruction following, and 1M token
     context
-
-# === Moonshot / Kimi ===
 - name: Kimi (Moonshot AI)
   year: 2024
   open_source: closed
@@ -861,8 +859,8 @@ methods:
   parents:
   - name: Transformer
     relation: extends
-  description: "Moonshot AI's long-context LLM supporting 200K+ tokens, popular in China"
-
+  description: Moonshot AI's long-context LLM supporting 200K+ tokens, popular in
+    China
 - name: Kimi k1.5
   year: 2025
   open_source: closed
@@ -875,15 +873,14 @@ methods:
   parents:
   - name: Kimi (Moonshot AI)
     relation: extends
-  description: "Reasoning-enhanced Kimi with reinforcement learning and multi-modal thinking"
-
-# === Qwen3 ===
+  description: Reasoning-enhanced Kimi with reinforcement learning and multi-modal
+    thinking
 - name: Qwen3
   year: 2025
   code: QwenLM/Qwen3
-  stars: 20000
+  stars: 26985
   open_source: open
-  license: "Apache-2.0"
+  license: Apache-2.0
   tags:
   - decoder
   - open-weight
@@ -892,15 +889,14 @@ methods:
   parents:
   - name: Qwen2.5
     relation: extends
-  description: "Hybrid thinking mode (fast/deep) with MoE variants, strong multilingual and agentic capabilities"
-
-# === Yi ===
+  description: Hybrid thinking mode (fast/deep) with MoE variants, strong multilingual
+    and agentic capabilities
 - name: Yi
   year: 2024
   code: 01-ai/Yi
-  stars: 8000
+  stars: 7839
   open_source: open
-  license: "Apache-2.0"
+  license: Apache-2.0
   tags:
   - decoder
   - open-weight
@@ -909,15 +905,13 @@ methods:
   parents:
   - name: LLaMA
     relation: inspires
-  description: "01.AI's bilingual LLM with strong long-context capabilities"
-
-# === Baichuan ===
+  description: 01.AI's bilingual LLM with strong long-context capabilities
 - name: Baichuan 2
   year: 2023
   code: baichuan-inc/Baichuan2
-  stars: 4000
+  stars: 4117
   open_source: open
-  license: "Baichuan License"
+  license: Baichuan License
   tags:
   - decoder
   - open-weight
@@ -926,9 +920,7 @@ methods:
   parents:
   - name: LLaMA
     relation: inspires
-  description: "Baichuan's open bilingual LLM series optimized for Chinese"
-
-# === Cohere ===
+  description: Baichuan's open bilingual LLM series optimized for Chinese
 - name: Command R+
   year: 2024
   open_source: closed
@@ -941,15 +933,13 @@ methods:
   parents:
   - name: Transformer
     relation: extends
-  description: "Cohere's RAG-optimized enterprise LLM with tool use and citation generation"
-
-# === Gemma 2 ===
+  description: Cohere's RAG-optimized enterprise LLM with tool use and citation generation
 - name: Gemma 2
   year: 2024
   code: google/gemma
   stars: 600
   open_source: open
-  license: "Gemma License"
+  license: Gemma License
   tags:
   - decoder
   - open-weight
@@ -958,13 +948,11 @@ methods:
   parents:
   - name: Gemma
     relation: extends
-  description: "Improved Gemma with knowledge distillation and logit soft-capping"
-
-# === Phi-4 ===
+  description: Improved Gemma with knowledge distillation and logit soft-capping
 - name: Phi-4
   year: 2024
   open_source: open
-  license: "MIT"
+  license: MIT
   tags:
   - decoder
   - small-lm
@@ -973,15 +961,14 @@ methods:
   parents:
   - name: Phi-3
     relation: extends
-  description: "14B model with strong reasoning from synthetic data and post-training innovation"
-
-# === Llama 3.1 ===
+  description: 14B model with strong reasoning from synthetic data and post-training
+    innovation
 - name: LLaMA 3.1
   year: 2024
   code: meta-llama/llama-models
-  stars: 7000
+  stars: 7533
   open_source: open
-  license: "Llama 3.1 Community License"
+  license: Llama 3.1 Community License
   tags:
   - decoder
   - open-weight
@@ -990,4 +977,4 @@ methods:
   parents:
   - name: LLaMA 3
     relation: extends
-  description: "Extended context (128K) Llama 3 with 405B flagship variant"
+  description: Extended context (128K) Llama 3 with 405B flagship variant

@@ -42,7 +42,7 @@ methods:
   arxiv: '1502.00956'
   year: 2015
   code: raulmur/ORB_SLAM2
-  stars: 10127
+  stars: 10131
   tags:
   - monocular
   - feature-based
@@ -57,7 +57,7 @@ methods:
   arxiv: '1610.06475'
   year: 2017
   code: raulmur/ORB_SLAM2
-  stars: 10127
+  stars: 10131
   tags:
   - monocular
   - stereo
@@ -74,7 +74,7 @@ methods:
   arxiv: '2007.11898'
   year: 2021
   code: UZ-SLAMLab/ORB_SLAM3
-  stars: 8400
+  stars: 8411
   tags:
   - monocular
   - stereo
@@ -93,7 +93,7 @@ methods:
   arxiv: '1910.01122'
   year: 2019
   code: stella-cv/stella_vslam
-  stars: 1164
+  stars: 1168
   tags:
   - monocular
   - stereo
@@ -110,7 +110,7 @@ methods:
   arxiv: '1407.4760'
   year: 2014
   code: tum-vision/lsd_slam
-  stars: 2705
+  stars: 2707
   tags:
   - monocular
   - direct
@@ -126,7 +126,7 @@ methods:
   arxiv: '1408.3667'
   year: 2014
   code: uzh-rpg/rpg_svo_pro_open
-  stars: 1557
+  stars: 1558
   tags:
   - monocular
   - semi-direct
@@ -144,7 +144,7 @@ methods:
   arxiv: '1607.02565'
   year: 2017
   code: JakobEngel/dso
-  stars: 2433
+  stars: 2436
   tags:
   - monocular
   - direct
@@ -161,7 +161,7 @@ methods:
   arxiv: '1708.03852'
   year: 2018
   code: HKUST-Aerial-Robotics/VINS-Mono
-  stars: 5810
+  stars: 5812
   tags:
   - monocular
   - visual-inertial
@@ -177,7 +177,7 @@ methods:
   arxiv: ''
   year: 2019
   code: HKUST-Aerial-Robotics/VINS-Fusion
-  stars: 4434
+  stars: 4438
   tags:
   - stereo
   - visual-inertial
@@ -194,7 +194,7 @@ methods:
   arxiv: '1910.02490'
   year: 2020
   code: MIT-SPARK/Kimera
-  stars: 2043
+  stars: 2047
   tags:
   - metric-semantic
   - mesh
@@ -212,7 +212,7 @@ methods:
   arxiv: '1906.02985'
   year: 2019
   code: introlab/rtabmap
-  stars: 3684
+  stars: 3686
   tags:
   - rgbd
   - lidar
@@ -230,7 +230,7 @@ methods:
   arxiv: '2108.10869'
   year: 2021
   code: princeton-vl/DROID-SLAM
-  stars: 2475
+  stars: 2485
   tags:
   - deep-learning
   - end-to-end
@@ -249,7 +249,7 @@ methods:
   arxiv: '2208.04726'
   year: 2023
   code: princeton-vl/DPVO
-  stars: 956
+  stars: 957
   tags:
   - deep-learning
   - visual-odometry
@@ -281,7 +281,7 @@ methods:
   arxiv: '2112.12130'
   year: 2022
   code: cvg/nice-slam
-  stars: 1572
+  stars: 1570
   tags:
   - implicit
   - neural
@@ -299,7 +299,7 @@ methods:
   arxiv: '2304.14377'
   year: 2023
   code: HengyiWang/Co-SLAM
-  stars: 473
+  stars: 474
   tags:
   - implicit
   - neural
@@ -316,7 +316,7 @@ methods:
   arxiv: '2304.04278'
   year: 2023
   code: eriksandstroem/Point-SLAM
-  stars: 474
+  stars: 475
   tags:
   - implicit
   - neural
@@ -351,7 +351,7 @@ methods:
   arxiv: '2312.06741'
   year: 2024
   code: muskie82/MonoGS
-  stars: 2017
+  stars: 2020
   tags:
   - gaussian-splatting
   - monocular
@@ -370,7 +370,7 @@ methods:
   arxiv: '2311.16728'
   year: 2024
   code: HuajianUP/Photo-SLAM
-  stars: 711
+  stars: 710
   tags:
   - gaussian-splatting
   - photorealistic
@@ -406,7 +406,7 @@ methods:
   arxiv: '2308.14737'
   year: 2023
   code: graphdeco-inria/gaussian-splatting
-  stars: 21038
+  stars: 21099
   tags:
   - gaussian-splatting
   - real-time
@@ -420,7 +420,7 @@ methods:
   arxiv: '2312.14132'
   year: 2024
   code: naver/dust3r
-  stars: 7024
+  stars: 7032
   tags:
   - dense-stereo
   - transformer
@@ -434,7 +434,7 @@ methods:
   arxiv: '2406.09756'
   year: 2024
   code: naver/mast3r
-  stars: 2796
+  stars: 2803
   tags:
   - dense-matching
   - stereo
@@ -449,7 +449,7 @@ methods:
   arxiv: '2409.09479'
   year: 2025
   code: MAC-VO/MAC-VO
-  stars: 880
+  stars: 882
   tags:
   - deep-learning
   - stereo
@@ -486,7 +486,7 @@ methods:
   arxiv: '2412.09401'
   year: 2025
   code: PKU-VCL-3DV/SLAM3R
-  stars: 1111
+  stars: 1113
   tags:
   - dense-slam
   - transformer
@@ -541,7 +541,7 @@ methods:
   arxiv: '2409.19152'
   year: 2025
   code: naver/mast3r
-  stars: 2796
+  stars: 2803
   tags:
   - structure-from-motion
   - dense
@@ -557,7 +557,7 @@ methods:
   arxiv: ''
   year: 2025
   code: UZ-SLAMLab/ORB_SLAM3
-  stars: 8400
+  stars: 8411
   tags:
   - stereo
   - visual-inertial
@@ -648,7 +648,7 @@ methods:
   arxiv: '1904.06504'
   year: 2019
   code: VladyslavUsenko/basalt-mirror
-  stars: 857
+  stars: 858
   tags:
   - visual-inertial
   - vio
@@ -666,7 +666,7 @@ methods:
   arxiv: '2011.00359'
   year: 2021
   code: castacks/tartanvo
-  stars: 277
+  stars: 276
   tags:
   - deep-learning
   - visual-odometry
@@ -693,7 +693,6 @@ methods:
     relation: extends
   description: SLAM in dynamic environments using deep learning-based segmentation
     to filter moving objects
-# === Commercial SLAM Solutions ===
 - name: Kudan SLAM
   year: 2014
   open_source: closed
@@ -705,7 +704,8 @@ methods:
   - sdk
   - commercial
   parents: []
-  description: Commercial visual and LiDAR SLAM SDK for AR, robotics, and autonomous vehicles
+  description: Commercial visual and LiDAR SLAM SDK for AR, robotics, and autonomous
+    vehicles
 - name: SLAMcore
   year: 2016
   open_source: closed
@@ -717,7 +717,8 @@ methods:
   - commercial
   - arm
   parents: []
-  description: ARM-acquired spatial AI company providing dense visual-inertial SLAM for robots
+  description: ARM-acquired spatial AI company providing dense visual-inertial SLAM
+    for robots
 - name: NavVis VLX
   year: 2017
   open_source: closed
