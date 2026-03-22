@@ -44,7 +44,7 @@ methods:
   arxiv: ''
   year: 2014
   code: jhu-dvrk/sawIntuitiveResearchKit
-  stars: 151
+  stars: 152
   tags:
   - surgical-robot
   - open-source
@@ -97,7 +97,7 @@ methods:
   arxiv: '2108.13035'
   year: 2021
   code: med-air/SurRoL
-  stars: 233
+  stars: 236
   tags:
   - reinforcement-learning
   - surgical-robot
@@ -250,8 +250,8 @@ methods:
   parents:
   - name: da Vinci System
     relation: inspires
-  description: Medtronic's modular robotic-assisted surgery system competing with da
-    Vinci
+  description: Medtronic's modular robotic-assisted surgery system competing with
+    da Vinci
 - name: CMR Versius
   year: 2019
   open_source: closed

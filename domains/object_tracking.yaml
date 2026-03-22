@@ -1,45 +1,44 @@
 name: Object Tracking
-description: >
-  From classical tracking-by-detection to transformer-based end-to-end tracking —
-  covering multi-object tracking (MOT), single-object tracking (SOT), and point tracking
-  across video sequences.
+description: 'From classical tracking-by-detection to transformer-based end-to-end
+  tracking — covering multi-object tracking (MOT), single-object tracking (SOT), and
+  point tracking across video sequences.
+
+  '
 source_awesome_lists:
 - https://github.com/luanshiyinyang/awesome-tracking
-
 methods:
 - name: SiamFC
   paper: Fully-Convolutional Siamese Networks for Object Tracking
   arxiv: '1606.09549'
   year: 2016
   code: bertinetto/siamese-fc
-  stars: 700
+  stars: 629
   tags:
   - SOT
   - siamese
   - fully-convolutional
   parents: []
   description: Pioneered Siamese network approach for real-time single-object tracking
-
 - name: SORT
   paper: Simple Online and Realtime Tracking
   arxiv: '1602.00763'
   year: 2016
   code: abewley/sort
-  stars: 4000
+  stars: 4348
   tags:
   - MOT
   - online
   - kalman-filter
   - hungarian
   parents: []
-  description: Simple MOT baseline using Kalman filter and Hungarian algorithm for association
-
+  description: Simple MOT baseline using Kalman filter and Hungarian algorithm for
+    association
 - name: DeepSORT
   paper: Simple Online and Realtime Tracking with a Deep Association Metric
   arxiv: '1703.07402'
   year: 2017
   code: nwojke/deep_sort
-  stars: 5000
+  stars: 6101
   tags:
   - MOT
   - online
@@ -49,13 +48,12 @@ methods:
   - name: SORT
     relation: extends
   description: Extends SORT with deep appearance features for improved identity association
-
 - name: SiamRPN++
   paper: 'SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks'
   arxiv: '1812.11703'
   year: 2019
   code: STVIR/pysot
-  stars: 4600
+  stars: 4588
   tags:
   - SOT
   - siamese
@@ -65,13 +63,12 @@ methods:
   - name: SiamFC
     relation: extends
   description: Siamese tracker with deeper backbones and depthwise cross-correlation
-
 - name: TransTrack
   paper: 'TransTrack: Multiple Object Tracking with Transformer'
   arxiv: '2012.15460'
   year: 2021
   code: PeizeSun/TransTrack
-  stars: 700
+  stars: 673
   tags:
   - MOT
   - transformer
@@ -79,14 +76,14 @@ methods:
   parents:
   - name: DeepSORT
     relation: inspires
-  description: First transformer-based MOT using track queries for joint detection and tracking
-
+  description: First transformer-based MOT using track queries for joint detection
+    and tracking
 - name: TrackFormer
   paper: 'TrackFormer: Multi-Object Tracking with Transformers'
   arxiv: '2101.02702'
   year: 2022
   code: timmeinhardt/trackformer
-  stars: 800
+  stars: 627
   tags:
   - MOT
   - transformer
@@ -95,14 +92,14 @@ methods:
   parents:
   - name: TransTrack
     relation: extends
-  description: DETR-based tracker using track queries for autoregressive multi-object tracking
-
+  description: DETR-based tracker using track queries for autoregressive multi-object
+    tracking
 - name: MOTR
   paper: 'MOTR: End-to-End Multiple-Object Tracking with Transformer'
   arxiv: '2105.03247'
   year: 2022
   code: megvii-research/MOTR
-  stars: 500
+  stars: 791
   tags:
   - MOT
   - transformer
@@ -112,13 +109,12 @@ methods:
   - name: TrackFormer
     relation: extends
   description: Fully end-to-end MOT with transformer using track-aware queries
-
 - name: ByteTrack
   paper: 'ByteTrack: Multi-Object Tracking by Associating Every Detection Box'
   arxiv: '2110.06864'
   year: 2022
   code: ifzhang/ByteTrack
-  stars: 4800
+  stars: 6177
   tags:
   - MOT
   - online
@@ -127,14 +123,14 @@ methods:
   parents:
   - name: SORT
     relation: extends
-  description: Associates every detection box including low-confidence ones for robust MOT
-
+  description: Associates every detection box including low-confidence ones for robust
+    MOT
 - name: BoT-SORT
   paper: 'BoT-SORT: Robust Associations Multi-Pedestrian Tracking'
   arxiv: '2206.14651'
   year: 2022
   code: NirAharon/BoT-SORT
-  stars: 1200
+  stars: 1379
   tags:
   - MOT
   - online
@@ -145,14 +141,14 @@ methods:
     relation: extends
   - name: DeepSORT
     relation: combines
-  description: Combines ByteTrack association with camera motion compensation and re-ID
-
+  description: Combines ByteTrack association with camera motion compensation and
+    re-ID
 - name: GTR
-  paper: 'Global Tracking Transformers'
+  paper: Global Tracking Transformers
   arxiv: '2203.13250'
   year: 2022
   code: xingyizhou/GTR
-  stars: 300
+  stars: 380
   tags:
   - MOT
   - transformer
@@ -160,14 +156,14 @@ methods:
   parents:
   - name: TransTrack
     relation: extends
-  description: Global tracking transformer that reasons about trajectories over entire video clips
-
+  description: Global tracking transformer that reasons about trajectories over entire
+    video clips
 - name: QDTrack
-  paper: 'Quasi-Dense Similarity Learning for Multiple Object Tracking'
+  paper: Quasi-Dense Similarity Learning for Multiple Object Tracking
   arxiv: '2006.06664'
   year: 2022
   code: SysCV/qdtrack
-  stars: 350
+  stars: 404
   tags:
   - MOT
   - quasi-dense
@@ -175,14 +171,14 @@ methods:
   parents:
   - name: DeepSORT
     relation: extends
-  description: Quasi-dense contrastive learning for instance similarity in multi-object tracking
-
+  description: Quasi-dense contrastive learning for instance similarity in multi-object
+    tracking
 - name: OC-SORT
   paper: 'Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking'
   arxiv: '2203.14360'
   year: 2023
   code: noahcao/OC_SORT
-  stars: 900
+  stars: 1048
   tags:
   - MOT
   - online
@@ -194,7 +190,6 @@ methods:
   - name: ByteTrack
     relation: inspires
   description: Observation-centric SORT variant robust to non-linear motion and occlusions
-
 - name: StrongSORT
   paper: 'StrongSORT: Make DeepSORT Great Again'
   arxiv: '2202.13514'
@@ -212,13 +207,13 @@ methods:
   - name: BoT-SORT
     relation: inspires
   description: Modernized DeepSORT with stronger re-ID features and improved association
-
 - name: MOTRv2
-  paper: 'MOTRv2: Bootstrapping End-to-End Multi-Object Tracking by Pretrained Object Detectors'
+  paper: 'MOTRv2: Bootstrapping End-to-End Multi-Object Tracking by Pretrained Object
+    Detectors'
   arxiv: '2211.09791'
   year: 2023
   code: megvii-research/MOTRv2
-  stars: 400
+  stars: 475
   tags:
   - MOT
   - transformer
@@ -228,13 +223,12 @@ methods:
   - name: MOTR
     relation: extends
   description: Bootstraps end-to-end MOT with pretrained detectors as proposal anchors
-
 - name: TAPIR
   paper: 'TAPIR: Tracking Any Point with per-frame Initialization and temporal Refinement'
   arxiv: '2306.08637'
   year: 2023
   code: google-deepmind/tapnet
-  stars: 1400
+  stars: 1820
   tags:
   - point-tracking
   - any-point
@@ -242,14 +236,14 @@ methods:
   parents:
   - name: SiamFC
     relation: inspires
-  description: Tracks any point across video with per-frame matching and temporal refinement
-
+  description: Tracks any point across video with per-frame matching and temporal
+    refinement
 - name: SAM-Track
-  paper: 'Segment and Track Anything'
+  paper: Segment and Track Anything
   arxiv: '2305.06558'
   year: 2023
   code: z-x-yang/Segment-and-Track-Anything
-  stars: 2500
+  stars: 3116
   tags:
   - MOT
   - segmentation
@@ -258,14 +252,14 @@ methods:
   parents:
   - name: DeepSORT
     relation: inspires
-  description: Combines SAM segmentation with tracking for interactive segment-and-track pipeline
-
+  description: Combines SAM segmentation with tracking for interactive segment-and-track
+    pipeline
 - name: CoTracker
   paper: 'CoTracker: It is Better to Track Together'
   arxiv: '2307.07635'
   year: 2024
   code: facebookresearch/co-tracker
-  stars: 3200
+  stars: 4879
   tags:
   - point-tracking
   - joint-tracking
@@ -274,7 +268,6 @@ methods:
   - name: TAPIR
     relation: extends
   description: Joint point tracking via transformer that tracks multiple points together
-
 - name: BoTrack
   paper: 'BoTrack: A Bootstrap Approach to Multi-Object Tracking'
   arxiv: '2402.13785'
@@ -291,13 +284,12 @@ methods:
   - name: OC-SORT
     relation: combines
   description: Bootstrap self-improving approach to multi-object tracking
-
 - name: CoTracker3
   paper: 'CoTracker3: Simpler and Better Point Tracking by Pseudo-Labelling Real Videos'
   arxiv: '2410.11831'
   year: 2025
   code: facebookresearch/co-tracker
-  stars: 3200
+  stars: 4879
   tags:
   - point-tracking
   - pseudo-labeling
@@ -306,7 +298,6 @@ methods:
   - name: CoTracker
     relation: extends
   description: Improved point tracking using pseudo-labels from real videos for training
-
 - name: DARTH
   paper: 'DARTH: End-to-End Multi-Object Tracking with Diffusion'
   arxiv: '2501.01861'
@@ -320,4 +311,5 @@ methods:
   parents:
   - name: MOTRv2
     relation: inspires
-  description: Applies diffusion models to multi-object tracking for end-to-end trajectory generation
+  description: Applies diffusion models to multi-object tracking for end-to-end trajectory
+    generation

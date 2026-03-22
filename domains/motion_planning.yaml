@@ -305,7 +305,7 @@ methods:
   arxiv: '2409.07563'
   year: 2024
   code: ACDSLab/MPPI-Generic
-  stars: 261
+  stars: 263
   tags:
   - sampling-based
   - mpc
@@ -337,7 +337,7 @@ methods:
   arxiv: '2108.08265'
   year: 2021
   code: zhejz/carla-roach
-  stars: 386
+  stars: 387
   tags:
   - reinforcement-learning
   - imitation-learning
@@ -370,7 +370,7 @@ methods:
   arxiv: '2210.14222'
   year: 2022
   code: autonomousvision/plant
-  stars: 294
+  stars: 295
   tags:
   - transformer
   - explainable
@@ -433,7 +433,7 @@ methods:
   arxiv: '2212.10156'
   year: 2023
   code: OpenDriveLab/UniAD
-  stars: 4527
+  stars: 4534
   tags:
   - end-to-end
   - unified
@@ -450,7 +450,7 @@ methods:
   arxiv: '2303.12077'
   year: 2023
   code: hustvl/VAD
-  stars: 1260
+  stars: 1261
   tags:
   - vectorized
   - end-to-end
@@ -587,7 +587,7 @@ methods:
   arxiv: '2411.15139'
   year: 2024
   code: hustvl/DiffusionDrive
-  stars: 1323
+  stars: 1324
   tags:
   - diffusion
   - end-to-end
@@ -606,7 +606,7 @@ methods:
   arxiv: '2405.19620'
   year: 2025
   code: swc-17/SparseDrive
-  stars: 887
+  stars: 894
   tags:
   - sparse
   - end-to-end

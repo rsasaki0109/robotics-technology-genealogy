@@ -47,7 +47,7 @@ methods:
     Variable Terrain'
   year: 2018
   code: RobustFieldAutonomyLab/LeGO-LOAM
-  stars: 2703
+  stars: 2705
   tags:
   - lidar-odometry
   - lightweight
@@ -116,7 +116,7 @@ methods:
     People Behavior Measurement
   year: 2019
   code: koide3/hdl_graph_slam
-  stars: 2254
+  stars: 2256
   tags:
   - lidar-slam
   - graph-based
@@ -130,7 +130,7 @@ methods:
   arxiv: '2007.00258'
   year: 2020
   code: TixiaoShan/LIO-SAM
-  stars: 4620
+  stars: 4631
   tags:
   - lidar-inertial
   - factor-graph
@@ -161,7 +161,7 @@ methods:
   arxiv: '2010.08196'
   year: 2021
   code: hku-mars/FAST_LIO
-  stars: 4436
+  stars: 4446
   tags:
   - lidar-inertial
   - kalman-filter
@@ -176,7 +176,7 @@ methods:
   arxiv: '2107.06829'
   year: 2022
   code: hku-mars/FAST_LIO
-  stars: 4436
+  stars: 4446
   tags:
   - lidar-inertial
   - ikd-tree
@@ -192,7 +192,7 @@ methods:
   arxiv: '2112.11514'
   year: 2022
   code: gaoxiang12/faster-lio
-  stars: 1485
+  stars: 1488
   tags:
   - lidar-inertial
   - voxel
@@ -207,7 +207,7 @@ methods:
   arxiv: '2306.10310'
   year: 2023
   code: hku-mars/Point-LIO
-  stars: 1148
+  stars: 1150
   tags:
   - lidar-inertial
   - point-by-point
@@ -221,7 +221,7 @@ methods:
   arxiv: '2109.12979'
   year: 2022
   code: jedeschaud/ct_icp
-  stars: 881
+  stars: 882
   tags:
   - lidar-odometry
   - continuous-time
@@ -236,7 +236,7 @@ methods:
   arxiv: '2209.15397'
   year: 2023
   code: PRBonn/kiss-icp
-  stars: 2109
+  stars: 2115
   tags:
   - lidar-odometry
   - simple
@@ -264,7 +264,7 @@ methods:
   arxiv: '2110.00605'
   year: 2022
   code: vectr-ucla/direct_lidar_odometry
-  stars: 1021
+  stars: 1023
   tags:
   - lidar-odometry
   - direct
@@ -327,7 +327,7 @@ methods:
   arxiv: '2310.01235'
   year: 2024
   code: ethz-asl/COIN-LIO
-  stars: 461
+  stars: 462
   tags:
   - lidar-inertial
   - intensity
@@ -359,7 +359,7 @@ methods:
   arxiv: '2405.01316'
   year: 2024
   code: tiev-tongji/LOG-LIO2
-  stars: 188
+  stars: 189
   tags:
   - lidar-inertial
   - uncertainty
@@ -414,7 +414,7 @@ methods:
   arxiv: '2407.10344'
   year: 2025
   code: koide3/glim
-  stars: 1494
+  stars: 1501
   tags:
   - lidar-inertial
   - gpu
@@ -450,7 +450,7 @@ methods:
   arxiv: '2209.15397'
   year: 2025
   code: PRBonn/kiss-icp
-  stars: 2109
+  stars: 2115
   tags:
   - lidar-odometry
   - simple
@@ -533,7 +533,7 @@ methods:
   paper: Real-Time Loop Closure in 2D LIDAR SLAM
   year: 2016
   code: googlecartographer/cartographer
-  stars: 7801
+  stars: 7806
   tags:
   - lidar-slam
   - graph-based
@@ -564,7 +564,7 @@ methods:
   arxiv: '2109.07982'
   year: 2022
   code: hku-mars/r3live
-  stars: 2363
+  stars: 2367
   tags:
   - lidar-inertial-visual
   - tightly-coupled
@@ -637,7 +637,7 @@ methods:
   arxiv: '2104.10831'
   year: 2021
   code: TixiaoShan/LVI-SAM
-  stars: 1799
+  stars: 1800
   tags:
   - lidar-visual-inertial
   - tightly-coupled
@@ -653,7 +653,7 @@ methods:
   arxiv: '2203.00893'
   year: 2022
   code: hku-mars/FAST-LIVO
-  stars: 1556
+  stars: 1557
   tags:
   - lidar-visual-inertial
   - tightly-coupled
@@ -667,7 +667,7 @@ methods:
   arxiv: '2408.01916'
   year: 2024
   code: hku-mars/FAST-LIVO2
-  stars: 3776
+  stars: 3785
   tags:
   - lidar-visual-inertial
   - tightly-coupled
@@ -692,117 +692,160 @@ methods:
   - name: LOAM
     relation: inspires
   description: Low-cost LiDAR-assisted visual SLAM using Livox LiDAR
-# === koide3 OSS & Related ===
-- name: "ndt_omp"
-  paper: "Multi-threaded NDT"
+- name: ndt_omp
+  paper: Multi-threaded NDT
   year: 2017
-  code: "koide3/ndt_omp"
+  code: koide3/ndt_omp
   stars: 832
-  tags: [ndt, multi-threaded, sse, registration, library]
+  tags:
+  - ndt
+  - multi-threaded
+  - sse
+  - registration
+  - library
   parents:
-    - name: "NDT"
-      relation: extends
-  description: "Multi-threaded and SSE-friendly NDT algorithm, widely used as registration backend"
-
-- name: "small_gicp"
-  paper: "small_gicp: Efficient and parallel algorithms for point cloud registration"
+  - name: NDT
+    relation: extends
+  description: Multi-threaded and SSE-friendly NDT algorithm, widely used as registration
+    backend
+- name: small_gicp
+  paper: 'small_gicp: Efficient and parallel algorithms for point cloud registration'
   year: 2024
-  code: "koide3/small_gicp"
-  stars: 884
-  tags: [gicp, registration, parallel, header-only, library]
+  code: koide3/small_gicp
+  stars: 886
+  tags:
+  - gicp
+  - registration
+  - parallel
+  - header-only
+  - library
   parents:
-    - name: "GICP"
-      relation: extends
-    - name: "ndt_omp"
-      relation: inspires
-  description: "Header-only C++ library for efficient parallel GICP/VGICP point cloud registration"
-
-- name: "hdl_localization"
-  paper: "A Portable 3D LIDAR-based System for Long-term and Wide-area People Behavior Measurement"
+  - name: GICP
+    relation: extends
+  - name: ndt_omp
+    relation: inspires
+  description: Header-only C++ library for efficient parallel GICP/VGICP point cloud
+    registration
+- name: hdl_localization
+  paper: A Portable 3D LIDAR-based System for Long-term and Wide-area People Behavior
+    Measurement
   year: 2019
-  code: "koide3/hdl_localization"
+  code: koide3/hdl_localization
   stars: 969
-  tags: [localization, ndt, ukf, lidar, ros]
+  tags:
+  - localization
+  - ndt
+  - ukf
+  - lidar
+  - ros
   parents:
-    - name: "ndt_omp"
-      relation: extends
-  description: "Real-time 3D LiDAR localization using NDT with UKF-based pose tracking"
-
-- name: "interactive_slam"
-  paper: "Interactive SLAM"
+  - name: ndt_omp
+    relation: extends
+  description: Real-time 3D LiDAR localization using NDT with UKF-based pose tracking
+- name: interactive_slam
+  paper: Interactive SLAM
   year: 2021
-  code: "koide3/interactive_slam"
-  stars: 940
-  tags: [slam, graph-slam, interactive, map-correction, gui]
+  code: koide3/interactive_slam
+  stars: 941
+  tags:
+  - slam
+  - graph-slam
+  - interactive
+  - map-correction
+  - gui
   parents:
-    - name: "hdl_graph_slam"
-      relation: extends
-  description: "Interactive map correction tool for 3D graph SLAM with GUI-based loop closure and editing"
-
-- name: "direct_visual_lidar_calibration"
-  paper: "General, Single-shot, Target-less, and Automatic LiDAR-Camera Extrinsic Calibration Toolbox"
+  - name: hdl_graph_slam
+    relation: extends
+  description: Interactive map correction tool for 3D graph SLAM with GUI-based loop
+    closure and editing
+- name: direct_visual_lidar_calibration
+  paper: General, Single-shot, Target-less, and Automatic LiDAR-Camera Extrinsic Calibration
+    Toolbox
   year: 2023
-  code: "koide3/direct_visual_lidar_calibration"
-  stars: 1347
-  tags: [calibration, lidar-camera, targetless, automatic, ros]
+  code: koide3/direct_visual_lidar_calibration
+  stars: 1348
+  tags:
+  - calibration
+  - lidar-camera
+  - targetless
+  - automatic
+  - ros
   parents: []
-  description: "Target-less LiDAR-camera extrinsic calibration toolbox via direct alignment"
-
-- name: "hdl_people_tracking"
+  description: Target-less LiDAR-camera extrinsic calibration toolbox via direct alignment
+- name: hdl_people_tracking
   year: 2019
-  code: "koide3/hdl_people_tracking"
+  code: koide3/hdl_people_tracking
   stars: 319
-  tags: [people-tracking, lidar, real-time, detection]
+  tags:
+  - people-tracking
+  - lidar
+  - real-time
+  - detection
   parents:
-    - name: "hdl_graph_slam"
-      relation: inspires
-  description: "Real-time people tracking using 3D LiDAR point clouds"
-
-  # === Related Registration & Calibration Methods ===
-- name: "VGICP"
-  paper: "Voxelized GICP for Fast and Accurate 3D Point Cloud Registration"
-  arxiv: "2103.02466"
+  - name: hdl_graph_slam
+    relation: inspires
+  description: Real-time people tracking using 3D LiDAR point clouds
+- name: VGICP
+  paper: Voxelized GICP for Fast and Accurate 3D Point Cloud Registration
+  arxiv: '2103.02466'
   year: 2021
-  code: "SMRT-AIST/fast_gicp"
-  stars: 1200
-  tags: [registration, voxelized, gicp, gpu, fast]
+  code: SMRT-AIST/fast_gicp
+  stars: 1607
+  tags:
+  - registration
+  - voxelized
+  - gicp
+  - gpu
+  - fast
   parents:
-    - name: "GICP"
-      relation: extends
-  description: "Voxelized GICP enabling fast GPU-accelerated point cloud registration"
-
-- name: "Quatro"
-  paper: "A Robust Global Registration for LiDAR Point Clouds"
-  arxiv: "2210.05508"
+  - name: GICP
+    relation: extends
+  description: Voxelized GICP enabling fast GPU-accelerated point cloud registration
+- name: Quatro
+  paper: A Robust Global Registration for LiDAR Point Clouds
+  arxiv: '2210.05508'
   year: 2022
-  code: "url-kaist/Quatro"
-  stars: 600
-  tags: [registration, global, robust, outlier-rejection]
+  code: url-kaist/Quatro
+  stars: 386
+  tags:
+  - registration
+  - global
+  - robust
+  - outlier-rejection
   parents:
-    - name: "GICP"
-      relation: inspires
-  description: "Robust global point cloud registration using quasi-SO(3) estimation"
-
-- name: "TEASER++"
-  paper: "TEASER: Fast and Certifiable Point Cloud Registration"
-  arxiv: "2001.07715"
+  - name: GICP
+    relation: inspires
+  description: Robust global point cloud registration using quasi-SO(3) estimation
+- name: TEASER++
+  paper: 'TEASER: Fast and Certifiable Point Cloud Registration'
+  arxiv: '2001.07715'
   year: 2020
-  code: "MIT-SPARK/TEASER-plusplus"
-  stars: 1600
-  tags: [registration, certifiable, robust, global, outlier-robust]
+  code: MIT-SPARK/TEASER-plusplus
+  stars: 2234
+  tags:
+  - registration
+  - certifiable
+  - robust
+  - global
+  - outlier-robust
   parents:
-    - name: "ICP"
-      relation: inspires
-  description: "Fast and certifiably robust point cloud registration even with extreme outlier ratios"
-
-- name: "GeoTransformer"
-  paper: "Geometric Transformer for Fast and Robust Point Cloud Registration"
-  arxiv: "2202.06688"
+  - name: ICP
+    relation: inspires
+  description: Fast and certifiably robust point cloud registration even with extreme
+    outlier ratios
+- name: GeoTransformer
+  paper: Geometric Transformer for Fast and Robust Point Cloud Registration
+  arxiv: '2202.06688'
   year: 2022
-  code: "qinzheng93/GeoTransformer"
-  stars: 600
-  tags: [registration, transformer, learning-based, geometric]
+  code: qinzheng93/GeoTransformer
+  stars: 931
+  tags:
+  - registration
+  - transformer
+  - learning-based
+  - geometric
   parents:
-    - name: "TEASER++"
-      relation: inspires
-  description: "Transformer-based point cloud registration with geometric structure encoding"
+  - name: TEASER++
+    relation: inspires
+  description: Transformer-based point cloud registration with geometric structure
+    encoding

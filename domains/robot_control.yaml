@@ -190,7 +190,7 @@ methods:
   arxiv: '1802.09477'
   year: 2018
   code: sfujim/TD3
-  stars: 2044
+  stars: 2045
   open_source: open
   license: ''
   tags:
@@ -229,7 +229,7 @@ methods:
   arxiv: '2301.04104'
   year: 2023
   code: danijar/dreamerv3
-  stars: 2944
+  stars: 2958
   open_source: open
   license: MIT
   tags:
@@ -247,7 +247,7 @@ methods:
   arxiv: '2106.01345'
   year: 2021
   code: kzl/decision-transformer
-  stars: 2778
+  stars: 2776
   open_source: open
   license: MIT
   tags:
@@ -303,7 +303,7 @@ methods:
   arxiv: '2304.13705'
   year: 2023
   code: tonyzhaozh/act
-  stars: 1798
+  stars: 1810
   open_source: open
   license: MIT
   tags:
@@ -322,7 +322,7 @@ methods:
   arxiv: '2304.13705'
   year: 2023
   code: tonyzhaozh/aloha
-  stars: 2162
+  stars: 2165
   open_source: open
   license: MIT
   tags:
@@ -340,7 +340,7 @@ methods:
   arxiv: '2401.02117'
   year: 2024
   code: MarkFzp/mobile-aloha
-  stars: 4384
+  stars: 4385
   open_source: open
   license: ''
   tags:
@@ -361,7 +361,7 @@ methods:
   arxiv: '2303.04137'
   year: 2023
   code: real-stanford/diffusion_policy
-  stars: 3894
+  stars: 3906
   open_source: open
   license: MIT
   tags:
@@ -382,7 +382,7 @@ methods:
   arxiv: '2405.12213'
   year: 2024
   code: octo-models/octo
-  stars: 1575
+  stars: 1577
   open_source: open
   license: MIT
   tags:
@@ -445,7 +445,7 @@ methods:
   arxiv: '2406.09246'
   year: 2024
   code: openvla/openvla
-  stars: 5585
+  stars: 5626
   open_source: open
   license: MIT
   tags:
@@ -488,7 +488,7 @@ methods:
   arxiv: '2406.10454'
   year: 2024
   code: MarkFzp/humanplus
-  stars: 829
+  stars: 830
   open_source: open
   license: MIT
   tags:
@@ -508,7 +508,7 @@ methods:
   arxiv: ''
   year: 2025
   code: huggingface/lerobot
-  stars: 22478
+  stars: 22583
   open_source: open
   license: Apache-2.0
   tags:
@@ -535,7 +535,8 @@ methods:
   parents:
   - name: PID
     relation: extends
-  description: FANUC's proprietary industrial robot controller dominating factory automation
+  description: FANUC's proprietary industrial robot controller dominating factory
+    automation
 - name: KUKA Sunrise.OS
   year: 2014
   open_source: closed
@@ -561,7 +562,8 @@ methods:
   parents:
   - name: PID
     relation: extends
-  description: Universal Robots' intuitive programming interface that popularized cobots
+  description: Universal Robots' intuitive programming interface that popularized
+    cobots
 - name: ABB RobotStudio
   year: 2005
   open_source: closed
