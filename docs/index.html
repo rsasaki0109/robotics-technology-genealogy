@@ -30,6 +30,13 @@
   .filter-btn.active { color: #fff; border-color: #22c55e; background: #1a2e1a; }
   .filter-btn:hover { border-color: #666; }
   .stats { color: #888; font-size: 13px; white-space: nowrap; }
+  .ticker {
+    background: linear-gradient(90deg, #1a1d23 0%, #0e1117 50%, #1a1d23 100%);
+    padding: 8px 24px; text-align: center; font-size: 14px; color: #eab308;
+    border-bottom: 1px solid #333; overflow: hidden; white-space: nowrap;
+    animation: ticker-fade 8s ease-in-out infinite;
+  }
+  @keyframes ticker-fade { 0%,100% { opacity: 0.3; } 15%,85% { opacity: 1; } }
   .next-link { color: #22c55e; cursor: pointer; text-decoration: underline; }
   .next-link:hover { color: #4ade80; }
   #domain-banner {
@@ -118,6 +125,8 @@
 </style>
 </head>
 <body>
+
+<div id="ticker" class="ticker"><span id="ticker-text"></span></div>
 
 <div class="header">
   <h1>Robotics Technology Genealogy</h1>
@@ -344,6 +353,18 @@ function toggleFilter(key, btnId) {
   if (currentGraphData) renderGraph(currentGraphData, false);
 }
 
+let tickerIdx = 0;
+function startTicker() {
+  if (!DATA.facts || !DATA.facts.length) return;
+  const el = document.getElementById("ticker-text");
+  function update() {
+    el.textContent = DATA.facts[tickerIdx % DATA.facts.length];
+    tickerIdx++;
+  }
+  update();
+  setInterval(update, 8000);
+}
+
 function buildSearchIndex() {
   const list = document.getElementById("search-list");
   for (const name of Object.keys(DATA.method_index)) {
@@ -525,6 +546,7 @@ fetch("data.json")
     searchInput.addEventListener("change", (e) => { searchMethod(e.target.value); e.target.value = ""; });
     searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") { searchMethod(e.target.value); e.target.value = ""; } });
     buildSearchIndex();
+    startTicker();
     onCategoryChange();
   });
 </script>
