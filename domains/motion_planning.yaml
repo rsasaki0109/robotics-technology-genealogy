@@ -317,54 +317,6 @@ methods:
     relation: extends
   description: GPU-accelerated CUDA library for MPPI enabling real-time sampling-based
     MPC on robotics hardware
-- name: ChauffeurNet
-  paper: 'ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the
-    Worst'
-  arxiv: '1812.03079'
-  year: 2019
-  code: ''
-  stars: 0
-  tags:
-  - imitation-learning
-  - autonomous-driving
-  - mid-to-mid
-  - waymo
-  parents: []
-  description: Imitation learning driving policy trained on expert demonstrations
-    with data augmentation via worst-case synthesis
-- name: Roach
-  paper: End-to-End Urban Driving by Imitating a Reinforcement Learning Coach
-  arxiv: '2108.08265'
-  year: 2021
-  code: zhejz/carla-roach
-  stars: 387
-  tags:
-  - reinforcement-learning
-  - imitation-learning
-  - carla
-  - autonomous-driving
-  parents:
-  - name: ChauffeurNet
-    relation: inspires
-  description: RL-trained privileged coach distilled into a vision-based driving policy
-    via imitation learning
-- name: ST-P3
-  paper: 'ST-P3: End-to-end Vision-based Autonomous Driving via Spatial-Temporal Feature
-    Learning'
-  arxiv: '2207.07601'
-  year: 2022
-  code: OpenDriveLab/ST-P3
-  stars: 427
-  tags:
-  - spatial-temporal
-  - end-to-end
-  - vision
-  - autonomous-driving
-  parents:
-  - name: ChauffeurNet
-    relation: inspires
-  description: End-to-end driving framework with spatial-temporal feature learning
-    for prediction and planning
 - name: PlanT
   paper: 'PlanT: Explainable Planning Transformers via Object-Level Representations'
   arxiv: '2210.14222'
@@ -377,27 +329,9 @@ methods:
   - object-level
   - carla
   - planning
-  parents:
-  - name: ChauffeurNet
-    relation: inspires
+  parents: []
   description: Planning transformer using object-level representations for explainable
     autonomous driving
-- name: MILE
-  paper: Model-Based Imitation Learning for Urban Driving
-  arxiv: '2210.07729'
-  year: 2022
-  code: wayveai/mile
-  stars: 423
-  tags:
-  - model-based
-  - imitation-learning
-  - world-model
-  - autonomous-driving
-  parents:
-  - name: ChauffeurNet
-    relation: inspires
-  description: Model-based imitation learning combining learned world model with planning
-    for urban driving
 - name: NMP
   paper: Neural Motion Planner for Autonomous Driving in Urban Environments
   arxiv: ''
@@ -409,9 +343,7 @@ methods:
   - cost-learning
   - lidar
   - autonomous-driving
-  parents:
-  - name: ChauffeurNet
-    relation: inspires
+  parents: []
   description: Learns a neural cost function from LiDAR for motion planning in urban
     driving scenarios
 - name: CoverNet
@@ -428,39 +360,6 @@ methods:
   parents: []
   description: Formulates trajectory prediction as classification over a fixed set
     of trajectory anchors
-- name: UniAD
-  paper: Planning-oriented Autonomous Driving
-  arxiv: '2212.10156'
-  year: 2023
-  code: OpenDriveLab/UniAD
-  stars: 4534
-  tags:
-  - end-to-end
-  - unified
-  - multi-task
-  - transformer
-  - autonomous-driving
-  parents:
-  - name: ChauffeurNet
-    relation: inspires
-  description: Unified autonomous driving framework connecting perception, prediction,
-    and planning in one transformer network
-- name: VAD
-  paper: 'VAD: Vectorized Scene Representation for Efficient Autonomous Driving'
-  arxiv: '2303.12077'
-  year: 2023
-  code: hustvl/VAD
-  stars: 1261
-  tags:
-  - vectorized
-  - end-to-end
-  - efficient
-  - autonomous-driving
-  parents:
-  - name: UniAD
-    relation: extends
-  description: Vectorized autonomous driving framework using scene-level vectorized
-    representation for efficient planning
 - name: GameFormer
   paper: 'GameFormer: Game-theoretic Modeling and Learning of Transformer-based Interactive
     Prediction and Planning for Autonomous Driving'
@@ -474,9 +373,7 @@ methods:
   - interaction
   - prediction
   - planning
-  parents:
-  - name: UniAD
-    relation: inspires
+  parents: []
   description: Game-theoretic transformer for interactive prediction and planning
     with iterative level-k reasoning
 - name: PDM-Closed
@@ -526,46 +423,8 @@ methods:
   parents:
   - name: PDM-Closed
     relation: inspires
-  - name: UniAD
-    relation: inspires
   description: Transformer-based open-loop planner leveraging state-space representations
     for nuPlan planning
-- name: GenAD
-  paper: 'GenAD: Generalized Predictive Model for Autonomous Driving'
-  arxiv: '2403.09630'
-  year: 2024
-  code: OpenDriveLab/DriveAGI
-  stars: 500
-  tags:
-  - generative
-  - world-model
-  - prediction
-  - planning
-  - autonomous-driving
-  parents:
-  - name: VAD
-    relation: extends
-  - name: UniAD
-    relation: extends
-  description: Generalized predictive model unifying scene prediction and planning
-    via generative world modeling
-- name: PARA-Drive
-  paper: 'PARA-Drive: Parallelized Architecture for Real-time Autonomous Driving'
-  arxiv: '2406.12742'
-  year: 2024
-  code: null
-  stars: 100
-  tags:
-  - parallel
-  - real-time
-  - end-to-end
-  - efficient
-  - autonomous-driving
-  parents:
-  - name: UniAD
-    relation: extends
-  description: Parallelized end-to-end driving architecture enabling real-time inference
-    by decoupling task heads
 - name: CTG++
   paper: 'CTG++: Connected Traffic Generation with Large Language Models'
   arxiv: '2306.10043'
@@ -582,44 +441,6 @@ methods:
     relation: inspires
   description: Controllable traffic generation using diffusion models with language-guided
     constraints for planning
-- name: DiffusionDrive
-  paper: 'DiffusionDrive: Truncated Diffusion Model for End-to-End Autonomous Driving'
-  arxiv: '2411.15139'
-  year: 2024
-  code: hustvl/DiffusionDrive
-  stars: 1324
-  tags:
-  - diffusion
-  - end-to-end
-  - truncated
-  - real-time
-  - autonomous-driving
-  parents:
-  - name: VAD
-    relation: extends
-  - name: CTG++
-    relation: inspires
-  description: Truncated diffusion model for efficient end-to-end driving with multi-modal
-    trajectory generation
-- name: SparseDrive
-  paper: 'SparseDrive: End-to-End Autonomous Driving via Sparse Scene Representation'
-  arxiv: '2405.19620'
-  year: 2025
-  code: swc-17/SparseDrive
-  stars: 894
-  tags:
-  - sparse
-  - end-to-end
-  - efficient
-  - scene-representation
-  - autonomous-driving
-  parents:
-  - name: VAD
-    relation: extends
-  - name: UniAD
-    relation: extends
-  description: Sparse scene representation framework for efficient end-to-end autonomous
-    driving planning
 - name: HydraPlanner
   paper: 'Hydra-MDP: End-to-end Multimodal Planning with Multi-target Hydra-Distillation'
   arxiv: '2406.06978'
@@ -634,8 +455,6 @@ methods:
   parents:
   - name: PDM-Closed
     relation: extends
-  - name: GenAD
-    relation: inspires
   description: Multi-target hydra-distillation framework for multimodal end-to-end
     motion planning
 - name: BEVPlanner2.0
@@ -649,10 +468,6 @@ methods:
   - planning
   - end-to-end
   - autonomous-driving
-  parents:
-  - name: UniAD
-    relation: extends
-  - name: VAD
-    relation: extends
+  parents: []
   description: Unified BEV planning framework consolidating perception and planning
     in bird's-eye-view space
