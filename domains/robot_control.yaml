@@ -25,6 +25,7 @@ methods:
   parents: []
   description: Proportional-Integral-Derivative feedback controller, the foundational
     building block of classical control
+  recommended: true
 - name: LQR
   paper: Contributions to the Theory of Optimal Control
   arxiv: ''
@@ -61,6 +62,7 @@ methods:
     relation: inspires
   description: Optimization-based control that plans optimal actions over a receding
     horizon using a dynamics model
+  recommended: true
 - name: Impedance Control
   paper: 'Impedance Control: An Approach to Manipulation'
   arxiv: ''
@@ -168,6 +170,7 @@ methods:
   parents: []
   description: Generates robot actions via iterative denoising diffusion, capturing
     multi-modal action distributions
+  recommended: true
 - name: pi0
   paper: 'pi0: A Vision-Language-Action Flow Model for General Robot Control'
   arxiv: '2410.24164'

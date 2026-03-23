@@ -47,6 +47,7 @@ methods:
   - name: FAB-MAP
     relation: inspires
   description: Differentiable VLAD pooling layer trainable end-to-end for place recognition
+  recommended: true
 - name: Patch-NetVLAD
   paper: 'Patch-NetVLAD: Multi-Scale Fusion of Locally-Global Descriptors for Place
     Recognition'
@@ -111,6 +112,7 @@ methods:
     relation: inspires
   description: All-MLP feature mixing architecture replacing aggregation layers for
     compact descriptors
+  recommended: true
 - name: AnyLoc
   paper: 'AnyLoc: Towards Universal Place Recognition'
   arxiv: '2308.00688'
@@ -141,6 +143,7 @@ methods:
   parents: []
   description: Egocentric 2D polar histogram descriptor from 3D LiDAR scans for place
     recognition
+  recommended: true
 - name: LiDAR Iris
   paper: LiDAR Iris for Loop-Closure Detection
   year: 2020

@@ -23,6 +23,7 @@ methods:
   parents: []
   description: Pioneering commercial teleoperated surgical robot enabling minimally
     invasive procedures
+  recommended: true
 - name: RAVEN
   paper: 'RAVEN: Developing Robotic Surgery from the Laboratory to the Bedside'
   arxiv: ''
@@ -58,6 +59,7 @@ methods:
     relation: inspires
   description: Open-source research kit repurposing retired da Vinci hardware for
     surgical robotics research
+  recommended: true
 - name: Autonomous Suturing
   paper: Autonomous Multilateral Surgical Suturing with a da Vinci Surgical System
   arxiv: ''
@@ -179,6 +181,7 @@ methods:
     relation: extends
   description: NVIDIA Isaac Sim based surgical simulation platform for learning augmented
     dexterity
+  recommended: true
 - name: FLex
   paper: 'FLex: A Flexible Surgical Foundation Model for Generalizable Surgical Phase
     Recognition'

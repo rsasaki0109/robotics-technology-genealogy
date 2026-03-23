@@ -48,6 +48,7 @@ methods:
   - name: SORT
     relation: extends
   description: Extends SORT with deep appearance features for improved identity association
+  recommended: true
 - name: SiamRPN++
   paper: 'SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks'
   arxiv: '1812.11703'
@@ -125,6 +126,7 @@ methods:
     relation: extends
   description: Associates every detection box including low-confidence ones for robust
     MOT
+  recommended: true
 - name: BoT-SORT
   paper: 'BoT-SORT: Robust Associations Multi-Pedestrian Tracking'
   arxiv: '2206.14651'
@@ -268,6 +270,7 @@ methods:
   - name: TAPIR
     relation: extends
   description: Joint point tracking via transformer that tracks multiple points together
+  recommended: true
 - name: BoTrack
   paper: 'BoTrack: A Bootstrap Approach to Multi-Object Tracking'
   arxiv: '2402.13785'

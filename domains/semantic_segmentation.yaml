@@ -34,6 +34,7 @@ methods:
     relation: extends
   description: Symmetric encoder-decoder with skip connections for precise biomedical
     image segmentation
+  recommended: true
 - name: DeepLab v1
   paper: Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected
     CRFs
@@ -282,6 +283,7 @@ methods:
     relation: extends
   description: Masked attention and multi-scale features for state-of-the-art universal
     segmentation
+  recommended: true
 - name: OneFormer
   paper: 'OneFormer: One Transformer to Rule Universal Image Segmentation'
   arxiv: '2211.06220'
@@ -329,6 +331,7 @@ methods:
     relation: inspires
   description: Foundation model for promptable segmentation trained on 1B+ masks with
     zero-shot transfer
+  recommended: true
 - name: SAM 2
   paper: 'SAM 2: Segment Anything in Images and Videos'
   arxiv: '2408.00714'

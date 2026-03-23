@@ -41,6 +41,7 @@ class Method(BaseModel):
     description: str | None = None
     license: str | None = None                          # e.g. "MIT", "Apache-2.0", "CC-BY-NC-4.0"
     open_source: OpenSourceStatus | None = None         # open / research / partial / closed
+    recommended: bool = False                             # Must-read for beginners
 
     @property
     def inferred_open_source(self) -> OpenSourceStatus:

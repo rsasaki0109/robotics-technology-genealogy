@@ -24,6 +24,7 @@ methods:
   parents: []
   description: Open-source multi-robot simulator tightly integrated with ROS for robotics
     research
+  recommended: true
 - name: MuJoCo
   paper: 'MuJoCo: A Physics Engine for Model-Based Control'
   arxiv: ''
@@ -38,6 +39,7 @@ methods:
   parents: []
   description: Fast and accurate physics engine designed for model-based control and
     reinforcement learning
+  recommended: true
 - name: OpenAI Gym
   paper: OpenAI Gym
   arxiv: '1606.01540'
@@ -320,6 +322,7 @@ methods:
     relation: extends
   description: Unified modular framework built on Isaac Sim for scalable robot learning
     workflows
+  recommended: true
 - name: ManiSkill3
   paper: 'ManiSkill3: GPU Parallelized Robotics Simulation and Benchmarking at Scale'
   arxiv: '2410.00425'

@@ -19,6 +19,7 @@ methods:
   - implicit-representation
   parents: []
   description: Seminal work on neural radiance fields for novel view synthesis
+  recommended: true
 - name: Instant-NGP
   paper: Instant Neural Graphics Primitives with a Multiresolution Hash Encoding
   arxiv: '2201.05989'
@@ -119,6 +120,7 @@ methods:
   - name: NeRF
     relation: replaces
   description: Paradigm shift from implicit to explicit 3D Gaussian representation
+  recommended: true
 - name: SuGaR
   paper: 'SuGaR: Surface-Aligned Gaussian Splatting for Efficient 3D Mesh Reconstruction'
   arxiv: '2311.12775'
@@ -704,6 +706,7 @@ methods:
     relation: inspires
   description: Modular framework for developing and benchmarking NeRF and Gaussian
     Splatting methods
+  recommended: true
 - name: gsplat
   paper: 'gsplat: An Open-Source Library for Gaussian Splatting'
   arxiv: '2409.06765'

@@ -38,6 +38,7 @@ methods:
     relation: inspires
   description: First deep learning approach for point cloud denoising and outlier
     removal
+  recommended: true
 - name: PCN (Total Denoising)
   paper: 'Total Denoising: Unsupervised Learning of 3D Point Cloud Cleaning'
   arxiv: '1904.07615'
@@ -62,6 +63,7 @@ methods:
   - name: PointCleanNet
     relation: inspires
   description: Estimates score (gradient of log-probability) of noise-free surface
+  recommended: true
 - name: IterativePFN
   paper: 'IterativePFN: True Iterative Point Cloud Filtering'
   arxiv: '2304.01529'
@@ -126,6 +128,7 @@ methods:
     relation: extends
   description: Adapts diffusion probabilistic models to iteratively denoise 3D point
     clouds with surface-aware conditioning
+  recommended: true
 - name: PCT-Denoise
   paper: 'PCT-Denoise: Point Cloud Transformer for Robust 3D Denoising'
   arxiv: '2501.09387'

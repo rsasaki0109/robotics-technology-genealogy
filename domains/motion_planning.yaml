@@ -85,6 +85,7 @@ methods:
   - name: RRT
     relation: extends
   description: Asymptotically optimal variant of RRT with rewiring of the tree structure
+  recommended: true
 - name: InformedRRT*
   paper: 'Informed RRT*: Optimal Sampling-based Path Planning Focused via Direct Sampling
     of an Admissible Ellipsoidal Heuristic'
@@ -135,6 +136,7 @@ methods:
   - grid
   parents: []
   description: Optimal graph search algorithm using heuristic functions to guide exploration
+  recommended: true
 - name: D*
   paper: Optimal and Efficient Path Planning for Partially-Known Environments
   arxiv: ''
@@ -300,6 +302,7 @@ methods:
     relation: inspires
   description: Model Predictive Path Integral control using sampling-based optimization
     with information-theoretic cost
+  recommended: true
 - name: MPPI-Generic
   paper: 'MPPI-Generic: A CUDA Library for Stochastic Optimization'
   arxiv: '2409.07563'

@@ -20,6 +20,7 @@ methods:
   parents: []
   description: First end-to-end deep network for scene flow on raw point clouds using
     flow embedding layers
+  recommended: true
 - name: HPLFlowNet
   paper: 'HPLFlowNet: Hierarchical Permutohedral Lattice FlowNet for Scene Flow Estimation
     on Large-Scale Point Clouds'
@@ -194,6 +195,7 @@ methods:
     relation: extends
   description: Decoder-focused architecture for scene flow with BEV features in autonomous
     driving
+  recommended: true
 - name: Flow4D
   paper: 'Flow4D: Leveraging 4D Voxel Network for LiDAR Scene Flow Estimation'
   arxiv: '2407.07995'
@@ -330,6 +332,7 @@ methods:
     relation: extends
   description: Recurrent all-pairs field transforms achieving state-of-the-art optical
     flow with iterative refinement
+  recommended: true
 - name: CamLiFlow
   paper: 'CamLiFlow: Bidirectional Camera-LiDAR Fusion for Joint Optical Flow and
     Scene Flow Estimation'

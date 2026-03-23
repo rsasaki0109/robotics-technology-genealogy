@@ -143,6 +143,7 @@ methods:
     relation: extends
   description: Multimodal large language model with strong reasoning across diverse
     tasks
+  recommended: true
 - name: Chinchilla
   paper: Training Compute-Optimal Large Language Models
   arxiv: '2203.15556'
@@ -267,6 +268,7 @@ methods:
   - name: LLaMA 2
     relation: extends
   description: Next-generation Llama with 8B-405B variants and multilingual support
+  recommended: true
 - name: LLaMA 4
   paper: The Llama 4 Herd of Models
   arxiv: null
@@ -535,6 +537,7 @@ methods:
     relation: extends
   description: Reasoning-focused model trained with RL to produce chain-of-thought
     solutions
+  recommended: true
 - name: Falcon
   paper: The Falcon Series of Open Language Models
   arxiv: '2311.16867'

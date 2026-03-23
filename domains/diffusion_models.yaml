@@ -24,6 +24,7 @@ methods:
   parents: []
   description: Foundational work establishing denoising diffusion probabilistic models
     for high-quality image generation
+  recommended: true
 - name: Score-Based SDE
   paper: Score-Based Generative Modeling through Stochastic Differential Equations
   arxiv: '2011.13456'
@@ -106,6 +107,7 @@ methods:
     relation: extends
   description: Open-source large-scale text-to-image model based on latent diffusion
     trained on LAION-5B dataset
+  recommended: true
 - name: Stable Diffusion XL
   paper: 'SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis'
   arxiv: '2307.01952'
@@ -195,6 +197,7 @@ methods:
     relation: extends
   description: Replacing UNet with transformer backbone in diffusion models demonstrating
     favorable scaling properties
+  recommended: true
 - name: SiT
   paper: 'SiT: Exploring Flow and Diffusion-based Generative Models with Scalable
     Interpolant Transformers'

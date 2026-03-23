@@ -44,6 +44,7 @@ methods:
   - name: SIFT
     relation: inspires
   description: Self-supervised CNN for joint keypoint detection and description
+  recommended: true
 - name: D2-Net
   paper: 'D2-Net: A Trainable CNN for Joint Description and Detection of Local Features'
   arxiv: '1905.03561'
@@ -86,6 +87,7 @@ methods:
   - name: SuperGlue
     relation: inspires
   description: Detector-free matching using transformers on dense features
+  recommended: true
 - name: LightGlue
   paper: 'LightGlue: Local Feature Matching at Light Speed'
   arxiv: '2306.13643'
@@ -115,6 +117,7 @@ methods:
   - name: LoFTR
     relation: inspires
   description: End-to-end dense stereo from uncalibrated image pairs
+  recommended: true
 - name: MASt3R
   paper: Grounding Image Matching in 3D with MASt3R
   arxiv: '2406.09756'

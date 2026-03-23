@@ -22,6 +22,7 @@ methods:
   - pretraining
   parents: []
   description: Contrastive image-text pretraining enabling zero-shot visual recognition
+  recommended: true
 - name: OpenCLIP
   paper: Reproducible Scaling Laws for Contrastive Language-Image Learning
   arxiv: '2212.07143'
@@ -332,6 +333,7 @@ methods:
     relation: inspires
   description: Visual instruction tuning connecting CLIP vision encoder with LLM via
     projection
+  recommended: true
 - name: LLaVA-1.5
   paper: Improved Baselines with Visual Instruction Tuning
   arxiv: '2310.03744'
@@ -461,6 +463,7 @@ methods:
     relation: extends
   description: Dynamic-resolution VLM with native video understanding and improved
     performance
+  recommended: true
 - name: Qwen2.5-VL
   paper: Qwen2.5-VL Technical Report
   arxiv: '2502.13923'

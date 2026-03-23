@@ -116,6 +116,7 @@ methods:
     relation: extends
   description: Simplified trust-region method using clipped surrogate objective for
     stable training
+  recommended: true
 - name: Rainbow
   paper: Rainbow — Combining Improvements in Deep Reinforcement Learning
   arxiv: '1710.02298'
@@ -164,6 +165,7 @@ methods:
     relation: extends
   description: Maximum entropy RL with stochastic policies for robust and sample-efficient
     learning
+  recommended: true
 - name: MPO
   paper: Maximum a Posteriori Policy Optimisation
   arxiv: '1806.06920'
@@ -356,6 +358,7 @@ methods:
     relation: replaces
   description: Directly optimizes policy from preferences without explicit reward
     model training
+  recommended: true
 - name: TD-MPC2
   paper: 'TD-MPC2: Scalable, Robust World Models for Continuous Control'
   arxiv: '2310.16828'

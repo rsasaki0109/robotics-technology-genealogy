@@ -71,6 +71,7 @@ methods:
     relation: inspires
   description: Large-scale benchmark with 1 billion grasp annotations for general
     object grasping in cluttered scenes
+  recommended: true
 - name: SuctionNet
   paper: 'SuctionNet-1Billion: A Large-Scale Benchmark for Suction Grasping'
   arxiv: '2103.12311'
@@ -104,6 +105,7 @@ methods:
     relation: extends
   description: Robust real-time grasp perception system handling spatial and temporal
     reasoning for diverse objects
+  recommended: true
 - name: VGN
   paper: 'Volumetric Grasping Network: Real-time 6 DOF Grasp Detection in Clutter'
   arxiv: '2101.01132'
@@ -136,6 +138,7 @@ methods:
     relation: extends
   description: Contact-based 6-DOF grasp generation using predicted contact maps for
     efficient grasping in clutter
+  recommended: true
 - name: GraspNeRF
   paper: 'GraspNeRF: Multiview-based 6-DoF Grasp Detection for Transparent and Specular
     Objects Using Generalizable NeRF'

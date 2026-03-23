@@ -197,6 +197,7 @@ methods:
   parents: []
   description: Robust relative monocular depth estimation via mixing diverse training
     datasets
+  recommended: true
 - name: DPT
   paper: Vision Transformers for Dense Prediction
   arxiv: '2103.13413'
@@ -230,6 +231,7 @@ methods:
     relation: extends
   description: Large-scale monocular depth foundation model trained on massive unlabeled
     data
+  recommended: true
 - name: ZoeDepth
   paper: 'ZoeDepth: Zero-shot Transfer by Combining Relative and Metric Depth'
   arxiv: '2302.12288'
@@ -262,6 +264,7 @@ methods:
     relation: inspires
   description: Diffusion-based monocular depth estimation repurposing Stable Diffusion
     image priors
+  recommended: true
 - name: RAFT-Stereo
   paper: 'RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching'
   arxiv: '2109.07547'
