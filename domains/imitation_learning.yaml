@@ -186,6 +186,7 @@ methods:
     relation: inspires
   description: Seminal work applying denoising diffusion to visuomotor policy learning
     with action sequence generation
+  recommended: true
 - name: 3D Diffusion Policy
   paper: '3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple
     3D Representations'
@@ -225,6 +226,7 @@ methods:
     relation: inspires
   description: Action chunking with transformers and CVAE for precise bimanual manipulation
     from teleoperation data
+  recommended: true
 - name: ALOHA
   paper: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware
   arxiv: '2304.13705'
@@ -359,6 +361,7 @@ methods:
     relation: inspires
   description: Open-source 7B VLA model fine-tuned from Prismatic VLM for generalist
     robot manipulation
+  recommended: true
 - name: Pi0
   paper: 'pi0: A Vision-Language-Action Flow Model for General Robot Control'
   arxiv: '2410.24164'

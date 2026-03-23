@@ -69,6 +69,7 @@ methods:
     relation: extends
   description: Region Proposal Network replaces selective search for fully differentiable
     two-stage detection
+  recommended: true
 - name: YOLO
   paper: 'You Only Look Once: Unified, Real-Time Object Detection'
   arxiv: '1506.02640'
@@ -296,6 +297,7 @@ methods:
     relation: extends
   description: Anchor-free design with decoupled head and task-aligned assigner for
     real-time detection
+  recommended: true
 - name: YOLOv9
   paper: 'YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information'
   arxiv: '2402.13616'
@@ -344,6 +346,7 @@ methods:
     relation: inspires
   description: First transformer-based detector using set prediction with bipartite
     matching loss
+  recommended: true
 - name: Deformable DETR
   paper: 'Deformable DETR: Deformable Transformers for End-to-End Object Detection'
   arxiv: '2010.04159'

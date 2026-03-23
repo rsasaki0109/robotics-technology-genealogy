@@ -135,6 +135,7 @@ methods:
     relation: combines
   description: Open-source Isaac Gym environments and PPO training for legged robot
     locomotion
+  recommended: true
 - name: ANYmal RL Locomotion
   paper: Learning Agile and Dynamic Motor Skills for Legged Robots
   arxiv: '1901.08652'
@@ -220,6 +221,7 @@ methods:
     relation: extends
   description: Single policy with diverse gait behaviors via multiplicity-of-behavior
     conditioning
+  recommended: true
 - name: DreamWaQ
   paper: 'DreamWaQ: Learning Robust Quadrupedal Locomotion With Implicit Terrain Imagination
     via Deep Reinforcement Learning'
@@ -277,6 +279,7 @@ methods:
     relation: extends
   description: Vision-based agile parkour on quadrupeds including jumps, climbs, and
     leaps via RL
+  recommended: true
 - name: Agile But Safe
   paper: 'Agile But Safe: Learning Collision-Free High-Speed Legged Locomotion'
   arxiv: '2401.17583'

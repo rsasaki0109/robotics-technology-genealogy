@@ -88,6 +88,7 @@ methods:
   - name: VINS-Mono
     relation: inspires
   description: Unified visual, visual-inertial, and multimap SLAM with improved robustness
+  recommended: true
 - name: OpenVSLAM
   paper: 'OpenVSLAM: A Versatile Visual SLAM Framework'
   arxiv: '1910.01122'
@@ -244,6 +245,7 @@ methods:
     relation: inspires
   description: End-to-end differentiable SLAM using recurrent iterative updates of
     camera poses and depth
+  recommended: true
 - name: DPVO
   paper: Deep Patch Visual Odometry
   arxiv: '2208.04726'
@@ -346,6 +348,7 @@ methods:
   - name: 3DGS
     relation: extends
   description: First 3D Gaussian Splatting SLAM for dense RGB-D tracking and mapping
+  recommended: true
 - name: MonoGS
   paper: Gaussian Splatting SLAM
   arxiv: '2312.06741'

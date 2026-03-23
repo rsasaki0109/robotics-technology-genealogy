@@ -112,6 +112,7 @@ methods:
     relation: replaces
   description: Iterative refinement with all-pairs correlation volumes and GRU-based
     updates
+  recommended: true
 - name: GMA
   paper: Learning to Estimate Hidden Motions with Global Motion Aggregation
   arxiv: '2104.02409'
@@ -158,6 +159,7 @@ methods:
     relation: combines
   description: Transformer-based architecture that tokenizes cost volumes for optical
     flow estimation
+  recommended: true
 - name: UniMatch
   paper: Unifying Flow, Stereo and Depth Estimation
   arxiv: '2211.05783'
@@ -175,6 +177,7 @@ methods:
     relation: extends
   description: Unified transformer framework for optical flow, stereo matching, and
     depth estimation
+  recommended: true
 - name: FlowFormer++
   paper: 'FlowFormer++: Masked Cost Volume Autoencoding for Pretraining Optical Flow
     Estimation'

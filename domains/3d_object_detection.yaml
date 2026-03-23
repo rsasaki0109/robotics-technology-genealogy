@@ -84,6 +84,7 @@ methods:
   - name: SECOND
     relation: extends
   description: Pillar-based point cloud encoding for fast 3D detection
+  recommended: true
 - name: Part-A2
   paper: 'Part-A^2 Net: 3D Part-Aware and Aggregation Neural Network for Object Detection
     from Point Cloud'
@@ -156,6 +157,7 @@ methods:
   - name: PointPillars
     relation: extends
   description: Anchor-free center-based 3D detector with built-in tracking
+  recommended: true
 - name: VoTr
   paper: Voxel Transformer for 3D Object Detection
   arxiv: '2109.02497'
@@ -287,6 +289,7 @@ methods:
     relation: inspires
   description: Spatiotemporal transformer for learning BEV representations from multi-camera
     images
+  recommended: true
 - name: StreamPETR
   paper: Exploring Object-Centric Temporal Modeling for Efficient Multi-View 3D Object
     Detection

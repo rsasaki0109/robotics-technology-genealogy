@@ -59,6 +59,7 @@ methods:
     relation: extends
   description: Skip connections enabling training of 100+ layer networks, backbone
     for most CV tasks
+  recommended: true
 - name: ResNeXt
   paper: Aggregated Residual Transformations for Deep Neural Networks
   arxiv: '1611.05431'
@@ -176,6 +177,7 @@ methods:
     relation: inspires
   description: Pure transformer applied to image patches, demonstrating transformers
     can match CNNs at scale
+  recommended: true
 - name: DeiT
   paper: Training data-efficient image transformers & distillation through attention
   arxiv: '2012.12877'
@@ -288,6 +290,7 @@ methods:
     relation: combines
   description: Universal visual features trained at scale, widely used as frozen backbone
     for robotics and CV
+  recommended: true
 - name: EVA-CLIP
   paper: 'EVA-CLIP: Improved Training Techniques for CLIP at Scale'
   arxiv: '2303.15389'

@@ -116,9 +116,13 @@ def domain_to_graph_data(domains: list[Domain]) -> dict:
         }
         border_color = BORDER_COLORS[oss]
 
+        rec_prefix = "\u2b50 " if m.recommended else ""
+        if m.recommended:
+            size = max(size, 40)
+
         nodes.append({
             "id": name,
-            "label": f"{m.name}\n[{m.year}]",
+            "label": f"{rec_prefix}{m.name}\n[{m.year}]",
             "title": title,
             "size": size,
             "color": {
@@ -131,6 +135,7 @@ def domain_to_graph_data(domains: list[Domain]) -> dict:
             "level": year_to_level[m.year],
             "oss": oss.value,
             "hasPaper": m.has_paper,
+            "recommended": m.recommended,
             "year": m.year,
             "arxiv": m.arxiv or "",
             "code": m.code or "",
@@ -235,6 +240,22 @@ def build_site_data(domains: list[Domain]) -> dict:
                 facts.append(f"{d.name}: {len(d.methods)} methods — led by {top.name} (★{top.stars:,})")
 
     site_data["facts"] = facts
+
+    # Hot 2025: recent high-star methods
+    recent = [m for m in all_methods if m.year >= 2024]
+    recent.sort(key=lambda m: m.stars or 0, reverse=True)
+    hot_2025 = []
+    for m in recent[:15]:
+        hot_2025.append({
+            "name": m.name,
+            "year": m.year,
+            "stars": m.stars or 0,
+            "domain": next((d.name for d in domains if m in d.methods), ""),
+            "code": m.code or "",
+            "arxiv": m.arxiv or "",
+        })
+    site_data["hot_2025"] = hot_2025
+
     return site_data
 
 
@@ -322,11 +343,18 @@ INDEX_HTML = """\
     padding: 10px 14px; font-size: 13px; line-height: 1.7; pointer-events: none;
   }
   .legend b { color: #fff; }
-  #stats-overlay {
+  #stats-overlay, #hot-overlay {
     display: none; position: fixed; inset: 0; z-index: 20000;
     background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
   }
-  #stats-overlay.visible { display: flex; }
+  #stats-overlay.visible, #hot-overlay.visible { display: flex; }
+  .hot-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 13px; border-bottom: 1px solid #222; }
+  .hot-row .hot-rank { color: #888; width: 28px; font-weight: 700; }
+  .hot-row .hot-name { flex: 1; }
+  .hot-row .hot-name a { color: #58a6ff; text-decoration: none; }
+  .hot-row .hot-name a:hover { text-decoration: underline; }
+  .hot-row .hot-domain { color: #888; font-size: 12px; margin: 0 12px; }
+  .hot-row .hot-stars { color: #eab308; white-space: nowrap; }
   .stats-panel {
     background: #161b22; border: 1px solid #333; border-radius: 12px;
     padding: 28px 32px; max-width: 720px; width: 90%; max-height: 85vh;
@@ -379,7 +407,9 @@ INDEX_HTML = """\
     <button class="filter-btn" id="btn-oss" title="Show only open source">OSS Only</button>
     <button class="filter-btn" id="btn-paper" title="Show only with paper">Paper Only</button>
     <button class="filter-btn" id="btn-nopaper" title="Show only without paper">No Paper</button>
+    <button class="filter-btn" id="btn-play" title="Animate timeline">&#9654; Play</button>
     <button class="filter-btn" id="btn-stats" title="Show project statistics">Stats</button>
+    <button class="filter-btn" id="btn-hot" title="2025 Hot Methods">&#128293; Hot</button>
     <span class="stats" id="stats"></span>
   </div>
   <a href="https://github.com/rsasaki0109/robotics-technology-genealogy" target="_blank">GitHub</a>
@@ -419,6 +449,15 @@ INDEX_HTML = """\
     <div id="st-oss"></div>
     <h3>Top 10 Repos by Stars</h3>
     <div id="st-top-stars"></div>
+  </div>
+</div>
+
+<div id="hot-overlay">
+  <div class="stats-panel">
+    <button class="close-btn" onclick="toggleHotPanel()">&times;</button>
+    <h2>&#128293; 2025 Hot Methods</h2>
+    <p style="color:#888;margin-bottom:16px;font-size:13px">Top recent methods (2024+) ranked by GitHub stars</p>
+    <div id="hot-list"></div>
   </div>
 </div>
 
@@ -763,6 +802,82 @@ function renderStatsPanel(stats) {
   });
 }
 
+let playTimer = null;
+function playTimeline() {
+  if (playTimer) { stopTimeline(); return; }
+  if (!currentGraphData) return;
+  const btn = document.getElementById("btn-play");
+  btn.textContent = "\\u23f9 Stop";
+  btn.classList.add("active");
+
+  const nodesByYear = {};
+  currentGraphData.nodes.forEach(n => {
+    const y = n.year || 2020;
+    if (!nodesByYear[y]) nodesByYear[y] = [];
+    nodesByYear[y].push(n);
+  });
+  const years = Object.keys(nodesByYear).sort();
+
+  const container = document.getElementById("graph");
+  const visNodes = new vis.DataSet();
+  const visEdges = new vis.DataSet();
+  if (network) network.destroy();
+  network = new vis.Network(container, {nodes: visNodes, edges: visEdges}, OPTIONS);
+
+  let i = 0;
+  playTimer = setInterval(() => {
+    if (i >= years.length) { stopTimeline(); return; }
+    const year = years[i];
+    const newNodes = nodesByYear[year];
+    // Highlight new nodes briefly
+    const highlighted = newNodes.map(n => ({...n, size: (n.size || 25) * 1.6}));
+    visNodes.add(highlighted);
+    setTimeout(() => {
+      newNodes.forEach(n => { visNodes.update({id: n.id, size: n.size || 25}); });
+    }, 500);
+    // Add edges where both endpoints exist
+    const nodeIds = new Set(visNodes.getIds());
+    currentGraphData.edges.forEach(e => {
+      const edgeId = e.from + "->" + e.to;
+      if (nodeIds.has(e.from) && nodeIds.has(e.to) && !visEdges.get(edgeId)) {
+        visEdges.add({...e, id: edgeId});
+      }
+    });
+    document.getElementById("stats").textContent = year + " \\u2014 " + visNodes.length + " methods";
+    i++;
+  }, 800);
+}
+function stopTimeline() {
+  if (playTimer) { clearInterval(playTimer); playTimer = null; }
+  document.getElementById("btn-play").textContent = "\\u25b6 Play";
+  document.getElementById("btn-play").classList.remove("active");
+  renderGraph(currentGraphData, false);
+}
+
+function toggleHotPanel() {
+  const overlay = document.getElementById("hot-overlay");
+  const btn = document.getElementById("btn-hot");
+  const isVisible = overlay.classList.toggle("visible");
+  btn.classList.toggle("active", isVisible);
+}
+
+function renderHotPanel() {
+  if (!DATA || !DATA.hot_2025) return;
+  const list = document.getElementById("hot-list");
+  list.innerHTML = "";
+  DATA.hot_2025.forEach((m, idx) => {
+    const link = m.code
+      ? '<a href="https://github.com/' + m.code + '" target="_blank">' + m.name + '</a>'
+      : (m.arxiv ? '<a href="https://arxiv.org/abs/' + m.arxiv + '" target="_blank">' + m.name + '</a>' : m.name);
+    list.innerHTML += '<div class="hot-row">' +
+      '<span class="hot-rank">#' + (idx + 1) + '</span>' +
+      '<span class="hot-name">' + link + ' <span style="color:#888">(' + m.year + ')</span></span>' +
+      '<span class="hot-domain">' + m.domain + '</span>' +
+      '<span class="hot-stars">\\u2605 ' + m.stars.toLocaleString() + '</span>' +
+      '</div>';
+  });
+}
+
 fetch("stats.json").then(r => r.json()).then(s => { STATS = s; renderStatsPanel(s); }).catch(() => {});
 
 fetch("data.json")
@@ -782,11 +897,14 @@ fetch("data.json")
     document.getElementById("btn-paper").addEventListener("click", () => toggleFilter("paper"));
     document.getElementById("btn-nopaper").addEventListener("click", () => toggleFilter("nopaper"));
     document.getElementById("btn-stats").addEventListener("click", () => toggleStatsPanel());
+    document.getElementById("btn-play").addEventListener("click", playTimeline);
+    document.getElementById("btn-hot").addEventListener("click", () => toggleHotPanel());
     const searchInput = document.getElementById("search");
     searchInput.addEventListener("change", (e) => { searchMethod(e.target.value); e.target.value = ""; });
     searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") { searchMethod(e.target.value); e.target.value = ""; } });
     buildSearchIndex();
     startTicker();
+    renderHotPanel();
     onCategoryChange();
   });
 </script>

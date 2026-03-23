@@ -162,6 +162,7 @@ methods:
     relation: extends
   description: Transformer-based fusion of camera and LiDAR features for end-to-end
     driving in CARLA
+  recommended: true
 - name: InterFuser
   paper: Safety-Enhanced Autonomous Driving Using Interpretable Sensor Fusion Transformer
   arxiv: '2207.14024'
@@ -243,6 +244,7 @@ methods:
     relation: inspires
   description: Unified framework connecting detection, tracking, mapping, prediction,
     and planning in one network
+  recommended: true
 - name: VAD
   paper: 'VAD: Vectorized Scene Representation for Efficient Autonomous Driving'
   arxiv: '2303.12077'
@@ -261,6 +263,7 @@ methods:
     relation: extends
   description: Replaces dense BEV representations with vectorized scene modeling for
     efficient end-to-end driving
+  recommended: true
 - name: GenAD
   paper: 'GenAD: Generalized Predictive Model for Autonomous Driving'
   arxiv: '2403.09630'

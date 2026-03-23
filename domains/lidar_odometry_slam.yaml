@@ -42,6 +42,7 @@ methods:
   - name: ICP
     relation: extends
   description: Real-time LiDAR odometry using edge and planar feature extraction
+  recommended: true
 - name: LeGO-LOAM
   paper: 'LeGO-LOAM: Lightweight and Ground-Optimized Lidar Odometry and Mapping on
     Variable Terrain'
@@ -186,6 +187,7 @@ methods:
     relation: extends
   description: Direct LiDAR-inertial odometry with incremental k-d tree for efficient
     map management
+  recommended: true
 - name: Faster-LIO
   paper: 'Faster-LIO: Lightweight Tightly Coupled Lidar-Inertial Odometry Using Parallel
     Sparse Incremental Voxels'
@@ -246,6 +248,7 @@ methods:
   - name: ICP
     relation: extends
   description: Simple and robust point-to-point ICP pipeline with adaptive thresholding
+  recommended: true
 - name: Norlab ICP Mapper
   paper: Robust and Accurate Mapping for Mobile Robots Based on ICP
   year: 2022

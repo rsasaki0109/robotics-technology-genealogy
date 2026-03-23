@@ -107,6 +107,7 @@ methods:
     relation: extends
   description: Next-generation ROS built on DDS with real-time support, security,
     and lifecycle management
+  recommended: true
 - name: micro-ROS
   year: 2020
   code: micro-ROS/micro_ros_setup
@@ -213,6 +214,7 @@ methods:
     relation: extends
   description: ROS 2 navigation framework with behavior trees, new planners, and lifecycle
     nodes
+  recommended: true
 - name: MoveIt 2
   year: 2021
   code: moveit/moveit2
@@ -300,6 +302,7 @@ methods:
     relation: extends
   description: Community-driven ROS 2 modular AD stack with perception, planning,
     and control components
+  recommended: true
 - name: Autoware Core
   year: 2022
   tags:
