@@ -198,6 +198,43 @@ def build_site_data(domains: list[Domain]) -> dict:
             if m.name not in site_data["method_index"]:
                 site_data["method_index"][m.name] = d.name
 
+    # Generate fun facts / insights
+    all_methods = [m for d in domains for m in d.methods]
+    facts = []
+
+    total = len(all_methods)
+    oldest = min(all_methods, key=lambda m: m.year)
+    newest = max(all_methods, key=lambda m: m.year)
+    facts.append(f"{total} technologies tracked — from {oldest.name} ({oldest.year}) to {newest.name} ({newest.year})")
+
+    top_stars = sorted([m for m in all_methods if m.stars], key=lambda m: m.stars, reverse=True)
+    if top_stars:
+        t = top_stars[0]
+        facts.append(f"Most starred: {t.name} with ★{t.stars:,} on GitHub")
+
+    # Count children per method across all domains
+    child_count: dict[str, int] = {}
+    for d in domains:
+        for m in d.methods:
+            for p in m.parents:
+                child_count[p.name] = child_count.get(p.name, 0) + 1
+    if child_count:
+        most_influential = max(child_count, key=child_count.get)
+        facts.append(f"Most influential: {most_influential} → {child_count[most_influential]} direct descendants")
+
+    oss_count = sum(1 for m in all_methods if m.inferred_open_source.value == "open")
+    facts.append(f"Open source ratio: {oss_count}/{total} ({100*oss_count//total}%) methods have public code")
+
+    facts.append(f"{len(domains)} domains: from LiDAR SLAM to LLMs, from surgical robots to diffusion models")
+
+    # Domain-specific highlights
+    for d in domains:
+        if len(d.methods) >= 30:
+            top = max(d.methods, key=lambda m: m.stars or 0)
+            if top.stars and top.stars > 5000:
+                facts.append(f"{d.name}: {len(d.methods)} methods — led by {top.name} (★{top.stars:,})")
+
+    site_data["facts"] = facts
     return site_data
 
 
@@ -234,6 +271,13 @@ INDEX_HTML = """\
   .filter-btn.active { color: #fff; border-color: #22c55e; background: #1a2e1a; }
   .filter-btn:hover { border-color: #666; }
   .stats { color: #888; font-size: 13px; white-space: nowrap; }
+  .ticker {
+    background: linear-gradient(90deg, #1a1d23 0%, #0e1117 50%, #1a1d23 100%);
+    padding: 8px 24px; text-align: center; font-size: 14px; color: #eab308;
+    border-bottom: 1px solid #333; overflow: hidden; white-space: nowrap;
+    animation: ticker-fade 8s ease-in-out infinite;
+  }
+  @keyframes ticker-fade { 0%,100% { opacity: 0.3; } 15%,85% { opacity: 1; } }
   .next-link { color: #22c55e; cursor: pointer; text-decoration: underline; }
   .next-link:hover { color: #4ade80; }
   #domain-banner {
@@ -322,6 +366,8 @@ INDEX_HTML = """\
 </style>
 </head>
 <body>
+
+<div id="ticker" class="ticker"><span id="ticker-text"></span></div>
 
 <div class="header">
   <h1>Robotics Technology Genealogy</h1>
@@ -548,6 +594,18 @@ function toggleFilter(key, btnId) {
   if (currentGraphData) renderGraph(currentGraphData, false);
 }
 
+let tickerIdx = 0;
+function startTicker() {
+  if (!DATA.facts || !DATA.facts.length) return;
+  const el = document.getElementById("ticker-text");
+  function update() {
+    el.textContent = DATA.facts[tickerIdx % DATA.facts.length];
+    tickerIdx++;
+  }
+  update();
+  setInterval(update, 8000);
+}
+
 function buildSearchIndex() {
   const list = document.getElementById("search-list");
   for (const name of Object.keys(DATA.method_index)) {
@@ -728,6 +786,7 @@ fetch("data.json")
     searchInput.addEventListener("change", (e) => { searchMethod(e.target.value); e.target.value = ""; });
     searchInput.addEventListener("keydown", (e) => { if (e.key === "Enter") { searchMethod(e.target.value); e.target.value = ""; } });
     buildSearchIndex();
+    startTicker();
     onCategoryChange();
   });
 </script>
