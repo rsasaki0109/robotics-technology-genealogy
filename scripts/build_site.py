@@ -405,17 +405,16 @@ INDEX_HTML = """\
 
 <div class="header">
   <h1>Robotics Technology Genealogy</h1>
+  <span style="color:#888; font-size:12px">Explore how 800+ technologies evolved. Click nodes for details.</span>
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
-    <input type="text" id="search" placeholder="Search method..." autocomplete="off" list="search-list">
+    <input type="text" id="search" placeholder="Try: NeRF, SLAM, GPT-4, YOLO..." autocomplete="off" list="search-list">
     <datalist id="search-list"></datalist>
-    <button class="filter-btn" id="btn-oss" title="Show only open source">OSS Only</button>
-    <button class="filter-btn" id="btn-paper" title="Show only with paper">Paper Only</button>
-    <button class="filter-btn" id="btn-nopaper" title="Show only without paper">No Paper</button>
-    <button class="filter-btn" id="btn-play" title="Animate timeline">&#9654; Play</button>
-    <button class="filter-btn" id="btn-stats" title="Show project statistics">Stats</button>
-    <button class="filter-btn" id="btn-hot" title="2025 Hot Methods">&#128293; Hot</button>
+    <button class="filter-btn" id="btn-play" title="Watch technologies emerge year by year">&#9654; Play Timeline</button>
+    <button class="filter-btn" id="btn-hot" title="Top trending methods in 2024-2025">&#128293; Hot</button>
+    <button class="filter-btn" id="btn-oss" title="Show only open source methods">OSS Only</button>
+    <button class="filter-btn" id="btn-stats" title="Show statistics">Stats</button>
     <span class="stats" id="stats"></span>
   </div>
   <a href="https://github.com/rsasaki0109/robotics-technology-genealogy" target="_blank">GitHub</a>
@@ -634,8 +633,6 @@ function toggleFilter(key, btnId) {
   if (key === "paper" && filters.paper) filters.nopaper = false;
   if (key === "nopaper" && filters.nopaper) filters.paper = false;
   document.getElementById("btn-oss").classList.toggle("active", filters.oss);
-  document.getElementById("btn-paper").classList.toggle("active", filters.paper);
-  document.getElementById("btn-nopaper").classList.toggle("active", filters.nopaper);
   if (currentGraphData) renderGraph(currentGraphData, false);
 }
 
@@ -900,8 +897,6 @@ fetch("data.json")
     catSelect.addEventListener("change", onCategoryChange);
     document.getElementById("domain").addEventListener("change", onDomainChange);
     document.getElementById("btn-oss").addEventListener("click", () => toggleFilter("oss"));
-    document.getElementById("btn-paper").addEventListener("click", () => toggleFilter("paper"));
-    document.getElementById("btn-nopaper").addEventListener("click", () => toggleFilter("nopaper"));
     document.getElementById("btn-stats").addEventListener("click", () => toggleStatsPanel());
     document.getElementById("btn-play").addEventListener("click", playTimeline);
     document.getElementById("btn-hot").addEventListener("click", () => toggleHotPanel());
