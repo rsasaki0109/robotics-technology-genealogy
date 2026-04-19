@@ -24,7 +24,7 @@ methods:
   arxiv: '1602.00763'
   year: 2016
   code: abewley/sort
-  stars: 4351
+  stars: 4355
   tags:
   - MOT
   - online
@@ -38,7 +38,7 @@ methods:
   arxiv: '1703.07402'
   year: 2017
   code: nwojke/deep_sort
-  stars: 6111
+  stars: 6118
   tags:
   - MOT
   - online
@@ -54,7 +54,7 @@ methods:
   arxiv: '1812.11703'
   year: 2019
   code: STVIR/pysot
-  stars: 4593
+  stars: 4594
   tags:
   - SOT
   - siamese
@@ -69,7 +69,7 @@ methods:
   arxiv: '2012.15460'
   year: 2021
   code: PeizeSun/TransTrack
-  stars: 673
+  stars: 672
   tags:
   - MOT
   - transformer
@@ -100,7 +100,7 @@ methods:
   arxiv: '2105.03247'
   year: 2022
   code: megvii-research/MOTR
-  stars: 794
+  stars: 795
   tags:
   - MOT
   - transformer
@@ -115,7 +115,7 @@ methods:
   arxiv: '2110.06864'
   year: 2022
   code: ifzhang/ByteTrack
-  stars: 6233
+  stars: 6297
   tags:
   - MOT
   - online
@@ -132,7 +132,7 @@ methods:
   arxiv: '2206.14651'
   year: 2022
   code: NirAharon/BoT-SORT
-  stars: 1395
+  stars: 1405
   tags:
   - MOT
   - online
@@ -165,7 +165,7 @@ methods:
   arxiv: '2006.06664'
   year: 2022
   code: SysCV/qdtrack
-  stars: 404
+  stars: 403
   tags:
   - MOT
   - quasi-dense
@@ -180,7 +180,7 @@ methods:
   arxiv: '2203.14360'
   year: 2023
   code: noahcao/OC_SORT
-  stars: 1065
+  stars: 1076
   tags:
   - MOT
   - online
@@ -230,7 +230,7 @@ methods:
   arxiv: '2306.08637'
   year: 2023
   code: google-deepmind/tapnet
-  stars: 1837
+  stars: 1851
   tags:
   - point-tracking
   - any-point
@@ -261,7 +261,7 @@ methods:
   arxiv: '2307.07635'
   year: 2024
   code: facebookresearch/co-tracker
-  stars: 4896
+  stars: 4908
   tags:
   - point-tracking
   - joint-tracking
@@ -292,7 +292,7 @@ methods:
   arxiv: '2410.11831'
   year: 2025
   code: facebookresearch/co-tracker
-  stars: 4896
+  stars: 4908
   tags:
   - point-tracking
   - pseudo-labeling
