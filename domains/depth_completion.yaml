@@ -25,7 +25,7 @@ methods:
   arxiv: '1807.00275'
   year: 2019
   code: fangchangma/self-supervised-depth-completion
-  stars: 652
+  stars: 651
   tags:
   - self-supervised
   - sparse-lidar
@@ -64,7 +64,7 @@ methods:
   arxiv: '2007.10042'
   year: 2020
   code: zzangjinsun/NLSPN_ECCV20
-  stars: 343
+  stars: 342
   tags:
   - spatial-propagation
   - non-local
@@ -88,7 +88,7 @@ methods:
   arxiv: '2304.13030'
   year: 2023
   code: youmi-zym/CompletionFormer
-  stars: 279
+  stars: 278
   tags:
   - transformer
   - cnn-transformer-hybrid
@@ -122,7 +122,7 @@ methods:
   arxiv: '2406.09414'
   year: 2025
   code: DepthAnything/Depth-Anything-V2
-  stars: 7893
+  stars: 7938
   tags:
   - foundation-model
   - monocular-depth
@@ -137,7 +137,7 @@ methods:
   arxiv: '2404.15506'
   year: 2025
   code: YvanYin/Metric3D
-  stars: 2162
+  stars: 2169
   tags:
   - foundation-model
   - metric-depth
@@ -154,7 +154,7 @@ methods:
   arxiv: '2406.11711'
   year: 2025
   code: princeton-vl/OGNI-DC
-  stars: 79
+  stars: 78
   tags:
   - optimization-guided
   - iterative-refinement
@@ -171,7 +171,7 @@ methods:
   arxiv: '2501.09898'
   year: 2025
   code: NVlabs/FoundationStereo
-  stars: 2634
+  stars: 2643
   tags:
   - foundation-model
   - stereo-matching
@@ -188,7 +188,7 @@ methods:
   arxiv: '1907.01341'
   year: 2020
   code: isl-org/MiDaS
-  stars: 5361
+  stars: 5370
   tags:
   - monocular-depth
   - zero-shot
@@ -218,7 +218,7 @@ methods:
   arxiv: '2401.10891'
   year: 2024
   code: LiheYoung/Depth-Anything
-  stars: 8061
+  stars: 8066
   tags:
   - monocular-depth
   - foundation-model
@@ -237,7 +237,7 @@ methods:
   arxiv: '2302.12288'
   year: 2023
   code: isl-org/ZoeDepth
-  stars: 2813
+  stars: 2815
   tags:
   - monocular-depth
   - metric-depth
@@ -253,7 +253,7 @@ methods:
   arxiv: '2312.02145'
   year: 2024
   code: prs-eth/Marigold
-  stars: 3116
+  stars: 3120
   tags:
   - monocular-depth
   - diffusion
@@ -270,7 +270,7 @@ methods:
   arxiv: '2109.07547'
   year: 2021
   code: princeton-vl/RAFT-Stereo
-  stars: 1052
+  stars: 1053
   tags:
   - stereo-matching
   - recurrent

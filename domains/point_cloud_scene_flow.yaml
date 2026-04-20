@@ -41,7 +41,7 @@ methods:
   arxiv: '1911.12408'
   year: 2020
   code: DylanWusee/PointPWC
-  stars: 161
+  stars: 159
   tags:
   - deep-learning
   - cost-volume
@@ -56,7 +56,7 @@ methods:
   arxiv: '2007.11142'
   year: 2020
   code: valeoai/FLOT
-  stars: 106
+  stars: 104
   tags:
   - deep-learning
   - optimal-transport
@@ -70,7 +70,7 @@ methods:
   arxiv: '2111.01253'
   year: 2021
   code: Lilac-Lee/Neural_Scene_Flow_Prior
-  stars: 137
+  stars: 138
   tags:
   - optimization
   - neural-prior
@@ -321,7 +321,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4014
+  stars: 4018
   tags:
   - deep-learning
   - optical-flow

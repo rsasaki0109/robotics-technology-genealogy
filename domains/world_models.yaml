@@ -14,7 +14,7 @@ methods:
   arxiv: '1803.10122'
   year: 2018
   code: hardmaru/WorldModelsExperiments
-  stars: 694
+  stars: 697
   tags:
   - vae
   - rnn
@@ -28,7 +28,7 @@ methods:
   arxiv: '1811.04551'
   year: 2019
   code: google-research/planet
-  stars: 1243
+  stars: 1245
   tags:
   - latent-dynamics
   - planning
@@ -44,7 +44,7 @@ methods:
   arxiv: '1912.01603'
   year: 2020
   code: danijar/dreamer
-  stars: 590
+  stars: 592
   tags:
   - latent-dynamics
   - imagination
@@ -60,7 +60,7 @@ methods:
   arxiv: '2010.02193'
   year: 2021
   code: danijar/dreamerv2
-  stars: 1030
+  stars: 1034
   tags:
   - discrete-latents
   - atari
@@ -76,7 +76,7 @@ methods:
   arxiv: '2206.14176'
   year: 2022
   code: danijar/daydreamer
-  stars: 414
+  stars: 418
   tags:
   - real-robot
   - model-based-rl
@@ -92,7 +92,7 @@ methods:
   arxiv: '2301.04104'
   year: 2023
   code: danijar/dreamerv3
-  stars: 3080
+  stars: 3106
   tags:
   - general-purpose
   - symlog
@@ -109,7 +109,7 @@ methods:
   arxiv: '1911.08265'
   year: 2020
   code: google-deepmind/mctx
-  stars: 2608
+  stars: 2612
   tags:
   - mcts
   - planning
@@ -143,7 +143,7 @@ methods:
   arxiv: '2310.16828'
   year: 2024
   code: nicklashansen/tdmpc2
-  stars: 788
+  stars: 794
   tags:
   - model-predictive-control
   - scalable
@@ -159,7 +159,7 @@ methods:
   arxiv: '2209.00588'
   year: 2023
   code: eloialonso/iris
-  stars: 876
+  stars: 877
   tags:
   - transformer
   - discrete-tokens
@@ -175,7 +175,7 @@ methods:
   arxiv: '2405.12399'
   year: 2024
   code: eloialonso/diamond
-  stars: 2011
+  stars: 2013
   tags:
   - diffusion
   - world-model
@@ -298,7 +298,7 @@ methods:
   arxiv: '2409.18964'
   year: 2024
   code: Genesis-Embodied-AI/Genesis
-  stars: 28488
+  stars: 28533
   tags:
   - physics-engine
   - generative
@@ -314,7 +314,7 @@ methods:
   arxiv: '2501.03575'
   year: 2025
   code: NVIDIA/Cosmos
-  stars: 8096
+  stars: 8100
   tags:
   - foundation-model
   - physical-ai
@@ -333,7 +333,7 @@ methods:
   arxiv: '2503.18945'
   year: 2025
   code: OpenRobotLab/Aether
-  stars: 586
+  stars: 587
   tags:
   - 3d-world-model
   - geometric-aware
@@ -351,7 +351,7 @@ methods:
   arxiv: '2404.08471'
   year: 2024
   code: facebookresearch/jepa
-  stars: 3705
+  stars: 3727
   tags:
   - self-supervised
   - video-prediction
@@ -367,7 +367,7 @@ methods:
   arxiv: '2411.17382'
   year: 2024
   code: etched-ai/open-oasis
-  stars: 2070
+  stars: 2074
   tags:
   - interactive
   - real-time
