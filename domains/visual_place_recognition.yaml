@@ -85,7 +85,7 @@ methods:
   arxiv: '2308.10832'
   year: 2023
   code: gmberton/EigenPlaces
-  stars: 148
+  stars: 149
   tags:
   - deep-learning
   - global-descriptor
@@ -100,7 +100,7 @@ methods:
   arxiv: '2303.02190'
   year: 2023
   code: amaralibey/MixVPR
-  stars: 316
+  stars: 317
   tags:
   - deep-learning
   - feature-mixing
@@ -135,7 +135,7 @@ methods:
     3D Point Cloud Map'
   year: 2018
   code: gisbi-kim/scancontext
-  stars: 103
+  stars: 105
   tags:
   - lidar
   - handcrafted
@@ -161,7 +161,7 @@ methods:
   arxiv: '2105.11344'
   year: 2020
   code: PRBonn/OverlapNet
-  stars: 724
+  stars: 725
   tags:
   - lidar
   - deep-learning
@@ -178,7 +178,7 @@ methods:
   arxiv: '2203.00972'
   year: 2022
   code: jac99/MinkLoc3Dv2
-  stars: 94
+  stars: 95
   tags:
   - lidar
   - deep-learning
@@ -210,7 +210,7 @@ methods:
   arxiv: '2209.12435'
   year: 2023
   code: hku-mars/STD
-  stars: 711
+  stars: 715
   tags:
   - lidar
   - handcrafted
@@ -243,7 +243,7 @@ methods:
   arxiv: '2304.07480'
   year: 2023
   code: hku-mars/btc_descriptor
-  stars: 326
+  stars: 327
   tags:
   - lidar
   - binary-descriptor
@@ -387,7 +387,7 @@ methods:
   arxiv: '2310.10023'
   year: 2023
   code: KOKIAOKI/3d_bbs
-  stars: 383
+  stars: 388
   tags:
   - lidar
   - global-localization

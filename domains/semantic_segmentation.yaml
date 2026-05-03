@@ -23,7 +23,7 @@ methods:
   arxiv: '1505.04597'
   year: 2015
   code: milesial/Pytorch-UNet
-  stars: 11404
+  stars: 11420
   tags:
   - semantic
   - encoder-decoder
@@ -135,7 +135,7 @@ methods:
   arxiv: '2001.04074'
   year: 2020
   code: openseg-group/OCNet.pytorch
-  stars: 813
+  stars: 814
   tags:
   - semantic
   - object-context
@@ -150,7 +150,7 @@ methods:
   arxiv: '2105.15203'
   year: 2021
   code: NVlabs/SegFormer
-  stars: 3464
+  stars: 3474
   tags:
   - semantic
   - transformer
@@ -181,7 +181,7 @@ methods:
   arxiv: '1703.06870'
   year: 2017
   code: facebookresearch/detectron2
-  stars: 34422
+  stars: 34444
   tags:
   - instance
   - two-stage
@@ -196,7 +196,7 @@ methods:
   arxiv: '1912.04488'
   year: 2020
   code: WXinlong/SOLO
-  stars: 1751
+  stars: 1752
   tags:
   - instance
   - single-stage
@@ -211,7 +211,7 @@ methods:
   arxiv: '2003.10152'
   year: 2020
   code: WXinlong/SOLO
-  stars: 1751
+  stars: 1752
   tags:
   - instance
   - single-stage
@@ -240,7 +240,7 @@ methods:
   arxiv: '1901.02446'
   year: 2019
   code: facebookresearch/detectron2
-  stars: 34422
+  stars: 34444
   tags:
   - panoptic
   - fpn
@@ -255,7 +255,7 @@ methods:
   arxiv: '2107.06278'
   year: 2021
   code: facebookresearch/MaskFormer
-  stars: 1457
+  stars: 1458
   tags:
   - panoptic
   - semantic
@@ -271,7 +271,7 @@ methods:
   arxiv: '2112.01527'
   year: 2022
   code: facebookresearch/Mask2Former
-  stars: 3330
+  stars: 3335
   tags:
   - panoptic
   - instance
@@ -289,7 +289,7 @@ methods:
   arxiv: '2211.06220'
   year: 2022
   code: SHI-Labs/OneFormer
-  stars: 1711
+  stars: 1713
   tags:
   - panoptic
   - instance
@@ -320,7 +320,7 @@ methods:
   arxiv: '2304.02643'
   year: 2023
   code: facebookresearch/segment-anything
-  stars: 54041
+  stars: 54081
   tags:
   - foundation
   - promptable
@@ -337,7 +337,7 @@ methods:
   arxiv: '2408.00714'
   year: 2024
   code: facebookresearch/sam2
-  stars: 19022
+  stars: 19074
   tags:
   - foundation
   - promptable
@@ -353,7 +353,7 @@ methods:
   arxiv: '2304.03284'
   year: 2023
   code: baaivision/Painter
-  stars: 2590
+  stars: 2588
   tags:
   - foundation
   - in-context
@@ -369,7 +369,7 @@ methods:
   arxiv: '2303.05499'
   year: 2023
   code: IDEA-Research/Grounded-Segment-Anything
-  stars: 17547
+  stars: 17553
   tags:
   - foundation
   - open-vocabulary
@@ -401,7 +401,7 @@ methods:
   arxiv: '2312.00863'
   year: 2024
   code: yformer/EfficientSAM
-  stars: 2477
+  stars: 2475
   tags:
   - foundation
   - efficient
@@ -417,7 +417,7 @@ methods:
   arxiv: '2306.12156'
   year: 2023
   code: CASIA-IVA-Lab/FastSAM
-  stars: 8317
+  stars: 8321
   tags:
   - foundation
   - real-time
@@ -432,7 +432,7 @@ methods:
   arxiv: '2306.14289'
   year: 2023
   code: ChaoningZhang/MobileSAM
-  stars: 5729
+  stars: 5738
   tags:
   - foundation
   - mobile
@@ -447,7 +447,7 @@ methods:
   arxiv: '2306.01567'
   year: 2023
   code: SysCV/SAM-HQ
-  stars: 4213
+  stars: 4214
   tags:
   - foundation
   - high-quality
@@ -462,7 +462,7 @@ methods:
   arxiv: '1904.08755'
   year: 2019
   code: NVIDIA/MinkowskiEngine
-  stars: 2911
+  stars: 2914
   tags:
   - 3d
   - sparse-convolution
@@ -476,7 +476,7 @@ methods:
   arxiv: '1911.11236'
   year: 2020
   code: QingyongHu/RandLA-Net
-  stars: 1538
+  stars: 1541
   tags:
   - 3d
   - point-cloud
@@ -492,7 +492,7 @@ methods:
   arxiv: '2011.10033'
   year: 2021
   code: xinge008/Cylinder3D
-  stars: 949
+  stars: 950
   tags:
   - 3d
   - point-cloud
@@ -508,7 +508,7 @@ methods:
   arxiv: '2210.05666'
   year: 2022
   code: Pointcept/Pointcept
-  stars: 2985
+  stars: 3000
   tags:
   - 3d
   - point-cloud
@@ -524,7 +524,7 @@ methods:
   arxiv: '2312.10035'
   year: 2024
   code: Pointcept/Pointcept
-  stars: 2985
+  stars: 3000
   tags:
   - 3d
   - point-cloud
@@ -541,7 +541,7 @@ methods:
   arxiv: '2207.07115'
   year: 2022
   code: hkchengrex/XMem
-  stars: 1969
+  stars: 1968
   tags:
   - video
   - memory
@@ -557,7 +557,7 @@ methods:
   arxiv: '2310.12982'
   year: 2024
   code: hkchengrex/Cutie
-  stars: 1040
+  stars: 1039
   tags:
   - video
   - object-centric

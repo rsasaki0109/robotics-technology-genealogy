@@ -99,7 +99,7 @@ methods:
   arxiv: '2108.13035'
   year: 2021
   code: med-air/SurRoL
-  stars: 252
+  stars: 253
   tags:
   - reinforcement-learning
   - surgical-robot
@@ -167,7 +167,7 @@ methods:
   arxiv: '2404.16027'
   year: 2024
   code: orbit-surgical/orbit-surgical
-  stars: 166
+  stars: 167
   tags:
   - simulation
   - isaac-sim
