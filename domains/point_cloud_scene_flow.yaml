@@ -183,7 +183,7 @@ methods:
   arxiv: '2401.16122'
   year: 2024
   code: KTH-RPL/DeFlow
-  stars: 132
+  stars: 131
   tags:
   - deep-learning
   - decoder
@@ -321,7 +321,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4026
+  stars: 4029
   tags:
   - deep-learning
   - optical-flow

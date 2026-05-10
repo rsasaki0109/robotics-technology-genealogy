@@ -125,7 +125,7 @@ methods:
   arxiv: '2207.07601'
   year: 2022
   code: OpenDriveLab/ST-P3
-  stars: 433
+  stars: 436
   open_source: open
   license: ''
   tags:
@@ -146,7 +146,7 @@ methods:
   arxiv: '2104.09224'
   year: 2022
   code: autonomousvision/transfuser
-  stars: 1545
+  stars: 1547
   open_source: open
   license: ''
   tags:
@@ -168,7 +168,7 @@ methods:
   arxiv: '2207.14024'
   year: 2022
   code: opendilab/InterFuser
-  stars: 645
+  stars: 646
   open_source: open
   license: ''
   tags:
@@ -187,7 +187,7 @@ methods:
   arxiv: '2206.08129'
   year: 2023
   code: OpenDriveLab/TCP
-  stars: 480
+  stars: 481
   open_source: open
   license: ''
   tags:
@@ -228,7 +228,7 @@ methods:
   arxiv: '2212.10156'
   year: 2023
   code: OpenDriveLab/UniAD
-  stars: 4591
+  stars: 4607
   open_source: open
   license: Apache-2.0
   tags:
@@ -250,7 +250,7 @@ methods:
   arxiv: '2303.12077'
   year: 2023
   code: hustvl/VAD
-  stars: 1298
+  stars: 1301
   open_source: open
   license: Apache-2.0
   tags:
@@ -388,7 +388,7 @@ methods:
   arxiv: '2311.16038'
   year: 2024
   code: wzzheng/OccWorld
-  stars: 546
+  stars: 549
   open_source: open
   license: ''
   tags:
@@ -409,7 +409,7 @@ methods:
   arxiv: '2309.09777'
   year: 2024
   code: JeffWang987/DriveDreamer
-  stars: 565
+  stars: 566
   open_source: open
   license: ''
   tags:
@@ -427,7 +427,7 @@ methods:
   arxiv: '2312.07488'
   year: 2024
   code: opendilab/LMDrive
-  stars: 895
+  stars: 899
   open_source: open
   license: ''
   tags:
@@ -468,7 +468,7 @@ methods:
   arxiv: '2411.15139'
   year: 2024
   code: hustvl/DiffusionDrive
-  stars: 1381
+  stars: 1389
   open_source: open
   license: ''
   tags:
@@ -487,7 +487,7 @@ methods:
   arxiv: '2405.19620'
   year: 2025
   code: swc-17/SparseDrive
-  stars: 928
+  stars: 929
   open_source: open
   license: ''
   tags:

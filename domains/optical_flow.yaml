@@ -101,7 +101,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4026
+  stars: 4029
   tags:
   - deep-learning
   - recurrent
@@ -118,7 +118,7 @@ methods:
   arxiv: '2104.02409'
   year: 2021
   code: zacjiang/GMA
-  stars: 335
+  stars: 336
   tags:
   - deep-learning
   - attention
@@ -133,7 +133,7 @@ methods:
   arxiv: '2111.13680'
   year: 2022
   code: haofeixu/gmflow
-  stars: 781
+  stars: 782
   tags:
   - deep-learning
   - transformer
@@ -184,7 +184,7 @@ methods:
   arxiv: '2303.01237'
   year: 2023
   code: XiaoyuShi97/FlowFormerPlusPlus
-  stars: 195
+  stars: 196
   tags:
   - deep-learning
   - transformer
@@ -200,7 +200,7 @@ methods:
   arxiv: '2303.08340'
   year: 2023
   code: XiaoyuShi97/VideoFlow
-  stars: 324
+  stars: 325
   tags:
   - deep-learning
   - multi-frame
@@ -217,7 +217,7 @@ methods:
   arxiv: '2405.14793'
   year: 2024
   code: princeton-vl/SEA-RAFT
-  stars: 641
+  stars: 645
   tags:
   - deep-learning
   - efficient
@@ -233,7 +233,7 @@ methods:
   arxiv: '2404.04808'
   year: 2024
   code: DQiaole/MemFlow
-  stars: 229
+  stars: 230
   tags:
   - deep-learning
   - memory

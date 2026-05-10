@@ -10,7 +10,7 @@ methods:
   arxiv: '1411.4038'
   year: 2015
   code: shelhamer/fcn.berkeleyvision.org
-  stars: 3355
+  stars: 3352
   tags:
   - semantic
   - fully-convolutional
@@ -23,7 +23,7 @@ methods:
   arxiv: '1505.04597'
   year: 2015
   code: milesial/Pytorch-UNet
-  stars: 11420
+  stars: 11432
   tags:
   - semantic
   - encoder-decoder
@@ -150,7 +150,7 @@ methods:
   arxiv: '2105.15203'
   year: 2021
   code: NVlabs/SegFormer
-  stars: 3474
+  stars: 3478
   tags:
   - semantic
   - transformer
@@ -181,7 +181,7 @@ methods:
   arxiv: '1703.06870'
   year: 2017
   code: facebookresearch/detectron2
-  stars: 34444
+  stars: 34456
   tags:
   - instance
   - two-stage
@@ -196,7 +196,7 @@ methods:
   arxiv: '1912.04488'
   year: 2020
   code: WXinlong/SOLO
-  stars: 1752
+  stars: 1755
   tags:
   - instance
   - single-stage
@@ -211,7 +211,7 @@ methods:
   arxiv: '2003.10152'
   year: 2020
   code: WXinlong/SOLO
-  stars: 1752
+  stars: 1755
   tags:
   - instance
   - single-stage
@@ -240,7 +240,7 @@ methods:
   arxiv: '1901.02446'
   year: 2019
   code: facebookresearch/detectron2
-  stars: 34444
+  stars: 34456
   tags:
   - panoptic
   - fpn
@@ -271,7 +271,7 @@ methods:
   arxiv: '2112.01527'
   year: 2022
   code: facebookresearch/Mask2Former
-  stars: 3335
+  stars: 3339
   tags:
   - panoptic
   - instance
@@ -320,7 +320,7 @@ methods:
   arxiv: '2304.02643'
   year: 2023
   code: facebookresearch/segment-anything
-  stars: 54081
+  stars: 54120
   tags:
   - foundation
   - promptable
@@ -337,7 +337,7 @@ methods:
   arxiv: '2408.00714'
   year: 2024
   code: facebookresearch/sam2
-  stars: 19074
+  stars: 19117
   tags:
   - foundation
   - promptable
@@ -353,7 +353,7 @@ methods:
   arxiv: '2304.03284'
   year: 2023
   code: baaivision/Painter
-  stars: 2588
+  stars: 2587
   tags:
   - foundation
   - in-context
@@ -369,7 +369,7 @@ methods:
   arxiv: '2303.05499'
   year: 2023
   code: IDEA-Research/Grounded-Segment-Anything
-  stars: 17553
+  stars: 17565
   tags:
   - foundation
   - open-vocabulary
@@ -385,7 +385,7 @@ methods:
   arxiv: '2304.06718'
   year: 2023
   code: UX-Decoder/Segment-Everything-Everywhere-All-At-Once
-  stars: 4777
+  stars: 4781
   tags:
   - foundation
   - multi-modal
@@ -401,7 +401,7 @@ methods:
   arxiv: '2312.00863'
   year: 2024
   code: yformer/EfficientSAM
-  stars: 2475
+  stars: 2473
   tags:
   - foundation
   - efficient
@@ -417,7 +417,7 @@ methods:
   arxiv: '2306.12156'
   year: 2023
   code: CASIA-IVA-Lab/FastSAM
-  stars: 8321
+  stars: 8330
   tags:
   - foundation
   - real-time
@@ -432,7 +432,7 @@ methods:
   arxiv: '2306.14289'
   year: 2023
   code: ChaoningZhang/MobileSAM
-  stars: 5738
+  stars: 5745
   tags:
   - foundation
   - mobile
@@ -447,7 +447,7 @@ methods:
   arxiv: '2306.01567'
   year: 2023
   code: SysCV/SAM-HQ
-  stars: 4214
+  stars: 4216
   tags:
   - foundation
   - high-quality
@@ -462,7 +462,7 @@ methods:
   arxiv: '1904.08755'
   year: 2019
   code: NVIDIA/MinkowskiEngine
-  stars: 2914
+  stars: 2918
   tags:
   - 3d
   - sparse-convolution
@@ -508,7 +508,7 @@ methods:
   arxiv: '2210.05666'
   year: 2022
   code: Pointcept/Pointcept
-  stars: 3000
+  stars: 3017
   tags:
   - 3d
   - point-cloud
@@ -524,7 +524,7 @@ methods:
   arxiv: '2312.10035'
   year: 2024
   code: Pointcept/Pointcept
-  stars: 3000
+  stars: 3017
   tags:
   - 3d
   - point-cloud
@@ -541,7 +541,7 @@ methods:
   arxiv: '2207.07115'
   year: 2022
   code: hkchengrex/XMem
-  stars: 1968
+  stars: 1970
   tags:
   - video
   - memory
@@ -557,7 +557,7 @@ methods:
   arxiv: '2310.12982'
   year: 2024
   code: hkchengrex/Cutie
-  stars: 1039
+  stars: 1042
   tags:
   - video
   - object-centric
@@ -573,7 +573,7 @@ methods:
   arxiv: '2201.03546'
   year: 2022
   code: isl-org/lang-seg
-  stars: 827
+  stars: 828
   tags:
   - semantic
   - open-vocabulary
