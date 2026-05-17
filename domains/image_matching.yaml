@@ -35,7 +35,7 @@ methods:
   arxiv: '1712.07629'
   year: 2018
   code: magicleap/SuperPointPretrainedNetwork
-  stars: 2168
+  stars: 2169
   tags:
   - feature-detection
   - learned
@@ -50,7 +50,7 @@ methods:
   arxiv: '1905.03561'
   year: 2019
   code: mihaidusmanu/d2-net
-  stars: 846
+  stars: 845
   tags:
   - feature-detection
   - learned
@@ -64,7 +64,7 @@ methods:
   arxiv: '1911.11763'
   year: 2020
   code: magicleap/SuperGluePretrainedNetwork
-  stars: 4006
+  stars: 4010
   tags:
   - feature-matching
   - graph-neural-network
@@ -78,7 +78,7 @@ methods:
   arxiv: '2104.00680'
   year: 2021
   code: zju3dv/LoFTR
-  stars: 2879
+  stars: 2885
   tags:
   - feature-matching
   - transformer
@@ -93,7 +93,7 @@ methods:
   arxiv: '2306.13643'
   year: 2023
   code: cvg/LightGlue
-  stars: 4513
+  stars: 4532
   tags:
   - feature-matching
   - lightweight
@@ -107,7 +107,7 @@ methods:
   arxiv: '2312.14132'
   year: 2024
   code: naver/dust3r
-  stars: 7127
+  stars: 7142
   tags:
   - 3d-reconstruction
   - dense-matching
@@ -123,7 +123,7 @@ methods:
   arxiv: '2406.09756'
   year: 2024
   code: naver/mast3r
-  stars: 2895
+  stars: 2916
   tags:
   - 3d-reconstruction
   - feature-matching
@@ -185,7 +185,7 @@ methods:
     relation: extends
   description: Local feature learning via policy gradient without non-differentiable
     operations
-  stars: 377
+  stars: 378
 - name: Patch2Pix
   paper: 'Patch2Pix: Epipolar-Guided Pixel-Level Correspondences'
   arxiv: '2012.01909'
@@ -263,7 +263,7 @@ methods:
     relation: extends
   description: Efficient variant of LoFTR achieving sparse-method speed with semi-dense
     accuracy
-  stars: 1002
+  stars: 1004
 - name: RoMa
   paper: 'RoMa: Robust Dense Feature Matching'
   arxiv: '2305.15404'
@@ -278,7 +278,7 @@ methods:
     relation: extends
   description: Robust dense feature matching using coarse-to-fine warp and certainty
     estimation
-  stars: 1212
+  stars: 1218
 - name: GIM
   paper: 'GIM: Learning Generalizable Image Matcher From Internet Videos'
   arxiv: '2402.11095'
@@ -293,7 +293,7 @@ methods:
     relation: extends
   description: Generalizable image matcher trained on internet videos for broad domain
     matching
-  stars: 885
+  stars: 886
 - name: XFeat
   paper: 'XFeat: Accelerated Features for Lightweight Image Matching'
   arxiv: '2404.19174'
@@ -308,7 +308,7 @@ methods:
   - name: SuperPoint
     relation: extends
   description: Lightweight and accelerated learned features for real-time image matching
-  stars: 1618
+  stars: 1621
 - name: OmniGlue
   paper: 'OmniGlue: Generalizable Feature Matching with Foundation Model Guidance'
   arxiv: '2405.12979'
@@ -322,7 +322,7 @@ methods:
   - name: LightGlue
     relation: extends
   description: Generalizable feature matcher guided by foundation model priors
-  stars: 712
+  stars: 713
 - name: MASt3R-SfM
   paper: 'MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion'
   arxiv: '2409.19152'
@@ -336,7 +336,7 @@ methods:
   - name: MASt3R
     relation: extends
   description: Fully-integrated SfM pipeline built on MASt3R for unconstrained reconstruction
-  stars: 2895
+  stars: 2916
 - name: VGGSfM
   paper: 'VGGSfM: Visual Geometry Grounded Deep Structure From Motion'
   arxiv: '2312.04563'
@@ -351,7 +351,7 @@ methods:
   - name: DUSt3R
     relation: inspires
   description: End-to-end differentiable SfM grounded in visual geometry principles
-  stars: 1382
+  stars: 1386
 - name: Steerers
   paper: 'Steerers: A Framework for Rotation Equivariant Keypoint Descriptors'
   arxiv: '2312.02152'
@@ -387,7 +387,7 @@ methods:
   arxiv: '2408.16061'
   year: 2025
   code: HengyiWang/spann3r
-  stars: 1125
+  stars: 1127
   tags:
   - 3d-reconstruction
   - dense-matching
@@ -403,7 +403,7 @@ methods:
   arxiv: '2412.12392'
   year: 2025
   code: rmurai0610/MASt3R-SLAM
-  stars: 2996
+  stars: 3019
   tags:
   - slam
   - dense-matching
@@ -434,7 +434,7 @@ methods:
   paper: Structure-from-Motion Revisited
   year: 2016
   code: colmap/colmap
-  stars: 11647
+  stars: 11705
   tags:
   - structure-from-motion
   - multi-view-stereo
@@ -450,7 +450,7 @@ methods:
   arxiv: '1812.03506'
   year: 2019
   code: cvg/Hierarchical-Localization
-  stars: 4072
+  stars: 4082
   tags:
   - localization
   - hierarchical
@@ -500,7 +500,7 @@ methods:
   arxiv: '2503.11651'
   year: 2025
   code: facebookresearch/vggt
-  stars: 13069
+  stars: 13124
   tags:
   - 3d-reconstruction
   - visual-geometry

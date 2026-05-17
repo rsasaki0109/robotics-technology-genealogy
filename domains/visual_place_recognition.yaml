@@ -37,7 +37,7 @@ methods:
   arxiv: '1511.07247'
   year: 2016
   code: Relja/netvlad
-  stars: 599
+  stars: 601
   tags:
   - deep-learning
   - vlad
@@ -54,7 +54,7 @@ methods:
   arxiv: '2103.01486'
   year: 2021
   code: QVPR/Patch-NetVLAD
-  stars: 587
+  stars: 588
   tags:
   - deep-learning
   - vlad
@@ -70,7 +70,7 @@ methods:
   arxiv: '2204.02287'
   year: 2022
   code: gmberton/CosPlace
-  stars: 389
+  stars: 391
   tags:
   - deep-learning
   - global-descriptor
@@ -85,7 +85,7 @@ methods:
   arxiv: '2308.10832'
   year: 2023
   code: gmberton/EigenPlaces
-  stars: 150
+  stars: 151
   tags:
   - deep-learning
   - global-descriptor
@@ -100,7 +100,7 @@ methods:
   arxiv: '2303.02190'
   year: 2023
   code: amaralibey/MixVPR
-  stars: 319
+  stars: 321
   tags:
   - deep-learning
   - feature-mixing
@@ -118,7 +118,7 @@ methods:
   arxiv: '2308.00688'
   year: 2024
   code: AnyLoc/AnyLoc
-  stars: 602
+  stars: 606
   tags:
   - deep-learning
   - foundation-model
@@ -135,7 +135,7 @@ methods:
     3D Point Cloud Map'
   year: 2018
   code: gisbi-kim/scancontext
-  stars: 106
+  stars: 108
   tags:
   - lidar
   - handcrafted
@@ -161,7 +161,7 @@ methods:
   arxiv: '2105.11344'
   year: 2020
   code: PRBonn/OverlapNet
-  stars: 727
+  stars: 728
   tags:
   - lidar
   - deep-learning
@@ -210,7 +210,7 @@ methods:
   arxiv: '2209.12435'
   year: 2023
   code: hku-mars/STD
-  stars: 716
+  stars: 718
   tags:
   - lidar
   - handcrafted
@@ -243,7 +243,7 @@ methods:
   arxiv: '2304.07480'
   year: 2023
   code: hku-mars/btc_descriptor
-  stars: 329
+  stars: 331
   tags:
   - lidar
   - binary-descriptor
@@ -293,7 +293,7 @@ methods:
   arxiv: '2502.15691'
   year: 2025
   code: AnyLoc/AnyLoc
-  stars: 602
+  stars: 606
   tags:
   - deep-learning
   - foundation-model
@@ -309,7 +309,7 @@ methods:
   arxiv: '2407.02230'
   year: 2025
   code: Lu-Feng/SelaVPR
-  stars: 264
+  stars: 266
   tags:
   - deep-learning
   - self-supervised
