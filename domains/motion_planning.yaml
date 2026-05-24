@@ -308,7 +308,7 @@ methods:
   arxiv: '2409.07563'
   year: 2024
   code: ACDSLab/MPPI-Generic
-  stars: 276
+  stars: 278
   tags:
   - sampling-based
   - mpc
@@ -384,7 +384,7 @@ methods:
   arxiv: '2306.07962'
   year: 2023
   code: autonomousvision/tuplan_garage
-  stars: 700
+  stars: 701
   tags:
   - rule-based
   - planning
@@ -399,7 +399,7 @@ methods:
   arxiv: ''
   year: 2024
   code: autonomousvision/tuplan_garage
-  stars: 700
+  stars: 701
   tags:
   - hybrid
   - learning
@@ -416,7 +416,7 @@ methods:
   arxiv: '2310.05018'
   year: 2024
   code: jchengai/planTF
-  stars: 366
+  stars: 367
   tags:
   - transformer
   - planning

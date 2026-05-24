@@ -29,7 +29,7 @@ methods:
   arxiv: ''
   year: 2012
   code: uw-biorobotics/raven2
-  stars: 58
+  stars: 59
   tags:
   - surgical-robot
   - open-source
@@ -99,7 +99,7 @@ methods:
   arxiv: '2108.13035'
   year: 2021
   code: med-air/SurRoL
-  stars: 255
+  stars: 256
   tags:
   - reinforcement-learning
   - surgical-robot
@@ -167,7 +167,7 @@ methods:
   arxiv: '2404.16027'
   year: 2024
   code: orbit-surgical/orbit-surgical
-  stars: 170
+  stars: 171
   tags:
   - simulation
   - isaac-sim

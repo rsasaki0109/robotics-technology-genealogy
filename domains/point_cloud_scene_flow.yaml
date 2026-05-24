@@ -321,7 +321,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4030
+  stars: 4037
   tags:
   - deep-learning
   - optical-flow
