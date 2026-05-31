@@ -45,7 +45,7 @@ methods:
   arxiv: ''
   year: 2014
   code: jhu-dvrk/sawIntuitiveResearchKit
-  stars: 156
+  stars: 158
   tags:
   - surgical-robot
   - open-source
@@ -167,7 +167,7 @@ methods:
   arxiv: '2404.16027'
   year: 2024
   code: orbit-surgical/orbit-surgical
-  stars: 171
+  stars: 172
   tags:
   - simulation
   - isaac-sim

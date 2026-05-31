@@ -24,7 +24,7 @@ methods:
   arxiv: '1602.00763'
   year: 2016
   code: abewley/sort
-  stars: 4364
+  stars: 4367
   tags:
   - MOT
   - online
@@ -38,7 +38,7 @@ methods:
   arxiv: '1703.07402'
   year: 2017
   code: nwojke/deep_sort
-  stars: 6137
+  stars: 6140
   tags:
   - MOT
   - online
@@ -54,7 +54,7 @@ methods:
   arxiv: '1812.11703'
   year: 2019
   code: STVIR/pysot
-  stars: 4601
+  stars: 4602
   tags:
   - SOT
   - siamese
@@ -69,7 +69,7 @@ methods:
   arxiv: '2012.15460'
   year: 2021
   code: PeizeSun/TransTrack
-  stars: 670
+  stars: 671
   tags:
   - MOT
   - transformer
@@ -84,7 +84,7 @@ methods:
   arxiv: '2101.02702'
   year: 2022
   code: timmeinhardt/trackformer
-  stars: 634
+  stars: 635
   tags:
   - MOT
   - transformer
@@ -100,7 +100,7 @@ methods:
   arxiv: '2105.03247'
   year: 2022
   code: megvii-research/MOTR
-  stars: 801
+  stars: 802
   tags:
   - MOT
   - transformer
@@ -115,7 +115,7 @@ methods:
   arxiv: '2110.06864'
   year: 2022
   code: ifzhang/ByteTrack
-  stars: 6397
+  stars: 6421
   tags:
   - MOT
   - online
@@ -132,7 +132,7 @@ methods:
   arxiv: '2206.14651'
   year: 2022
   code: NirAharon/BoT-SORT
-  stars: 1438
+  stars: 1447
   tags:
   - MOT
   - online
@@ -165,7 +165,7 @@ methods:
   arxiv: '2006.06664'
   year: 2022
   code: SysCV/qdtrack
-  stars: 403
+  stars: 404
   tags:
   - MOT
   - quasi-dense
@@ -180,7 +180,7 @@ methods:
   arxiv: '2203.14360'
   year: 2023
   code: noahcao/OC_SORT
-  stars: 1096
+  stars: 1101
   tags:
   - MOT
   - online
@@ -230,7 +230,7 @@ methods:
   arxiv: '2306.08637'
   year: 2023
   code: google-deepmind/tapnet
-  stars: 1895
+  stars: 1905
   tags:
   - point-tracking
   - any-point
@@ -245,7 +245,7 @@ methods:
   arxiv: '2305.06558'
   year: 2023
   code: z-x-yang/Segment-and-Track-Anything
-  stars: 3123
+  stars: 3124
   tags:
   - MOT
   - segmentation
@@ -261,7 +261,7 @@ methods:
   arxiv: '2307.07635'
   year: 2024
   code: facebookresearch/co-tracker
-  stars: 4957
+  stars: 4964
   tags:
   - point-tracking
   - joint-tracking
@@ -292,7 +292,7 @@ methods:
   arxiv: '2410.11831'
   year: 2025
   code: facebookresearch/co-tracker
-  stars: 4957
+  stars: 4964
   tags:
   - point-tracking
   - pseudo-labeling
