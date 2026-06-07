@@ -55,7 +55,7 @@ methods:
   arxiv: '2107.10981'
   year: 2021
   code: luost26/score-denoise
-  stars: 212
+  stars: 213
   tags:
   - score-based
   - gradient-field
@@ -69,7 +69,7 @@ methods:
   arxiv: '2304.01529'
   year: 2023
   code: ddsediri/IterativePFN
-  stars: 68
+  stars: 69
   tags:
   - deep-learning
   - iterative

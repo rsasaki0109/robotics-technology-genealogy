@@ -12,7 +12,7 @@ methods:
   arxiv: '1806.01411'
   year: 2019
   code: xingyul/flownet3d
-  stars: 402
+  stars: 403
   tags:
   - deep-learning
   - point-cloud
@@ -41,7 +41,7 @@ methods:
   arxiv: '1911.12408'
   year: 2020
   code: DylanWusee/PointPWC
-  stars: 161
+  stars: 160
   tags:
   - deep-learning
   - cost-volume
@@ -321,7 +321,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4039
+  stars: 4045
   tags:
   - deep-learning
   - optical-flow

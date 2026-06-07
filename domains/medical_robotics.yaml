@@ -149,7 +149,7 @@ methods:
   arxiv: '2401.06013'
   year: 2024
   code: BeileiCui/SurgicalDINO
-  stars: 71
+  stars: 69
   tags:
   - depth-estimation
   - foundation-model
@@ -167,7 +167,7 @@ methods:
   arxiv: '2404.16027'
   year: 2024
   code: orbit-surgical/orbit-surgical
-  stars: 172
+  stars: 174
   tags:
   - simulation
   - isaac-sim

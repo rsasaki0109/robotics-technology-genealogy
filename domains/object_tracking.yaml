@@ -54,7 +54,7 @@ methods:
   arxiv: '1812.11703'
   year: 2019
   code: STVIR/pysot
-  stars: 4602
+  stars: 4599
   tags:
   - SOT
   - siamese
@@ -84,7 +84,7 @@ methods:
   arxiv: '2101.02702'
   year: 2022
   code: timmeinhardt/trackformer
-  stars: 635
+  stars: 638
   tags:
   - MOT
   - transformer
@@ -100,7 +100,7 @@ methods:
   arxiv: '2105.03247'
   year: 2022
   code: megvii-research/MOTR
-  stars: 802
+  stars: 803
   tags:
   - MOT
   - transformer
@@ -115,7 +115,7 @@ methods:
   arxiv: '2110.06864'
   year: 2022
   code: ifzhang/ByteTrack
-  stars: 6421
+  stars: 6436
   tags:
   - MOT
   - online
@@ -132,7 +132,7 @@ methods:
   arxiv: '2206.14651'
   year: 2022
   code: NirAharon/BoT-SORT
-  stars: 1447
+  stars: 1452
   tags:
   - MOT
   - online
@@ -180,7 +180,7 @@ methods:
   arxiv: '2203.14360'
   year: 2023
   code: noahcao/OC_SORT
-  stars: 1101
+  stars: 1105
   tags:
   - MOT
   - online
@@ -197,7 +197,7 @@ methods:
   arxiv: '2202.13514'
   year: 2023
   code: dyhBUPT/StrongSORT
-  stars: 934
+  stars: 937
   tags:
   - MOT
   - online
@@ -215,7 +215,7 @@ methods:
   arxiv: '2211.09791'
   year: 2023
   code: megvii-research/MOTRv2
-  stars: 482
+  stars: 483
   tags:
   - MOT
   - transformer
@@ -230,7 +230,7 @@ methods:
   arxiv: '2306.08637'
   year: 2023
   code: google-deepmind/tapnet
-  stars: 1905
+  stars: 1910
   tags:
   - point-tracking
   - any-point
@@ -245,7 +245,7 @@ methods:
   arxiv: '2305.06558'
   year: 2023
   code: z-x-yang/Segment-and-Track-Anything
-  stars: 3124
+  stars: 3127
   tags:
   - MOT
   - segmentation
@@ -261,7 +261,7 @@ methods:
   arxiv: '2307.07635'
   year: 2024
   code: facebookresearch/co-tracker
-  stars: 4964
+  stars: 4972
   tags:
   - point-tracking
   - joint-tracking
@@ -292,7 +292,7 @@ methods:
   arxiv: '2410.11831'
   year: 2025
   code: facebookresearch/co-tracker
-  stars: 4964
+  stars: 4972
   tags:
   - point-tracking
   - pseudo-labeling
