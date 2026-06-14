@@ -137,7 +137,7 @@ methods:
   arxiv: '1802.09477'
   year: 2018
   code: sfujim/TD3
-  stars: 2081
+  stars: 2086
   tags:
   - actor-critic
   - off-policy
@@ -204,7 +204,7 @@ methods:
   arxiv: '2006.04779'
   year: 2020
   code: aviralkumar2907/CQL
-  stars: 485
+  stars: 486
   tags:
   - offline-RL
   - value-based
@@ -221,7 +221,7 @@ methods:
   arxiv: '1912.01603'
   year: 2020
   code: danijar/dreamer
-  stars: 603
+  stars: 606
   tags:
   - model-based
   - world-model
@@ -251,7 +251,7 @@ methods:
   arxiv: '2106.01345'
   year: 2021
   code: kzl/decision-transformer
-  stars: 2811
+  stars: 2815
   tags:
   - offline-RL
   - transformer
@@ -266,7 +266,7 @@ methods:
   arxiv: '2110.06169'
   year: 2022
   code: ikostrikov/implicit_q_learning
-  stars: 329
+  stars: 330
   tags:
   - offline-RL
   - implicit
@@ -314,7 +314,7 @@ methods:
   arxiv: '2103.01955'
   year: 2022
   code: marlbenchmark/on-policy
-  stars: 2016
+  stars: 2024
   tags:
   - multi-agent
   - cooperative
@@ -331,7 +331,7 @@ methods:
   arxiv: '2301.04104'
   year: 2023
   code: danijar/dreamerv3
-  stars: 3363
+  stars: 3412
   tags:
   - model-based
   - world-model
@@ -364,7 +364,7 @@ methods:
   arxiv: '2310.16828'
   year: 2023
   code: nicklashansen/tdmpc2
-  stars: 855
+  stars: 864
   tags:
   - model-based
   - model-predictive-control
@@ -380,7 +380,7 @@ methods:
   arxiv: '2402.03300'
   year: 2024
   code: deepseek-ai/DeepSeek-Math
-  stars: 3317
+  stars: 3325
   tags:
   - language-model
   - group-relative

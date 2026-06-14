@@ -105,7 +105,7 @@ methods:
   arxiv: '2203.05940'
   year: 2022
   code: unknownue/pdflow
-  stars: 28
+  stars: 29
   tags:
   - normalizing-flow
   - generative

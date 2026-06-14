@@ -56,7 +56,7 @@ methods:
   arxiv: '2007.11142'
   year: 2020
   code: valeoai/FLOT
-  stars: 104
+  stars: 105
   tags:
   - deep-learning
   - optimal-transport
@@ -233,7 +233,7 @@ methods:
   arxiv: '2407.01702'
   year: 2025
   code: KTH-RPL/SeFlow
-  stars: 120
+  stars: 121
   tags:
   - self-supervised
   - autonomous-driving
@@ -321,7 +321,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4045
+  stars: 4051
   tags:
   - deep-learning
   - optical-flow

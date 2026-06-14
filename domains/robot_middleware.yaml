@@ -21,7 +21,7 @@ methods:
 - name: Zenoh
   year: 2020
   code: eclipse-zenoh/zenoh
-  stars: 2841
+  stars: 2863
   tags:
   - protocol
   - pub-sub
@@ -35,7 +35,7 @@ methods:
 - name: MCAP
   year: 2021
   code: foxglove/mcap
-  stars: 965
+  stars: 971
   tags:
   - data-format
   - recording
@@ -66,7 +66,7 @@ methods:
   paper: 'YARP: Yet Another Robot Platform'
   year: 2006
   code: robotology/yarp
-  stars: 594
+  stars: 595
   tags:
   - middleware
   - humanoid
@@ -78,7 +78,7 @@ methods:
   paper: 'ROS: an open-source Robot Operating System'
   year: 2009
   code: ros/ros
-  stars: 3237
+  stars: 3238
   tags:
   - middleware
   - open-source
@@ -93,7 +93,7 @@ methods:
   paper: 'Robot Operating System 2: Design, architecture, and uses in the wild'
   year: 2017
   code: ros2/ros2
-  stars: 5600
+  stars: 5628
   tags:
   - middleware
   - dds
@@ -111,7 +111,7 @@ methods:
 - name: micro-ROS
   year: 2020
   code: micro-ROS/micro_ros_setup
-  stars: 494
+  stars: 495
   tags:
   - middleware
   - embedded
@@ -125,7 +125,7 @@ methods:
 - name: ROS 2 with Zenoh
   year: 2023
   code: eclipse-zenoh/zenoh-plugin-ros2dds
-  stars: 274
+  stars: 275
   tags:
   - middleware
   - cloud
@@ -157,7 +157,7 @@ methods:
   paper: 'The Office Marathon: Robust Navigation in an Indoor Office Environment'
   year: 2010
   code: ros-planning/navigation
-  stars: 2645
+  stars: 2647
   tags:
   - framework
   - navigation
@@ -186,7 +186,7 @@ methods:
 - name: rosbridge
   year: 2012
   code: RobotWebTools/rosbridge_suite
-  stars: 1209
+  stars: 1210
   tags:
   - framework
   - web
@@ -201,7 +201,7 @@ methods:
   paper: 'Nav2: The Navigation Stack for ROS 2'
   year: 2020
   code: ros-navigation/navigation2
-  stars: 4325
+  stars: 4347
   tags:
   - framework
   - navigation
@@ -218,7 +218,7 @@ methods:
 - name: MoveIt 2
   year: 2021
   code: moveit/moveit2
-  stars: 1843
+  stars: 1851
   tags:
   - framework
   - motion-planning
@@ -233,7 +233,7 @@ methods:
 - name: ros2_control
   year: 2021
   code: ros-controls/ros2_control
-  stars: 913
+  stars: 916
   tags:
   - framework
   - control
@@ -247,7 +247,7 @@ methods:
 - name: OpenPilot
   year: 2016
   code: commaai/openpilot
-  stars: 61312
+  stars: 61369
   tags:
   - ad-stack
   - adas
@@ -258,7 +258,7 @@ methods:
 - name: Apollo
   year: 2017
   code: ApolloAuto/apollo
-  stars: 26657
+  stars: 26673
   tags:
   - ad-stack
   - full-stack
@@ -273,7 +273,7 @@ methods:
     Stack'
   year: 2015
   code: autowarefoundation/autoware
-  stars: 11695
+  stars: 11710
   tags:
   - ad-stack
   - full-stack
@@ -288,7 +288,7 @@ methods:
 - name: Autoware.Universe
   year: 2022
   code: autowarefoundation/autoware.universe
-  stars: 1650
+  stars: 1655
   tags:
   - ad-stack
   - full-stack
@@ -355,7 +355,7 @@ methods:
   - name: ROS 2
     relation: extends
   description: ROS 2 recording system with pluggable storage backends (SQLite, MCAP)
-  stars: 416
+  stars: 419
 - name: colcon
   year: 2018
   code: colcon/colcon-core
@@ -383,7 +383,7 @@ methods:
 - name: Foxglove
   year: 2021
   code: foxglove/studio
-  stars: 84
+  stars: 87
   tags:
   - tool
   - visualization
@@ -490,7 +490,7 @@ methods:
 - name: Boston Dynamics Spot SDK
   year: 2020
   code: boston-dynamics/spot-sdk
-  stars: 2487
+  stars: 2490
   open_source: partial
   license: Commercial (SDK open)
   tags:
@@ -515,7 +515,7 @@ methods:
   - name: ROS 2
     relation: extends
   description: Unitree robotics SDK/ROS 2 interface for Go2, B2, H1 robots
-  stars: 723
+  stars: 733
 - name: NVIDIA Isaac ROS
   year: 2023
   code: NVIDIA-ISAAC-ROS/isaac_ros_common

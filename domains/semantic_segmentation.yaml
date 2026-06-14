@@ -10,7 +10,7 @@ methods:
   arxiv: '1411.4038'
   year: 2015
   code: shelhamer/fcn.berkeleyvision.org
-  stars: 3353
+  stars: 3352
   tags:
   - semantic
   - fully-convolutional
@@ -23,7 +23,7 @@ methods:
   arxiv: '1505.04597'
   year: 2015
   code: milesial/Pytorch-UNet
-  stars: 11478
+  stars: 11486
   tags:
   - semantic
   - encoder-decoder
@@ -150,7 +150,7 @@ methods:
   arxiv: '2105.15203'
   year: 2021
   code: NVlabs/SegFormer
-  stars: 3516
+  stars: 3531
   tags:
   - semantic
   - transformer
@@ -166,7 +166,7 @@ methods:
   arxiv: '2209.08575'
   year: 2022
   code: Visual-Attention-Network/SegNeXt
-  stars: 885
+  stars: 886
   tags:
   - semantic
   - convolutional-attention
@@ -181,7 +181,7 @@ methods:
   arxiv: '1703.06870'
   year: 2017
   code: facebookresearch/detectron2
-  stars: 34531
+  stars: 34548
   tags:
   - instance
   - two-stage
@@ -226,7 +226,7 @@ methods:
   arxiv: '2003.05664'
   year: 2020
   code: aim-uofa/AdelaiDet
-  stars: 3481
+  stars: 3480
   tags:
   - instance
   - conditional-convolution
@@ -240,7 +240,7 @@ methods:
   arxiv: '1901.02446'
   year: 2019
   code: facebookresearch/detectron2
-  stars: 34531
+  stars: 34548
   tags:
   - panoptic
   - fpn
@@ -255,7 +255,7 @@ methods:
   arxiv: '2107.06278'
   year: 2021
   code: facebookresearch/MaskFormer
-  stars: 1460
+  stars: 1461
   tags:
   - panoptic
   - semantic
@@ -271,7 +271,7 @@ methods:
   arxiv: '2112.01527'
   year: 2022
   code: facebookresearch/Mask2Former
-  stars: 3370
+  stars: 3382
   tags:
   - panoptic
   - instance
@@ -289,7 +289,7 @@ methods:
   arxiv: '2211.06220'
   year: 2022
   code: SHI-Labs/OneFormer
-  stars: 1722
+  stars: 1723
   tags:
   - panoptic
   - instance
@@ -320,7 +320,7 @@ methods:
   arxiv: '2304.02643'
   year: 2023
   code: facebookresearch/segment-anything
-  stars: 54312
+  stars: 54342
   tags:
   - foundation
   - promptable
@@ -337,7 +337,7 @@ methods:
   arxiv: '2408.00714'
   year: 2024
   code: facebookresearch/sam2
-  stars: 19300
+  stars: 19350
   tags:
   - foundation
   - promptable
@@ -353,7 +353,7 @@ methods:
   arxiv: '2304.03284'
   year: 2023
   code: baaivision/Painter
-  stars: 2592
+  stars: 2596
   tags:
   - foundation
   - in-context
@@ -369,7 +369,7 @@ methods:
   arxiv: '2303.05499'
   year: 2023
   code: IDEA-Research/Grounded-Segment-Anything
-  stars: 17621
+  stars: 17634
   tags:
   - foundation
   - open-vocabulary
@@ -401,7 +401,7 @@ methods:
   arxiv: '2312.00863'
   year: 2024
   code: yformer/EfficientSAM
-  stars: 2480
+  stars: 2482
   tags:
   - foundation
   - efficient
@@ -417,7 +417,7 @@ methods:
   arxiv: '2306.12156'
   year: 2023
   code: CASIA-IVA-Lab/FastSAM
-  stars: 8361
+  stars: 8365
   tags:
   - foundation
   - real-time
@@ -432,7 +432,7 @@ methods:
   arxiv: '2306.14289'
   year: 2023
   code: ChaoningZhang/MobileSAM
-  stars: 5784
+  stars: 5791
   tags:
   - foundation
   - mobile
@@ -447,7 +447,7 @@ methods:
   arxiv: '2306.01567'
   year: 2023
   code: SysCV/SAM-HQ
-  stars: 4230
+  stars: 4231
   tags:
   - foundation
   - high-quality
@@ -462,7 +462,7 @@ methods:
   arxiv: '1904.08755'
   year: 2019
   code: NVIDIA/MinkowskiEngine
-  stars: 2934
+  stars: 2935
   tags:
   - 3d
   - sparse-convolution
@@ -476,7 +476,7 @@ methods:
   arxiv: '1911.11236'
   year: 2020
   code: QingyongHu/RandLA-Net
-  stars: 1548
+  stars: 1550
   tags:
   - 3d
   - point-cloud
@@ -492,7 +492,7 @@ methods:
   arxiv: '2011.10033'
   year: 2021
   code: xinge008/Cylinder3D
-  stars: 953
+  stars: 954
   tags:
   - 3d
   - point-cloud
@@ -508,7 +508,7 @@ methods:
   arxiv: '2210.05666'
   year: 2022
   code: Pointcept/Pointcept
-  stars: 3069
+  stars: 3078
   tags:
   - 3d
   - point-cloud
@@ -524,7 +524,7 @@ methods:
   arxiv: '2312.10035'
   year: 2024
   code: Pointcept/Pointcept
-  stars: 3069
+  stars: 3078
   tags:
   - 3d
   - point-cloud
@@ -557,7 +557,7 @@ methods:
   arxiv: '2310.12982'
   year: 2024
   code: hkchengrex/Cutie
-  stars: 1058
+  stars: 1061
   tags:
   - video
   - object-centric
@@ -573,7 +573,7 @@ methods:
   arxiv: '2201.03546'
   year: 2022
   code: isl-org/lang-seg
-  stars: 829
+  stars: 830
   tags:
   - semantic
   - open-vocabulary
