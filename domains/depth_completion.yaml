@@ -12,7 +12,7 @@ methods:
   arxiv: '1709.07492'
   year: 2018
   code: fangchangma/sparse-to-dense.pytorch
-  stars: 452
+  stars: 451
   tags:
   - supervised
   - cnn
@@ -25,7 +25,7 @@ methods:
   arxiv: '1807.00275'
   year: 2019
   code: fangchangma/self-supervised-depth-completion
-  stars: 652
+  stars: 653
   tags:
   - self-supervised
   - sparse-lidar
@@ -88,7 +88,7 @@ methods:
   arxiv: '2304.13030'
   year: 2023
   code: youmi-zym/CompletionFormer
-  stars: 278
+  stars: 279
   tags:
   - transformer
   - cnn-transformer-hybrid
@@ -122,7 +122,7 @@ methods:
   arxiv: '2406.09414'
   year: 2025
   code: DepthAnything/Depth-Anything-V2
-  stars: 8284
+  stars: 8315
   tags:
   - foundation-model
   - monocular-depth
@@ -137,7 +137,7 @@ methods:
   arxiv: '2404.15506'
   year: 2025
   code: YvanYin/Metric3D
-  stars: 2230
+  stars: 2233
   tags:
   - foundation-model
   - metric-depth
@@ -171,7 +171,7 @@ methods:
   arxiv: '2501.09898'
   year: 2025
   code: NVlabs/FoundationStereo
-  stars: 2758
+  stars: 2771
   tags:
   - foundation-model
   - stereo-matching
@@ -188,7 +188,7 @@ methods:
   arxiv: '1907.01341'
   year: 2020
   code: isl-org/MiDaS
-  stars: 5405
+  stars: 5409
   tags:
   - monocular-depth
   - zero-shot
@@ -237,7 +237,7 @@ methods:
   arxiv: '2302.12288'
   year: 2023
   code: isl-org/ZoeDepth
-  stars: 2830
+  stars: 2833
   tags:
   - monocular-depth
   - metric-depth
@@ -253,7 +253,7 @@ methods:
   arxiv: '2312.02145'
   year: 2024
   code: prs-eth/Marigold
-  stars: 3159
+  stars: 3166
   tags:
   - monocular-depth
   - diffusion
@@ -270,7 +270,7 @@ methods:
   arxiv: '2109.07547'
   year: 2021
   code: princeton-vl/RAFT-Stereo
-  stars: 1080
+  stars: 1082
   tags:
   - stereo-matching
   - recurrent

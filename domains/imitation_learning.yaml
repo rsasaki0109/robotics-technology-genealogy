@@ -119,7 +119,7 @@ methods:
   arxiv: '2206.11251'
   year: 2022
   code: notmahi/bet
-  stars: 143
+  stars: 144
   open_source: open
   license: MIT
   tags:
@@ -171,7 +171,7 @@ methods:
   arxiv: '2303.04137'
   year: 2023
   code: real-stanford/diffusion_policy
-  stars: 4274
+  stars: 4296
   open_source: open
   license: MIT
   tags:
@@ -193,7 +193,7 @@ methods:
   arxiv: '2403.03954'
   year: 2024
   code: YanjieZe/3D-Diffusion-Policy
-  stars: 1383
+  stars: 1389
   open_source: open
   license: MIT
   tags:
@@ -211,7 +211,7 @@ methods:
   arxiv: '2304.13705'
   year: 2023
   code: tonyzhaozh/act
-  stars: 2001
+  stars: 2013
   open_source: open
   license: MIT
   tags:
@@ -232,7 +232,7 @@ methods:
   arxiv: '2304.13705'
   year: 2023
   code: tonyzhaozh/aloha
-  stars: 2253
+  stars: 2259
   open_source: open
   license: MIT
   tags:
@@ -251,7 +251,7 @@ methods:
   arxiv: '2401.02117'
   year: 2024
   code: MarkFzp/mobile-aloha
-  stars: 4439
+  stars: 4440
   open_source: open
   license: ''
   tags:
@@ -269,7 +269,7 @@ methods:
   arxiv: '2212.06817'
   year: 2023
   code: google-research/robotics_transformer
-  stars: 1730
+  stars: 1734
   open_source: closed
   license: ''
   tags:
@@ -305,7 +305,7 @@ methods:
   arxiv: '2310.08864'
   year: 2023
   code: google-deepmind/open_x_embodiment
-  stars: 1885
+  stars: 1894
   open_source: open
   license: Apache-2.0
   tags:
@@ -326,7 +326,7 @@ methods:
   arxiv: '2405.12213'
   year: 2024
   code: octo-models/octo
-  stars: 1671
+  stars: 1676
   open_source: open
   license: MIT
   tags:
@@ -346,7 +346,7 @@ methods:
   arxiv: '2406.09246'
   year: 2024
   code: openvla/openvla
-  stars: 6427
+  stars: 6462
   open_source: open
   license: MIT
   tags:
@@ -405,7 +405,7 @@ methods:
   arxiv: '2506.01844'
   year: 2025
   code: huggingface/lerobot
-  stars: 24985
+  stars: 25173
   open_source: open
   license: Apache-2.0
   tags:
@@ -465,7 +465,7 @@ methods:
   arxiv: '2406.10454'
   year: 2024
   code: MarkFzp/humanplus
-  stars: 849
+  stars: 848
   open_source: open
   license: MIT
   tags:
@@ -484,7 +484,7 @@ methods:
   arxiv: '2402.10329'
   year: 2024
   code: real-stanford/universal_manipulation_interface
-  stars: 1445
+  stars: 1448
   open_source: open
   license: MIT
   tags:
@@ -522,7 +522,7 @@ methods:
   arxiv: ''
   year: 2024
   code: huggingface/lerobot
-  stars: 24985
+  stars: 25173
   open_source: open
   license: Apache-2.0
   tags:
@@ -543,7 +543,7 @@ methods:
   arxiv: '2406.02523'
   year: 2024
   code: robocasa/robocasa
-  stars: 1464
+  stars: 1479
   open_source: open
   license: MIT
   tags:
@@ -561,7 +561,7 @@ methods:
   arxiv: '2403.12945'
   year: 2024
   code: droid-dataset/droid
-  stars: 371
+  stars: 370
   open_source: open
   license: ''
   tags:

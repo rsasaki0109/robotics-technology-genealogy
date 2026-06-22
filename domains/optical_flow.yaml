@@ -101,7 +101,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4051
+  stars: 4056
   tags:
   - deep-learning
   - recurrent
@@ -217,7 +217,7 @@ methods:
   arxiv: '2405.14793'
   year: 2024
   code: princeton-vl/SEA-RAFT
-  stars: 660
+  stars: 663
   tags:
   - deep-learning
   - efficient

@@ -10,7 +10,7 @@ methods:
   arxiv: '1411.4038'
   year: 2015
   code: shelhamer/fcn.berkeleyvision.org
-  stars: 3352
+  stars: 3353
   tags:
   - semantic
   - fully-convolutional
@@ -23,7 +23,7 @@ methods:
   arxiv: '1505.04597'
   year: 2015
   code: milesial/Pytorch-UNet
-  stars: 11486
+  stars: 11496
   tags:
   - semantic
   - encoder-decoder
@@ -73,7 +73,7 @@ methods:
   arxiv: '1612.01105'
   year: 2017
   code: hszhao/semseg
-  stars: 1376
+  stars: 1377
   tags:
   - semantic
   - pyramid-pooling
@@ -103,7 +103,7 @@ methods:
   arxiv: '1802.02611'
   year: 2018
   code: google-research/deeplab2
-  stars: 1036
+  stars: 1037
   tags:
   - semantic
   - encoder-decoder
@@ -119,7 +119,7 @@ methods:
   arxiv: '1908.07919'
   year: 2019
   code: HRNet/HRNet-Semantic-Segmentation
-  stars: 3324
+  stars: 3326
   tags:
   - semantic
   - high-resolution
@@ -150,7 +150,7 @@ methods:
   arxiv: '2105.15203'
   year: 2021
   code: NVlabs/SegFormer
-  stars: 3531
+  stars: 3547
   tags:
   - semantic
   - transformer
@@ -166,7 +166,7 @@ methods:
   arxiv: '2209.08575'
   year: 2022
   code: Visual-Attention-Network/SegNeXt
-  stars: 886
+  stars: 887
   tags:
   - semantic
   - convolutional-attention
@@ -181,7 +181,7 @@ methods:
   arxiv: '1703.06870'
   year: 2017
   code: facebookresearch/detectron2
-  stars: 34548
+  stars: 34564
   tags:
   - instance
   - two-stage
@@ -240,7 +240,7 @@ methods:
   arxiv: '1901.02446'
   year: 2019
   code: facebookresearch/detectron2
-  stars: 34548
+  stars: 34564
   tags:
   - panoptic
   - fpn
@@ -255,7 +255,7 @@ methods:
   arxiv: '2107.06278'
   year: 2021
   code: facebookresearch/MaskFormer
-  stars: 1461
+  stars: 1462
   tags:
   - panoptic
   - semantic
@@ -271,7 +271,7 @@ methods:
   arxiv: '2112.01527'
   year: 2022
   code: facebookresearch/Mask2Former
-  stars: 3382
+  stars: 3387
   tags:
   - panoptic
   - instance
@@ -289,7 +289,7 @@ methods:
   arxiv: '2211.06220'
   year: 2022
   code: SHI-Labs/OneFormer
-  stars: 1723
+  stars: 1727
   tags:
   - panoptic
   - instance
@@ -306,7 +306,7 @@ methods:
   arxiv: '2207.04044'
   year: 2022
   code: google-research/deeplab2
-  stars: 1036
+  stars: 1037
   tags:
   - panoptic
   - transformer
@@ -320,7 +320,7 @@ methods:
   arxiv: '2304.02643'
   year: 2023
   code: facebookresearch/segment-anything
-  stars: 54342
+  stars: 54371
   tags:
   - foundation
   - promptable
@@ -337,7 +337,7 @@ methods:
   arxiv: '2408.00714'
   year: 2024
   code: facebookresearch/sam2
-  stars: 19350
+  stars: 19384
   tags:
   - foundation
   - promptable
@@ -353,7 +353,7 @@ methods:
   arxiv: '2304.03284'
   year: 2023
   code: baaivision/Painter
-  stars: 2596
+  stars: 2594
   tags:
   - foundation
   - in-context
@@ -385,7 +385,7 @@ methods:
   arxiv: '2304.06718'
   year: 2023
   code: UX-Decoder/Segment-Everything-Everywhere-All-At-Once
-  stars: 4791
+  stars: 4790
   tags:
   - foundation
   - multi-modal
@@ -401,7 +401,7 @@ methods:
   arxiv: '2312.00863'
   year: 2024
   code: yformer/EfficientSAM
-  stars: 2482
+  stars: 2483
   tags:
   - foundation
   - efficient
@@ -432,7 +432,7 @@ methods:
   arxiv: '2306.14289'
   year: 2023
   code: ChaoningZhang/MobileSAM
-  stars: 5791
+  stars: 5793
   tags:
   - foundation
   - mobile
@@ -447,7 +447,7 @@ methods:
   arxiv: '2306.01567'
   year: 2023
   code: SysCV/SAM-HQ
-  stars: 4231
+  stars: 4233
   tags:
   - foundation
   - high-quality
@@ -462,7 +462,7 @@ methods:
   arxiv: '1904.08755'
   year: 2019
   code: NVIDIA/MinkowskiEngine
-  stars: 2935
+  stars: 2934
   tags:
   - 3d
   - sparse-convolution
@@ -476,7 +476,7 @@ methods:
   arxiv: '1911.11236'
   year: 2020
   code: QingyongHu/RandLA-Net
-  stars: 1550
+  stars: 1554
   tags:
   - 3d
   - point-cloud
@@ -492,7 +492,7 @@ methods:
   arxiv: '2011.10033'
   year: 2021
   code: xinge008/Cylinder3D
-  stars: 954
+  stars: 955
   tags:
   - 3d
   - point-cloud
@@ -508,7 +508,7 @@ methods:
   arxiv: '2210.05666'
   year: 2022
   code: Pointcept/Pointcept
-  stars: 3078
+  stars: 3083
   tags:
   - 3d
   - point-cloud
@@ -524,7 +524,7 @@ methods:
   arxiv: '2312.10035'
   year: 2024
   code: Pointcept/Pointcept
-  stars: 3078
+  stars: 3083
   tags:
   - 3d
   - point-cloud
@@ -541,7 +541,7 @@ methods:
   arxiv: '2207.07115'
   year: 2022
   code: hkchengrex/XMem
-  stars: 1976
+  stars: 1977
   tags:
   - video
   - memory
@@ -557,7 +557,7 @@ methods:
   arxiv: '2310.12982'
   year: 2024
   code: hkchengrex/Cutie
-  stars: 1061
+  stars: 1063
   tags:
   - video
   - object-centric
@@ -605,7 +605,7 @@ methods:
   arxiv: '2302.12242'
   year: 2023
   code: MendelXu/SAN
-  stars: 382
+  stars: 383
   tags:
   - semantic
   - open-vocabulary
