@@ -50,7 +50,7 @@ methods:
   arxiv: '1905.03561'
   year: 2019
   code: mihaidusmanu/d2-net
-  stars: 846
+  stars: 847
   tags:
   - feature-detection
   - learned
@@ -64,7 +64,7 @@ methods:
   arxiv: '1911.11763'
   year: 2020
   code: magicleap/SuperGluePretrainedNetwork
-  stars: 4034
+  stars: 4037
   tags:
   - feature-matching
   - graph-neural-network
@@ -78,7 +78,7 @@ methods:
   arxiv: '2104.00680'
   year: 2021
   code: zju3dv/LoFTR
-  stars: 2921
+  stars: 2922
   tags:
   - feature-matching
   - transformer
@@ -93,7 +93,7 @@ methods:
   arxiv: '2306.13643'
   year: 2023
   code: cvg/LightGlue
-  stars: 4623
+  stars: 4625
   tags:
   - feature-matching
   - lightweight
@@ -107,7 +107,7 @@ methods:
   arxiv: '2312.14132'
   year: 2024
   code: naver/dust3r
-  stars: 7204
+  stars: 7217
   tags:
   - 3d-reconstruction
   - dense-matching
@@ -123,7 +123,7 @@ methods:
   arxiv: '2406.09756'
   year: 2024
   code: naver/mast3r
-  stars: 3006
+  stars: 3009
   tags:
   - 3d-reconstruction
   - feature-matching
@@ -185,7 +185,7 @@ methods:
     relation: extends
   description: Local feature learning via policy gradient without non-differentiable
     operations
-  stars: 381
+  stars: 382
 - name: Patch2Pix
   paper: 'Patch2Pix: Epipolar-Guided Pixel-Level Correspondences'
   arxiv: '2012.01909'
@@ -200,7 +200,7 @@ methods:
     relation: extends
   description: Epipolar-guided pixel-level correspondence refinement for detector-free
     matching
-  stars: 296
+  stars: 295
 - name: ASpanFormer
   paper: 'ASpanFormer: Detector-Free Image Matching with Adaptive Span Transformer'
   arxiv: '2208.14201'
@@ -216,7 +216,7 @@ methods:
     relation: extends
   description: Adaptive span transformer for detector-free matching with flow-based
     attention spans
-  stars: 249
+  stars: 250
 - name: QuadTree Attention
   paper: QuadTree Attention for Vision Transformers
   arxiv: '2201.02767'
@@ -231,7 +231,7 @@ methods:
     relation: extends
   description: Hierarchical quadtree-based attention for efficient feature matching
     in transformers
-  stars: 369
+  stars: 368
 - name: TopicFM
   paper: 'TopicFM: Robust and Interpretable Topic-Assisted Feature Matching'
   arxiv: '2207.00328'
@@ -308,7 +308,7 @@ methods:
   - name: SuperPoint
     relation: extends
   description: Lightweight and accelerated learned features for real-time image matching
-  stars: 1654
+  stars: 1662
 - name: OmniGlue
   paper: 'OmniGlue: Generalizable Feature Matching with Foundation Model Guidance'
   arxiv: '2405.12979'
@@ -322,7 +322,7 @@ methods:
   - name: LightGlue
     relation: extends
   description: Generalizable feature matcher guided by foundation model priors
-  stars: 711
+  stars: 712
 - name: MASt3R-SfM
   paper: 'MASt3R-SfM: a Fully-Integrated Solution for Unconstrained Structure-from-Motion'
   arxiv: '2409.19152'
@@ -336,7 +336,7 @@ methods:
   - name: MASt3R
     relation: extends
   description: Fully-integrated SfM pipeline built on MASt3R for unconstrained reconstruction
-  stars: 3006
+  stars: 3009
 - name: VGGSfM
   paper: 'VGGSfM: Visual Geometry Grounded Deep Structure From Motion'
   arxiv: '2312.04563'
@@ -351,7 +351,7 @@ methods:
   - name: DUSt3R
     relation: inspires
   description: End-to-end differentiable SfM grounded in visual geometry principles
-  stars: 1400
+  stars: 1404
 - name: Steerers
   paper: 'Steerers: A Framework for Rotation Equivariant Keypoint Descriptors'
   arxiv: '2312.02152'
@@ -403,7 +403,7 @@ methods:
   arxiv: '2412.12392'
   year: 2025
   code: rmurai0610/MASt3R-SLAM
-  stars: 3071
+  stars: 3080
   tags:
   - slam
   - dense-matching
@@ -434,7 +434,7 @@ methods:
   paper: Structure-from-Motion Revisited
   year: 2016
   code: colmap/colmap
-  stars: 11970
+  stars: 12060
   tags:
   - structure-from-motion
   - multi-view-stereo
@@ -450,7 +450,7 @@ methods:
   arxiv: '1812.03506'
   year: 2019
   code: cvg/Hierarchical-Localization
-  stars: 4125
+  stars: 4132
   tags:
   - localization
   - hierarchical
@@ -468,7 +468,7 @@ methods:
   arxiv: '2210.10716'
   year: 2022
   code: naver/croco
-  stars: 502
+  stars: 503
   tags:
   - self-supervised
   - pretraining
@@ -484,7 +484,7 @@ methods:
   arxiv: '2202.00667'
   year: 2023
   code: Parskatt/DKM
-  stars: 481
+  stars: 482
   tags:
   - feature-matching
   - dense-matching
@@ -500,7 +500,7 @@ methods:
   arxiv: '2503.11651'
   year: 2025
   code: facebookresearch/vggt
-  stars: 13470
+  stars: 13594
   tags:
   - 3d-reconstruction
   - visual-geometry

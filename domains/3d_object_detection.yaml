@@ -13,7 +13,7 @@ methods:
   arxiv: '1612.00593'
   year: 2017
   code: charlesq34/pointnet
-  stars: 5432
+  stars: 5435
   tags:
   - point-cloud
   - classification
@@ -28,7 +28,7 @@ methods:
   arxiv: '1706.02413'
   year: 2017
   code: charlesq34/pointnet2
-  stars: 3674
+  stars: 3678
   tags:
   - point-cloud
   - hierarchical
@@ -57,7 +57,7 @@ methods:
   arxiv: '1801.05373'
   year: 2018
   code: traveller59/second.pytorch
-  stars: 1774
+  stars: 1775
   tags:
   - point-cloud
   - voxel
@@ -91,7 +91,7 @@ methods:
   arxiv: '1907.03670'
   year: 2020
   code: open-mmlab/OpenPCDet
-  stars: 5627
+  stars: 5633
   tags:
   - point-cloud
   - part-aware
@@ -109,7 +109,7 @@ methods:
   arxiv: '1912.13192'
   year: 2020
   code: open-mmlab/OpenPCDet
-  stars: 5627
+  stars: 5633
   tags:
   - point-cloud
   - point-voxel
@@ -127,7 +127,7 @@ methods:
   arxiv: '2012.15712'
   year: 2021
   code: open-mmlab/OpenPCDet
-  stars: 5627
+  stars: 5633
   tags:
   - point-cloud
   - voxel
@@ -144,7 +144,7 @@ methods:
   arxiv: '2006.11275'
   year: 2021
   code: tianweiy/CenterPoint
-  stars: 2173
+  stars: 2174
   tags:
   - point-cloud
   - center-based
@@ -211,7 +211,7 @@ methods:
   arxiv: '2301.06051'
   year: 2023
   code: Haiyang-W/DSVT
-  stars: 450
+  stars: 451
   tags:
   - point-cloud
   - transformer
@@ -229,7 +229,7 @@ methods:
   arxiv: '2110.06922'
   year: 2021
   code: WangYueFt/detr3d
-  stars: 912
+  stars: 914
   tags:
   - camera
   - multi-view
@@ -243,7 +243,7 @@ methods:
   arxiv: '2112.11790'
   year: 2022
   code: HuangJunJie2017/BEVDet
-  stars: 1790
+  stars: 1793
   tags:
   - camera
   - bev
@@ -258,7 +258,7 @@ methods:
   arxiv: '2203.05625'
   year: 2022
   code: megvii-research/PETR
-  stars: 1061
+  stars: 1060
   tags:
   - camera
   - multi-view
@@ -275,7 +275,7 @@ methods:
   arxiv: '2203.17270'
   year: 2022
   code: fundamentalvision/BEVFormer
-  stars: 4518
+  stars: 4530
   tags:
   - camera
   - bev
@@ -296,7 +296,7 @@ methods:
   arxiv: '2303.11926'
   year: 2023
   code: exiawsh/StreamPETR
-  stars: 817
+  stars: 818
   tags:
   - camera
   - multi-view
@@ -350,7 +350,7 @@ methods:
   arxiv: '2205.13542'
   year: 2022
   code: mit-han-lab/bevfusion
-  stars: 3180
+  stars: 3194
   tags:
   - multi-modal
   - bev
@@ -405,7 +405,7 @@ methods:
   arxiv: '2308.07732'
   year: 2023
   code: Haiyang-W/UniTR
-  stars: 353
+  stars: 355
   tags:
   - multi-modal
   - transformer
@@ -442,7 +442,7 @@ methods:
   arxiv: '2308.09616'
   year: 2025
   code: megvii-research/Far3D
-  stars: 198
+  stars: 199
   tags:
   - camera
   - multi-view
@@ -460,7 +460,7 @@ methods:
   arxiv: '2304.14340'
   year: 2025
   code: yichen928/SparseFusion
-  stars: 267
+  stars: 268
   tags:
   - multi-modal
   - sparse
@@ -497,7 +497,7 @@ methods:
   arxiv: '2403.05817'
   year: 2025
   code: zhanggang001/hednet
-  stars: 187
+  stars: 188
   tags:
   - point-cloud
   - fully-sparse
@@ -533,7 +533,7 @@ methods:
   arxiv: '2311.11722'
   year: 2025
   code: linxuewu/Sparse4D
-  stars: 513
+  stars: 514
   tags:
   - camera
   - multi-view
@@ -577,7 +577,7 @@ methods:
     relation: extends
   description: First two-stage 3D object detector generating proposals directly from
     raw point clouds
-  stars: 1817
+  stars: 1819
 - name: FCOS3D
   paper: 'FCOS3D: Fully Convolutional One-Stage Monocular 3D Object Detection'
   arxiv: '2104.10956'
@@ -608,7 +608,7 @@ methods:
   arxiv: '2005.12872'
   year: 2020
   code: facebookresearch/detr
-  stars: 15313
+  stars: 15318
   tags:
   - transformer
   - end-to-end
@@ -658,7 +658,7 @@ methods:
   arxiv: '2102.00463'
   year: 2022
   code: open-mmlab/OpenPCDet
-  stars: 5627
+  stars: 5633
   tags:
   - point-cloud
   - point-voxel

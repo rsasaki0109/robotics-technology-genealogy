@@ -37,7 +37,7 @@ methods:
   arxiv: '1511.07247'
   year: 2016
   code: Relja/netvlad
-  stars: 605
+  stars: 607
   tags:
   - deep-learning
   - vlad
@@ -85,7 +85,7 @@ methods:
   arxiv: '2308.10832'
   year: 2023
   code: gmberton/EigenPlaces
-  stars: 156
+  stars: 157
   tags:
   - deep-learning
   - global-descriptor
@@ -100,7 +100,7 @@ methods:
   arxiv: '2303.02190'
   year: 2023
   code: amaralibey/MixVPR
-  stars: 322
+  stars: 324
   tags:
   - deep-learning
   - feature-mixing
@@ -118,7 +118,7 @@ methods:
   arxiv: '2308.00688'
   year: 2024
   code: AnyLoc/AnyLoc
-  stars: 622
+  stars: 625
   tags:
   - deep-learning
   - foundation-model
@@ -161,7 +161,7 @@ methods:
   arxiv: '2105.11344'
   year: 2020
   code: PRBonn/OverlapNet
-  stars: 730
+  stars: 731
   tags:
   - lidar
   - deep-learning
@@ -243,7 +243,7 @@ methods:
   arxiv: '2304.07480'
   year: 2023
   code: hku-mars/btc_descriptor
-  stars: 340
+  stars: 341
   tags:
   - lidar
   - binary-descriptor
@@ -293,7 +293,7 @@ methods:
   arxiv: '2502.15691'
   year: 2025
   code: AnyLoc/AnyLoc
-  stars: 622
+  stars: 625
   tags:
   - deep-learning
   - foundation-model
@@ -348,7 +348,7 @@ methods:
     relation: extends
   description: First learned 3D point cloud descriptor for large-scale place recognition
     combining PointNet with VLAD
-  stars: 398
+  stars: 399
 - name: MinkLoc3D
   paper: 'MinkLoc3D: Point Cloud Based Large-Scale Place Recognition'
   arxiv: '2011.04530'
@@ -387,7 +387,7 @@ methods:
   arxiv: '2310.10023'
   year: 2023
   code: KOKIAOKI/3d_bbs
-  stars: 399
+  stars: 401
   tags:
   - lidar
   - global-localization

@@ -12,7 +12,7 @@ methods:
   arxiv: '1606.09549'
   year: 2016
   code: bertinetto/siamese-fc
-  stars: 628
+  stars: 627
   tags:
   - SOT
   - siamese
@@ -38,7 +38,7 @@ methods:
   arxiv: '1703.07402'
   year: 2017
   code: nwojke/deep_sort
-  stars: 6148
+  stars: 6151
   tags:
   - MOT
   - online
@@ -54,7 +54,7 @@ methods:
   arxiv: '1812.11703'
   year: 2019
   code: STVIR/pysot
-  stars: 4600
+  stars: 4602
   tags:
   - SOT
   - siamese
@@ -100,7 +100,7 @@ methods:
   arxiv: '2105.03247'
   year: 2022
   code: megvii-research/MOTR
-  stars: 802
+  stars: 804
   tags:
   - MOT
   - transformer
@@ -115,7 +115,7 @@ methods:
   arxiv: '2110.06864'
   year: 2022
   code: ifzhang/ByteTrack
-  stars: 6488
+  stars: 6513
   tags:
   - MOT
   - online
@@ -132,7 +132,7 @@ methods:
   arxiv: '2206.14651'
   year: 2022
   code: NirAharon/BoT-SORT
-  stars: 1467
+  stars: 1471
   tags:
   - MOT
   - online
@@ -180,7 +180,7 @@ methods:
   arxiv: '2203.14360'
   year: 2023
   code: noahcao/OC_SORT
-  stars: 1111
+  stars: 1113
   tags:
   - MOT
   - online
@@ -197,7 +197,7 @@ methods:
   arxiv: '2202.13514'
   year: 2023
   code: dyhBUPT/StrongSORT
-  stars: 940
+  stars: 941
   tags:
   - MOT
   - online
@@ -215,7 +215,7 @@ methods:
   arxiv: '2211.09791'
   year: 2023
   code: megvii-research/MOTRv2
-  stars: 483
+  stars: 484
   tags:
   - MOT
   - transformer
@@ -230,7 +230,7 @@ methods:
   arxiv: '2306.08637'
   year: 2023
   code: google-deepmind/tapnet
-  stars: 1924
+  stars: 1928
   tags:
   - point-tracking
   - any-point
@@ -245,7 +245,7 @@ methods:
   arxiv: '2305.06558'
   year: 2023
   code: z-x-yang/Segment-and-Track-Anything
-  stars: 3125
+  stars: 3126
   tags:
   - MOT
   - segmentation
@@ -261,7 +261,7 @@ methods:
   arxiv: '2307.07635'
   year: 2024
   code: facebookresearch/co-tracker
-  stars: 4991
+  stars: 5003
   tags:
   - point-tracking
   - joint-tracking
@@ -292,7 +292,7 @@ methods:
   arxiv: '2410.11831'
   year: 2025
   code: facebookresearch/co-tracker
-  stars: 4991
+  stars: 5003
   tags:
   - point-tracking
   - pseudo-labeling
