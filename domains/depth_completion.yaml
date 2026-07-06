@@ -25,7 +25,7 @@ methods:
   arxiv: '1807.00275'
   year: 2019
   code: fangchangma/self-supervised-depth-completion
-  stars: 653
+  stars: 654
   tags:
   - self-supervised
   - sparse-lidar
@@ -38,7 +38,7 @@ methods:
   arxiv: '1908.01238'
   year: 2020
   code: kakaxi314/GuideNet
-  stars: 168
+  stars: 167
   tags:
   - guided-conv
   - image-guided
@@ -122,7 +122,7 @@ methods:
   arxiv: '2406.09414'
   year: 2025
   code: DepthAnything/Depth-Anything-V2
-  stars: 8351
+  stars: 8395
   tags:
   - foundation-model
   - monocular-depth
@@ -137,7 +137,7 @@ methods:
   arxiv: '2404.15506'
   year: 2025
   code: YvanYin/Metric3D
-  stars: 2240
+  stars: 2249
   tags:
   - foundation-model
   - metric-depth
@@ -171,7 +171,7 @@ methods:
   arxiv: '2501.09898'
   year: 2025
   code: NVlabs/FoundationStereo
-  stars: 2785
+  stars: 2802
   tags:
   - foundation-model
   - stereo-matching
@@ -188,7 +188,7 @@ methods:
   arxiv: '1907.01341'
   year: 2020
   code: isl-org/MiDaS
-  stars: 5414
+  stars: 5416
   tags:
   - monocular-depth
   - zero-shot
@@ -218,7 +218,7 @@ methods:
   arxiv: '2401.10891'
   year: 2024
   code: LiheYoung/Depth-Anything
-  stars: 8131
+  stars: 8134
   tags:
   - monocular-depth
   - foundation-model
@@ -253,7 +253,7 @@ methods:
   arxiv: '2312.02145'
   year: 2024
   code: prs-eth/Marigold
-  stars: 3171
+  stars: 3174
   tags:
   - monocular-depth
   - diffusion
@@ -270,7 +270,7 @@ methods:
   arxiv: '2109.07547'
   year: 2021
   code: princeton-vl/RAFT-Stereo
-  stars: 1087
+  stars: 1092
   tags:
   - stereo-matching
   - recurrent

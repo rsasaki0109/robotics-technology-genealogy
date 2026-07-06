@@ -137,7 +137,7 @@ methods:
   arxiv: '1802.09477'
   year: 2018
   code: sfujim/TD3
-  stars: 2087
+  stars: 2090
   tags:
   - actor-critic
   - off-policy
@@ -189,7 +189,7 @@ methods:
   arxiv: '1803.11485'
   year: 2018
   code: oxwhirl/pymarl
-  stars: 2199
+  stars: 2202
   tags:
   - multi-agent
   - value-decomposition
@@ -221,7 +221,7 @@ methods:
   arxiv: '1912.01603'
   year: 2020
   code: danijar/dreamer
-  stars: 611
+  stars: 614
   tags:
   - model-based
   - world-model
@@ -251,7 +251,7 @@ methods:
   arxiv: '2106.01345'
   year: 2021
   code: kzl/decision-transformer
-  stars: 2820
+  stars: 2819
   tags:
   - offline-RL
   - transformer
@@ -314,7 +314,7 @@ methods:
   arxiv: '2103.01955'
   year: 2022
   code: marlbenchmark/on-policy
-  stars: 2042
+  stars: 2045
   tags:
   - multi-agent
   - cooperative
@@ -331,7 +331,7 @@ methods:
   arxiv: '2301.04104'
   year: 2023
   code: danijar/dreamerv3
-  stars: 3467
+  stars: 3495
   tags:
   - model-based
   - world-model
@@ -364,7 +364,7 @@ methods:
   arxiv: '2310.16828'
   year: 2023
   code: nicklashansen/tdmpc2
-  stars: 876
+  stars: 882
   tags:
   - model-based
   - model-predictive-control
@@ -380,7 +380,7 @@ methods:
   arxiv: '2402.03300'
   year: 2024
   code: deepseek-ai/DeepSeek-Math
-  stars: 3347
+  stars: 3351
   tags:
   - language-model
   - group-relative
