@@ -99,7 +99,7 @@ methods:
   arxiv: '2108.13035'
   year: 2021
   code: med-air/SurRoL
-  stars: 259
+  stars: 260
   tags:
   - reinforcement-learning
   - surgical-robot
@@ -149,7 +149,7 @@ methods:
   arxiv: '2401.06013'
   year: 2024
   code: BeileiCui/SurgicalDINO
-  stars: 69
+  stars: 70
   tags:
   - depth-estimation
   - foundation-model

@@ -64,7 +64,7 @@ methods:
   arxiv: '1911.11763'
   year: 2020
   code: magicleap/SuperGluePretrainedNetwork
-  stars: 4041
+  stars: 4047
   tags:
   - feature-matching
   - graph-neural-network
@@ -78,7 +78,7 @@ methods:
   arxiv: '2104.00680'
   year: 2021
   code: zju3dv/LoFTR
-  stars: 2926
+  stars: 2930
   tags:
   - feature-matching
   - transformer
@@ -93,7 +93,7 @@ methods:
   arxiv: '2306.13643'
   year: 2023
   code: cvg/LightGlue
-  stars: 4634
+  stars: 4651
   tags:
   - feature-matching
   - lightweight
@@ -107,7 +107,7 @@ methods:
   arxiv: '2312.14132'
   year: 2024
   code: naver/dust3r
-  stars: 7228
+  stars: 7235
   tags:
   - 3d-reconstruction
   - dense-matching
@@ -123,7 +123,7 @@ methods:
   arxiv: '2406.09756'
   year: 2024
   code: naver/mast3r
-  stars: 3021
+  stars: 3030
   tags:
   - 3d-reconstruction
   - feature-matching
@@ -216,7 +216,7 @@ methods:
     relation: extends
   description: Adaptive span transformer for detector-free matching with flow-based
     attention spans
-  stars: 249
+  stars: 250
 - name: QuadTree Attention
   paper: QuadTree Attention for Vision Transformers
   arxiv: '2201.02767'
@@ -278,7 +278,7 @@ methods:
     relation: extends
   description: Robust dense feature matching using coarse-to-fine warp and certainty
     estimation
-  stars: 1261
+  stars: 1267
 - name: GIM
   paper: 'GIM: Learning Generalizable Image Matcher From Internet Videos'
   arxiv: '2402.11095'
@@ -293,7 +293,7 @@ methods:
     relation: extends
   description: Generalizable image matcher trained on internet videos for broad domain
     matching
-  stars: 899
+  stars: 900
 - name: XFeat
   paper: 'XFeat: Accelerated Features for Lightweight Image Matching'
   arxiv: '2404.19174'
@@ -308,7 +308,7 @@ methods:
   - name: SuperPoint
     relation: extends
   description: Lightweight and accelerated learned features for real-time image matching
-  stars: 1672
+  stars: 1679
 - name: OmniGlue
   paper: 'OmniGlue: Generalizable Feature Matching with Foundation Model Guidance'
   arxiv: '2405.12979'
@@ -336,7 +336,7 @@ methods:
   - name: MASt3R
     relation: extends
   description: Fully-integrated SfM pipeline built on MASt3R for unconstrained reconstruction
-  stars: 3021
+  stars: 3030
 - name: VGGSfM
   paper: 'VGGSfM: Visual Geometry Grounded Deep Structure From Motion'
   arxiv: '2312.04563'
@@ -387,7 +387,7 @@ methods:
   arxiv: '2408.16061'
   year: 2025
   code: HengyiWang/spann3r
-  stars: 1138
+  stars: 1137
   tags:
   - 3d-reconstruction
   - dense-matching
@@ -403,7 +403,7 @@ methods:
   arxiv: '2412.12392'
   year: 2025
   code: rmurai0610/MASt3R-SLAM
-  stars: 3089
+  stars: 3096
   tags:
   - slam
   - dense-matching
@@ -434,7 +434,7 @@ methods:
   paper: Structure-from-Motion Revisited
   year: 2016
   code: colmap/colmap
-  stars: 12113
+  stars: 12185
   tags:
   - structure-from-motion
   - multi-view-stereo
@@ -450,7 +450,7 @@ methods:
   arxiv: '1812.03506'
   year: 2019
   code: cvg/Hierarchical-Localization
-  stars: 4142
+  stars: 4149
   tags:
   - localization
   - hierarchical
@@ -468,7 +468,7 @@ methods:
   arxiv: '2210.10716'
   year: 2022
   code: naver/croco
-  stars: 503
+  stars: 504
   tags:
   - self-supervised
   - pretraining
@@ -500,7 +500,7 @@ methods:
   arxiv: '2503.11651'
   year: 2025
   code: facebookresearch/vggt
-  stars: 13700
+  stars: 13791
   tags:
   - 3d-reconstruction
   - visual-geometry
