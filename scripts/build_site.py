@@ -294,7 +294,12 @@ INDEX_HTML = """\
 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0e1117; color: #ccc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  html, body { height: 100%; }
+  body {
+    background: #0e1117; color: #ccc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden;
+  }
+  #stories, .header, #domain-banner { flex-shrink: 0; }
   .header { padding: 16px 24px; border-bottom: 1px solid #333; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .header h1 { color: #fff; font-size: 20px; white-space: nowrap; }
   .header a { color: #888; text-decoration: none; font-size: 13px; }
@@ -363,7 +368,7 @@ INDEX_HTML = """\
   #domain-banner .chip.star { border-color: #eab308; color: #eab308; }
   #domain-banner .chip.latest { border-color: #22c55e; color: #22c55e; }
   #domain-banner .chip.oss { border-color: #3b82f6; color: #3b82f6; }
-  #graph { width: 100%; height: calc(100vh - 70px); }
+  #graph { width: 100%; flex: 1; min-height: 0; }
   #info-panel {
     display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 10000;
     background: #161b22; border-top: 1px solid #333; padding: 16px 24px;
@@ -443,18 +448,29 @@ INDEX_HTML = """\
   .star-row a:hover { text-decoration: underline; }
   .star-row .star-count { color: #eab308; white-space: nowrap; }
   @media (max-width: 768px) {
-    .story-card { min-width: 160px; padding: 8px 12px; }
+    #stories { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+    .story-card { min-width: 200px; max-width: 240px; flex: 0 0 auto; padding: 10px 12px; scroll-snap-align: start; }
     .story-icon { font-size: 18px; }
     .story-text { font-size: 11px; }
-    .header { flex-direction: column; align-items: flex-start; padding: 12px 16px; }
-    .header h1 { font-size: 16px; }
-    .controls { flex-wrap: wrap; gap: 8px; }
-    select, #search { font-size: 12px; padding: 6px 8px; width: 100%; }
-    .filter-btn { font-size: 11px; padding: 4px 8px; }
-    #graph { height: calc(100vh - 120px); }
+    .header { padding: 10px 12px; gap: 8px; row-gap: 8px; }
+    .header h1 { font-size: 15px; flex: 1; }
+    .header > a { order: 1; }
+    .controls { order: 2; width: 100%; gap: 6px; }
+    #category, #domain { flex: 1 1 45%; min-width: 0; width: auto; font-size: 13px; padding: 8px; }
+    #search { flex: 1 1 100%; width: 100%; font-size: 16px; padding: 8px; }
+    .filter-btn { font-size: 12px; padding: 8px 10px; }
+    .stats { flex-basis: 100%; font-size: 11px; }
+    #domain-banner { padding: 8px 12px; gap: 8px; font-size: 12px; }
+    #domain-banner .desc { min-width: 100%; }
     .legend { font-size: 11px; padding: 6px 10px; top: auto; bottom: 12px; right: 12px; }
-    #info-panel { font-size: 13px; }
-    #stats-overlay { width: 95%; left: 2.5%; }
+    #info-panel { font-size: 13px; padding: 14px 16px; max-height: 45vh; padding-bottom: calc(14px + env(safe-area-inset-bottom)); }
+    #info-panel h2 { font-size: 16px; }
+    #guide-toast { width: 90%; max-width: 340px; text-align: center; font-size: 13px; bottom: 50vh; }
+    .stats-panel { width: 94%; padding: 20px 16px; max-height: 88vh; border-radius: 10px; }
+    .stats-panel h2 { font-size: 18px; }
+    .hot-row { flex-wrap: wrap; row-gap: 2px; }
+    .hot-row .hot-domain { display: none; }
+    .hot-row .hot-jump { margin-left: auto; }
   }
 </style>
 </head>
@@ -869,7 +885,6 @@ function showBanner(domainName) {
 
   if (!domainName || domainName === "__category__") {
     banner.classList.remove("visible");
-    document.getElementById("graph").style.height = "calc(100vh - 70px)";
     return;
   }
 
@@ -890,7 +905,6 @@ function showBanner(domainName) {
     (h.roots.length ? '<span class="chip">Roots: ' + h.roots.join(", ") + '</span>' : '');
 
   banner.classList.add("visible");
-  document.getElementById("graph").style.height = "calc(100vh - 110px)";
 }
 
 function onCategoryChange() {
