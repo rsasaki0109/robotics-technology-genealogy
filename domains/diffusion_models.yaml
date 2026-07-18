@@ -3,7 +3,8 @@ description: 'From the foundational denoising diffusion probabilistic models (DD
   and score-based generative modeling through accelerated sampling (DDIM), classifier-free
   guidance, and latent diffusion, to large-scale text-to-image systems (Stable Diffusion,
   DALL-E 2, Imagen), diffusion transformers (DiT), flow matching, and video generation
-  (SORA, Stable Video Diffusion) — the evolution of diffusion-based generative models.
+  (SORA, Stable Video Diffusion, CogVideoX, Open-Sora, HunyuanVideo, Wan, LTX-Video,
+  Mochi) - the evolution of diffusion-based generative models.
 
   '
 source_awesome_lists:
@@ -328,3 +329,173 @@ methods:
     relation: extends
   description: Latent video diffusion model extending Stable Diffusion with temporal
     layers for video generation
+- name: CogVideo
+  paper: 'CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers'
+  arxiv: '2205.15868'
+  year: 2022
+  code: THUDM/CogVideo
+  stars: 12883
+  tags:
+  - video-generation
+  - transformer
+  - text-to-video
+  - foundational
+  parents: []
+  description: Early large-scale transformer pretrained for text-to-video generation
+    from Tsinghua / Zhipu AI
+- name: CogVideoX
+  paper: 'CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer'
+  arxiv: '2408.06072'
+  year: 2024
+  code: THUDM/CogVideo
+  stars: 12883
+  tags:
+  - video-generation
+  - dit
+  - 3d-vae
+  - expert-transformer
+  - open-source
+  parents:
+  - name: CogVideo
+    relation: extends
+  - name: DiT
+    relation: extends
+  - name: SORA
+    relation: inspires
+  description: Open diffusion transformer with 3D causal VAE and expert adaptive LayerNorm
+    for long, motion-rich text-to-video generation
+  recommended: true
+- name: HunyuanVideo
+  paper: 'HunyuanVideo: A Systematic Framework For Large Video Generation Model'
+  arxiv: '2412.03603'
+  year: 2024
+  code: Tencent-Hunyuan/HunyuanVideo
+  stars: 12345
+  tags:
+  - video-generation
+  - dit
+  - open-source
+  - large-scale
+  parents:
+  - name: DiT
+    relation: extends
+  - name: SORA
+    relation: inspires
+  description: Tencent's systematic large video generation framework with open DiT
+    weights widely used as an open Sora-class baseline
+  recommended: true
+- name: Open-Sora
+  paper: 'Open-Sora: Democratizing Efficient Video Production for All'
+  arxiv: '2412.20404'
+  year: 2024
+  code: hpcaitech/Open-Sora
+  stars: 29198
+  tags:
+  - video-generation
+  - open-source
+  - stdit
+  - sora-reproduction
+  parents:
+  - name: SORA
+    relation: inspires
+  - name: DiT
+    relation: extends
+  description: Fully open-source Sora-style video generation stack with Spatial-Temporal
+    DiT, compressive 3D autoencoder, and public training code
+  recommended: true
+- name: Open-Sora 2.0
+  paper: 'Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k'
+  arxiv: '2503.09642'
+  year: 2025
+  code: hpcaitech/Open-Sora
+  stars: 29198
+  tags:
+  - video-generation
+  - open-source
+  - scalable
+  - commercial-level
+  parents:
+  - name: Open-Sora
+    relation: extends
+  - name: HunyuanVideo
+    relation: inspires
+  description: 11B open video model trained for ~$200k matching HunyuanVideo-class
+    quality on VBench and human preference
+- name: Mochi 1
+  paper: Mochi 1
+  arxiv: ''
+  year: 2024
+  code: genmoai/mochi
+  stars: 3697
+  tags:
+  - video-generation
+  - asymmdit
+  - open-source
+  - motion-quality
+  parents:
+  - name: DiT
+    relation: extends
+  - name: Stable Diffusion 3
+    relation: inspires
+  description: Genmo's 10B AsymmDiT open video model emphasizing smooth motion and
+    temporal coherence under Apache 2.0
+- name: LTX-Video
+  paper: 'LTX-Video: Realtime Video Latent Diffusion'
+  arxiv: '2501.00103'
+  year: 2024
+  code: Lightricks/LTX-Video
+  stars: 10698
+  tags:
+  - video-generation
+  - realtime
+  - efficient
+  - open-source
+  parents:
+  - name: DiT
+    relation: extends
+  - name: Latent Diffusion
+    relation: extends
+  description: Lightricks realtime latent video diffusion optimized for fast inference
+    on consumer GPUs with I2V and keyframe control
+- name: Wan 2.1
+  paper: 'Wan: Open and Advanced Large-Scale Video Generative Models'
+  arxiv: '2503.20314'
+  year: 2025
+  code: Wan-Video/Wan2.1
+  stars: 16599
+  tags:
+  - video-generation
+  - dit
+  - open-source
+  - large-scale
+  - foundation-model
+  parents:
+  - name: DiT
+    relation: extends
+  - name: SORA
+    relation: inspires
+  - name: HunyuanVideo
+    relation: inspires
+  description: Alibaba's open large-scale video foundation suite (1.3B-14B) pushing
+    open-weight quality toward closed Sora/Veo-class models
+  recommended: true
+- name: LTX-2
+  paper: 'LTX-2: Efficient Joint Audio-Visual Foundation Model'
+  arxiv: '2601.03233'
+  year: 2026
+  code: Lightricks/LTX-Video
+  stars: 10698
+  tags:
+  - video-generation
+  - audio-visual
+  - joint-generation
+  - open-source
+  - foundation-model
+  parents:
+  - name: LTX-Video
+    relation: extends
+  - name: DiT
+    relation: extends
+  description: Asymmetric dual-stream DiT jointly generating synchronized video and
+    audio in one diffusion pass with open weights
+  recommended: true

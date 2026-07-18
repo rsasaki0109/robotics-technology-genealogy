@@ -1,6 +1,8 @@
 name: Image Matching & Feature Detection
-description: 'Evolution of image matching methods — from handcrafted features to transformer-based
-  matchers.
+description: 'Evolution of image matching methods — from handcrafted features (SIFT)
+  and learned matchers (SuperPoint, LoFTR) through pairwise 3D reconstruction (DUSt3R,
+  MASt3R) to feed-forward visual geometry transformers (VGGT, Fast3R, CUT3R, Pi3,
+  StreamVGGT, MapAnything, VGGT-Omega).
 
   '
 source_awesome_lists:
@@ -495,12 +497,46 @@ methods:
     relation: extends
   description: Dense kernelized feature matching using global correlation and kernel
     regression for geometry estimation
+- name: Fast3R
+  paper: 'Fast3R: Towards 3D Reconstruction of 1000+ Images in One Forward Pass'
+  arxiv: '2501.13928'
+  year: 2025
+  code: facebookresearch/fast3r
+  stars: 1598
+  tags:
+  - 3d-reconstruction
+  - multi-view
+  - feed-forward
+  - scalable
+  - transformer
+  parents:
+  - name: DUSt3R
+    relation: extends
+  description: Multi-view generalization of DUSt3R processing 1000+ images in one
+    forward pass without iterative global alignment
+- name: CUT3R
+  paper: 'CUT3R: Continuous 3D Perception Model with Persistent State'
+  arxiv: '2501.12387'
+  year: 2025
+  code: CUT3R/CUT3R
+  stars: 1461
+  tags:
+  - 3d-reconstruction
+  - online
+  - recurrent
+  - streaming
+  - feed-forward
+  parents:
+  - name: DUSt3R
+    relation: extends
+  description: Stateful recurrent transformer continuously updating a persistent scene
+    state for online metric 3D reconstruction from video streams
 - name: VGGT
   paper: 'VGGT: Visual Geometry Grounded Transformer'
   arxiv: '2503.11651'
   year: 2025
   code: facebookresearch/vggt
-  stars: 13791
+  stars: 13870
   tags:
   - 3d-reconstruction
   - visual-geometry
@@ -512,9 +548,50 @@ methods:
     relation: extends
   - name: DUSt3R
     relation: inspires
+  - name: Fast3R
+    relation: inspires
   description: Feed-forward transformer predicting cameras, depth, point maps, and
     3D points from unposed images in a single forward pass
   recommended: true
+- name: Pi3
+  paper: 'Pi3: Scalable Permutation-Equivariant Visual Geometry Learning'
+  arxiv: '2507.13347'
+  year: 2025
+  code: yyfz/Pi3
+  stars: 2067
+  tags:
+  - 3d-reconstruction
+  - visual-geometry
+  - permutation-equivariant
+  - feed-forward
+  - transformer
+  parents:
+  - name: VGGT
+    relation: extends
+  - name: DUSt3R
+    relation: inspires
+  description: Permutation-equivariant visual geometry model (pi-cubed) removing fixed
+    reference-view bias for robust multi-view pose and point-map prediction
+  recommended: true
+- name: StreamVGGT
+  paper: Streaming 4D Visual Geometry Transformer
+  arxiv: '2507.11539'
+  year: 2025
+  code: wzzheng/StreamVGGT
+  stars: 940
+  tags:
+  - 4d-reconstruction
+  - streaming
+  - causal-transformer
+  - real-time
+  - visual-geometry
+  parents:
+  - name: VGGT
+    relation: extends
+  - name: CUT3R
+    relation: inspires
+  description: Causal streaming transformer for real-time 4D visual geometry perception
+    with cached memory tokens compatible with FlashAttention
 - name: MapAnything
   paper: 'MapAnything: Universal Feed-Forward Metric 3D Reconstruction'
   arxiv: '2509.13414'
@@ -530,8 +607,30 @@ methods:
   parents:
   - name: VGGT
     relation: extends
+  - name: Pi3
+    relation: inspires
   - name: DUSt3R
     relation: inspires
   description: Universal feed-forward metric 3D reconstruction backbone unifying SfM,
     MVS, depth, and localization in one model
+  recommended: true
+- name: VGGT-Omega
+  paper: 'VGGT-Omega: Scaling Visual Geometry Grounded Transformers'
+  arxiv: '2605.15195'
+  year: 2026
+  code: ''
+  stars: 0
+  tags:
+  - 3d-reconstruction
+  - visual-geometry
+  - scalable
+  - dynamic-scenes
+  - registers
+  parents:
+  - name: VGGT
+    relation: extends
+  - name: StreamVGGT
+    relation: inspires
+  description: Scaled VGGT successor with register attention, multi-task dense head,
+    and self-supervised video training for static and dynamic scenes
   recommended: true

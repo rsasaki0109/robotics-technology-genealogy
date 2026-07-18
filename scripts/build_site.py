@@ -474,17 +474,17 @@ INDEX_HTML = """\
     <div class="story-icon">🦾</div>
     <div class="story-text"><b>OpenVLA → π0.5 → DreamZero</b><br>From VLAs to world-action robot policies<br><span class="story-badge">2026</span></div>
   </div>
-  <div class="story-card featured vggt" onclick="jumpToStory('Image Matching & Feature Detection','MapAnything')">
+  <div class="story-card featured vggt" onclick="jumpToStory('Image Matching & Feature Detection','VGGT-Omega')">
     <div class="story-icon">📐</div>
-    <div class="story-text"><b>VGGT → MapAnything</b><br>Universal feed-forward metric 3D reconstruction<br><span class="story-badge">2026</span></div>
+    <div class="story-text"><b>DUSt3R → VGGT → Pi3 / MapAnything</b><br>Feed-forward visual geometry to VGGT-Omega<br><span class="story-badge">VGGT</span></div>
+  </div>
+  <div class="story-card featured" style="box-shadow:inset 0 -2px 0 #a855f7" onclick="jumpToStory('Diffusion Models','Wan 2.1')">
+    <div class="story-icon">🎬</div>
+    <div class="story-text"><b>Sora → CogVideoX → Wan / LTX-2</b><br>Open video DiTs from Sora to 2026<br><span class="story-badge" style="background:#a855f7;color:#fff">Video</span></div>
   </div>
   <div class="story-card" onclick="jumpToStory('Neural Radiance Fields & 3D Gaussian Splatting','NeRF')">
     <div class="story-icon">🔥</div>
     <div class="story-text"><b>NeRF → 3DGS</b><br>2 years, 22 descendants — the paradigm shift in 3D</div>
-  </div>
-  <div class="story-card" onclick="jumpToStory('Large Language Models','Transformer')">
-    <div class="story-icon">🧠</div>
-    <div class="story-text"><b>Transformer → GPT-4 / DeepSeek</b><br>The LLM explosion from 2017</div>
   </div>
 </div>
 
@@ -493,7 +493,7 @@ INDEX_HTML = """\
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
-    <input type="text" id="search" placeholder="Try: DreamZero, MapAnything, OpenVLA, Cosmos..." title="Shortcut: press / to search" autocomplete="off" list="search-list">
+    <input type="text" id="search" placeholder="Try: VGGT-Omega, Wan 2.1, Pi3, DreamZero..." title="Shortcut: press / to search" autocomplete="off" list="search-list">
     <datalist id="search-list"></datalist>
     <button class="filter-btn" id="btn-play" title="Watch technologies emerge year by year">&#9654; 1992→2026</button>
     <button class="filter-btn" id="btn-hot" title="Top trending methods in 2025-2026">&#128293; Hot</button>
@@ -1136,8 +1136,8 @@ def main() -> None:
     site_data = build_site_data(domains)
 
     data_path = OUTPUT_DIR / "data.json"
-    with data_path.open("w") as f:
-        json.dump(site_data, f, separators=(",", ":"))
+    with data_path.open("w", encoding="utf-8") as f:
+        json.dump(site_data, f, separators=(",", ":"), ensure_ascii=False)
     print(f"  data.json: {data_path.stat().st_size / 1024:.0f} KB")
 
     print("Building stats...")
@@ -1148,7 +1148,7 @@ def main() -> None:
     print(f"  stats.json: {stats_path.stat().st_size / 1024:.1f} KB")
 
     index_path = OUTPUT_DIR / "index.html"
-    index_path.write_text(INDEX_HTML)
+    index_path.write_text(INDEX_HTML, encoding="utf-8")
     print(f"  index.html written")
 
     print(f"\nDone! Open {OUTPUT_DIR}/index.html or deploy docs/ to GitHub Pages.")

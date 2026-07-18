@@ -67,7 +67,7 @@ class Domain(BaseModel):
 def load_domain(path: str | Path) -> Domain:
     """Load a domain definition from a YAML file."""
     path = Path(path)
-    with path.open() as f:
+    with path.open(encoding="utf-8") as f:
         data = yaml.safe_load(f)
     return Domain(**data)
 

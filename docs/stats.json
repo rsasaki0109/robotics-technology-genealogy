@@ -1,5 +1,5 @@
 {
-  "total_methods": 862,
+  "total_methods": 876,
   "total_domains": 28,
   "methods_per_domain": [
     {
@@ -23,6 +23,10 @@
       "count": 45
     },
     {
+      "domain": "Image Matching & Feature Detection",
+      "count": 40
+    },
+    {
       "domain": "3D Object Detection",
       "count": 39
     },
@@ -33,10 +37,6 @@
     {
       "domain": "Robot Middleware & Frameworks",
       "count": 38
-    },
-    {
-      "domain": "Image Matching & Feature Detection",
-      "count": 35
     },
     {
       "domain": "Imitation Learning & Robot Foundation Models",
@@ -53,6 +53,10 @@
     {
       "domain": "Motion Planning",
       "count": 29
+    },
+    {
+      "domain": "Diffusion Models",
+      "count": 27
     },
     {
       "domain": "End-to-End Autonomous Driving",
@@ -93,10 +97,6 @@
     {
       "domain": "Grasp Planning & Manipulation",
       "count": 19
-    },
-    {
-      "domain": "Diffusion Models",
-      "count": 18
     },
     {
       "domain": "Optical Flow",
@@ -266,7 +266,7 @@
     },
     {
       "year": 2022,
-      "count": 100
+      "count": 101
     },
     {
       "year": 2023,
@@ -274,23 +274,23 @@
     },
     {
       "year": 2024,
-      "count": 168
+      "count": 173
     },
     {
       "year": 2025,
-      "count": 104
+      "count": 110
     },
     {
       "year": 2026,
-      "count": 12
+      "count": 14
     }
   ],
   "oss_breakdown": {
-    "open": 601,
+    "open": 614,
     "research": 1,
     "partial": 6,
     "closed": 69,
-    "unknown": 185
+    "unknown": 186
   },
   "top_by_stars": [
     {

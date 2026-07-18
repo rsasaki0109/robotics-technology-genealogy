@@ -19,7 +19,7 @@ def _load_raw_yamls() -> list[tuple[str, dict]]:
     """Load all YAML files as raw dicts for field-level checks."""
     results = []
     for path in sorted(DOMAINS_DIR.glob("*.yaml")):
-        with path.open() as f:
+        with path.open(encoding="utf-8") as f:
             data = yaml.safe_load(f)
         results.append((path.name, data))
     return results
@@ -31,7 +31,7 @@ def _load_raw_yamls() -> list[tuple[str, dict]]:
 def test_all_yaml_parseable():
     """Every YAML in domains/ must parse without errors."""
     for path in sorted(DOMAINS_DIR.glob("*.yaml")):
-        with path.open() as f:
+        with path.open(encoding="utf-8") as f:
             data = yaml.safe_load(f)
         assert isinstance(data, dict), f"{path.name} did not parse to a dict"
 
