@@ -243,10 +243,10 @@ def build_site_data(domains: list[Domain]) -> dict:
 
     site_data["facts"] = facts
 
-    # Hot 2025: recent high-star methods
-    recent = [m for m in all_methods if m.year >= 2024]
+    # Hot 2026: recent high-star methods (2025+)
+    recent = [m for m in all_methods if m.year >= 2025]
     recent.sort(key=lambda m: m.stars or 0, reverse=True)
-    hot_2025 = []
+    hot_2026 = []
     seen_names: set[str] = set()
     domain_count: dict[str, int] = {}
     MAX_PER_DOMAIN = 2
@@ -258,7 +258,7 @@ def build_site_data(domains: list[Domain]) -> dict:
             continue
         seen_names.add(m.name)
         domain_count[domain_name] = domain_count.get(domain_name, 0) + 1
-        hot_2025.append({
+        hot_2026.append({
             "name": m.name,
             "year": m.year,
             "stars": m.stars or 0,
@@ -266,9 +266,11 @@ def build_site_data(domains: list[Domain]) -> dict:
             "code": m.code or "",
             "arxiv": m.arxiv or "",
         })
-        if len(hot_2025) >= 15:
+        if len(hot_2026) >= 15:
             break
-    site_data["hot_2025"] = hot_2025
+    site_data["hot_2026"] = hot_2026
+    # Keep alias for older clients
+    site_data["hot_2025"] = hot_2026
 
     return site_data
 
@@ -444,17 +446,17 @@ INDEX_HTML = """\
 <body>
 
 <div id="stories">
-  <div class="story-card featured wm" onclick="jumpToStory('World Models for Robotics & Embodied AI','World Models')">
+  <div class="story-card featured wm" onclick="jumpToStory('World Models for Robotics & Embodied AI','DreamZero')">
     <div class="story-icon">🌐</div>
-    <div class="story-text"><b>World Models → Dreamer → Cosmos / JEPA</b><br>Latent simulators for embodied intelligence<br><span class="story-badge">HOT</span></div>
+    <div class="story-text"><b>World Models → Cosmos → DreamZero</b><br>2026 world-action models for embodied AI<br><span class="story-badge">2026</span></div>
   </div>
-  <div class="story-card featured vla" onclick="jumpToStory('Imitation Learning & Robot Foundation Models','OpenVLA')">
+  <div class="story-card featured vla" onclick="jumpToStory('Imitation Learning & Robot Foundation Models','DreamZero')">
     <div class="story-icon">🦾</div>
-    <div class="story-text"><b>RT-2 → OpenVLA → π0</b><br>Vision-language-action robot policies<br><span class="story-badge">HOT</span></div>
+    <div class="story-text"><b>OpenVLA → π0.5 → DreamZero</b><br>From VLAs to world-action robot policies<br><span class="story-badge">2026</span></div>
   </div>
-  <div class="story-card featured vggt" onclick="jumpToStory('Image Matching & Feature Detection','VGGT')">
+  <div class="story-card featured vggt" onclick="jumpToStory('Image Matching & Feature Detection','MapAnything')">
     <div class="story-icon">📐</div>
-    <div class="story-text"><b>DUSt3R → VGGT</b><br>Feed-forward visual geometry transformers<br><span class="story-badge">HOT</span></div>
+    <div class="story-text"><b>VGGT → MapAnything</b><br>Universal feed-forward metric 3D reconstruction<br><span class="story-badge">2026</span></div>
   </div>
   <div class="story-card" onclick="jumpToStory('Neural Radiance Fields & 3D Gaussian Splatting','NeRF')">
     <div class="story-icon">🔥</div>
@@ -471,10 +473,10 @@ INDEX_HTML = """\
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
-    <input type="text" id="search" placeholder="Try: World Models, OpenVLA, VGGT, Cosmos..." autocomplete="off" list="search-list">
+    <input type="text" id="search" placeholder="Try: DreamZero, MapAnything, OpenVLA, Cosmos..." autocomplete="off" list="search-list">
     <datalist id="search-list"></datalist>
     <button class="filter-btn" id="btn-play" title="Watch technologies emerge year by year">&#9654; 1992→2026</button>
-    <button class="filter-btn" id="btn-hot" title="Top trending methods in 2024-2025">&#128293; Hot</button>
+    <button class="filter-btn" id="btn-hot" title="Top trending methods in 2025-2026">&#128293; Hot</button>
     <button class="filter-btn" id="btn-oss" title="Show only open source methods">OSS Only</button>
     <button class="filter-btn" id="btn-stats" title="Show statistics">Stats</button>
     <span class="stats" id="stats"></span>
@@ -522,8 +524,8 @@ INDEX_HTML = """\
 <div id="hot-overlay">
   <div class="stats-panel">
     <button class="close-btn" onclick="toggleHotPanel()">&times;</button>
-    <h2>&#128293; 2025 Hot Methods</h2>
-    <p style="color:#888;margin-bottom:16px;font-size:13px">Top recent methods (2024+) ranked by GitHub stars</p>
+    <h2>&#128293; 2026 Hot Methods</h2>
+    <p style="color:#888;margin-bottom:16px;font-size:13px">Top recent methods (2025+) ranked by GitHub stars</p>
     <div id="hot-list"></div>
   </div>
 </div>
@@ -955,10 +957,10 @@ function toggleHotPanel() {
 }
 
 function renderHotPanel() {
-  if (!DATA || !DATA.hot_2025) return;
+  if (!DATA || !(DATA.hot_2026 || DATA.hot_2025)) return;
   const list = document.getElementById("hot-list");
   list.innerHTML = "";
-  DATA.hot_2025.forEach((m, idx) => {
+  (DATA.hot_2026 || DATA.hot_2025).forEach((m, idx) => {
     const link = m.code
       ? '<a href="https://github.com/' + m.code + '" target="_blank">' + m.name + '</a>'
       : (m.arxiv ? '<a href="https://arxiv.org/abs/' + m.arxiv + '" target="_blank">' + m.name + '</a>' : m.name);

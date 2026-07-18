@@ -1,5 +1,5 @@
 {
-  "total_methods": 845,
+  "total_methods": 853,
   "total_domains": 28,
   "methods_per_domain": [
     {
@@ -12,7 +12,7 @@
     },
     {
       "domain": "World Models for Robotics & Embodied AI",
-      "count": 52
+      "count": 55
     },
     {
       "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
@@ -36,14 +36,14 @@
     },
     {
       "domain": "Image Matching & Feature Detection",
-      "count": 34
-    },
-    {
-      "domain": "2D Object Detection",
-      "count": 31
+      "count": 35
     },
     {
       "domain": "Imitation Learning & Robot Foundation Models",
+      "count": 35
+    },
+    {
+      "domain": "2D Object Detection",
       "count": 31
     },
     {
@@ -274,19 +274,19 @@
     },
     {
       "year": 2024,
-      "count": 165
+      "count": 166
     },
     {
       "year": 2025,
-      "count": 100
+      "count": 102
     },
     {
       "year": 2026,
-      "count": 2
+      "count": 7
     }
   ],
   "oss_breakdown": {
-    "open": 589,
+    "open": 597,
     "research": 1,
     "partial": 6,
     "closed": 69,

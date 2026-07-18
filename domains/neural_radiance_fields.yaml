@@ -593,7 +593,7 @@ methods:
 - name: Aether
   paper: 'Aether: Geometric-Aware Unified World Model'
   arxiv: '2503.18945'
-  year: 2026
+  year: 2025
   code: OpenRobotLab/Aether
   stars: 600
   tags:
@@ -609,7 +609,7 @@ methods:
 - name: GaussianAnything
   paper: 'GaussianAnything: Interactive Point Cloud Latent Diffusion for 3D Generation'
   arxiv: '2411.08033'
-  year: 2026
+  year: 2024
   code: NIRVANALAN/GaussianAnything
   stars: 407
   tags:

@@ -913,3 +913,63 @@ methods:
     relation: inspires
   description: Adapts pre-trained video diffusion models into action-conditioned world
     models for embodied decision-making
+- name: Cosmos Policy
+  paper: 'Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning'
+  arxiv: '2601.16163'
+  year: 2026
+  code: NVlabs/cosmos-policy
+  stars: 832
+  tags:
+  - world-action-model
+  - video-diffusion
+  - robot-policy
+  - planning
+  - nvidia
+  parents:
+  - name: Cosmos
+    relation: extends
+  - name: DreamerV3
+    relation: inspires
+  description: Fine-tunes Cosmos video models into latent-frame robot policies with
+    test-time model-based planning
+  recommended: true
+- name: LingBot-VA
+  paper: Causal World Modeling for Robot Control
+  arxiv: '2601.21998'
+  year: 2026
+  code: Robbyant/lingbot-va
+  stars: 1623
+  tags:
+  - world-action-model
+  - causal
+  - mixture-of-transformers
+  - video-diffusion
+  parents:
+  - name: Genie
+    relation: inspires
+  - name: Cosmos Policy
+    relation: inspires
+  description: Causal video-action world model with MoT experts for closed-loop robot
+    control from long visual histories
+- name: DreamZero
+  paper: World Action Models are Zero-shot Policies
+  arxiv: '2602.15922'
+  year: 2026
+  code: dreamzero0/dreamzero
+  stars: 2461
+  tags:
+  - world-action-model
+  - zero-shot
+  - video-diffusion
+  - nvidia
+  - real-time
+  parents:
+  - name: Cosmos Policy
+    relation: inspires
+  - name: Genie
+    relation: inspires
+  - name: Dreamer 4
+    relation: inspires
+  description: 14B joint video-action diffusion WAM enabling zero-shot robot policies
+    and few-shot embodiment transfer
+  recommended: true

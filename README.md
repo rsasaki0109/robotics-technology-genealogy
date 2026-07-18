@@ -60,7 +60,7 @@ robotics-technology-genealogy info "LoFTR"
 
 # List with filters
 robotics-technology-genealogy list --tag transformer
-robotics-technology-genealogy list --year 2025
+robotics-technology-genealogy list --year 2026
 ```
 
 ## Web UI (Local)

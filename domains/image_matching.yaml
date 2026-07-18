@@ -515,3 +515,23 @@ methods:
   description: Feed-forward transformer predicting cameras, depth, point maps, and
     3D points from unposed images in a single forward pass
   recommended: true
+- name: MapAnything
+  paper: 'MapAnything: Universal Feed-Forward Metric 3D Reconstruction'
+  arxiv: '2509.13414'
+  year: 2026
+  code: facebookresearch/map-anything
+  stars: 3564
+  tags:
+  - metric-3d
+  - feed-forward
+  - multi-task
+  - visual-geometry
+  - unified
+  parents:
+  - name: VGGT
+    relation: extends
+  - name: DUSt3R
+    relation: inspires
+  description: Universal feed-forward metric 3D reconstruction backbone unifying SfM,
+    MVS, depth, and localization in one model
+  recommended: true

@@ -400,6 +400,89 @@ methods:
     relation: extends
   description: Scaled successor to pi0 with improved open-world generalization across
     diverse tasks and environments
+- name: UniVLA
+  paper: 'UniVLA: Learning to Act Anywhere with Task-Centric Latent Actions'
+  arxiv: '2505.06111'
+  year: 2025
+  code: OpenDriveLab/UniVLA
+  stars: 1108
+  open_source: open
+  license: ''
+  tags:
+  - vla
+  - latent-action
+  - generalist
+  - cross-embodiment
+  parents:
+  - name: OpenVLA
+    relation: extends
+  - name: Pi0
+    relation: inspires
+  description: Task-centric latent-action VLA enabling control across diverse robots
+    and environments
+- name: Cosmos Policy
+  paper: 'Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning'
+  arxiv: '2601.16163'
+  year: 2026
+  code: NVlabs/cosmos-policy
+  stars: 832
+  open_source: open
+  license: ''
+  tags:
+  - world-action-model
+  - video-diffusion
+  - robot-policy
+  - nvidia
+  parents:
+  - name: Pi0.5
+    relation: inspires
+  - name: OpenVLA
+    relation: inspires
+  description: Video-model-based robot policy encoding actions as latent frames for
+    visuomotor control and planning
+- name: LingBot-VA
+  paper: Causal World Modeling for Robot Control
+  arxiv: '2601.21998'
+  year: 2026
+  code: Robbyant/lingbot-va
+  stars: 1623
+  open_source: open
+  license: ''
+  tags:
+  - world-action-model
+  - vla
+  - causal
+  - video-diffusion
+  parents:
+  - name: Cosmos Policy
+    relation: inspires
+  - name: GR-2
+    relation: inspires
+  description: Causal MoT video-action model unifying world prediction and policy
+    execution for generalist control
+- name: DreamZero
+  paper: World Action Models are Zero-shot Policies
+  arxiv: '2602.15922'
+  year: 2026
+  code: dreamzero0/dreamzero
+  stars: 2461
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - world-action-model
+  - zero-shot
+  - video-diffusion
+  - foundation-model
+  parents:
+  - name: Pi0.5
+    relation: inspires
+  - name: Cosmos Policy
+    relation: extends
+  - name: LingBot-VA
+    relation: inspires
+  description: Joint video-action diffusion WAM with strong zero-shot generalization
+    beyond semantic-only VLAs
+  recommended: true
 - name: SmolVLA
   paper: 'SmolVLA: A Small Vision-Language-Action Model for Efficient Robot Learning'
   arxiv: '2506.01844'
