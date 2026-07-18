@@ -386,10 +386,23 @@ INDEX_HTML = """\
   #info-panel .close-btn:hover { color: #fff; }
   .legend {
     position: fixed; top: 80px; right: 16px; z-index: 9999;
-    background: rgba(14,17,23,0.9); border: 1px solid #333; border-radius: 8px;
-    padding: 10px 14px; font-size: 13px; line-height: 1.7; pointer-events: none;
+    background: rgba(14,17,23,0.92); border: 1px solid #333; border-radius: 8px;
+    padding: 10px 14px; font-size: 13px; line-height: 1.7;
   }
   .legend b { color: #fff; }
+  .legend .legend-head { cursor: pointer; user-select: none; }
+  .legend.collapsed #legend-body { display: none; }
+  #loading {
+    position: fixed; inset: 0; display: flex; flex-direction: column; gap: 14px;
+    justify-content: center; align-items: center; background: #0e1117; z-index: 30000;
+    transition: opacity 0.3s;
+  }
+  #loading.hidden { opacity: 0; pointer-events: none; }
+  .spinner {
+    width: 42px; height: 42px; border: 3px solid #23262d; border-top-color: #3b82f6;
+    border-radius: 50%; animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
   #stats-overlay, #hot-overlay {
     display: none; position: fixed; inset: 0; z-index: 20000;
     background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
@@ -402,6 +415,8 @@ INDEX_HTML = """\
   .hot-row .hot-name a:hover { text-decoration: underline; }
   .hot-row .hot-domain { color: #888; font-size: 12px; margin: 0 12px; }
   .hot-row .hot-stars { color: #eab308; white-space: nowrap; }
+  .hot-row .hot-jump { color: #22c55e; cursor: pointer; font-size: 12px; margin-left: 10px; white-space: nowrap; }
+  .hot-row .hot-jump:hover { text-decoration: underline; }
   .stats-panel {
     background: #161b22; border: 1px solid #333; border-radius: 12px;
     padding: 28px 32px; max-width: 720px; width: 90%; max-height: 85vh;
@@ -445,6 +460,11 @@ INDEX_HTML = """\
 </head>
 <body>
 
+<div id="loading">
+  <div class="spinner"></div>
+  <div style="color:#888;font-size:13px">Loading the genealogy of 860+ methods&hellip;</div>
+</div>
+
 <div id="stories">
   <div class="story-card featured wm" onclick="jumpToStory('World Models for Robotics & Embodied AI','LeWorldModel')">
     <div class="story-icon">🌐</div>
@@ -473,7 +493,7 @@ INDEX_HTML = """\
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
-    <input type="text" id="search" placeholder="Try: DreamZero, MapAnything, OpenVLA, Cosmos..." autocomplete="off" list="search-list">
+    <input type="text" id="search" placeholder="Try: DreamZero, MapAnything, OpenVLA, Cosmos..." title="Shortcut: press / to search" autocomplete="off" list="search-list">
     <datalist id="search-list"></datalist>
     <button class="filter-btn" id="btn-play" title="Watch technologies emerge year by year">&#9654; 1992→2026</button>
     <button class="filter-btn" id="btn-hot" title="Top trending methods in 2025-2026">&#128293; Hot</button>
@@ -500,7 +520,8 @@ INDEX_HTML = """\
     <div class="info-links" id="info-links"></div>
     <div class="info-meta" id="info-meta"></div>
     <div id="info-tags" style="margin-top:6px"></div>
-    <div id="info-next" style="margin-top:8px; display:none; color:#22c55e; font-size:13px"></div>
+    <div id="info-prev" style="margin-top:8px; display:none; color:#eab308; font-size:13px"></div>
+    <div id="info-next" style="margin-top:4px; display:none; color:#22c55e; font-size:13px"></div>
   </div>
 </div>
 
@@ -530,7 +551,9 @@ INDEX_HTML = """\
   </div>
 </div>
 
-<div class="legend">
+<div class="legend" id="legend">
+  <div class="legend-head" onclick="toggleLegend()"><b>Legend</b> <span id="legend-arrow" style="color:#888">&#9662;</span></div>
+  <div id="legend-body">
   <b>Edges</b><br>
   <span style="color:#22c55e">━━▶</span> extends<br>
   <span style="color:#06b6d4">━━▶</span> combines<br>
@@ -545,6 +568,7 @@ INDEX_HTML = """\
   <span style="color:#f97316">◉</span> Partial<br>
   <span style="color:#ef4444">◉</span> Closed<br>
   <span style="color:#555">◉</span> Unknown
+  </div>
 </div>
 
 <script>
@@ -655,6 +679,30 @@ function showInfoPanel(nodeData) {
     });
   }
 
+  // "Built on" - find parents (methods this one extends)
+  const prevEl = document.getElementById("info-prev");
+  if (prevEl && currentGraphData) {
+    const parents = currentGraphData.edges
+      .filter(e => e.to === nodeData.id)
+      .map(e => {
+        const parent = currentGraphData.nodes.find(n => n.id === e.from);
+        return parent ? { name: parent.id, year: parent.year } : null;
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.year - b.year);
+
+    if (parents.length > 0) {
+      prevEl.innerHTML = "<b>Built on:</b> " + parents.map(p => {
+        const safeName = p.name.replace(/"/g, "&quot;");
+        return '<span class="next-link" style="color:#eab308" onclick="searchAndFocus(&quot;' + safeName + '&quot;)">' +
+        p.name + " [" + p.year + "]</span>";
+      }).join(", ");
+      prevEl.style.display = "block";
+    } else {
+      prevEl.style.display = "none";
+    }
+  }
+
   // "Read next" - find children (methods that extend this one)
   const nextEl = document.getElementById("info-next");
   if (nextEl && currentGraphData) {
@@ -682,6 +730,13 @@ function showInfoPanel(nodeData) {
   }
 
   panel.classList.add("visible");
+  updateHash(nodeData.id);
+}
+
+function updateHash(methodName) {
+  if (methodName && history.replaceState) {
+    history.replaceState(null, "", "#m=" + encodeURIComponent(methodName));
+  }
 }
 
 function searchAndFocus(name) {
@@ -749,8 +804,21 @@ function buildSearchIndex() {
   }
 }
 
-function searchMethod(query) {
-  if (!query || !DATA.method_index[query]) return;
+function resolveMethodName(query) {
+  if (!query) return null;
+  if (DATA.method_index[query]) return query;
+  // Case-insensitive exact match, then prefix match
+  const lower = query.toLowerCase();
+  const names = Object.keys(DATA.method_index);
+  const exact = names.find(n => n.toLowerCase() === lower);
+  if (exact) return exact;
+  const prefix = names.find(n => n.toLowerCase().startsWith(lower));
+  return prefix || null;
+}
+
+function searchMethod(rawQuery) {
+  const query = resolveMethodName(rawQuery);
+  if (!query) return;
   const domainName = DATA.method_index[query];
 
   // Find which category contains this domain
@@ -767,6 +835,8 @@ function searchMethod(query) {
         if (network) {
           network.selectNodes([query]);
           network.focus(query, { scale: 1.2, animation: { duration: 500 } });
+          const nodeData = currentGraphData.nodes.find(n => n.id === query);
+          if (nodeData) showInfoPanel(nodeData);
         }
       }, 300);
       break;
@@ -964,13 +1034,27 @@ function renderHotPanel() {
     const link = m.code
       ? '<a href="https://github.com/' + m.code + '" target="_blank">' + m.name + '</a>'
       : (m.arxiv ? '<a href="https://arxiv.org/abs/' + m.arxiv + '" target="_blank">' + m.name + '</a>' : m.name);
+    const safeName = m.name.replace(/"/g, "&quot;");
     list.innerHTML += '<div class="hot-row">' +
       '<span class="hot-rank">#' + (idx + 1) + '</span>' +
       '<span class="hot-name">' + link + ' <span style="color:#888">(' + m.year + ')</span></span>' +
       '<span class="hot-domain">' + m.domain + '</span>' +
       '<span class="hot-stars">\\u2605 ' + m.stars.toLocaleString() + '</span>' +
+      '<span class="hot-jump" onclick="toggleHotPanel(); searchMethod(&quot;' + safeName + '&quot;)">Show in graph &rarr;</span>' +
       '</div>';
   });
+}
+
+function toggleLegend() {
+  const legend = document.getElementById("legend");
+  const collapsed = legend.classList.toggle("collapsed");
+  document.getElementById("legend-arrow").innerHTML = collapsed ? "&#9656;" : "&#9662;";
+}
+
+// Collapse legend by default on small screens
+if (window.innerWidth < 768) {
+  document.getElementById("legend").classList.add("collapsed");
+  document.getElementById("legend-arrow").innerHTML = "&#9656;";
 }
 
 fetch("stats.json").then(r => r.json()).then(s => { STATS = s; renderStatsPanel(s); }).catch(() => {});
@@ -998,7 +1082,43 @@ fetch("data.json")
     buildSearchIndex();
     renderHotPanel();
     onCategoryChange();
+
+    // Deep link: #m=MethodName opens that method directly
+    const hash = decodeURIComponent(location.hash || "");
+    if (hash.startsWith("#m=")) {
+      setTimeout(() => searchMethod(hash.slice(3)), 200);
+    }
+
+    document.getElementById("loading").classList.add("hidden");
+  })
+  .catch(() => {
+    document.getElementById("loading").innerHTML =
+      '<div style="color:#ef4444">Failed to load data.json — please reload.</div>';
   });
+
+// Keyboard shortcuts: "/" focuses search, Escape closes panels/overlays
+document.addEventListener("keydown", (e) => {
+  if (e.key === "/" && document.activeElement.tagName !== "INPUT") {
+    e.preventDefault();
+    document.getElementById("search").focus();
+  } else if (e.key === "Escape") {
+    document.getElementById("stats-overlay").classList.remove("visible");
+    document.getElementById("hot-overlay").classList.remove("visible");
+    document.getElementById("btn-stats").classList.remove("active");
+    document.getElementById("btn-hot").classList.remove("active");
+    closeInfoPanel();
+  }
+});
+
+// Click outside modal panels to close them
+["stats-overlay", "hot-overlay"].forEach(id => {
+  document.getElementById(id).addEventListener("click", (e) => {
+    if (e.target.id === id) {
+      e.target.classList.remove("visible");
+      document.getElementById(id === "stats-overlay" ? "btn-stats" : "btn-hot").classList.remove("active");
+    }
+  });
+});
 </script>
 </body>
 </html>
