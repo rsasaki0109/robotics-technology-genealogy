@@ -1,9 +1,9 @@
 name: World Models for Robotics & Embodied AI
 description: 'From Ha & Schmidhuber''s original World Models through latent dynamics
   learning (Dreamer series), model-based planning (MuZero, TD-MPC), transformer and
-  diffusion world models (IRIS, STORM, DIAMOND), to large-scale generative video world
-  simulators (Cosmos, Genie, Sora, Dreamer 4, V-JEPA 2) — the evolution of learned
-  world models for embodied intelligence.
+  diffusion world models (IRIS, STORM, DIAMOND), JEPA latent predictors (I-JEPA to
+  V-JEPA 2.1 / LeWorldModel), to large-scale generative video world simulators (Cosmos,
+  Genie, Sora, DreamZero) — the evolution of learned world models for embodied intelligence.
 
   '
 source_awesome_lists:
@@ -11,6 +11,7 @@ source_awesome_lists:
 - https://github.com/opendilab/awesome-model-based-RL
 - https://github.com/Li-Zn-H/AwesomeWorldModels
 - https://github.com/NJU3DV-LoongGroup/Embodied-World-Models-Survey
+- https://github.com/AbdelStark/awesome-jepa
 methods:
 - name: World Models
   paper: World Models
@@ -684,6 +685,22 @@ methods:
     relation: extends
   description: Scalable non-generative image pretraining that predicts semantic representations
     of masked target blocks from visible context
+- name: IWM
+  paper: Learning and Leveraging World Models in Visual Representation Learning
+  arxiv: '2403.00504'
+  year: 2024
+  code: ''
+  stars: 0
+  tags:
+  - image
+  - world-model
+  - latent-prediction
+  - self-supervised
+  parents:
+  - name: I-JEPA
+    relation: extends
+  description: Image World Models generalizing I-JEPA predictors to photometric and
+    geometric latent transformations
 - name: MC-JEPA
   paper: 'MC-JEPA: A Joint-Embedding Predictive Architecture for Self-Supervised Learning
     of Motion and Content Features'
@@ -717,6 +734,23 @@ methods:
     relation: extends
   description: Extends latent target prediction to audio spectrograms using curriculum
     time-frequency masking
+- name: Point-JEPA
+  paper: 'Point-JEPA: A Joint Embedding Predictive Architecture for Self-Supervised
+    Learning on Point Cloud'
+  arxiv: '2404.16432'
+  year: 2024
+  code: Ayumu-J-S/Point-JEPA
+  stars: 48
+  tags:
+  - point-cloud
+  - 3d
+  - sequencer
+  - self-supervised
+  parents:
+  - name: I-JEPA
+    relation: extends
+  description: Point-cloud JEPA with a token sequencer for spatial context selection
+    without raw-space reconstruction
 - name: 3D-JEPA
   paper: '3D-JEPA: A Joint Embedding Predictive Architecture for 3D Self-Supervised
     Representation Learning'
@@ -732,6 +766,8 @@ methods:
   parents:
   - name: I-JEPA
     relation: extends
+  - name: Point-JEPA
+    relation: inspires
   description: Non-generative 3D representation learner predicting semantic target-block
     embeddings from point-cloud context
 - name: V-JEPA
@@ -750,8 +786,28 @@ methods:
     relation: extends
   - name: MC-JEPA
     relation: inspires
+  - name: IWM
+    relation: inspires
   description: Self-supervised video prediction in latent space for learning visual
     representations without generative decoding
+- name: Discrete-JEPA
+  paper: 'Discrete JEPA: Learning Discrete Token Representations without Reconstruction'
+  arxiv: '2506.14373'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - discrete-tokens
+  - vector-quantization
+  - symbolic-reasoning
+  - self-supervised
+  parents:
+  - name: V-JEPA
+    relation: extends
+  - name: I-JEPA
+    relation: inspires
+  description: Extends JEPA with semantic vector quantization for discrete tokens
+    enabling symbolic reasoning and long-horizon prediction
 - name: ACT-JEPA
   paper: 'ACT-JEPA: Novel Joint-Embedding Predictive Architecture for Efficient Policy
     Representation Learning'
@@ -807,6 +863,42 @@ methods:
     relation: inspires
   description: Action-conditioned latent world model post-trained on 62 hours of robot
     video for zero-shot model-predictive manipulation
+- name: V-JEPA 2.1
+  paper: 'V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning'
+  arxiv: '2603.14482'
+  year: 2026
+  code: facebookresearch/vjepa2
+  stars: 4363
+  tags:
+  - dense-features
+  - deep-self-supervision
+  - video
+  - robotics
+  - meta
+  parents:
+  - name: V-JEPA 2
+    relation: extends
+  description: Dense predictive loss and deep self-supervision yielding spatially
+    grounded features for robotics, depth, and navigation
+  recommended: true
+- name: LLM-JEPA
+  paper: 'LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures'
+  arxiv: '2509.14252'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - language-model
+  - joint-embedding
+  - representation-learning
+  - self-supervised
+  parents:
+  - name: JEPA
+    relation: extends
+  - name: I-JEPA
+    relation: inspires
+  description: Applies JEPA latent-prediction objectives to LLM training for stronger
+    abstract representations
 - name: LeJEPA
   paper: 'LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics'
   arxiv: '2511.08544'
@@ -858,6 +950,84 @@ methods:
     relation: extends
   description: Systematic JEPA world-model design for latent-space planning across
     simulated and real robot manipulation and navigation
+- name: Causal-JEPA
+  paper: 'Causal-JEPA: Learning World Models through Object-Level Latent Masking'
+  arxiv: '2602.11389'
+  year: 2026
+  code: ''
+  stars: 0
+  tags:
+  - causal
+  - object-centric
+  - latent-masking
+  - world-model
+  parents:
+  - name: V-JEPA 2
+    relation: extends
+  - name: JEPA-WM
+    relation: inspires
+  description: Object-level latent masking inducing causal inductive bias for counterfactual
+    reasoning and efficient planning
+- name: LeWorldModel
+  paper: 'LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from
+    Pixels'
+  arxiv: '2603.19312'
+  year: 2026
+  code: lucas-maes/le-wm
+  stars: 4157
+  tags:
+  - world-model
+  - sigreg
+  - end-to-end
+  - pixel
+  - planning
+  parents:
+  - name: LeJEPA
+    relation: extends
+  - name: JEPA-WM
+    relation: inspires
+  - name: V-JEPA 2-AC
+    relation: inspires
+  description: Minimal two-term JEPA world model training stably from pixels with
+    SIGReg, planning up to 48x faster than foundation WMs
+  recommended: true
+- name: ThinkJEPA
+  paper: 'ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning
+    Model'
+  arxiv: '2603.22281'
+  year: 2026
+  code: ''
+  stars: 0
+  tags:
+  - world-model
+  - vlm
+  - long-horizon
+  - dual-temporal
+  parents:
+  - name: V-JEPA 2
+    relation: extends
+  - name: VL-JEPA
+    relation: combines
+  description: Dual-temporal JEPA with dense latent dynamics plus VLM thinker guidance
+    for long-horizon semantic planning
+- name: HWM
+  paper: Hierarchical Planning with Latent World Models
+  arxiv: '2604.03208'
+  year: 2026
+  code: kevinghst/HWM_PLDM
+  stars: 155
+  tags:
+  - hierarchical-planning
+  - latent-world-model
+  - long-horizon
+  - zero-shot
+  parents:
+  - name: JEPA-WM
+    relation: extends
+  - name: LeWorldModel
+    relation: inspires
+  description: Multi-scale hierarchical planning in latent world models for long-horizon
+    zero-shot control with lower compute
 - name: Oasis
   paper: 'Oasis: A Universe in a Transformer'
   arxiv: '2411.17382'

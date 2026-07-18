@@ -1,7 +1,11 @@
 {
-  "total_methods": 853,
+  "total_methods": 862,
   "total_domains": 28,
   "methods_per_domain": [
+    {
+      "domain": "World Models for Robotics & Embodied AI",
+      "count": 64
+    },
     {
       "domain": "Large Language Models",
       "count": 60
@@ -9,10 +13,6 @@
     {
       "domain": "LiDAR Odometry & SLAM",
       "count": 56
-    },
-    {
-      "domain": "World Models for Robotics & Embodied AI",
-      "count": 55
     },
     {
       "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
@@ -274,23 +274,23 @@
     },
     {
       "year": 2024,
-      "count": 166
+      "count": 168
     },
     {
       "year": 2025,
-      "count": 102
+      "count": 104
     },
     {
       "year": 2026,
-      "count": 7
+      "count": 12
     }
   ],
   "oss_breakdown": {
-    "open": 597,
+    "open": 601,
     "research": 1,
     "partial": 6,
     "closed": 69,
-    "unknown": 180
+    "unknown": 185
   },
   "top_by_stars": [
     {
