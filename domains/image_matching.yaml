@@ -514,3 +514,4 @@ methods:
     relation: inspires
   description: Feed-forward transformer predicting cameras, depth, point maps, and
     3D points from unposed images in a single forward pass
+  recommended: true

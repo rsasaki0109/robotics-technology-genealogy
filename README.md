@@ -23,11 +23,11 @@ Interactive genealogy tree visualizer for Robotics & AI technologies.
 
 | Category | Domains |
 |----------|---------|
+| **Robot Learning** | World Models, Imitation Learning / VLA, Legged Robots, Grasp Planning |
+| **Perception (Visual)** | Image Matching (VGGT), NeRF/3DGS, Visual SLAM, Depth, 2D Detection, Segmentation, Optical Flow, Object Tracking |
 | **Perception (LiDAR/3D)** | LiDAR SLAM, 3D Detection, Point Cloud Denoising, Scene Flow, Place Recognition |
-| **Perception (Visual)** | NeRF/3DGS, Image Matching, Visual SLAM, Depth, 2D Detection, Segmentation, Optical Flow, Object Tracking |
-| **Planning & Control** | Motion Planning, Robot Control, E2E Autonomous Driving |
-| **Robot Learning** | Imitation Learning, World Models, Legged Robots, Grasp Planning |
 | **Foundation Models** | LLM, VLM, Diffusion Models, Vision Backbone, Reinforcement Learning |
+| **Planning & Control** | Motion Planning, Robot Control, E2E Autonomous Driving |
 | **Platforms & Simulation** | Robot Simulation, Robot Middleware, Medical Robotics |
 
 ## Relation Types

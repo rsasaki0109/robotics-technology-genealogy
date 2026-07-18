@@ -27,6 +27,22 @@ DOMAINS_DIR = Path(__file__).parent.parent / "domains"
 OUTPUT_DIR = Path(__file__).parent.parent / "docs"
 
 CATEGORY_MAP = {
+    "Robot Learning": [
+        "World Models for Robotics & Embodied AI",
+        "Imitation Learning & Robot Foundation Models",
+        "Legged Robot Control",
+        "Grasp Planning & Manipulation",
+    ],
+    "Perception (Visual)": [
+        "Image Matching & Feature Detection",
+        "Neural Radiance Fields & 3D Gaussian Splatting",
+        "Visual SLAM",
+        "Depth Completion",
+        "2D Object Detection",
+        "Semantic Segmentation",
+        "Optical Flow",
+        "Object Tracking",
+    ],
     "Perception (LiDAR/3D)": [
         "LiDAR Odometry & SLAM",
         "3D Object Detection",
@@ -34,33 +50,17 @@ CATEGORY_MAP = {
         "Point Cloud Scene Flow",
         "Place Recognition",
     ],
-    "Perception (Visual)": [
-        "Neural Radiance Fields & 3D Gaussian Splatting",
-        "Image Matching & Feature Detection",
-        "Visual SLAM",
-        "Depth Completion",
-        "2D Object Detection",
-        "Semantic Segmentation",
-            "Optical Flow",
-            "Object Tracking",
+    "Foundation Models": [
+        "Large Language Models",
+        "Vision-Language Models",
+        "Diffusion Models",
+        "Vision Backbone & Foundation",
+        "Reinforcement Learning",
     ],
     "Planning & Control": [
         "Motion Planning",
         "Robot Control",
         "End-to-End Autonomous Driving",
-    ],
-    "Robot Learning": [
-        "Imitation Learning & Robot Foundation Models",
-        "World Models for Robotics & Embodied AI",
-        "Legged Robot Control",
-        "Grasp Planning & Manipulation",
-    ],
-    "Foundation Models": [
-        "Large Language Models",
-        "Vision-Language Models",
-        "Diffusion Models",
-            "Vision Backbone & Foundation",
-            "Reinforcement Learning",
     ],
     "Platforms & Simulation": [
         "Robot Simulation",
@@ -314,13 +314,28 @@ INDEX_HTML = """\
   .story-card {
     flex: 1; min-width: 180px; padding: 12px 16px; cursor: pointer;
     display: flex; gap: 10px; align-items: center;
-    border-right: 1px solid #222; transition: background 0.2s;
+    border-right: 1px solid #222; transition: background 0.2s, box-shadow 0.2s;
   }
   .story-card:hover { background: #1a2e1a; }
   .story-card:last-child { border-right: none; }
+  .story-card.featured {
+    background: linear-gradient(180deg, #152033 0%, #0e1117 100%);
+    box-shadow: inset 0 -2px 0 #3b82f6;
+  }
+  .story-card.featured:hover { background: #1a2a3d; }
+  .story-card.featured.wm { box-shadow: inset 0 -2px 0 #06b6d4; }
+  .story-card.featured.vla { box-shadow: inset 0 -2px 0 #22c55e; }
+  .story-card.featured.vggt { box-shadow: inset 0 -2px 0 #eab308; }
   .story-icon { font-size: 24px; flex-shrink: 0; }
   .story-text { font-size: 12px; line-height: 1.4; color: #aaa; }
   .story-text b { color: #fff; font-size: 13px; }
+  .story-badge {
+    display: inline-block; margin-top: 2px; padding: 1px 6px; border-radius: 999px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.02em; color: #0e1117;
+  }
+  .story-card.featured.wm .story-badge { background: #06b6d4; }
+  .story-card.featured.vla .story-badge { background: #22c55e; }
+  .story-card.featured.vggt .story-badge { background: #eab308; }
   #guide-toast {
     position: fixed; bottom: 240px; left: 50%; transform: translateX(-50%);
     background: #22c55e; color: #000; padding: 10px 20px; border-radius: 8px;
@@ -429,21 +444,21 @@ INDEX_HTML = """\
 <body>
 
 <div id="stories">
+  <div class="story-card featured wm" onclick="jumpToStory('World Models for Robotics & Embodied AI','World Models')">
+    <div class="story-icon">🌐</div>
+    <div class="story-text"><b>World Models → Dreamer → Cosmos / JEPA</b><br>Latent simulators for embodied intelligence<br><span class="story-badge">HOT</span></div>
+  </div>
+  <div class="story-card featured vla" onclick="jumpToStory('Imitation Learning & Robot Foundation Models','OpenVLA')">
+    <div class="story-icon">🦾</div>
+    <div class="story-text"><b>RT-2 → OpenVLA → π0</b><br>Vision-language-action robot policies<br><span class="story-badge">HOT</span></div>
+  </div>
+  <div class="story-card featured vggt" onclick="jumpToStory('Image Matching & Feature Detection','VGGT')">
+    <div class="story-icon">📐</div>
+    <div class="story-text"><b>DUSt3R → VGGT</b><br>Feed-forward visual geometry transformers<br><span class="story-badge">HOT</span></div>
+  </div>
   <div class="story-card" onclick="jumpToStory('Neural Radiance Fields & 3D Gaussian Splatting','NeRF')">
     <div class="story-icon">🔥</div>
     <div class="story-text"><b>NeRF → 3DGS</b><br>2 years, 22 descendants — the paradigm shift in 3D</div>
-  </div>
-  <div class="story-card" onclick="jumpToStory('Image Matching & Feature Detection','SIFT')">
-    <div class="story-icon">🔗</div>
-    <div class="story-text"><b>SIFT → DUSt3R → VGGT</b><br>20 years of image matching evolution</div>
-  </div>
-  <div class="story-card" onclick="jumpToStory('Robot Control','PID')">
-    <div class="story-icon">🤖</div>
-    <div class="story-text"><b>PID (1922) → Diffusion Policy</b><br>100 years of robot control</div>
-  </div>
-  <div class="story-card" onclick="jumpToStory('LiDAR Odometry & SLAM','ICP')">
-    <div class="story-icon">📡</div>
-    <div class="story-text"><b>ICP → LOAM → KISS-ICP</b><br>30 years of LiDAR SLAM</div>
   </div>
   <div class="story-card" onclick="jumpToStory('Large Language Models','Transformer')">
     <div class="story-icon">🧠</div>
@@ -456,7 +471,7 @@ INDEX_HTML = """\
   <div class="controls">
     <select id="category"></select>
     <select id="domain"></select>
-    <input type="text" id="search" placeholder="Try: NeRF, SLAM, GPT-4, YOLO..." autocomplete="off" list="search-list">
+    <input type="text" id="search" placeholder="Try: World Models, OpenVLA, VGGT, Cosmos..." autocomplete="off" list="search-list">
     <datalist id="search-list"></datalist>
     <button class="filter-btn" id="btn-play" title="Watch technologies emerge year by year">&#9654; 1992→2026</button>
     <button class="filter-btn" id="btn-hot" title="Top trending methods in 2024-2025">&#128293; Hot</button>

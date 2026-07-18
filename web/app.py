@@ -33,16 +33,15 @@ def main() -> None:
     domains = load_domains()
 
     CATEGORY_MAP = {
-        "Perception (LiDAR/3D)": {
-            "LiDAR Odometry & SLAM",
-            "3D Object Detection",
-            "Point Cloud Denoising",
-            "Point Cloud Scene Flow",
-            "Place Recognition",
+        "Robot Learning": {
+            "World Models for Robotics & Embodied AI",
+            "Imitation Learning & Robot Foundation Models",
+            "Legged Robot Control",
+            "Grasp Planning & Manipulation",
         },
         "Perception (Visual)": {
-            "Neural Radiance Fields & 3D Gaussian Splatting",
             "Image Matching & Feature Detection",
+            "Neural Radiance Fields & 3D Gaussian Splatting",
             "Visual SLAM",
             "Depth Completion",
             "2D Object Detection",
@@ -50,16 +49,12 @@ def main() -> None:
             "Optical Flow",
             "Object Tracking",
         },
-        "Planning & Control": {
-            "Motion Planning",
-            "Robot Control",
-            "End-to-End Autonomous Driving",
-        },
-        "Robot Learning": {
-            "Imitation Learning & Robot Foundation Models",
-            "World Models for Robotics & Embodied AI",
-            "Legged Robot Control",
-            "Grasp Planning & Manipulation",
+        "Perception (LiDAR/3D)": {
+            "LiDAR Odometry & SLAM",
+            "3D Object Detection",
+            "Point Cloud Denoising",
+            "Point Cloud Scene Flow",
+            "Place Recognition",
         },
         "Foundation Models": {
             "Large Language Models",
@@ -67,6 +62,11 @@ def main() -> None:
             "Diffusion Models",
             "Vision Backbone & Foundation",
             "Reinforcement Learning",
+        },
+        "Planning & Control": {
+            "Motion Planning",
+            "Robot Control",
+            "End-to-End Autonomous Driving",
         },
         "Platforms & Simulation": {
             "Robot Simulation",
