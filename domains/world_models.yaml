@@ -1,13 +1,16 @@
 name: World Models for Robotics & Embodied AI
 description: 'From Ha & Schmidhuber''s original World Models through latent dynamics
-  learning (Dreamer series), model-based planning (MuZero, TD-MPC), transformer world
-  models (IRIS), to large-scale generative video world simulators (Cosmos, Genie,
-  SORA) — the evolution of learned world models for embodied intelligence.
+  learning (Dreamer series), model-based planning (MuZero, TD-MPC), transformer and
+  diffusion world models (IRIS, STORM, DIAMOND), to large-scale generative video world
+  simulators (Cosmos, Genie, Sora, Dreamer 4, V-JEPA 2) — the evolution of learned
+  world models for embodied intelligence.
 
   '
 source_awesome_lists:
 - https://github.com/danijar/dreamerv3
 - https://github.com/opendilab/awesome-model-based-RL
+- https://github.com/Li-Zn-H/AwesomeWorldModels
+- https://github.com/NJU3DV-LoongGroup/Embodied-World-Models-Survey
 methods:
 - name: World Models
   paper: World Models
@@ -23,6 +26,21 @@ methods:
   parents: []
   description: Seminal work learning a compressed spatial-temporal model of the environment
     for planning in latent space
+- name: PETS
+  paper: Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics
+    Models
+  arxiv: '1805.12114'
+  year: 2018
+  code: kchua/handful-of-trials
+  stars: 475
+  tags:
+  - probabilistic-ensemble
+  - trajectory-sampling
+  - model-based-rl
+  - sample-efficient
+  parents: []
+  description: Probabilistic ensembles with trajectory sampling enabling sample-efficient
+    model-based RL from scratch
 - name: PlaNet
   paper: Learning Latent Dynamics for Planning from Pixels
   arxiv: '1811.04551'
@@ -39,6 +57,41 @@ methods:
     relation: extends
   description: Learns latent dynamics from pixels and plans via cross-entropy method
     in the learned latent space
+- name: MBPO
+  paper: 'When to Trust Your Model: Model-Based Policy Optimization'
+  arxiv: '1906.10718'
+  year: 2019
+  code: jannerm/mbpo
+  stars: 557
+  tags:
+  - model-based-rl
+  - policy-optimization
+  - ensemble
+  - sample-efficient
+  parents:
+  - name: PETS
+    relation: extends
+  description: Combines short model-generated rollouts with policy optimization, balancing
+    model bias and sample efficiency
+- name: SLAC
+  paper: 'Stochastic Latent Actor-Critic: Deep Reinforcement Learning with a Latent
+    Variable Model'
+  arxiv: '1907.00953'
+  year: 2019
+  code: alexlee-gk/slac
+  stars: 154
+  tags:
+  - latent-variable
+  - actor-critic
+  - model-based-rl
+  - pixels
+  parents:
+  - name: PlaNet
+    relation: inspires
+  - name: World Models
+    relation: inspires
+  description: Jointly learns a stochastic latent dynamics model and an actor-critic
+    for pixel-based continuous control
 - name: Dreamer
   paper: 'Dream to Control: Learning Behaviors by Latent Imagination'
   arxiv: '1912.01603'
@@ -104,6 +157,26 @@ methods:
   description: General-purpose world model agent mastering diverse domains with fixed
     hyperparameters via symlog predictions
   recommended: true
+- name: Dreamer 4
+  paper: Training Agents Inside of Scalable World Models
+  arxiv: '2509.24527'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - transformer
+  - offline-rl
+  - imagination
+  - minecraft
+  - scalable
+  parents:
+  - name: DreamerV3
+    relation: extends
+  - name: Genie
+    relation: inspires
+  description: Scalable transformer world model enabling imagination RL from offline
+    data, first to obtain Minecraft diamonds without environment interaction
+  recommended: true
 - name: MuZero
   paper: Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model
   arxiv: '1911.08265'
@@ -120,6 +193,22 @@ methods:
     relation: inspires
   description: Learns a dynamics model for MCTS planning without access to environment
     rules, mastering board and Atari games
+- name: EfficientZero
+  paper: Mastering Atari Games with Limited Data
+  arxiv: '2111.00210'
+  year: 2021
+  code: YeWR/EfficientZero
+  stars: 938
+  tags:
+  - mcts
+  - sample-efficient
+  - self-supervised
+  - atari
+  parents:
+  - name: MuZero
+    relation: extends
+  description: Sample-efficient MuZero variant with self-supervised consistency and
+    value prefix prediction for Atari 100k
 - name: TD-MPC
   paper: Temporal Difference Learning for Model Predictive Control
   arxiv: '2203.04955'
@@ -154,6 +243,22 @@ methods:
     relation: extends
   description: Scaled successor achieving single-model multi-task control across 104
     diverse continuous control tasks
+- name: TransDreamer
+  paper: 'TransDreamer: Reinforcement Learning with Transformer World Models'
+  arxiv: '2202.09481'
+  year: 2022
+  code: changchencc/TransDreamer
+  stars: 31
+  tags:
+  - transformer
+  - tssm
+  - model-based-rl
+  - long-horizon
+  parents:
+  - name: Dreamer
+    relation: extends
+  description: Replaces RSSM recurrence with a Transformer state-space model for longer-horizon
+    latent imagination
 - name: IRIS
   paper: Transformers are Sample-Efficient World Models
   arxiv: '2209.00588'
@@ -168,8 +273,47 @@ methods:
   parents:
   - name: DreamerV2
     relation: inspires
+  - name: TransDreamer
+    relation: inspires
   description: Transformer-based world model using discrete tokens achieving strong
     Atari results with 100k interactions
+- name: STORM
+  paper: 'STORM: Efficient Stochastic Transformer based World Models for Reinforcement
+    Learning'
+  arxiv: '2310.09615'
+  year: 2023
+  code: weipu-zhang/STORM
+  stars: 142
+  tags:
+  - transformer
+  - stochastic
+  - atari
+  - sample-efficient
+  parents:
+  - name: DreamerV2
+    relation: extends
+  - name: IRIS
+    relation: inspires
+  description: Stochastic Transformer world model combining categorical VAEs with
+    efficient sequence modeling for Atari 100k
+- name: TWISTER
+  paper: Learning Transformer-based World Models with Contrastive Predictive Coding
+  arxiv: '2503.04416'
+  year: 2025
+  code: burchim/TWISTER
+  stars: 57
+  tags:
+  - transformer
+  - contrastive
+  - model-based-rl
+  - representation-learning
+  parents:
+  - name: STORM
+    relation: extends
+  - name: DreamerV3
+    relation: inspires
+  description: Transformer world model trained with contrastive predictive coding
+    for stronger latent dynamics representations
 - name: DIAMOND
   paper: 'DIAMOND: Diffusion for World Modeling'
   arxiv: '2405.12399'
@@ -188,6 +332,24 @@ methods:
     relation: inspires
   description: Diffusion-based world model achieving state-of-the-art Atari results
     by directly generating future frames
+- name: GameNGen
+  paper: Diffusion Models Are Real-Time Game Engines
+  arxiv: '2408.14837'
+  year: 2024
+  code: ''
+  stars: 0
+  tags:
+  - diffusion
+  - real-time
+  - game-engine
+  - interactive
+  parents:
+  - name: DIAMOND
+    relation: inspires
+  - name: SORA
+    relation: inspires
+  description: Diffusion-powered neural game engine simulating interactive DOOM in
+    real time from action-conditioned frame prediction
 - name: SORA
   paper: 'Sora: A Review on Background, Technology, Limitations, and Opportunities
     of Large Vision Models'
@@ -256,6 +418,22 @@ methods:
     relation: extends
   description: Scaled successor generating rich 3D interactive environments with consistent
     geometry and physics
+- name: Genie 3
+  paper: 'Genie 3: A New Frontier for World Models'
+  arxiv: ''
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - interactive
+  - real-time
+  - foundation-world-model
+  - deepmind
+  parents:
+  - name: Genie 2
+    relation: extends
+  description: Real-time interactive foundation world model with improved consistency
+    and realism over Genie 2
 - name: GameGen
   paper: 'GameGen-X: Interactive Open-world Game Video Generation'
   arxiv: '2411.00769'
@@ -293,6 +471,61 @@ methods:
     relation: inspires
   description: General world model generating video states conditioned on natural
     language action descriptions
+- name: WorldDreamer
+  paper: 'WorldDreamer: Towards General World Models for Video Generation via Predicting
+    Masked Tokens'
+  arxiv: '2401.09985'
+  year: 2024
+  code: JeffWang987/WorldDreamer
+  stars: 206
+  tags:
+  - masked-prediction
+  - video-generation
+  - general-purpose
+  - transformer
+  parents:
+  - name: UniSim
+    relation: inspires
+  - name: SORA
+    relation: inspires
+  description: General world model for video generation via masked token prediction
+    capturing physics and motion
+- name: iVideoGPT
+  paper: 'iVideoGPT: Interactive VideoGPTs are Scalable World Models'
+  arxiv: '2405.15223'
+  year: 2024
+  code: thuml/iVideoGPT
+  stars: 186
+  tags:
+  - transformer
+  - interactive
+  - scalable
+  - robot-manipulation
+  parents:
+  - name: IRIS
+    relation: inspires
+  - name: UniSim
+    relation: inspires
+  description: Scalable autoregressive interactive VideoGPT pretrained on millions
+    of human and robot trajectories
+- name: RoboDreamer
+  paper: 'RoboDreamer: Learning Compositional World Models for Robot Imagination'
+  arxiv: '2404.12377'
+  year: 2024
+  code: rainbow979/robodreamer
+  stars: 101
+  tags:
+  - robotics
+  - compositional
+  - video-diffusion
+  - manipulation
+  parents:
+  - name: UniSim
+    relation: inspires
+  - name: DreamerV3
+    relation: inspires
+  description: Compositional video world model decomposing language instructions into
+    primitives for robot imagination
 - name: Genesis
   paper: 'Genesis: A Generative and Universal Physics Engine for Robotics and Beyond'
   arxiv: '2409.18964'
@@ -328,12 +561,30 @@ methods:
   description: NVIDIA's world foundation model platform generating physically grounded
     videos for robotics and driving
   recommended: true
+- name: EnerVerse
+  paper: 'EnerVerse: Envisioning Embodied Future Space for Robotics Manipulation'
+  arxiv: '2501.01895'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - robotics
+  - video-diffusion
+  - 4d
+  - manipulation
+  parents:
+  - name: Cosmos
+    relation: inspires
+  - name: RoboDreamer
+    relation: inspires
+  description: Chunk-wise autoregressive video diffusion with sparse memory for 4D
+    embodied manipulation futures
 - name: Aether
   paper: 'Aether: Geometric-Aware Unified World Model'
   arxiv: '2503.18945'
   year: 2025
   code: OpenRobotLab/Aether
-  stars: 600
+  stars: 603
   tags:
   - 3d-world-model
   - geometric-aware
@@ -346,22 +597,267 @@ methods:
     relation: inspires
   description: Geometry-aware unified world model bridging 3D understanding with generative
     video prediction for embodied AI
+- name: TesserAct
+  paper: 'TesserAct: Learning 4D Embodied World Models'
+  arxiv: '2504.20995'
+  year: 2025
+  code: UMass-Embodied-AGI/TesserAct
+  stars: 401
+  tags:
+  - 4d
+  - embodied-ai
+  - rgb-depth-normal
+  - robotics
+  parents:
+  - name: RoboDreamer
+    relation: extends
+  - name: Aether
+    relation: inspires
+  description: 4D embodied world model jointly generating RGB, depth, and normal videos
+    for temporally consistent robot scenes
+- name: NWM
+  paper: Navigation World Models
+  arxiv: '2412.03572'
+  year: 2025
+  code: facebookresearch/nwm
+  stars: 647
+  tags:
+  - navigation
+  - video-prediction
+  - planning
+  - embodied-ai
+  parents:
+  - name: UniSim
+    relation: inspires
+  - name: V-JEPA
+    relation: inspires
+  description: Conditional diffusion world model for visual navigation planning via
+    imagined trajectories
+- name: DINO-WM
+  paper: World Models on Pre-trained Visual Features enable Zero-shot Planning
+  arxiv: '2411.04983'
+  year: 2025
+  code: gaoyuezhou/dino_wm
+  stars: 526
+  tags:
+  - dinov2
+  - zero-shot
+  - planning
+  - latent-dynamics
+  parents:
+  - name: DreamerV3
+    relation: inspires
+  - name: V-JEPA
+    relation: inspires
+  description: Learns dynamics in frozen DINOv2 feature space enabling zero-shot planning
+    without pixel reconstruction
+- name: JEPA
+  paper: 'Introduction to Latent Variable Energy-Based Models: A Path Towards Autonomous
+    Machine Intelligence'
+  arxiv: '2306.02572'
+  year: 2022
+  code: ''
+  stars: 0
+  tags:
+  - joint-embedding
+  - energy-based-model
+  - latent-prediction
+  - self-supervised
+  parents:
+  - name: World Models
+    relation: inspires
+  description: Foundational architecture that predicts abstract target representations
+    from context while discarding unpredictable observation details
+- name: I-JEPA
+  paper: Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture
+  arxiv: '2301.08243'
+  year: 2023
+  code: facebookresearch/ijepa
+  stars: 3474
+  tags:
+  - image
+  - joint-embedding
+  - masked-prediction
+  - self-supervised
+  parents:
+  - name: JEPA
+    relation: extends
+  description: Scalable non-generative image pretraining that predicts semantic representations
+    of masked target blocks from visible context
+- name: MC-JEPA
+  paper: 'MC-JEPA: A Joint-Embedding Predictive Architecture for Self-Supervised Learning
+    of Motion and Content Features'
+  arxiv: '2307.12698'
+  year: 2023
+  code: ''
+  stars: 0
+  tags:
+  - motion
+  - content
+  - optical-flow
+  - self-supervised
+  parents:
+  - name: I-JEPA
+    relation: extends
+  description: Jointly learns complementary motion and scene-content representations
+    through coupled predictive objectives
+- name: A-JEPA
+  paper: 'A-JEPA: Joint-Embedding Predictive Architecture Can Listen'
+  arxiv: '2311.15830'
+  year: 2023
+  code: ''
+  stars: 0
+  tags:
+  - audio
+  - spectrogram
+  - curriculum-masking
+  - self-supervised
+  parents:
+  - name: I-JEPA
+    relation: extends
+  description: Extends latent target prediction to audio spectrograms using curriculum
+    time-frequency masking
+- name: 3D-JEPA
+  paper: '3D-JEPA: A Joint Embedding Predictive Architecture for 3D Self-Supervised
+    Representation Learning'
+  arxiv: '2409.15803'
+  year: 2024
+  code: ''
+  stars: 0
+  tags:
+  - point-cloud
+  - 3d
+  - masked-prediction
+  - self-supervised
+  parents:
+  - name: I-JEPA
+    relation: extends
+  description: Non-generative 3D representation learner predicting semantic target-block
+    embeddings from point-cloud context
 - name: V-JEPA
-  paper: 'V-JEPA: Latent Video Prediction for Visual Representation Learning'
+  paper: Revisiting Feature Prediction for Learning Visual Representations from Video
   arxiv: '2404.08471'
   year: 2024
   code: facebookresearch/jepa
-  stars: 4027
+  stars: 4039
   tags:
   - self-supervised
   - video-prediction
   - latent-representation
   - meta
   parents:
-  - name: World Models
+  - name: I-JEPA
+    relation: extends
+  - name: MC-JEPA
     relation: inspires
   description: Self-supervised video prediction in latent space for learning visual
     representations without generative decoding
+- name: ACT-JEPA
+  paper: 'ACT-JEPA: Novel Joint-Embedding Predictive Architecture for Efficient Policy
+    Representation Learning'
+  arxiv: '2501.14622'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - imitation-learning
+  - action-chunking
+  - policy-learning
+  - robotics
+  parents:
+  - name: V-JEPA
+    relation: extends
+  description: Combines action-chunk prediction with latent observation prediction
+    to learn robust policy representations and environment dynamics
+- name: V-JEPA 2
+  paper: 'V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction
+    and Planning'
+  arxiv: '2506.09985'
+  year: 2025
+  code: facebookresearch/vjepa2
+  stars: 4363
+  tags:
+  - self-supervised
+  - video-prediction
+  - robotics
+  - planning
+  - meta
+  parents:
+  - name: V-JEPA
+    relation: extends
+  description: Internet-scale video JEPA backbone for physical understanding, action
+    anticipation, and latent future prediction
+  recommended: true
+- name: V-JEPA 2-AC
+  paper: 'V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction
+    and Planning'
+  arxiv: '2506.09985'
+  year: 2025
+  code: facebookresearch/vjepa2
+  stars: 4363
+  tags:
+  - action-conditioned
+  - robotics
+  - model-predictive-control
+  - zero-shot-planning
+  parents:
+  - name: V-JEPA 2
+    relation: extends
+  - name: DINO-WM
+    relation: inspires
+  description: Action-conditioned latent world model post-trained on 62 hours of robot
+    video for zero-shot model-predictive manipulation
+- name: LeJEPA
+  paper: 'LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics'
+  arxiv: '2511.08544'
+  year: 2025
+  code: rbalestr-lab/lejepa
+  stars: 1274
+  tags:
+  - joint-embedding
+  - sigreg
+  - collapse-prevention
+  - scalable
+  parents:
+  - name: JEPA
+    relation: extends
+  description: Lean JEPA objective using isotropic Gaussian regularization for stable,
+    scalable learning without teacher-student heuristics
+- name: VL-JEPA
+  paper: 'VL-JEPA: Joint Embedding Predictive Architecture for Vision-language'
+  arxiv: '2512.10942'
+  year: 2025
+  code: ''
+  stars: 0
+  tags:
+  - vision-language
+  - continuous-embedding
+  - selective-decoding
+  - multimodal
+  parents:
+  - name: V-JEPA 2
+    relation: extends
+  description: Vision-language JEPA predicting continuous text embeddings with optional
+    selective decoding instead of autoregressive token generation
+- name: JEPA-WM
+  paper: What Drives Success in Physical Planning with Joint-Embedding Predictive
+    World Models?
+  arxiv: '2512.24497'
+  year: 2025
+  code: facebookresearch/jepa-wms
+  stars: 432
+  tags:
+  - robotics
+  - physical-planning
+  - latent-world-model
+  - model-predictive-control
+  parents:
+  - name: V-JEPA 2-AC
+    relation: extends
+  - name: DINO-WM
+    relation: extends
+  description: Systematic JEPA world-model design for latent-space planning across
+    simulated and real robot manipulation and navigation
 - name: Oasis
   paper: 'Oasis: A Universe in a Transformer'
   arxiv: '2411.17382'
@@ -381,6 +877,24 @@ methods:
     relation: inspires
   description: Real-time interactive world model generating playable game environments
     frame by frame via a transformer
+- name: MineWorld
+  paper: 'MineWorld: a Real-Time and Open-Source Interactive World Model on Minecraft'
+  arxiv: '2504.08388'
+  year: 2025
+  code: microsoft/MineWorld
+  stars: 481
+  tags:
+  - minecraft
+  - interactive
+  - real-time
+  - open-source
+  parents:
+  - name: Oasis
+    relation: extends
+  - name: Genie
+    relation: inspires
+  description: Real-time open-source interactive Minecraft world model with parallel
+    token generation for controllability
 - name: AVID
   paper: 'AVID: Adapting Video Diffusion Models to World Models'
   arxiv: '2410.12822'

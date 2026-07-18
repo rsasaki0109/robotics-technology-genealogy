@@ -1,5 +1,5 @@
 {
-  "total_methods": 816,
+  "total_methods": 845,
   "total_domains": 28,
   "methods_per_domain": [
     {
@@ -9,6 +9,10 @@
     {
       "domain": "LiDAR Odometry & SLAM",
       "count": 56
+    },
+    {
+      "domain": "World Models for Robotics & Embodied AI",
+      "count": 52
     },
     {
       "domain": "Neural Radiance Fields & 3D Gaussian Splatting",
@@ -68,10 +72,6 @@
     },
     {
       "domain": "Point Cloud Scene Flow",
-      "count": 23
-    },
-    {
-      "domain": "World Models for Robotics & Embodied AI",
       "count": 23
     },
     {
@@ -250,11 +250,11 @@
     },
     {
       "year": 2018,
-      "count": 31
+      "count": 32
     },
     {
       "year": 2019,
-      "count": 42
+      "count": 44
     },
     {
       "year": 2020,
@@ -262,23 +262,23 @@
     },
     {
       "year": 2021,
-      "count": 75
+      "count": 76
     },
     {
       "year": 2022,
-      "count": 98
+      "count": 100
     },
     {
       "year": 2023,
-      "count": 129
+      "count": 133
     },
     {
       "year": 2024,
-      "count": 160
+      "count": 165
     },
     {
       "year": 2025,
-      "count": 86
+      "count": 100
     },
     {
       "year": 2026,
@@ -286,130 +286,130 @@
     }
   ],
   "oss_breakdown": {
-    "open": 570,
+    "open": 589,
     "research": 1,
     "partial": 6,
     "closed": 69,
-    "unknown": 170
+    "unknown": 180
   },
   "top_by_stars": [
     {
       "name": "DeepSeek-V3",
-      "stars": 102319,
+      "stars": 103911,
       "code": "deepseek-ai/DeepSeek-V3",
       "year": 2025
     },
     {
       "name": "DeepSeek-R1",
-      "stars": 91980,
+      "stars": 91992,
       "code": "deepseek-ai/DeepSeek-R1",
       "year": 2025
     },
     {
+      "name": "Stable Diffusion",
+      "stars": 73186,
+      "code": "CompVis/stable-diffusion",
+      "year": 2022
+    },
+    {
       "name": "OpenPilot",
-      "stars": 60406,
+      "stars": 63098,
       "code": "commaai/openpilot",
       "year": 2016
     },
     {
       "name": "LLaMA",
-      "stars": 59250,
+      "stars": 59507,
       "code": "meta-llama/llama",
       "year": 2023
     },
     {
       "name": "LLaMA 2",
-      "stars": 59250,
+      "stars": 59507,
       "code": "meta-llama/llama",
       "year": 2023
     },
     {
-      "name": "YOLOv5",
-      "stars": 57072,
-      "code": "ultralytics/yolov5",
-      "year": 2020
-    },
-    {
       "name": "YOLOv8",
-      "stars": 54848,
+      "stars": 59434,
       "code": "ultralytics/ultralytics",
       "year": 2023
     },
     {
       "name": "YOLO11",
-      "stars": 54848,
+      "stars": 59434,
       "code": "ultralytics/ultralytics",
       "year": 2024
     },
     {
+      "name": "YOLOv5",
+      "stars": 57676,
+      "code": "ultralytics/yolov5",
+      "year": 2020
+    },
+    {
       "name": "SAM",
-      "stars": 53743,
+      "stars": 54529,
       "code": "facebookresearch/segment-anything",
       "year": 2023
     },
     {
       "name": "Grok-1",
-      "stars": 51528,
+      "stars": 51695,
       "code": "xai-org/grok-1",
       "year": 2024
     },
     {
       "name": "BERT",
-      "stars": 39931,
+      "stars": 40054,
       "code": "google-research/bert",
       "year": 2018
     },
     {
-      "name": "Stable Diffusion",
-      "stars": 39000,
-      "code": "CompVis/stable-diffusion",
-      "year": 2022
-    },
-    {
       "name": "Faster R-CNN",
-      "stars": 34247,
+      "stars": 34600,
       "code": "facebookresearch/detectron2",
       "year": 2015
     },
     {
       "name": "FPN",
-      "stars": 34247,
+      "stars": 34600,
       "code": "facebookresearch/detectron2",
       "year": 2017
     },
     {
       "name": "RetinaNet",
-      "stars": 34247,
+      "stars": 34600,
       "code": "facebookresearch/detectron2",
       "year": 2017
     },
     {
       "name": "Mask R-CNN",
-      "stars": 34247,
+      "stars": 34600,
       "code": "facebookresearch/detectron2",
       "year": 2017
     },
     {
       "name": "Panoptic-FPN",
-      "stars": 34247,
+      "stars": 34600,
       "code": "facebookresearch/detectron2",
       "year": 2019
     },
     {
       "name": "CLIP",
-      "stars": 32910,
+      "stars": 33978,
       "code": "openai/CLIP",
       "year": 2021
     },
     {
-      "name": "LLaMA 3",
-      "stars": 29291,
-      "code": "meta-llama/llama3",
+      "name": "Genesis",
+      "stars": 29545,
+      "code": "Genesis-Embodied-AI/Genesis",
       "year": 2024
     },
     {
       "name": "Genesis",
-      "stars": 28319,
+      "stars": 29545,
       "code": "Genesis-Embodied-AI/Genesis",
       "year": 2024
     }
