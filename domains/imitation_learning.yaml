@@ -1,6 +1,7 @@
 name: Imitation Learning & Robot Foundation Models
 description: 'From classical behavioral cloning to modern diffusion-based policies,
-  action-chunking transformers, vision-language-action models, and the LeRobot ecosystem
+  action-chunking transformers, and vision-language-action foundation models (OpenVLA,
+  Pi0, GR00T, Gemini Robotics, Qwen-VLA, and LingBot-VLA), plus the LeRobot ecosystem
   — the full evolution of learning robot manipulation from demonstrations.
 
   '
@@ -420,6 +421,205 @@ methods:
     relation: inspires
   description: Task-centric latent-action VLA enabling control across diverse robots
     and environments
+- name: OpenVLA-OFT
+  paper: 'Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success'
+  arxiv: '2502.19645'
+  year: 2025
+  code: moojink/openvla-oft
+  stars: 1274
+  open_source: open
+  license: MIT
+  tags:
+  - vla
+  - optimized-fine-tuning
+  - action-chunking
+  - parallel-decoding
+  - real-time
+  parents:
+  - name: OpenVLA
+    relation: extends
+  - name: ACT
+    relation: inspires
+  description: Optimized OpenVLA fine-tuning with parallel decoding, continuous action
+    chunks, and up to 26x faster action generation
+- name: GR00T N1
+  paper: 'GR00T N1: An Open Foundation Model for Generalist Humanoid Robots'
+  arxiv: '2503.14734'
+  year: 2025
+  code: NVIDIA/Isaac-GR00T
+  stars: 7613
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - vla
+  - humanoid
+  - dual-system
+  - diffusion-transformer
+  - foundation-model
+  parents:
+  - name: RT-2
+    relation: inspires
+  - name: Diffusion Policy
+    relation: combines
+  - name: Open X-Embodiment
+    relation: inspires
+  description: NVIDIA dual-system humanoid VLA coupling a reasoning VLM with a
+    real-time diffusion-transformer action expert
+  recommended: true
+- name: GR00T N1.7
+  paper: 'GR00T N1.7: An Open Reasoning VLA Model for Humanoid Robots'
+  arxiv: ''
+  year: 2026
+  code: NVIDIA/Isaac-GR00T
+  stars: 7613
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - vla
+  - humanoid
+  - embodied-reasoning
+  - dexterity
+  - open-source
+  parents:
+  - name: GR00T N1
+    relation: extends
+  description: Commercially usable GR00T successor adding multi-step reasoning,
+    finger-level control, and scaling with 20,000 hours of egocentric video
+  recommended: true
+- name: Gemini Robotics
+  paper: 'Gemini Robotics: Bringing AI into the Physical World'
+  arxiv: '2503.20020'
+  year: 2025
+  code: ''
+  stars: 0
+  open_source: closed
+  license: ''
+  tags:
+  - vla
+  - embodied-reasoning
+  - dexterous
+  - foundation-model
+  - google-deepmind
+  parents:
+  - name: RT-2
+    relation: extends
+  - name: Open X-Embodiment
+    relation: inspires
+  description: Gemini 2.0-based VLA connecting broad embodied reasoning priors to
+    reactive, dexterous low-level robot control
+  recommended: true
+- name: Gemini Robotics 1.5
+  paper: 'Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots with Advanced
+    Embodied Reasoning, Thinking, and Motion Transfer'
+  arxiv: '2510.03342'
+  year: 2025
+  code: ''
+  stars: 0
+  open_source: closed
+  license: ''
+  tags:
+  - vla
+  - embodied-reasoning
+  - motion-transfer
+  - multi-embodiment
+  - thinking
+  parents:
+  - name: Gemini Robotics
+    relation: extends
+  description: Multi-embodiment Gemini VLA interleaving internal reasoning and actions,
+    with motion transfer for heterogeneous robot bodies
+- name: Helix
+  paper: 'Helix: A Vision-Language-Action Model for Generalist Humanoid Control'
+  arxiv: ''
+  year: 2025
+  code: ''
+  stars: 0
+  open_source: closed
+  license: ''
+  tags:
+  - vla
+  - humanoid
+  - dual-system
+  - high-frequency-control
+  - figure-ai
+  parents:
+  - name: RT-2
+    relation: inspires
+  - name: ACT
+    relation: inspires
+  description: Figure AI dual-system VLA combining a 7B semantic VLM with an 80M
+    visuomotor policy for 200 Hz humanoid upper-body control
+- name: Xiaomi-Robotics-0
+  paper: 'Xiaomi-Robotics-0: An Open-Sourced Vision-Language-Action Model with Real-Time
+    Execution'
+  arxiv: '2602.12684'
+  year: 2026
+  code: XiaomiRobotics/Xiaomi-Robotics-0
+  stars: 575
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - vla
+  - real-time
+  - asynchronous-execution
+  - bimanual
+  - open-source
+  parents:
+  - name: OpenVLA-OFT
+    relation: inspires
+  - name: Pi0.5
+    relation: inspires
+  description: Open cross-embodiment VLA using asynchronous action-chunk execution
+    for smooth real-time bimanual control on consumer GPUs
+- name: Qwen-VLA
+  paper: 'Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments,
+    and Robot Embodiments'
+  arxiv: '2605.30280'
+  year: 2026
+  code: QwenLM/Qwen-VLA
+  stars: 707
+  open_source: research
+  license: ''
+  tags:
+  - vla
+  - unified
+  - flow-matching
+  - cross-embodiment
+  - navigation
+  parents:
+  - name: Pi0.5
+    relation: inspires
+  - name: GR00T N1
+    relation: inspires
+  - name: UniVLA
+    relation: extends
+  description: Qwen3.5-based generalist VLA unifying manipulation, navigation, and
+    egocentric trajectory prediction through a DiT flow-matching action decoder
+  recommended: true
+- name: LingBot-VLA 2.0
+  paper: 'From Foundation to Application: Improving VLA Models in Practice'
+  arxiv: '2607.06403'
+  year: 2026
+  code: Robbyant/lingbot-vla-v2
+  stars: 534
+  open_source: open
+  license: Apache-2.0
+  tags:
+  - vla
+  - cross-embodiment
+  - mixture-of-experts
+  - predictive-dynamics
+  - whole-body
+  parents:
+  - name: GR00T N1.7
+    relation: inspires
+  - name: Qwen-VLA
+    relation: inspires
+  - name: LingBot-VA
+    relation: combines
+  description: Practical 6B VLA trained on 60,000 hours across 20 robot embodiments,
+    with sparse MoE action experts and predictive geometry/dynamics distillation
+  recommended: true
 - name: Cosmos Policy
   paper: 'Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning'
   arxiv: '2601.16163'

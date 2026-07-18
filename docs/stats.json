@@ -1,5 +1,5 @@
 {
-  "total_methods": 876,
+  "total_methods": 885,
   "total_domains": 28,
   "methods_per_domain": [
     {
@@ -23,6 +23,10 @@
       "count": 45
     },
     {
+      "domain": "Imitation Learning & Robot Foundation Models",
+      "count": 44
+    },
+    {
       "domain": "Image Matching & Feature Detection",
       "count": 40
     },
@@ -37,10 +41,6 @@
     {
       "domain": "Robot Middleware & Frameworks",
       "count": 38
-    },
-    {
-      "domain": "Imitation Learning & Robot Foundation Models",
-      "count": 35
     },
     {
       "domain": "2D Object Detection",
@@ -278,18 +278,18 @@
     },
     {
       "year": 2025,
-      "count": 110
+      "count": 115
     },
     {
       "year": 2026,
-      "count": 14
+      "count": 18
     }
   ],
   "oss_breakdown": {
-    "open": 614,
-    "research": 1,
+    "open": 619,
+    "research": 2,
     "partial": 6,
-    "closed": 69,
+    "closed": 72,
     "unknown": 186
   },
   "top_by_stars": [
