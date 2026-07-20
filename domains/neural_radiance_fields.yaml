@@ -12,7 +12,7 @@ methods:
   arxiv: '2003.08934'
   year: 2020
   code: bmild/nerf
-  stars: 10914
+  stars: 10916
   tags:
   - neural-rendering
   - view-synthesis
@@ -25,7 +25,7 @@ methods:
   arxiv: '2201.05989'
   year: 2022
   code: NVlabs/instant-ngp
-  stars: 17488
+  stars: 17496
   tags:
   - neural-rendering
   - real-time
@@ -81,7 +81,7 @@ methods:
   arxiv: '2111.12077'
   year: 2022
   code: google-research/multinerf
-  stars: 3810
+  stars: 3811
   tags:
   - neural-rendering
   - unbounded-scenes
@@ -111,7 +111,7 @@ methods:
   arxiv: '2308.14737'
   year: 2023
   code: graphdeco-inria/gaussian-splatting
-  stars: 22640
+  stars: 22707
   tags:
   - gaussian-splatting
   - real-time
@@ -126,7 +126,7 @@ methods:
   arxiv: '2311.12775'
   year: 2024
   code: Anttwo/SuGaR
-  stars: 3453
+  stars: 3462
   tags:
   - gaussian-splatting
   - mesh-reconstruction
@@ -140,7 +140,7 @@ methods:
   arxiv: '2403.17888'
   year: 2024
   code: hbb1/2d-gaussian-splatting
-  stars: 3231
+  stars: 3241
   tags:
   - gaussian-splatting
   - geometry
@@ -168,7 +168,7 @@ methods:
   arxiv: '2311.16493'
   year: 2024
   code: autonomousvision/mip-splatting
-  stars: 1450
+  stars: 1455
   tags:
   - gaussian-splatting
   - anti-aliasing
@@ -183,7 +183,7 @@ methods:
   arxiv: '2209.14988'
   year: 2022
   code: ashawkey/stable-dreamfusion
-  stars: 8844
+  stars: 8848
   tags:
   - text-to-3d
   - diffusion
@@ -197,7 +197,7 @@ methods:
   arxiv: '2309.16653'
   year: 2023
   code: dreamgaussian/dreamgaussian
-  stars: 4342
+  stars: 4345
   tags:
   - text-to-3d
   - gaussian-splatting
@@ -242,7 +242,7 @@ methods:
   arxiv: '2011.12948'
   year: 2021
   code: google/nerfies
-  stars: 1969
+  stars: 1970
   tags:
   - neural-rendering
   - deformable
@@ -256,7 +256,7 @@ methods:
   arxiv: '2012.02190'
   year: 2021
   code: sxyu/pixel-nerf
-  stars: 1466
+  stars: 1467
   tags:
   - neural-rendering
   - few-shot
@@ -364,7 +364,7 @@ methods:
   arxiv: '2312.16084'
   year: 2024
   code: minghanqin/LangSplat
-  stars: 1065
+  stars: 1068
   tags:
   - gaussian-splatting
   - language
@@ -381,7 +381,7 @@ methods:
   arxiv: '2312.00109'
   year: 2024
   code: city-super/Scaffold-GS
-  stars: 1261
+  stars: 1266
   tags:
   - gaussian-splatting
   - structured
@@ -395,7 +395,7 @@ methods:
   arxiv: '2311.12198'
   year: 2024
   code: XPandora/PhysGaussian
-  stars: 1394
+  stars: 1396
   tags:
   - gaussian-splatting
   - physics-simulation
@@ -410,7 +410,7 @@ methods:
   arxiv: '2310.10642'
   year: 2024
   code: hustvl/4DGaussians
-  stars: 3822
+  stars: 3833
   tags:
   - gaussian-splatting
   - dynamic-scenes
@@ -503,7 +503,7 @@ methods:
   arxiv: '2403.20309'
   year: 2025
   code: NVlabs/InstantSplat
-  stars: 1682
+  stars: 1684
   tags:
   - gaussian-splatting
   - sparse-view
@@ -517,7 +517,7 @@ methods:
   arxiv: '2408.10105'
   year: 2025
   code: lfranke/TRIPS
-  stars: 560
+  stars: 561
   tags:
   - gaussian-splatting
   - triplane
@@ -547,7 +547,7 @@ methods:
   arxiv: '2402.05054'
   year: 2025
   code: 3DTopia/LGM
-  stars: 2095
+  stars: 2097
   tags:
   - gaussian-splatting
   - 3d-generation
@@ -563,7 +563,7 @@ methods:
   arxiv: '2412.01506'
   year: 2025
   code: microsoft/TRELLIS
-  stars: 13166
+  stars: 13227
   tags:
   - 3d-generation
   - structured-latent
@@ -595,7 +595,7 @@ methods:
   arxiv: '2503.18945'
   year: 2025
   code: OpenRobotLab/Aether
-  stars: 600
+  stars: 604
   tags:
   - world-model
   - 3d-generation
@@ -611,7 +611,7 @@ methods:
   arxiv: '2411.08033'
   year: 2024
   code: NIRVANALAN/GaussianAnything
-  stars: 407
+  stars: 408
   tags:
   - 3d-generation
   - point-cloud
@@ -628,7 +628,7 @@ methods:
   arxiv: '2106.10689'
   year: 2021
   code: Totoro97/NeuS
-  stars: 1777
+  stars: 1778
   tags:
   - neural-rendering
   - sdf
@@ -660,7 +660,7 @@ methods:
   arxiv: '2306.03092'
   year: 2023
   code: NVlabs/neuralangelo
-  stars: 4606
+  stars: 4607
   tags:
   - neural-rendering
   - surface-reconstruction
@@ -678,7 +678,7 @@ methods:
   arxiv: '2112.07945'
   year: 2022
   code: NVlabs/eg3d
-  stars: 3335
+  stars: 3334
   tags:
   - neural-rendering
   - 3d-gan
@@ -693,7 +693,7 @@ methods:
   arxiv: '2302.04264'
   year: 2023
   code: nerfstudio-project/nerfstudio
-  stars: 11797
+  stars: 11822
   tags:
   - neural-rendering
   - framework
@@ -712,7 +712,7 @@ methods:
   arxiv: '2409.06765'
   year: 2024
   code: nerfstudio-project/gsplat
-  stars: 5374
+  stars: 5410
   tags:
   - gaussian-splatting
   - rasterization
@@ -742,7 +742,7 @@ methods:
   arxiv: '2303.12789'
   year: 2023
   code: ayaanzhaque/instruct-nerf2nerf
-  stars: 852
+  stars: 853
   tags:
   - neural-rendering
   - 3d-editing

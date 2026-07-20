@@ -83,7 +83,7 @@ methods:
   arxiv: '2109.12098'
   year: 2022
   code: cliport/cliport
-  stars: 545
+  stars: 546
   open_source: open
   license: Apache-2.0
   tags:
@@ -137,7 +137,7 @@ methods:
   arxiv: '2403.03181'
   year: 2024
   code: jayLEE0301/vq_bet_official
-  stars: 211
+  stars: 212
   open_source: open
   license: MIT
   tags:
@@ -172,7 +172,7 @@ methods:
   arxiv: '2303.04137'
   year: 2023
   code: real-stanford/diffusion_policy
-  stars: 4369
+  stars: 4394
   open_source: open
   license: MIT
   tags:
@@ -194,7 +194,7 @@ methods:
   arxiv: '2403.03954'
   year: 2024
   code: YanjieZe/3D-Diffusion-Policy
-  stars: 1405
+  stars: 1407
   open_source: open
   license: MIT
   tags:
@@ -212,7 +212,7 @@ methods:
   arxiv: '2304.13705'
   year: 2023
   code: tonyzhaozh/act
-  stars: 2062
+  stars: 2084
   open_source: open
   license: MIT
   tags:
@@ -233,7 +233,7 @@ methods:
   arxiv: '2304.13705'
   year: 2023
   code: tonyzhaozh/aloha
-  stars: 2275
+  stars: 2280
   open_source: open
   license: MIT
   tags:
@@ -252,7 +252,7 @@ methods:
   arxiv: '2401.02117'
   year: 2024
   code: MarkFzp/mobile-aloha
-  stars: 4449
+  stars: 4452
   open_source: open
   license: ''
   tags:
@@ -270,7 +270,7 @@ methods:
   arxiv: '2212.06817'
   year: 2023
   code: google-research/robotics_transformer
-  stars: 1743
+  stars: 1742
   open_source: closed
   license: ''
   tags:
@@ -306,7 +306,7 @@ methods:
   arxiv: '2310.08864'
   year: 2023
   code: google-deepmind/open_x_embodiment
-  stars: 1918
+  stars: 1929
   open_source: open
   license: Apache-2.0
   tags:
@@ -327,7 +327,7 @@ methods:
   arxiv: '2405.12213'
   year: 2024
   code: octo-models/octo
-  stars: 1703
+  stars: 1711
   open_source: open
   license: MIT
   tags:
@@ -347,7 +347,7 @@ methods:
   arxiv: '2406.09246'
   year: 2024
   code: openvla/openvla
-  stars: 6608
+  stars: 6657
   open_source: open
   license: MIT
   tags:
@@ -406,7 +406,7 @@ methods:
   arxiv: '2505.06111'
   year: 2025
   code: OpenDriveLab/UniVLA
-  stars: 1108
+  stars: 1109
   open_source: open
   license: ''
   tags:
@@ -426,7 +426,7 @@ methods:
   arxiv: '2502.19645'
   year: 2025
   code: moojink/openvla-oft
-  stars: 1274
+  stars: 1299
   open_source: open
   license: MIT
   tags:
@@ -447,7 +447,7 @@ methods:
   arxiv: '2503.14734'
   year: 2025
   code: NVIDIA/Isaac-GR00T
-  stars: 7613
+  stars: 7628
   open_source: open
   license: Apache-2.0
   tags:
@@ -463,15 +463,15 @@ methods:
     relation: combines
   - name: Open X-Embodiment
     relation: inspires
-  description: NVIDIA dual-system humanoid VLA coupling a reasoning VLM with a
-    real-time diffusion-transformer action expert
+  description: NVIDIA dual-system humanoid VLA coupling a reasoning VLM with a real-time
+    diffusion-transformer action expert
   recommended: true
 - name: GR00T N1.7
   paper: 'GR00T N1.7: An Open Reasoning VLA Model for Humanoid Robots'
   arxiv: ''
   year: 2026
   code: NVIDIA/Isaac-GR00T
-  stars: 7613
+  stars: 7628
   open_source: open
   license: Apache-2.0
   tags:
@@ -483,8 +483,8 @@ methods:
   parents:
   - name: GR00T N1
     relation: extends
-  description: Commercially usable GR00T successor adding multi-step reasoning,
-    finger-level control, and scaling with 20,000 hours of egocentric video
+  description: Commercially usable GR00T successor adding multi-step reasoning, finger-level
+    control, and scaling with 20,000 hours of egocentric video
   recommended: true
 - name: Gemini Robotics
   paper: 'Gemini Robotics: Bringing AI into the Physical World'
@@ -547,15 +547,15 @@ methods:
     relation: inspires
   - name: ACT
     relation: inspires
-  description: Figure AI dual-system VLA combining a 7B semantic VLM with an 80M
-    visuomotor policy for 200 Hz humanoid upper-body control
+  description: Figure AI dual-system VLA combining a 7B semantic VLM with an 80M visuomotor
+    policy for 200 Hz humanoid upper-body control
 - name: Xiaomi-Robotics-0
   paper: 'Xiaomi-Robotics-0: An Open-Sourced Vision-Language-Action Model with Real-Time
     Execution'
   arxiv: '2602.12684'
   year: 2026
   code: XiaomiRobotics/Xiaomi-Robotics-0
-  stars: 575
+  stars: 582
   open_source: open
   license: Apache-2.0
   tags:
@@ -577,7 +577,7 @@ methods:
   arxiv: '2605.30280'
   year: 2026
   code: QwenLM/Qwen-VLA
-  stars: 707
+  stars: 711
   open_source: research
   license: ''
   tags:
@@ -601,7 +601,7 @@ methods:
   arxiv: '2607.06403'
   year: 2026
   code: Robbyant/lingbot-vla-v2
-  stars: 534
+  stars: 590
   open_source: open
   license: Apache-2.0
   tags:
@@ -625,7 +625,7 @@ methods:
   arxiv: '2601.16163'
   year: 2026
   code: NVlabs/cosmos-policy
-  stars: 832
+  stars: 834
   open_source: open
   license: ''
   tags:
@@ -645,7 +645,7 @@ methods:
   arxiv: '2601.21998'
   year: 2026
   code: Robbyant/lingbot-va
-  stars: 1623
+  stars: 1632
   open_source: open
   license: ''
   tags:
@@ -665,7 +665,7 @@ methods:
   arxiv: '2602.15922'
   year: 2026
   code: dreamzero0/dreamzero
-  stars: 2461
+  stars: 2466
   open_source: open
   license: Apache-2.0
   tags:
@@ -688,7 +688,7 @@ methods:
   arxiv: '2506.01844'
   year: 2025
   code: huggingface/lerobot
-  stars: 25756
+  stars: 25977
   open_source: open
   license: Apache-2.0
   tags:
@@ -767,7 +767,7 @@ methods:
   arxiv: '2402.10329'
   year: 2024
   code: real-stanford/universal_manipulation_interface
-  stars: 1492
+  stars: 1509
   open_source: open
   license: MIT
   tags:
@@ -786,7 +786,7 @@ methods:
   arxiv: '2403.07788'
   year: 2024
   code: j96w/DexCap
-  stars: 386
+  stars: 388
   open_source: open
   license: ''
   tags:
@@ -805,7 +805,7 @@ methods:
   arxiv: ''
   year: 2024
   code: huggingface/lerobot
-  stars: 25756
+  stars: 25977
   open_source: open
   license: Apache-2.0
   tags:
@@ -826,7 +826,7 @@ methods:
   arxiv: '2406.02523'
   year: 2024
   code: robocasa/robocasa
-  stars: 1535
+  stars: 1555
   open_source: open
   license: MIT
   tags:
@@ -844,7 +844,7 @@ methods:
   arxiv: '2403.12945'
   year: 2024
   code: droid-dataset/droid
-  stars: 379
+  stars: 382
   open_source: open
   license: ''
   tags:
