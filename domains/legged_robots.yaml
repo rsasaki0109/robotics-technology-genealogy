@@ -44,7 +44,7 @@ methods:
   arxiv: ''
   year: 2019
   code: mit-biomimetics/Cheetah-Software
-  stars: 3256
+  stars: 3263
   tags:
   - quadruped
   - model-based
@@ -106,7 +106,7 @@ methods:
   arxiv: '2109.11978'
   year: 2021
   code: leggedrobotics/rsl_rl
-  stars: 2820
+  stars: 2838
   tags:
   - quadruped
   - reinforcement-learning
@@ -122,7 +122,7 @@ methods:
   arxiv: ''
   year: 2021
   code: leggedrobotics/legged_gym
-  stars: 3064
+  stars: 3070
   tags:
   - quadruped
   - reinforcement-learning
@@ -191,7 +191,7 @@ methods:
   arxiv: '2205.02824'
   year: 2022
   code: Improbable-AI/rapid-locomotion-rl
-  stars: 291
+  stars: 293
   tags:
   - quadruped
   - reinforcement-learning
@@ -208,7 +208,7 @@ methods:
   arxiv: '2212.03238'
   year: 2023
   code: Improbable-AI/walk-these-ways
-  stars: 1419
+  stars: 1424
   tags:
   - quadruped
   - reinforcement-learning
@@ -265,7 +265,7 @@ methods:
   arxiv: '2309.14341'
   year: 2024
   code: chengxuxin/extreme-parkour
-  stars: 1122
+  stars: 1136
   tags:
   - quadruped
   - parkour
@@ -285,7 +285,7 @@ methods:
   arxiv: '2401.17583'
   year: 2024
   code: LeCAR-Lab/ABS
-  stars: 610
+  stars: 613
   tags:
   - quadruped
   - safety
@@ -304,7 +304,7 @@ methods:
   arxiv: '2309.05665'
   year: 2024
   code: ZiwenZhuang/parkour
-  stars: 1095
+  stars: 1100
   tags:
   - quadruped
   - parkour
@@ -323,7 +323,7 @@ methods:
   arxiv: '2406.10454'
   year: 2024
   code: MarkFzp/humanplus
-  stars: 849
+  stars: 848
   tags:
   - humanoid
   - imitation-learning

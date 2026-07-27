@@ -12,7 +12,7 @@ methods:
   arxiv: '1806.01411'
   year: 2019
   code: xingyul/flownet3d
-  stars: 404
+  stars: 405
   tags:
   - deep-learning
   - point-cloud
@@ -233,7 +233,7 @@ methods:
   arxiv: '2407.01702'
   year: 2025
   code: KTH-RPL/SeFlow
-  stars: 120
+  stars: 121
   tags:
   - self-supervised
   - autonomous-driving
@@ -321,7 +321,7 @@ methods:
   arxiv: '2003.12039'
   year: 2020
   code: princeton-vl/RAFT
-  stars: 4066
+  stars: 4071
   tags:
   - deep-learning
   - optical-flow

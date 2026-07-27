@@ -13,7 +13,7 @@ methods:
   arxiv: '1612.00593'
   year: 2017
   code: charlesq34/pointnet
-  stars: 5444
+  stars: 5447
   tags:
   - point-cloud
   - classification
@@ -28,7 +28,7 @@ methods:
   arxiv: '1706.02413'
   year: 2017
   code: charlesq34/pointnet2
-  stars: 3688
+  stars: 3687
   tags:
   - point-cloud
   - hierarchical
@@ -72,7 +72,7 @@ methods:
   arxiv: '1812.05784'
   year: 2019
   code: nutonomy/second.pytorch
-  stars: 1023
+  stars: 1025
   tags:
   - point-cloud
   - pillar
@@ -91,7 +91,7 @@ methods:
   arxiv: '1907.03670'
   year: 2020
   code: open-mmlab/OpenPCDet
-  stars: 5655
+  stars: 5663
   tags:
   - point-cloud
   - part-aware
@@ -109,7 +109,7 @@ methods:
   arxiv: '1912.13192'
   year: 2020
   code: open-mmlab/OpenPCDet
-  stars: 5655
+  stars: 5663
   tags:
   - point-cloud
   - point-voxel
@@ -127,7 +127,7 @@ methods:
   arxiv: '2012.15712'
   year: 2021
   code: open-mmlab/OpenPCDet
-  stars: 5655
+  stars: 5663
   tags:
   - point-cloud
   - voxel
@@ -211,7 +211,7 @@ methods:
   arxiv: '2301.06051'
   year: 2023
   code: Haiyang-W/DSVT
-  stars: 456
+  stars: 455
   tags:
   - point-cloud
   - transformer
@@ -229,7 +229,7 @@ methods:
   arxiv: '2110.06922'
   year: 2021
   code: WangYueFt/detr3d
-  stars: 914
+  stars: 915
   tags:
   - camera
   - multi-view
@@ -243,7 +243,7 @@ methods:
   arxiv: '2112.11790'
   year: 2022
   code: HuangJunJie2017/BEVDet
-  stars: 1801
+  stars: 1802
   tags:
   - camera
   - bev
@@ -258,7 +258,7 @@ methods:
   arxiv: '2203.05625'
   year: 2022
   code: megvii-research/PETR
-  stars: 1063
+  stars: 1065
   tags:
   - camera
   - multi-view
@@ -275,7 +275,7 @@ methods:
   arxiv: '2203.17270'
   year: 2022
   code: fundamentalvision/BEVFormer
-  stars: 4545
+  stars: 4556
   tags:
   - camera
   - bev
@@ -296,7 +296,7 @@ methods:
   arxiv: '2303.11926'
   year: 2023
   code: exiawsh/StreamPETR
-  stars: 822
+  stars: 825
   tags:
   - camera
   - multi-view
@@ -350,7 +350,7 @@ methods:
   arxiv: '2205.13542'
   year: 2022
   code: mit-han-lab/bevfusion
-  stars: 3221
+  stars: 3229
   tags:
   - multi-modal
   - bev
@@ -425,7 +425,7 @@ methods:
   arxiv: '2403.15241'
   year: 2024
   code: yinjunbo/IS-Fusion
-  stars: 220
+  stars: 219
   tags:
   - multi-modal
   - instance-scene
@@ -442,7 +442,7 @@ methods:
   arxiv: '2308.09616'
   year: 2025
   code: megvii-research/Far3D
-  stars: 199
+  stars: 201
   tags:
   - camera
   - multi-view
@@ -533,7 +533,7 @@ methods:
   arxiv: '2311.11722'
   year: 2025
   code: linxuewu/Sparse4D
-  stars: 517
+  stars: 518
   tags:
   - camera
   - multi-view
@@ -554,7 +554,7 @@ methods:
   arxiv: '2008.05711'
   year: 2020
   code: nv-tlabs/lift-splat-shoot
-  stars: 1358
+  stars: 1363
   tags:
   - camera
   - bev
@@ -595,7 +595,7 @@ methods:
   arxiv: '1904.07850'
   year: 2019
   code: xingyizhou/CenterNet
-  stars: 7566
+  stars: 7570
   tags:
   - anchor-free
   - center-based
@@ -608,7 +608,7 @@ methods:
   arxiv: '2005.12872'
   year: 2020
   code: facebookresearch/detr
-  stars: 15349
+  stars: 15359
   tags:
   - transformer
   - end-to-end
@@ -658,7 +658,7 @@ methods:
   arxiv: '2102.00463'
   year: 2022
   code: open-mmlab/OpenPCDet
-  stars: 5655
+  stars: 5663
   tags:
   - point-cloud
   - point-voxel

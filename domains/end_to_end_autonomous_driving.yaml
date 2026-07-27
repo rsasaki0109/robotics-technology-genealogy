@@ -68,7 +68,7 @@ methods:
   arxiv: '1912.12294'
   year: 2020
   code: dotchen/LearningByCheating
-  stars: 342
+  stars: 341
   open_source: open
   license: MIT
   tags:
@@ -86,7 +86,7 @@ methods:
   arxiv: '2108.08265'
   year: 2021
   code: zhejz/carla-roach
-  stars: 400
+  stars: 399
   open_source: open
   license: ''
   tags:
@@ -104,7 +104,7 @@ methods:
   arxiv: '2210.07729'
   year: 2022
   code: wayveai/mile
-  stars: 431
+  stars: 433
   open_source: open
   license: ''
   tags:
@@ -125,7 +125,7 @@ methods:
   arxiv: '2207.07601'
   year: 2022
   code: OpenDriveLab/ST-P3
-  stars: 437
+  stars: 438
   open_source: open
   license: ''
   tags:
@@ -146,7 +146,7 @@ methods:
   arxiv: '2104.09224'
   year: 2022
   code: autonomousvision/transfuser
-  stars: 1582
+  stars: 1586
   open_source: open
   license: ''
   tags:
@@ -187,7 +187,7 @@ methods:
   arxiv: '2206.08129'
   year: 2023
   code: OpenDriveLab/TCP
-  stars: 486
+  stars: 487
   open_source: open
   license: ''
   tags:
@@ -228,7 +228,7 @@ methods:
   arxiv: '2212.10156'
   year: 2023
   code: OpenDriveLab/UniAD
-  stars: 4692
+  stars: 4701
   open_source: open
   license: Apache-2.0
   tags:
@@ -250,7 +250,7 @@ methods:
   arxiv: '2303.12077'
   year: 2023
   code: hustvl/VAD
-  stars: 1342
+  stars: 1345
   open_source: open
   license: Apache-2.0
   tags:
@@ -269,7 +269,7 @@ methods:
   arxiv: '2403.09630'
   year: 2024
   code: OpenDriveLab/DriveAGI
-  stars: 800
+  stars: 802
   open_source: open
   license: ''
   tags:
@@ -308,7 +308,7 @@ methods:
   arxiv: '2406.03877'
   year: 2024
   code: Thinklab-SJTU/Bench2Drive
-  stars: 1912
+  stars: 1917
   open_source: open
   license: Apache-2.0
   tags:
@@ -409,7 +409,7 @@ methods:
   arxiv: '2309.09777'
   year: 2024
   code: JeffWang987/DriveDreamer
-  stars: 585
+  stars: 587
   open_source: open
   license: ''
   tags:
@@ -427,7 +427,7 @@ methods:
   arxiv: '2312.07488'
   year: 2024
   code: opendilab/LMDrive
-  stars: 920
+  stars: 925
   open_source: open
   license: ''
   tags:
@@ -468,7 +468,7 @@ methods:
   arxiv: '2411.15139'
   year: 2024
   code: hustvl/DiffusionDrive
-  stars: 1451
+  stars: 1457
   open_source: open
   license: ''
   tags:
