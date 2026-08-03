@@ -29,7 +29,7 @@ methods:
   arxiv: '1901.01060'
   year: 2019
   code: mrakotosaon/pointcleannet
-  stars: 291
+  stars: 292
   tags:
   - deep-learning
   - outlier-removal
@@ -105,7 +105,7 @@ methods:
   arxiv: '2203.05940'
   year: 2022
   code: unknownue/pdflow
-  stars: 30
+  stars: 31
   tags:
   - normalizing-flow
   - generative

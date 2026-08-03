@@ -14,7 +14,7 @@ methods:
   arxiv: ''
   year: 2004
   code: graspit-simulator/graspit
-  stars: 217
+  stars: 218
   tags:
   - simulator
   - classical
@@ -44,7 +44,7 @@ methods:
   arxiv: '1905.10520'
   year: 2019
   code: NVlabs/6dof-graspnet
-  stars: 281
+  stars: 280
   tags:
   - 6dof
   - variational
@@ -60,7 +60,7 @@ methods:
   arxiv: '1912.13470'
   year: 2020
   code: graspnet/graspnet-baseline
-  stars: 988
+  stars: 995
   tags:
   - benchmark
   - large-scale
@@ -94,7 +94,7 @@ methods:
   arxiv: '2212.08333'
   year: 2023
   code: graspnet/anygrasp_sdk
-  stars: 948
+  stars: 955
   tags:
   - real-time
   - robust
@@ -111,7 +111,7 @@ methods:
   arxiv: '2101.01132'
   year: 2021
   code: ethz-asl/vgn
-  stars: 314
+  stars: 313
   tags:
   - volumetric
   - real-time
@@ -127,7 +127,7 @@ methods:
   arxiv: '2103.14127'
   year: 2021
   code: NVlabs/contact_graspnet
-  stars: 515
+  stars: 516
   tags:
   - contact
   - 6dof
@@ -180,7 +180,7 @@ methods:
   arxiv: '2210.02697'
   year: 2023
   code: PKU-EPIC/DexGraspNet
-  stars: 455
+  stars: 456
   tags:
   - dexterous
   - dataset
@@ -198,7 +198,7 @@ methods:
   arxiv: '2210.04887'
   year: 2022
   code: HaozhiQi/Hora
-  stars: 250
+  stars: 249
   tags:
   - in-hand
   - rotation
@@ -230,7 +230,7 @@ methods:
   arxiv: '2211.15459'
   year: 2023
   code: yzqin/dexpoint-release
-  stars: 107
+  stars: 106
   tags:
   - dexterous
   - point-cloud
@@ -282,7 +282,7 @@ methods:
   arxiv: '2307.13204'
   year: 2024
   code: mkt1412/GraspGPT_public
-  stars: 151
+  stars: 150
   tags:
   - llm
   - task-oriented
