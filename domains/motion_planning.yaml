@@ -275,7 +275,7 @@ methods:
   arxiv: ''
   year: 2013
   code: rst-tu-dortmund/teb_local_planner
-  stars: 1332
+  stars: 1335
   tags:
   - local-planner
   - trajectory-optimization
@@ -308,7 +308,7 @@ methods:
   arxiv: '2409.07563'
   year: 2024
   code: ACDSLab/MPPI-Generic
-  stars: 303
+  stars: 304
   tags:
   - sampling-based
   - mpc
@@ -416,7 +416,7 @@ methods:
   arxiv: '2310.05018'
   year: 2024
   code: jchengai/planTF
-  stars: 372
+  stars: 374
   tags:
   - transformer
   - planning

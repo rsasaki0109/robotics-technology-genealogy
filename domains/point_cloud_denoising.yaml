@@ -29,7 +29,7 @@ methods:
   arxiv: '1901.01060'
   year: 2019
   code: mrakotosaon/pointcleannet
-  stars: 292
+  stars: 293
   tags:
   - deep-learning
   - outlier-removal
