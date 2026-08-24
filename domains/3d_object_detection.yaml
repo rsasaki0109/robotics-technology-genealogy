@@ -13,7 +13,7 @@ methods:
   arxiv: '1612.00593'
   year: 2017
   code: charlesq34/pointnet
-  stars: 5454
+  stars: 5456
   tags:
   - point-cloud
   - classification
@@ -28,7 +28,7 @@ methods:
   arxiv: '1706.02413'
   year: 2017
   code: charlesq34/pointnet2
-  stars: 3696
+  stars: 3697
   tags:
   - point-cloud
   - hierarchical
@@ -91,7 +91,7 @@ methods:
   arxiv: '1907.03670'
   year: 2020
   code: open-mmlab/OpenPCDet
-  stars: 5682
+  stars: 5689
   tags:
   - point-cloud
   - part-aware
@@ -109,7 +109,7 @@ methods:
   arxiv: '1912.13192'
   year: 2020
   code: open-mmlab/OpenPCDet
-  stars: 5682
+  stars: 5689
   tags:
   - point-cloud
   - point-voxel
@@ -127,7 +127,7 @@ methods:
   arxiv: '2012.15712'
   year: 2021
   code: open-mmlab/OpenPCDet
-  stars: 5682
+  stars: 5689
   tags:
   - point-cloud
   - voxel
@@ -144,7 +144,7 @@ methods:
   arxiv: '2006.11275'
   year: 2021
   code: tianweiy/CenterPoint
-  stars: 2181
+  stars: 2182
   tags:
   - point-cloud
   - center-based
@@ -178,7 +178,7 @@ methods:
   arxiv: '2112.06375'
   year: 2022
   code: tusen-ai/SST
-  stars: 884
+  stars: 883
   tags:
   - point-cloud
   - transformer
@@ -229,7 +229,7 @@ methods:
   arxiv: '2110.06922'
   year: 2021
   code: WangYueFt/detr3d
-  stars: 916
+  stars: 917
   tags:
   - camera
   - multi-view
@@ -243,7 +243,7 @@ methods:
   arxiv: '2112.11790'
   year: 2022
   code: HuangJunJie2017/BEVDet
-  stars: 1804
+  stars: 1803
   tags:
   - camera
   - bev
@@ -275,7 +275,7 @@ methods:
   arxiv: '2203.17270'
   year: 2022
   code: fundamentalvision/BEVFormer
-  stars: 4573
+  stars: 4578
   tags:
   - camera
   - bev
@@ -296,7 +296,7 @@ methods:
   arxiv: '2303.11926'
   year: 2023
   code: exiawsh/StreamPETR
-  stars: 835
+  stars: 836
   tags:
   - camera
   - multi-view
@@ -331,7 +331,7 @@ methods:
   arxiv: '2203.11496'
   year: 2022
   code: XuyangBai/TransFusion
-  stars: 771
+  stars: 770
   tags:
   - multi-modal
   - transformer
@@ -386,7 +386,7 @@ methods:
   arxiv: '2301.01283'
   year: 2023
   code: junjie18/CMT
-  stars: 418
+  stars: 417
   tags:
   - multi-modal
   - transformer
@@ -425,7 +425,7 @@ methods:
   arxiv: '2403.15241'
   year: 2024
   code: yinjunbo/IS-Fusion
-  stars: 219
+  stars: 218
   tags:
   - multi-modal
   - instance-scene
@@ -460,7 +460,7 @@ methods:
   arxiv: '2304.14340'
   year: 2025
   code: yichen928/SparseFusion
-  stars: 271
+  stars: 270
   tags:
   - multi-modal
   - sparse
@@ -497,7 +497,7 @@ methods:
   arxiv: '2403.05817'
   year: 2025
   code: zhanggang001/hednet
-  stars: 189
+  stars: 190
   tags:
   - point-cloud
   - fully-sparse
@@ -515,7 +515,7 @@ methods:
   arxiv: '2308.04556'
   year: 2025
   code: NVlabs/FocalFormer3D
-  stars: 211
+  stars: 210
   tags:
   - multi-modal
   - transformer
@@ -595,7 +595,7 @@ methods:
   arxiv: '1904.07850'
   year: 2019
   code: xingyizhou/CenterNet
-  stars: 7569
+  stars: 7570
   tags:
   - anchor-free
   - center-based
@@ -608,7 +608,7 @@ methods:
   arxiv: '2005.12872'
   year: 2020
   code: facebookresearch/detr
-  stars: 15356
+  stars: 15353
   tags:
   - transformer
   - end-to-end
@@ -658,7 +658,7 @@ methods:
   arxiv: '2102.00463'
   year: 2022
   code: open-mmlab/OpenPCDet
-  stars: 5682
+  stars: 5689
   tags:
   - point-cloud
   - point-voxel

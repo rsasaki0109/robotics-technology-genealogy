@@ -83,7 +83,7 @@ methods:
   arxiv: '2109.12098'
   year: 2022
   code: cliport/cliport
-  stars: 549
+  stars: 548
   open_source: open
   license: Apache-2.0
   tags:
@@ -172,7 +172,7 @@ methods:
   arxiv: '2303.04137'
   year: 2023
   code: real-stanford/diffusion_policy
-  stars: 4458
+  stars: 4482
   open_source: open
   license: MIT
   tags:
@@ -194,7 +194,7 @@ methods:
   arxiv: '2403.03954'
   year: 2024
   code: YanjieZe/3D-Diffusion-Policy
-  stars: 1425
+  stars: 1428
   open_source: open
   license: MIT
   tags:
@@ -212,7 +212,7 @@ methods:
   arxiv: '2304.13705'
   year: 2023
   code: tonyzhaozh/act
-  stars: 2150
+  stars: 2172
   open_source: open
   license: MIT
   tags:
@@ -233,7 +233,7 @@ methods:
   arxiv: '2304.13705'
   year: 2023
   code: tonyzhaozh/aloha
-  stars: 2301
+  stars: 2308
   open_source: open
   license: MIT
   tags:
@@ -252,7 +252,7 @@ methods:
   arxiv: '2401.02117'
   year: 2024
   code: MarkFzp/mobile-aloha
-  stars: 4461
+  stars: 4464
   open_source: open
   license: ''
   tags:
@@ -306,7 +306,7 @@ methods:
   arxiv: '2310.08864'
   year: 2023
   code: google-deepmind/open_x_embodiment
-  stars: 1984
+  stars: 1998
   open_source: open
   license: Apache-2.0
   tags:
@@ -327,7 +327,7 @@ methods:
   arxiv: '2405.12213'
   year: 2024
   code: octo-models/octo
-  stars: 1738
+  stars: 1746
   open_source: open
   license: MIT
   tags:
@@ -347,7 +347,7 @@ methods:
   arxiv: '2406.09246'
   year: 2024
   code: openvla/openvla
-  stars: 6835
+  stars: 6884
   open_source: open
   license: MIT
   tags:
@@ -406,7 +406,7 @@ methods:
   arxiv: '2505.06111'
   year: 2025
   code: OpenDriveLab/UniVLA
-  stars: 1120
+  stars: 1122
   open_source: open
   license: ''
   tags:
@@ -426,7 +426,7 @@ methods:
   arxiv: '2502.19645'
   year: 2025
   code: moojink/openvla-oft
-  stars: 1338
+  stars: 1344
   open_source: open
   license: MIT
   tags:
@@ -447,7 +447,7 @@ methods:
   arxiv: '2503.14734'
   year: 2025
   code: NVIDIA/Isaac-GR00T
-  stars: 7840
+  stars: 7901
   open_source: open
   license: Apache-2.0
   tags:
@@ -471,7 +471,7 @@ methods:
   arxiv: ''
   year: 2026
   code: NVIDIA/Isaac-GR00T
-  stars: 7840
+  stars: 7901
   open_source: open
   license: Apache-2.0
   tags:
@@ -555,7 +555,7 @@ methods:
   arxiv: '2602.12684'
   year: 2026
   code: XiaomiRobotics/Xiaomi-Robotics-0
-  stars: 642
+  stars: 645
   open_source: open
   license: Apache-2.0
   tags:
@@ -577,7 +577,7 @@ methods:
   arxiv: '2605.30280'
   year: 2026
   code: QwenLM/Qwen-VLA
-  stars: 743
+  stars: 750
   open_source: research
   license: ''
   tags:
@@ -601,7 +601,7 @@ methods:
   arxiv: '2607.06403'
   year: 2026
   code: Robbyant/lingbot-vla-v2
-  stars: 758
+  stars: 789
   open_source: open
   license: Apache-2.0
   tags:
@@ -645,7 +645,7 @@ methods:
   arxiv: '2601.21998'
   year: 2026
   code: Robbyant/lingbot-va
-  stars: 1769
+  stars: 1798
   open_source: open
   license: ''
   tags:
@@ -665,7 +665,7 @@ methods:
   arxiv: '2602.15922'
   year: 2026
   code: dreamzero0/dreamzero
-  stars: 2554
+  stars: 2584
   open_source: open
   license: Apache-2.0
   tags:
@@ -688,7 +688,7 @@ methods:
   arxiv: '2506.01844'
   year: 2025
   code: huggingface/lerobot
-  stars: 26704
+  stars: 26865
   open_source: open
   license: Apache-2.0
   tags:
@@ -748,7 +748,7 @@ methods:
   arxiv: '2406.10454'
   year: 2024
   code: MarkFzp/humanplus
-  stars: 849
+  stars: 850
   open_source: open
   license: MIT
   tags:
@@ -767,7 +767,7 @@ methods:
   arxiv: '2402.10329'
   year: 2024
   code: real-stanford/universal_manipulation_interface
-  stars: 1549
+  stars: 1556
   open_source: open
   license: MIT
   tags:
@@ -805,7 +805,7 @@ methods:
   arxiv: ''
   year: 2024
   code: huggingface/lerobot
-  stars: 26704
+  stars: 26865
   open_source: open
   license: Apache-2.0
   tags:
@@ -826,7 +826,7 @@ methods:
   arxiv: '2406.02523'
   year: 2024
   code: robocasa/robocasa
-  stars: 1648
+  stars: 1667
   open_source: open
   license: MIT
   tags:
@@ -844,7 +844,7 @@ methods:
   arxiv: '2403.12945'
   year: 2024
   code: droid-dataset/droid
-  stars: 394
+  stars: 435
   open_source: open
   license: ''
   tags:
