@@ -18,7 +18,7 @@ methods:
   arxiv: '1803.10122'
   year: 2018
   code: hardmaru/WorldModelsExperiments
-  stars: 733
+  stars: 734
   tags:
   - vae
   - rnn
@@ -98,7 +98,7 @@ methods:
   arxiv: '1912.01603'
   year: 2020
   code: danijar/dreamer
-  stars: 621
+  stars: 623
   tags:
   - latent-dynamics
   - imagination
@@ -114,7 +114,7 @@ methods:
   arxiv: '2010.02193'
   year: 2021
   code: danijar/dreamerv2
-  stars: 1056
+  stars: 1057
   tags:
   - discrete-latents
   - atari
@@ -130,7 +130,7 @@ methods:
   arxiv: '2206.14176'
   year: 2022
   code: danijar/daydreamer
-  stars: 456
+  stars: 458
   tags:
   - real-robot
   - model-based-rl
@@ -146,7 +146,7 @@ methods:
   arxiv: '2301.04104'
   year: 2023
   code: danijar/dreamerv3
-  stars: 3698
+  stars: 3722
   tags:
   - general-purpose
   - symlog
@@ -183,7 +183,7 @@ methods:
   arxiv: '1911.08265'
   year: 2020
   code: google-deepmind/mctx
-  stars: 2653
+  stars: 2655
   tags:
   - mcts
   - planning
@@ -215,7 +215,7 @@ methods:
   arxiv: '2203.04955'
   year: 2023
   code: nicklashansen/tdmpc
-  stars: 523
+  stars: 525
   tags:
   - model-predictive-control
   - td-learning
@@ -233,7 +233,7 @@ methods:
   arxiv: '2310.16828'
   year: 2024
   code: nicklashansen/tdmpc2
-  stars: 931
+  stars: 939
   tags:
   - model-predictive-control
   - scalable
@@ -265,7 +265,7 @@ methods:
   arxiv: '2209.00588'
   year: 2023
   code: eloialonso/iris
-  stars: 901
+  stars: 900
   tags:
   - transformer
   - discrete-tokens
@@ -320,7 +320,7 @@ methods:
   arxiv: '2405.12399'
   year: 2024
   code: eloialonso/diamond
-  stars: 2096
+  stars: 2099
   tags:
   - diffusion
   - world-model
@@ -440,7 +440,7 @@ methods:
   arxiv: '2411.00769'
   year: 2024
   code: GameGen-X/GameGen-X
-  stars: 342
+  stars: 343
   tags:
   - game-generation
   - interactive
@@ -532,7 +532,7 @@ methods:
   arxiv: '2409.18964'
   year: 2024
   code: Genesis-Embodied-AI/Genesis
-  stars: 29794
+  stars: 29843
   tags:
   - physics-engine
   - generative
@@ -548,7 +548,7 @@ methods:
   arxiv: '2501.03575'
   year: 2025
   code: NVIDIA/Cosmos
-  stars: 11602
+  stars: 11679
   tags:
   - foundation-model
   - physical-ai
@@ -585,7 +585,7 @@ methods:
   arxiv: '2503.18945'
   year: 2025
   code: OpenRobotLab/Aether
-  stars: 608
+  stars: 609
   tags:
   - 3d-world-model
   - geometric-aware
@@ -603,7 +603,7 @@ methods:
   arxiv: '2504.20995'
   year: 2025
   code: UMass-Embodied-AGI/TesserAct
-  stars: 405
+  stars: 407
   tags:
   - 4d
   - embodied-ai
@@ -621,7 +621,7 @@ methods:
   arxiv: '2412.03572'
   year: 2025
   code: facebookresearch/nwm
-  stars: 672
+  stars: 676
   tags:
   - navigation
   - video-prediction
@@ -639,7 +639,7 @@ methods:
   arxiv: '2411.04983'
   year: 2025
   code: gaoyuezhou/dino_wm
-  stars: 555
+  stars: 558
   tags:
   - dinov2
   - zero-shot
@@ -674,7 +674,7 @@ methods:
   arxiv: '2301.08243'
   year: 2023
   code: facebookresearch/ijepa
-  stars: 3489
+  stars: 3488
   tags:
   - image
   - joint-embedding
@@ -775,7 +775,7 @@ methods:
   arxiv: '2404.08471'
   year: 2024
   code: facebookresearch/jepa
-  stars: 4100
+  stars: 4114
   tags:
   - self-supervised
   - video-prediction
@@ -831,7 +831,7 @@ methods:
   arxiv: '2506.09985'
   year: 2025
   code: facebookresearch/vjepa2
-  stars: 4504
+  stars: 4552
   tags:
   - self-supervised
   - video-prediction
@@ -850,7 +850,7 @@ methods:
   arxiv: '2506.09985'
   year: 2025
   code: facebookresearch/vjepa2
-  stars: 4504
+  stars: 4552
   tags:
   - action-conditioned
   - robotics
@@ -868,7 +868,7 @@ methods:
   arxiv: '2603.14482'
   year: 2026
   code: facebookresearch/vjepa2
-  stars: 4504
+  stars: 4552
   tags:
   - dense-features
   - deep-self-supervision
@@ -904,7 +904,7 @@ methods:
   arxiv: '2511.08544'
   year: 2025
   code: rbalestr-lab/lejepa
-  stars: 1320
+  stars: 1328
   tags:
   - joint-embedding
   - sigreg
@@ -937,7 +937,7 @@ methods:
   arxiv: '2512.24497'
   year: 2025
   code: facebookresearch/jepa-wms
-  stars: 457
+  stars: 468
   tags:
   - robotics
   - physical-planning
@@ -974,7 +974,7 @@ methods:
   arxiv: '2603.19312'
   year: 2026
   code: lucas-maes/le-wm
-  stars: 4336
+  stars: 4362
   tags:
   - world-model
   - sigreg
@@ -1015,7 +1015,7 @@ methods:
   arxiv: '2604.03208'
   year: 2026
   code: kevinghst/HWM_PLDM
-  stars: 173
+  stars: 176
   tags:
   - hierarchical-planning
   - latent-world-model
@@ -1088,7 +1088,7 @@ methods:
   arxiv: '2601.16163'
   year: 2026
   code: NVlabs/cosmos-policy
-  stars: 854
+  stars: 858
   tags:
   - world-action-model
   - video-diffusion
@@ -1108,7 +1108,7 @@ methods:
   arxiv: '2601.21998'
   year: 2026
   code: Robbyant/lingbot-va
-  stars: 1798
+  stars: 1830
   tags:
   - world-action-model
   - causal
@@ -1126,7 +1126,7 @@ methods:
   arxiv: '2602.15922'
   year: 2026
   code: dreamzero0/dreamzero
-  stars: 2584
+  stars: 2612
   tags:
   - world-action-model
   - zero-shot

@@ -135,7 +135,7 @@ methods:
   arxiv: '2201.03545'
   year: 2022
   code: facebookresearch/ConvNeXt
-  stars: 6416
+  stars: 6414
   tags:
   - cnn
   - modernized
@@ -166,7 +166,7 @@ methods:
   arxiv: '2010.11929'
   year: 2021
   code: google-research/vision_transformer
-  stars: 12678
+  stars: 12692
   tags:
   - transformer
   - classification
@@ -183,7 +183,7 @@ methods:
   arxiv: '2012.12877'
   year: 2021
   code: facebookresearch/deit
-  stars: 4355
+  stars: 4352
   tags:
   - transformer
   - classification
@@ -198,7 +198,7 @@ methods:
   arxiv: '2103.14030'
   year: 2021
   code: microsoft/Swin-Transformer
-  stars: 16050
+  stars: 16060
   tags:
   - transformer
   - hierarchical
@@ -214,7 +214,7 @@ methods:
   arxiv: '2111.09883'
   year: 2022
   code: microsoft/Swin-Transformer
-  stars: 16050
+  stars: 16060
   tags:
   - transformer
   - hierarchical
@@ -244,7 +244,7 @@ methods:
   arxiv: '2111.06377'
   year: 2022
   code: facebookresearch/mae
-  stars: 8371
+  stars: 8370
   tags:
   - self-supervised
   - masked-autoencoder
@@ -262,7 +262,7 @@ methods:
   arxiv: '2104.14294'
   year: 2021
   code: facebookresearch/dino
-  stars: 7612
+  stars: 7611
   tags:
   - self-supervised
   - self-distillation
@@ -277,7 +277,7 @@ methods:
   arxiv: '2304.07193'
   year: 2023
   code: facebookresearch/dinov2
-  stars: 13259
+  stars: 13284
   tags:
   - self-supervised
   - foundation
@@ -296,7 +296,7 @@ methods:
   arxiv: '2303.15389'
   year: 2023
   code: baaivision/EVA
-  stars: 2690
+  stars: 2694
   tags:
   - contrastive
   - clip
@@ -327,7 +327,7 @@ methods:
   arxiv: '2211.05778'
   year: 2023
   code: OpenGVLab/InternImage
-  stars: 2839
+  stars: 2844
   tags:
   - cnn
   - deformable-convolution

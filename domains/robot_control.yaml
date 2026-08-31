@@ -141,7 +141,7 @@ methods:
   arxiv: '2401.02117'
   year: 2024
   code: MarkFzp/mobile-aloha
-  stars: 4464
+  stars: 4468
   open_source: open
   license: ''
   tags:
@@ -158,7 +158,7 @@ methods:
   arxiv: '2303.04137'
   year: 2023
   code: real-stanford/diffusion_policy
-  stars: 4482
+  stars: 4502
   open_source: open
   license: MIT
   tags:
